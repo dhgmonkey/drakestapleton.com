@@ -1,24 +1,26 @@
 # Handoff — drakestapleton.com
 
-**As of 13 Aug 2026.** The site is a **Vite + React + TypeScript** project on GitHub Pages.
+**As of 13 Aug 2026.** The public site is a waiting-list gate while the human portrait remains in private development.
 
-- https://www.drakestapleton.com/ → portfolio
-- https://www.drakestapleton.com/symphony/ → Atlas Symphony public record
+- https://www.drakestapleton.com/ -> waiting list
+- all prior portfolio routes -> waiting list
 - Source: https://github.com/dhgmonkey/drakestapleton.com (`main`)
 
 Do not attach Atlas private trees, Hostinger tokens, or the coding archive.
 
 ---
 
-## What shipped
+## Release boundary
 
 | Piece | Status |
 |---|---|
 | Stack | Vite 7 · React 19 · TypeScript · react-router |
 | Host | GitHub Pages + HTTPS · CNAME `www.drakestapleton.com` |
 | Deploy | `.github/workflows/pages.yml` — `npm ci && npm run build` → `dist/` |
-| Symphony | Inventor/first operator Drake Stapleton · first run 30 Jul 2026 |
-| Diagrams | `/symphony/workflow` · `/symphony/map` · first-run SVG in React |
+| Public UI | No-index waiting-list page on every route |
+| Signup API | Dedicated Boston Python service on TLS port 8443 |
+| Stored data | Normalized email, consent version, UTC timestamp only |
+| Excluded | Human portrait draft, resume, private history, credentials, financial identifiers |
 
 **Not on the public site:** career CSV, personal media, counterpart stills, credentials, private IPs.
 

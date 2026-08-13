@@ -1,6 +1,6 @@
 # drakestapleton.com
 
-Public site for **Drake Stapleton** — architecture portfolio and the **Atlas Symphony** record.
+Public waiting-list front door for the in-development Drake Stapleton human portrait and Atlas portfolio.
 
 Live: [https://www.drakestapleton.com/](https://www.drakestapleton.com/)  
 Symphony: [https://www.drakestapleton.com/symphony/](https://www.drakestapleton.com/symphony/)
@@ -17,15 +17,11 @@ npm run build     # dist/  (copies index.html → 404.html for GitHub Pages SPA)
 npm run preview
 ```
 
-## Routes
+## Public release state
 
-| Path | Page |
-|---|---|
-| `/` | Portfolio |
-| `/symphony` | Named process, first operators, versions, citation |
-| `/symphony/first` | Verbatim invocation + first-run roster |
-| `/symphony/workflow` | Interactive command tree / cycle / save plane |
-| `/symphony/map` | Bird’s-eye six-track map |
+Every browser route renders the waiting-list page. The portfolio pages remain source material only and are not imported into the public bundle.
+
+Signup writes go to the dedicated Boston API at `waitlist-api.drakestapleton.com:8443`. The public client sends only email, affirmative consent, consent version, a honeypot, and elapsed form time. The database stores only normalized email, consent version, and signup timestamp.
 
 Interactive diagrams live in `public/diagrams/` and are framed by the app. Private media, LAN addresses, and credentials stay off this site.
 
