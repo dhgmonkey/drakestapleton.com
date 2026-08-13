@@ -21,7 +21,8 @@ export function WaitlistPage() {
 
   async function joinWaitlist(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const form = new FormData(event.currentTarget);
+    const formElement = event.currentTarget;
+    const form = new FormData(formElement);
     const email = String(form.get("email") || "").trim();
     const consent = form.get("consent") === "on";
     const website = String(form.get("website") || "");
@@ -54,7 +55,7 @@ export function WaitlistPage() {
 
       setState("success");
       setMessage("You are on the list. I will write when the first public release is ready.");
-      event.currentTarget.reset();
+      formElement.reset();
     } catch {
       setState("error");
       setMessage("The list could not save your email. Please try again in a moment.");
