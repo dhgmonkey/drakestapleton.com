@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { PageIntro } from "../components/PagePrimitives";
 import { usePageMeta } from "../lib/usePageMeta";
 
 const lessons = [
@@ -61,14 +62,12 @@ export function WhatILearnedPage() {
 
   return (
     <main className="wrap portrait-wrap learned-page">
-      <header className="learned-hero">
-        <p className="kicker">Learning is part of the record</p>
-        <h1>Every hard turn taught me how to return.</h1>
-        <p className="portrait-deck">
+      <PageIntro eyebrow="Learning is part of the record" title="Every hard turn taught me how to return." className="learned-hero">
+        <p>
           The strongest evidence of who I am lives in the choices I made when a plan met reality. I learned,
           repaired what I could, and carried the lesson forward.
         </p>
-      </header>
+      </PageIntro>
 
       <section className="lesson-list" aria-label="Lessons and repairs">
         {lessons.map((lesson, index) => (

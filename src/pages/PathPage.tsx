@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { PageIntro } from "../components/PagePrimitives";
 import { usePageMeta } from "../lib/usePageMeta";
 
 const chapters = [
@@ -43,14 +44,12 @@ export function PathPage() {
 
   return (
     <main className="wrap portrait-wrap path-page">
-      <header className="path-header">
-        <p className="kicker">Education and work</p>
-        <h1>Chemistry became the foundation for everything that followed.</h1>
-        <p className="portrait-deck">
+      <PageIntro eyebrow="Education and work" title="Chemistry became the foundation for everything that followed." className="path-header">
+        <p>
           I spent years developing products and supporting manufacturing. My work in software and AI grew
           alongside that career and carries its discipline forward.
         </p>
-      </header>
+      </PageIntro>
 
       <section className="path-timeline" aria-label="Education and work history">
         {chapters.map((chapter) => (

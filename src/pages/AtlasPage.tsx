@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { PageIntro } from "../components/PagePrimitives";
 import { usePageMeta } from "../lib/usePageMeta";
 
 const organs = [
@@ -34,15 +35,13 @@ export function AtlasPage() {
 
   return (
     <main className="wrap portrait-wrap atlas-page">
-      <header className="atlas-hero">
-        <p className="kicker">Atlas / The personal reason and the real system</p>
-        <h1>Atlas began with the goodbye I still carry.</h1>
-        <p className="portrait-deck">
+      <PageIntro eyebrow="Atlas / The personal reason and the real system" title="Atlas began with the goodbye I still carry." className="atlas-hero">
+        <p>
           My father left sermons, handwritten pages, and a voice I still carry. Atlas grew from a question
           that stayed with me: can technology help me meet those words honestly and honor the person who
           wrote them?
         </p>
-      </header>
+      </PageIntro>
 
       <section className="atlas-before" aria-labelledby="before-atlas-heading">
         <p className="portrait-index">Before Atlas had a name</p>

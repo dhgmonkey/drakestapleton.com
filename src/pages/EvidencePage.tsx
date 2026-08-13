@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { PageIntro } from "../components/PagePrimitives";
 import { AUDIT_SCOPE, EVIDENCE_CLASSES, NEXT_SOURCES, VERIFIED_FINDINGS } from "../data/historyAudit";
 import { usePageMeta } from "../lib/usePageMeta";
 
@@ -12,14 +13,12 @@ export function EvidencePage() {
 
   return (
     <main className="wrap portrait-wrap evidence-page">
-      <header className="path-header evidence-header">
-        <p className="kicker">Forensic history audit / current record</p>
-        <h1>What the available record supports.</h1>
-        <p className="portrait-deck">
+      <PageIntro eyebrow="Forensic history audit / current record" title="What the available record supports." className="path-header evidence-header">
+        <p>
           This page organizes verified work, reconstructed history, direct Atlas sessions, and the sources
           that will make the record fuller.
         </p>
-      </header>
+      </PageIntro>
 
       <section className="audit-status" aria-labelledby="audit-status-title">
         <div>

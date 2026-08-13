@@ -1,5 +1,66 @@
 import { Link } from "react-router-dom";
+import { ChapterNav, SectionLead } from "../components/PagePrimitives";
 import { usePageMeta } from "../lib/usePageMeta";
+
+const chapters = [
+  { href: "#formation", number: "01", label: "Formation" },
+  { href: "#drive", number: "02", label: "Drive" },
+  { href: "#people", number: "03", label: "People" },
+  { href: "#work", number: "04", label: "Work" },
+  { href: "#atlas", number: "05", label: "Atlas" },
+];
+
+const perseverance = [
+  {
+    marker: "Closed",
+    title: "I grieved by building.",
+    body: "When Nemesis was dissolved in 2025, I wrote a seventeen-page constitution for a better community. Then I returned and helped carry the next wounded squad.",
+  },
+  {
+    marker: "10 weeks",
+    title: "I rebuilt what other people had written off.",
+    body: "I took a post-closure merger to 46 members and 85 percent activity. I retrained people after hard rounds, built the dashboards and schedules, and developed leaders who could run it on their own.",
+  },
+  {
+    marker: "45 times",
+    title: "I nearly stepped down. I kept finding a reason to stay.",
+    body: "The reason was always the people: the member who needed training, the officer who was burning out, or the person who needed someone to believe another attempt was waiting.",
+    quote: "Somehow I just keep finding the strength, or rather the stubbornness, to keep going.",
+  },
+  {
+    marker: "Fix it",
+    title: "I built that persistence into my systems.",
+    body: "Atlas carries every broken build, difficult merge, and rejected check forward as evidence. Each result shapes the next attempt. Every repair should make the whole system stronger.",
+  },
+];
+
+const lifeRecord = [
+  "I survived a childhood that taught me to hide, and became a man who lives in the open.",
+  "I built a marriage and opened my home to foster children who needed somewhere safe.",
+  "I earned two science degrees and built a career across research, product development, and manufacturing.",
+  "I protected roughly $1.2 million in supply during a global disruption and served as a HAZMAT Incident Commander.",
+  "I rebuilt fractured communities and trained people who deserved another chance.",
+  "I taught myself software, trained models, designed AI systems, and funded Atlas with my own money.",
+  "I turned grief into a reason to preserve memory, and hard lessons into machinery that tries again.",
+];
+
+const inheritances = [
+  ["My mother", "taught me to leave what hurts, keep going, and trust what I could become."],
+  ["My grandparents", "gave us land, roots, food, and the belief that a life is measured by what it gives away."],
+  ["The father who chose me", "gave me his name, taught me to be useful, and showed me that family can be a decision."],
+  ["The people who found me", "taught me that gratitude moves forward. You turn around and reach for someone else."],
+];
+
+const values = [
+  ["Truth", "I keep the source. I separate what I saw from what I inferred. I face hard facts with open eyes."],
+  ["Service", "Leadership makes another person stronger and gives the title less importance."],
+  ["Belonging", "I build places where people can stay fully visible."],
+  ["Integrity", "I carry what is right through friendship, position, and every uncomfortable truth."],
+  ["Agency", "A title describes one part of my life. I decide how far the whole life can go."],
+  ["Curiosity", "I keep a question alive long enough to make it sharper."],
+  ["Perseverance", "Every hard attempt gives me information. I preserve the lesson and return with a better system."],
+  ["Love", "Family can be inherited, chosen, adopted, married, fostered, or found through a headset in the dark."],
+];
 
 export function HomePage() {
   usePageMeta({
@@ -10,356 +71,218 @@ export function HomePage() {
   });
 
   return (
-    <main className="wrap portrait-wrap soul-page">
-      <section className="soul-hero">
-        <p className="kicker">Drake Stapleton / A human record</p>
-        <h1>
-          I keep finding the strength. <em>Or rather, the stubbornness.</em>
-        </h1>
-        <p className="soul-hero-lede">
-          I have lost people, watched things I built fall apart, learned, rebuilt, and started again. I am a
-          chemist, a manufacturing engineer, a husband, a former foster parent, a community builder, and an
-          AI systems architect. The title changes. My drive stays.
-        </p>
-        <p className="soul-audience">
-          This site is a record I made for myself. It gives me a place to see my own life whole.
-        </p>
-        <div className="portrait-actions">
-          <a className="portrait-link" href="#the-life">
-            Read the life behind the work
-          </a>
-          <Link className="portrait-link quiet" to="/atlas">
-            Why I built Atlas
-          </Link>
+    <main className="portrait-page home-page">
+      <section className="home-hero page-boundary">
+        <div className="hero-copy">
+          <p className="kicker">Drake Stapleton / Thirty-two years alive</p>
+          <h1>
+            I keep finding <span>the strength.</span>
+          </h1>
+          <blockquote>Or rather, the stubbornness.</blockquote>
+          <p className="home-hero-lede">
+            I am a chemist, a manufacturing engineer, a husband, a former foster parent, a community
+            builder, and an AI systems architect. My work crosses fields. My drive stays.
+          </p>
+          <p className="home-hero-purpose">
+            This is a record I made for myself. It gives me a place to see my own life whole.
+          </p>
+        </div>
+        <aside className="hero-identity" aria-label="The life in brief">
+          <span>Born 1994</span>
+          <span>Kentucky raised</span>
+          <span>Two science degrees</span>
+          <span>Builder by choice</span>
+          <span>Still becoming</span>
+        </aside>
+      </section>
+
+      <div className="page-boundary">
+        <ChapterNav links={chapters} />
+      </div>
+
+      <section className="manifesto-band">
+        <div className="page-boundary manifesto-inner">
+          <p className="portrait-index">In my own words</p>
+          <blockquote>
+            “I am living as myself. I am claiming my own life and my own purpose. I decide what I can become.”
+          </blockquote>
+          <p>I have spent years learning how to see my own life clearly. This site is me choosing to look.</p>
         </div>
       </section>
 
-      <section className="claim-band" aria-labelledby="claim-heading">
-        <p className="portrait-index">In my own words</p>
-        <h2 id="claim-heading">This is my witness.</h2>
-        <blockquote>
-          “I am living as myself. I am claiming my own life and my own purpose. I decide what I can become.”
-        </blockquote>
+      <section className="home-chapter page-boundary" id="formation">
+        <SectionLead eyebrow="01 / Formation" title="I learned how to fight for every inch.">
+          <p>The beginning gave me love, pressure, questions, and the habit of earning my way forward.</p>
+        </SectionLead>
+        <div className="formation-grid">
+          <article className="feature-story">
+            <p className="chapter-tag">The boy I was</p>
+            <h3>I learned to disappear before I learned why.</h3>
+            <p>
+              I grew up gay in the Bible Belt. My mother fought for me. My grandparents rooted me. My father
+              chose me. My little sister gave me someone to protect. I was surrounded by love while believing
+              that being fully known could cost me everything.
+            </p>
+            <p>
+              I played football, earned my place in honors classes the hard way, and learned how to look
+              capable while writing my own manual for living.
+            </p>
+          </article>
+          <article className="grade-card">
+            <p className="chapter-tag">The drive behind the grades</p>
+            <strong>3.92</strong>
+            <h3>I fought for that GPA.</h3>
+            <p>
+              Other students held the valedictorian and salutatorian titles. Autism and ADHD made focus a
+              daily contest, and I moved through high school unmedicated.
+            </p>
+            <p>
+              I wanted effortless brilliance. Determination became my advantage. I returned to the page,
+              the problem, and the work as many times as it took.
+            </p>
+          </article>
+          <article className="door-story">
+            <div>
+              <p className="chapter-tag">June 12, 2013</p>
+              <h3>The worst night of my life and the best decision of my life share a date.</h3>
+            </div>
+            <div>
+              <p>
+                I was nineteen and closer to the edge than most people knew. I picked up a controller. A
+                stranger named Saturn spoke to me in a Call of Duty lobby and invited me into DHG.
+              </p>
+              <p>
+                I said yes. That answer gave me people who had my back, a place to lead, and proof that the
+                person I had hidden could still be wanted. Belonging found me through a headset in the dark.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section className="home-chapter drive-chapter" id="drive">
+        <div className="page-boundary">
+          <SectionLead eyebrow="02 / Drive" title="I turn every ending into another beginning.">
+            <p>
+              My mother returned to school in her forties and finished what life had interrupted. I watched
+              her cross the stage on May 5, 2016. Eight days later, she stood beside me at Western Kentucky.
+            </p>
+          </SectionLead>
+          <div className="perseverance-ledger">
+            {perseverance.map((item, index) => (
+              <article key={item.marker}>
+                <div className="ledger-number">{String(index + 1).padStart(2, "0")}</div>
+                <p className="ledger-marker">{item.marker}</p>
+                <div>
+                  <h3>{item.title}</h3>
+                  {item.quote && <blockquote>“{item.quote}”</blockquote>}
+                  <p>{item.body}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+          <div className="recovery-note">
+            <p className="chapter-tag">What I know now</p>
+            <p>Perseverance includes recovery. Rest brings me back to the work while keeping the person doing it whole.</p>
+            <Link to="/what-i-learned">Read the lessons I carried forward</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="life-record" aria-labelledby="life-record-title">
+        <div className="page-boundary life-record-grid">
+          <div className="life-record-number" aria-hidden="true">32</div>
+          <div>
+            <p className="portrait-index">A life worth seeing</p>
+            <h2 id="life-record-title">I have already built an extraordinary life.</h2>
+            <div className="life-record-list">
+              {lifeRecord.map((item, index) => (
+                <p key={item}><span>{String(index + 1).padStart(2, "0")}</span>{item}</p>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="home-chapter page-boundary" id="people">
+        <SectionLead eyebrow="03 / People" title="My life is shaped by what gets handed forward." />
+        <div className="inheritance-grid">
+          {inheritances.map(([name, body]) => (
+            <article key={name}>
+              <h3>{name}</h3>
+              <p>{body}</p>
+            </article>
+          ))}
+        </div>
+        <div className="values-block">
+          <div className="values-intro">
+            <p className="chapter-tag">What I stand for</p>
+            <h3>The work changes. My values stay.</h3>
+          </div>
+          <div className="values-grid">
+            {values.map(([name, body]) => (
+              <article key={name}>
+                <h4>{name}</h4>
+                <p>{body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="home-chapter work-chapter" id="work">
+        <div className="page-boundary">
+          <SectionLead eyebrow="04 / Work" title="The fields changed. My standard stayed.">
+            <p>
+              Chemistry taught me to respect evidence. Manufacturing taught me that decisions carry real
+              consequences. Community taught me to open the door when someone needs it.
+            </p>
+          </SectionLead>
+          <div className="work-record">
+            <article><strong>2016</strong><span>B.S. in Chemistry and Biology, Western Kentucky University</span></article>
+            <article><strong>2018</strong><span>M.S. in Chemistry, Western Kentucky University</span></article>
+            <article><strong>2018 onward</strong><span>Industrial research, product development, and manufacturing engineering</span></article>
+            <article><strong>Built alongside it</strong><span>Software, communities, model training, research systems, and Atlas</span></article>
+          </div>
+          <Link className="text-link" to="/path">Follow the complete education and work path</Link>
+        </div>
+      </section>
+
+      <section className="atlas-home" id="atlas">
+        <div className="page-boundary atlas-home-grid">
+          <div>
+            <p className="portrait-index">05 / My father and Atlas</p>
+            <h2>Atlas began with the goodbye I still carry.</h2>
+          </div>
+          <div>
+            <p>
+              My father was a preacher. He left handwritten pages and years of thought behind. He died in
+              2019. I still carry the words I wanted to say and the conversations I wish we could have shared.
+            </p>
+            <p>
+              I want one more honest encounter with the words he left, grounded in the source and faithful
+              to the person who wrote them. Atlas grew around memory, truth, dignity, and a grief I chose to
+              turn into work.
+            </p>
+            <Link to="/atlas">Read why Atlas exists and how it works</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="home-closing page-boundary">
+        <p className="portrait-index">Self-definition</p>
+        <h2>I choose the size of my own life.</h2>
         <p>
-          I have spent years learning how to see my own life clearly. This site is me choosing to look at
-          everything already here.
+          I paid for the compute, spent the nights, trained the models, built the architecture, documented
+          the lessons, and kept going. I design and operate AI systems. Those words name work already done.
+          The work, its value, and the person behind it already exist.
         </p>
-      </section>
-
-      <section className="perseverance-section" aria-labelledby="perseverance-heading">
-        <header>
-          <p className="portrait-index">00 / The thing that carries me</p>
-          <h2 id="perseverance-heading">I turn every ending into another beginning.</h2>
-        </header>
-        <div className="perseverance-intro">
-          <p>
-            I inherited that from my mother. She left high school one year short and returned in her
-            forties to finish what life had interrupted. On May 5, 2016, I watched her cross the stage. Eight
-            days later, she stood beside me when I received my own honors certificate at Western Kentucky.
-          </p>
-          <p>
-            She taught me “keep going” by taking more than twenty years to finish something, and then
-            finishing it.
-          </p>
-        </div>
-        <div className="perseverance-record" aria-label="A record of rebuilding">
-          <article>
-            <p className="record-marker">Closed</p>
-            <div>
-              <h3>I grieved by building.</h3>
-              <p>
-                When Nemesis was dissolved in 2025, I wrote a seventeen-page constitution for a better
-                community. Then I went back and helped carry the next wounded squad.
-              </p>
-            </div>
-          </article>
-          <article>
-            <p className="record-marker">10 weeks</p>
-            <div>
-              <h3>I rebuilt what other people had written off.</h3>
-              <p>
-                I took a post-closure merger to 46 members and 85 percent activity. I retrained people after
-                hard rounds, built the dashboards and schedules, and developed leaders who could run it on
-                their own.
-              </p>
-            </div>
-          </article>
-          <article className="record-forty-five">
-            <p className="record-marker">45 times</p>
-            <div>
-              <h3>I nearly stepped down. I kept finding a reason to stay.</h3>
-              <blockquote>
-                “Somehow I just keep finding the strength, or rather the stubbornness, to keep going.”
-              </blockquote>
-              <p>
-                The reason was always the people: the person who still needed training, the officer who was
-                burning out, or the member who needed someone to believe another attempt was waiting.
-              </p>
-            </div>
-          </article>
-          <article>
-            <p className="record-marker">Fix it</p>
-            <div>
-              <h3>I built that persistence into my systems.</h3>
-              <p>
-                Atlas carries every broken build, difficult merge, and rejected check forward as evidence.
-                Each result shapes the next attempt. My rule is plain: every repair should make the whole
-                system stronger.
-              </p>
-            </div>
-          </article>
-        </div>
-        <p className="perseverance-coda">
-          Perseverance includes recovery. I have run myself into the ground before. Rest brings me back to
-          the work while keeping the person doing it whole.
-        </p>
-        <Link className="portrait-inline-link perseverance-link" to="/what-i-learned">
-          See what experience taught me
-        </Link>
-      </section>
-
-      <section className="years-section" aria-labelledby="years-heading">
-        <div className="years-number" aria-hidden="true">32</div>
-        <div className="years-content">
-          <p className="portrait-index">Thirty-two years alive</p>
-          <h2 id="years-heading">I have already lived a life worth seeing.</h2>
-          <p className="years-lede">
-            Its value comes from everything I kept turning into something that could help someone else.
-          </p>
-          <div className="years-record">
-            <p>I survived a childhood that taught me to hide, and became a man who is done hiding.</p>
-            <p>I built a marriage and opened my home to foster children who needed somewhere safe.</p>
-            <p>I earned two science degrees and built a career across research, product development, and manufacturing.</p>
-            <p>I protected roughly $1.2 million in supply during a global disruption and served as a HAZMAT Incident Commander.</p>
-            <p>I rebuilt communities after they fractured and trained people who deserved another chance.</p>
-            <p>I taught myself software, trained models, designed agent systems, and funded Atlas with my own money.</p>
-            <p>I turned grief into a reason to preserve memory, and hard lessons into machinery that tries again.</p>
-          </div>
-          <p className="years-close">
-            Every choice belongs to the road that brought me here. What I have done in 32 years is
-            extraordinary, and it is mine.
-          </p>
-        </div>
-      </section>
-
-      <section className="story-section" id="the-life" aria-labelledby="the-boy-heading">
-        <div className="story-label">
-          <p className="portrait-index">01 / The boy I was</p>
-          <p className="story-aside">Bible Belt. Farm country. Loved, closeted, and alone.</p>
-        </div>
-        <div className="story-copy">
-          <h2 id="the-boy-heading">I learned to disappear before I learned why.</h2>
-          <p>
-            I grew up gay in the Bible Belt. I was loved by a mother who fought for me, grandparents who
-            rooted me, a father who chose me, and a little sister I wanted to protect from the moment I
-            held her. I was surrounded by people who loved me, and I still believed that being fully known
-            could cost me all of them.
-          </p>
-          <p>
-            I worked hard at becoming the version of me each room would accept. I played football. I
-            earned my place in honors classes the hard way. Other students held the valedictorian and
-            salutatorian titles. I graduated with a 3.92 GPA and fought for every inch of it while moving
-            through high school with autism, ADHD, and an unmedicated mind that made focus a daily contest.
-          </p>
-          <p>
-            I wanted effortless brilliance. My own strength arrived as determination and drive. I learned
-            how to return my attention to the work, ask more of myself, and keep going until the result
-            reflected the effort. That habit has followed me into every field since.
-          </p>
-          <p className="story-emphasis">
-            A person can receive love every day and still spend years unseen.
-          </p>
-        </div>
-      </section>
-
-      <section className="story-section story-section-blue" aria-labelledby="door-heading">
-        <div className="story-label">
-          <p className="portrait-index">02 / The door</p>
-          <p className="story-aside">June 12, 2013</p>
-        </div>
-        <div className="story-copy">
-          <h2 id="door-heading">The worst night of my life and the best decision of my life share a date.</h2>
-          <p>
-            I was nineteen, home after my first year of college, and closer to the edge than most people
-            knew. I picked up a controller because it gave my hands something to do. Then a stranger named
-            Saturn spoke to me in a Call of Duty lobby and invited me into a community called DHG.
-          </p>
-          <p>
-            I said yes. That small answer gave me people who had my back, a place to lead, and the first
-            proof that the person I had hidden might still be wanted. I entered as Monkey, found mentors
-            and brothers, and eventually became responsible for opening that same door for other people.
-          </p>
-          <p className="story-emphasis light">
-            Belonging found me in the last place I would have thought to look for it.
-          </p>
-        </div>
-      </section>
-
-      <section className="inheritance-section" aria-labelledby="inheritance-heading">
-        <header>
-          <p className="portrait-index">03 / What I was given</p>
-          <h2 id="inheritance-heading">My life has always been about what gets handed forward.</h2>
-        </header>
-        <div className="inheritance-lines">
-          <article>
-            <p className="inheritance-name">My mother</p>
-            <p>taught me to leave what hurts, keep going, and trust what I could become.</p>
-          </article>
-          <article>
-            <p className="inheritance-name">My grandparents</p>
-            <p>gave us land, roots, food, and the belief that a life is measured by what it gives away.</p>
-          </article>
-          <article>
-            <p className="inheritance-name">The father who chose me</p>
-            <p>gave me his name, taught me to be useful to other people, and showed me that family can be a decision.</p>
-          </article>
-          <article>
-            <p className="inheritance-name">The people who found me</p>
-            <p>taught me that gratitude moves forward. You turn around and reach for someone else.</p>
-          </article>
-        </div>
-      </section>
-
-      <section className="values-section" aria-labelledby="values-heading">
-        <header>
-          <p className="portrait-index">04 / What I stand for</p>
-          <h2 id="values-heading">The work changes. My values stay.</h2>
-        </header>
-        <div className="values-list">
-          <article>
-            <h3>Truth</h3>
-            <p>I keep the source. I separate what I saw from what I inferred. I would rather face a hard fact than live inside a soft lie.</p>
-          </article>
-          <article>
-            <h3>Service</h3>
-            <p>I believe a life is measured by what it gives away. Leadership makes another person stronger and gives the title less importance.</p>
-          </article>
-          <article>
-            <h3>Belonging</h3>
-            <p>I know what it costs to be surrounded by love and still feel unseen. I build places where people can stay fully visible.</p>
-          </article>
-          <article>
-            <h3>Integrity</h3>
-            <p>I carry what is right through friendship, position, and every uncomfortable truth.</p>
-          </article>
-          <article>
-            <h3>Agency</h3>
-            <p>A degree, employer, industry, or job title describes one part of my life. I decide how far the whole life can go.</p>
-          </article>
-          <article>
-            <h3>Curiosity</h3>
-            <p>I keep a question alive long enough to make it sharper. I want to know how the universe, a machine, a community, and a mind work from the inside.</p>
-          </article>
-          <article>
-            <h3>Perseverance</h3>
-            <p>Every hard attempt gives me information. I preserve the lesson and return with a better system.</p>
-          </article>
-          <article>
-            <h3>Love</h3>
-            <p>Family can be inherited, chosen, adopted, married, fostered, or found through a headset in the dark. Love is the reason I reach back.</p>
-          </article>
-        </div>
-      </section>
-
-      <section className="atlas-origin" aria-labelledby="atlas-origin-heading">
-        <p className="portrait-index">05 / My father and Atlas</p>
-        <div>
-          <h2 id="atlas-origin-heading">Atlas began with the goodbye I still carry.</h2>
-          <p>
-            My father was a preacher. He left handwritten pages and years of thought behind. He died in
-            2019. I still carry the words I wanted to say and the conversations I wish we could have shared.
-          </p>
-          <p>
-            I want to scan his writing, preserve its source, and build a system capable of studying his
-            language and intent. I want one more honest encounter with the words he left, grounded in the
-            source and faithful to the person who wrote them. I want the closure I have carried for years.
-          </p>
-          <p>
-            That is why Atlas is personal. The architecture grew around a human need: memory with
-            sources kept visible, conversation grounded in truth, and technology that protects dignity and
-            handles grief with care.
-          </p>
-          <Link className="portrait-inline-link" to="/atlas">
-            Read what Atlas means and how it works
-          </Link>
-        </div>
-      </section>
-
-      <section className="work-section" aria-labelledby="work-heading">
-        <header>
-          <p className="portrait-index">06 / The work</p>
-          <h2 id="work-heading">The fields changed. My standard stayed.</h2>
-        </header>
-        <div className="work-thesis">
-          <p>
-            Chemistry taught me to respect evidence. Manufacturing taught me that decisions have real
-            consequences for safety, quality, cost, and the people doing the work. Community taught me that
-            leadership opens the door when someone needs it.
-          </p>
-          <p>
-            I carried all three into software and artificial intelligence. I earned a bachelor&apos;s degree in
-            Chemistry and Biology and a master&apos;s degree in Chemistry from Western Kentucky University. I
-            spent years in industrial research and manufacturing, then taught myself to build systems that
-            went beyond the title on my badge.
-          </p>
-        </div>
-        <div className="work-proof" aria-label="Selected record">
-          <div>
-            <strong>2016 and 2018</strong>
-            <span>B.S. and M.S., Western Kentucky University</span>
-          </div>
-          <div>
-            <strong>2018 onward</strong>
-            <span>Industrial chemistry, product development, and manufacturing engineering</span>
-          </div>
-          <div>
-            <strong>Built alongside it</strong>
-            <span>Software, communities, model training, research systems, and Atlas</span>
-          </div>
-        </div>
-        <Link className="portrait-inline-link" to="/path">
-          Follow the complete education and work path
-        </Link>
-      </section>
-
-      <section className="self-definition-section" aria-labelledby="self-definition-heading">
-        <p className="portrait-index">07 / Self-definition</p>
-        <div>
-          <h2 id="self-definition-heading">I choose the size of my own life.</h2>
-          <p>
-            The scale of what I have built is extraordinary. I paid for the compute, spent the nights,
-            trained the models, built the architecture, documented the lessons, and kept going before
-            anyone had hired me to do it. This is serious work, built through my own commitment.
-          </p>
-          <p>
-            I design and operate AI systems. Those words name work already done. The work, its value, and
-            the person behind it already exist.
-          </p>
-        </div>
-      </section>
-
-      <section className="soul-closing">
-        <p className="portrait-index">The purpose</p>
         <blockquote>“The people saved me. Now it&apos;s my turn.”</blockquote>
-        <p>
-          Everything else is implementation: the degrees, the products, the systems, the communities, the
-          models, the infrastructure. The purpose is to reach back.
-        </p>
-        <div className="portrait-actions">
-          <Link className="portrait-link" to="/atlas">
-            Enter the Atlas story
-          </Link>
-          <Link className="portrait-link quiet" to="/evidence">
-            Review the documented record
-          </Link>
+        <div className="home-closing-actions">
+          <Link to="/evidence">Explore the documented record</Link>
+          <a href="https://github.com/dhgmonkey">Visit GitHub</a>
         </div>
       </section>
-
-      <footer className="footer portrait-footer">
-        Drake Stapleton · <a href="https://github.com/dhgmonkey">github.com/dhgmonkey</a>
-        <br />
-        This story is shared by choice. Private records, credentials, and other people&apos;s private lives remain private.
-      </footer>
     </main>
   );
 }
