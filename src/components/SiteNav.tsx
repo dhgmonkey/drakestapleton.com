@@ -3,11 +3,10 @@ import { NavLink } from "react-router-dom";
 const LINKS = [
   { to: "/", label: "Drake", end: true },
   { to: "/path", label: "The path", end: true },
+  { to: "/atlas", label: "Atlas", end: true },
+  { to: "/what-broke", label: "What broke", end: true },
   { to: "/evidence", label: "Evidence", end: true },
   { to: "/symphony", label: "Symphony", end: true },
-  { to: "/symphony/first", label: "First run", end: false },
-  { to: "/symphony/workflow", label: "Workflow", end: false },
-  { to: "/symphony/map", label: "Bird’s-eye", end: false },
 ];
 
 export function SiteNav() {
@@ -16,7 +15,7 @@ export function SiteNav() {
       <div className="site-nav-inner">
         <NavLink to="/" className="brand" end>
           Drake Stapleton
-          <span>Chemistry, systems, and Atlas</span>
+          <span>The life behind the work</span>
         </NavLink>
         <nav className="links" aria-label="Primary">
           {LINKS.map((l) => (

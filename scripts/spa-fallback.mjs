@@ -5,6 +5,8 @@ const dist = "dist";
 const index = join(dist, "index.html");
 const copies = [
   "404.html",
+  "atlas/index.html",
+  "what-broke/index.html",
   "path/index.html",
   "evidence/index.html",
   "symphony/index.html",

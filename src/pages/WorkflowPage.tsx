@@ -11,13 +11,14 @@ export function WorkflowPage() {
   });
 
   return (
-    <main className="wrap wide">
+    <main className="wrap wide workflow-page">
       <p className="kicker">Diagram · command tree · cycle phases</p>
       <h1>Workflow</h1>
       <p className="lede">
-        The human operator works through one orchestrator. Commands move down the tree, results return up
-        it, and lateral signals carry status without granting authority. Each node may create no more than
-        three children.
+        The current Boston Atlas flow uses three explicit levels. L1 conducts without implementing. L2
+        separates architecture, adversarial review, evidence, and operations. L3 performs bounded edits,
+        tests, provider checks, teardown verification, and receipts. Results return through the same chain,
+        and an implementation lane may not approve its own work.
       </p>
       <h2 className="sec">Who talks to whom</h2>
       <div className="card">

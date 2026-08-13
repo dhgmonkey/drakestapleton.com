@@ -1,44 +1,73 @@
-const box = (x: number, y: number, w: number, h: number, title: string, sub: string, fill: string, stroke: string) => (
-  <g>
-    <rect x={x} y={y} width={w} height={h} rx="14" fill={fill} stroke={stroke} strokeWidth="1.8" />
-    <text x={x + w / 2} y={y + 22} textAnchor="middle" fill="#e8ecff" fontSize="13" fontWeight="700">
-      {title}
-    </text>
-    <text x={x + w / 2} y={y + 40} textAnchor="middle" fill="#8b93b8" fontSize="11">
-      {sub}
-    </text>
-  </g>
-);
+function Box({
+  x,
+  y,
+  w,
+  h,
+  title,
+  sub,
+  accent = "#0a3161",
+}: {
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+  title: string;
+  sub: string;
+  accent?: string;
+}) {
+  return (
+    <g>
+      <rect x={x} y={y} width={w} height={h} fill="#ffffff" stroke={accent} strokeWidth="2" />
+      <rect x={x} y={y} width="6" height={h} fill={accent} />
+      <text x={x + w / 2 + 3} y={y + 24} textAnchor="middle" fill="#0a3161" fontSize="14" fontWeight="700">
+        {title}
+      </text>
+      <text x={x + w / 2 + 3} y={y + 44} textAnchor="middle" fill="#586979" fontSize="11">
+        {sub}
+      </text>
+    </g>
+  );
+}
 
 export function CommandTree() {
   return (
-    <svg viewBox="0 0 1180 520" role="img" aria-label="Atlas Symphony command tree">
+    <svg viewBox="0 0 1180 560" role="img" aria-label="Current Atlas Symphony L1, L2, and L3 command tree">
       <defs>
-        <marker id="ct" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-          <path d="M 0 0 L 10 5 L 0 10 z" fill="rgba(167,139,250,.75)" />
+        <marker id="tier-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#0a3161" />
+        </marker>
+        <marker id="review-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#b22234" />
         </marker>
       </defs>
-      <line x1="590" y1="70" x2="590" y2="100" stroke="rgba(167,139,250,.55)" markerEnd="url(#ct)" />
-      <line x1="590" y1="168" x2="590" y2="198" stroke="rgba(167,139,250,.55)" markerEnd="url(#ct)" />
-      <line x1="520" y1="258" x2="300" y2="300" stroke="rgba(167,139,250,.55)" markerEnd="url(#ct)" />
-      <line x1="590" y1="258" x2="590" y2="300" stroke="rgba(167,139,250,.55)" markerEnd="url(#ct)" />
-      <line x1="660" y1="258" x2="880" y2="300" stroke="rgba(167,139,250,.55)" markerEnd="url(#ct)" />
-      <line x1="240" y1="364" x2="140" y2="410" stroke="rgba(167,139,250,.55)" markerEnd="url(#ct)" />
-      <line x1="300" y1="364" x2="300" y2="410" stroke="rgba(167,139,250,.55)" markerEnd="url(#ct)" />
-      <line x1="360" y1="364" x2="460" y2="410" stroke="rgba(167,139,250,.55)" markerEnd="url(#ct)" />
-      <line x1="880" y1="364" x2="880" y2="410" stroke="rgba(251,113,133,.7)" />
-      <text x="720" y="400" fill="#8b93b8" fontSize="11">
-        F executes only if R fails
-      </text>
-      {box(478, 16, 224, 54, "Drake Stapleton", "only human GO", "#1a1438", "#a78bfa")}
-      {box(478, 100, 224, 68, "Talking sub-agent", "the live session · middle of the chat", "#12202a", "#5eead4")}
-      {box(455, 198, 270, 60, "A · Atlas Symphony", "Master face · intake + seal", "#161b36", "#5eead4")}
-      {box(188, 310, 224, 54, "H · Hive Steward", "routes only · never implements", "#161b36", "#a78bfa")}
-      {box(478, 310, 224, 54, "B · Heartbeat", "measure only · H1 / F1", "#161b36", "#34d399")}
-      {box(768, 310, 224, 54, "F · Kill Squad", "standby · fail-fast · not a nurse", "#261018", "#fb7185")}
-      {box(38, 420, 204, 52, "R · Runtime", "implements · ≤3 workers", "#12182e", "#5eead4")}
-      {box(198, 420, 204, 52, "T · Trust", "evidence · ≤3 workers", "#12182e", "#5eead4")}
-      {box(358, 420, 204, 52, "P · Product", "docs · ≤3 workers", "#12182e", "#5eead4")}
+
+      <text x="34" y="50" fill="#b22234" fontSize="11" fontWeight="700" letterSpacing="2">HUMAN AUTHORITY</text>
+      <text x="34" y="168" fill="#b22234" fontSize="11" fontWeight="700" letterSpacing="2">L1</text>
+      <text x="34" y="292" fill="#b22234" fontSize="11" fontWeight="700" letterSpacing="2">L2</text>
+      <text x="34" y="430" fill="#b22234" fontSize="11" fontWeight="700" letterSpacing="2">L3</text>
+
+      <line x1="590" y1="86" x2="590" y2="130" stroke="#0a3161" strokeWidth="2" markerEnd="url(#tier-arrow)" />
+      <line x1="590" y1="202" x2="590" y2="242" stroke="#0a3161" strokeWidth="2" markerEnd="url(#tier-arrow)" />
+      <path d="M590 312 V350 H175 V398 M590 350 H450 V398 M590 350 H730 V398 M590 350 H1005 V398" fill="none" stroke="#0a3161" strokeWidth="2" markerEnd="url(#tier-arrow)" />
+
+      <Box x={455} y={24} w={270} h={62} title="Drake Stapleton" sub="intent · boundaries · consequential GO" accent="#b22234" />
+      <Box x={430} y={130} w={320} h={72} title="L1 · Conductor" sub="scope · sequence · authority · synthesis" />
+
+      <Box x={55} y={250} w={250} h={62} title="L2 · Architecture" sub="design and implementation steward" />
+      <Box x={325} y={250} w={250} h={62} title="L2 · Adversarial review" sub="independent challenge · no authoring" accent="#b22234" />
+      <Box x={595} y={250} w={250} h={62} title="L2 · Evidence" sub="tests · hashes · provenance · verdict" accent="#b22234" />
+      <Box x={865} y={250} w={250} h={62} title="L2 · Operations" sub="provider state · cost · teardown" />
+
+      <Box x={55} y={398} w={240} h={68} title="L3 · Build cells" sub="bounded edits · focused tests" />
+      <Box x={330} y={398} w={240} h={68} title="L3 · Review cells" sub="threats · mismatch · falsifiers" accent="#b22234" />
+      <Box x={610} y={398} w={240} h={68} title="L3 · Proof cells" sub="manifests · receipts · readback" accent="#b22234" />
+      <Box x={885} y={398} w={240} h={68} title="L3 · Provider cells" sub="inventory · lifecycle · cleanup" />
+
+      <path d="M450 312 C450 338 720 338 720 312" fill="none" stroke="#b22234" strokeWidth="2" strokeDasharray="7 6" markerEnd="url(#review-arrow)" />
+      <text x="585" y="335" textAnchor="middle" fill="#b22234" fontSize="11" fontWeight="700">IMPLEMENTATION MAY NOT CLEAR ITSELF</text>
+
+      <path d="M175 466 V510 H590 M450 466 V510 H590 M730 466 V510 H590 M1005 466 V510 H590" fill="none" stroke="#0a3161" strokeWidth="1.6" />
+      <text x="590" y="538" textAnchor="middle" fill="#0a3161" fontSize="12" fontWeight="700">L3 RECEIPTS → L2 VERDICTS → L1 SYNTHESIS → HUMAN GO WHEN REQUIRED</text>
     </svg>
   );
 }

@@ -108,4 +108,10 @@ export const VERSIONS = [
     name: "Hive face",
     blurb: "Formalized four lead roles, limited each node to three children, and kept lateral status signals separate from command authority.",
   },
+  {
+    id: "Current L-tier",
+    date: "13 Aug 2026",
+    name: "Conductor, stewards, and bounded cells",
+    blurb: "L1 coordinates only. Independent L2 stewards own implementation, adversarial review, evidence, and operations. L3 cells perform bounded edits, tests, provider checks, and receipts. An implementation lane cannot clear itself.",
+  },
 ];

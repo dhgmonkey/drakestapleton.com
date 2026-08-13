@@ -3,28 +3,27 @@ function Phase({
   title,
   lines,
   x,
-  y,
-  stroke,
+  accent = "#0a3161",
 }: {
   n: string;
   title: string;
   lines: string[];
   x: number;
-  y: number;
-  stroke: string;
+  accent?: string;
 }) {
   return (
     <g>
-      <rect x={x} y={y} width={220} height={110} rx="14" fill="#161b36" stroke={stroke} />
-      <text x={x + 110} y={y + 28} textAnchor="middle" fill="#8b93b8" fontSize="11">
+      <rect x={x} y={62} width={176} height={142} fill="#ffffff" stroke={accent} strokeWidth="2" />
+      <rect x={x} y={62} width={176} height="7" fill={accent} />
+      <text x={x + 18} y={92} fill={accent} fontSize="11" fontWeight="700" letterSpacing="1.5">
         {n}
       </text>
-      <text x={x + 110} y={y + 50} textAnchor="middle" fill="#e8ecff" fontSize="14" fontWeight="700">
+      <text x={x + 18} y={119} fill="#0a3161" fontSize="14" fontWeight="700">
         {title}
       </text>
-      {lines.map((l, i) => (
-        <text key={l} x={x + 110} y={y + 72 + i * 16} textAnchor="middle" fill="#8b93b8" fontSize="11">
-          {l}
+      {lines.map((line, index) => (
+        <text key={line} x={x + 18} y={145 + index * 18} fill="#586979" fontSize="11">
+          {line}
         </text>
       ))}
     </g>
@@ -33,13 +32,17 @@ function Phase({
 
 export function CyclePhases() {
   return (
-    <svg viewBox="0 0 1180 280" role="img" aria-label="Atlas Symphony cycle phases">
-      <Phase n="1 · A-Intake" title="Classify the goal" lines={["name primary R | T | P"]} x={20} y={80} stroke="#5eead4" />
-      <Phase n="2 · A-Children" title="Three in parallel" lines={["B measure", "H route ≤3", "F standby"]} x={270} y={80} stroke="#a78bfa" />
-      <Phase n="3 · H-Conductors" title="Three in parallel" lines={["R implements", "T evidence", "P docs"]} x={520} y={80} stroke="#5eead4" />
-      <Phase n="4 · optional" title="Market-Fanout" lines={["mode=market only"]} x={770} y={80} stroke="#fbbf24" />
-      <Phase n="5–7" title="Kill · Hist · Seal" lines={["F only if R fails", "Historian offline", "A seals the cycle"]} x={940} y={80} stroke="#fb7185" />
-      <path d="M240 135 H270 M490 135 H520 M740 135 H770 M990 135" stroke="rgba(94,234,212,.6)" fill="none" />
+    <svg viewBox="0 0 1180 270" role="img" aria-label="Current Atlas Symphony cycle">
+      <Phase n="01" title="Admit" lines={["bind scope", "cost and authority"]} x={18} accent="#b22234" />
+      <Phase n="02" title="Conduct" lines={["reuse prior work", "sequence without coding"]} x={211} />
+      <Phase n="03" title="Separate" lines={["independent L2 lanes", "author cannot self-clear"]} x={404} accent="#b22234" />
+      <Phase n="04" title="Execute" lines={["bounded L3 cells", "edits · tests · receipts"]} x={597} />
+      <Phase n="05" title="Verify" lines={["exact candidate", "proof and teardown"]} x={790} accent="#b22234" />
+      <Phase n="06" title="Close" lines={["L2 verdicts", "L1 synthesis · human GO"]} x={983} />
+      <path d="M194 133 H211 M387 133 H404 M580 133 H597 M773 133 H790 M966 133 H983" stroke="#0a3161" strokeWidth="2" fill="none" />
+      <text x="590" y="242" textAnchor="middle" fill="#586979" fontSize="12">
+        A failed gate stops the claim, preserves the evidence, and returns the exact error to the next bounded attempt.
+      </text>
     </svg>
   );
 }

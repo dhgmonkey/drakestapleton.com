@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { Layout } from "./components/Layout";
+import { AtlasPage } from "./pages/AtlasPage";
 import { FirstRunPage } from "./pages/FirstRunPage";
 import { EvidencePage } from "./pages/EvidencePage";
 import { HomePage } from "./pages/HomePage";
@@ -8,14 +9,17 @@ import { NotFoundPage } from "./pages/NotFoundPage";
 import { PathPage } from "./pages/PathPage";
 import { SymphonyPage } from "./pages/SymphonyPage";
 import { WorkflowPage } from "./pages/WorkflowPage";
+import { WhatBrokePage } from "./pages/WhatBrokePage";
 
 export function App() {
   return (
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<HomePage />} />
+        <Route path="/atlas" element={<AtlasPage />} />
         <Route path="/path" element={<PathPage />} />
         <Route path="/evidence" element={<EvidencePage />} />
+        <Route path="/what-broke" element={<WhatBrokePage />} />
         <Route path="/symphony" element={<SymphonyPage />} />
         <Route path="/symphony/first" element={<FirstRunPage />} />
         <Route path="/symphony/workflow" element={<WorkflowPage />} />
