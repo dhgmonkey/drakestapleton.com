@@ -138,8 +138,9 @@ export function HomePage() {
               daily contest, and I moved through high school unmedicated.
             </p>
             <p>
-              I wanted effortless brilliance. Determination became my advantage. I returned to the page,
-              the problem, and the work as many times as it took.
+              I wanted effortless brilliance. Determination became my advantage. It carried me through high
+              school and college. During my first year of graduate school, willpower finally ran out. I
+              started medication. It gave me a new way to focus and keep moving.
             </p>
           </article>
           <article className="door-story">

@@ -76,7 +76,9 @@ export function PathPage() {
           <p>
             Determination became my advantage. I returned to the page, the problem, and the work as many
             times as it took. That 3.92 represents discipline, drive, and the habit of fighting for every
-            inch. I carried the same habit through two science degrees and every field that followed.
+            inch. During my first year of graduate school, willpower finally ran out. I started medication,
+            found a new way to focus, and carried that same drive through the degree and every field that
+            followed.
           </p>
         </div>
       </section>
