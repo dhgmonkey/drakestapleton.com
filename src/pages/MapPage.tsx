@@ -1,3 +1,4 @@
+import { Birdseye } from "../diagrams/Birdseye";
 import { usePageMeta } from "../lib/usePageMeta";
 
 export function MapPage() {
@@ -15,7 +16,9 @@ export function MapPage() {
         Six tracks ran at once. Time goes left to right. This is the overview; the first-run page is the
         origin story.
       </p>
-      <iframe className="diagram-frame" title="Atlas bird’s-eye development map" src="/diagrams/map.html" />
+      <div className="card" style={{ overflowX: "auto" }}>
+        <Birdseye />
+      </div>
     </main>
   );
 }
