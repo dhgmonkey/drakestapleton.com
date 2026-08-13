@@ -5,6 +5,7 @@ const dist = "dist";
 const index = join(dist, "index.html");
 const copies = [
   "404.html",
+  "path/index.html",
   "symphony/index.html",
   "symphony/first/index.html",
   "symphony/workflow/index.html",

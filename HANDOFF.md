@@ -2,6 +2,8 @@
 
 **As of 13 Aug 2026.** The site is a **Vite + React + TypeScript** project on GitHub Pages.
 
+The `content/human-portrait` branch is a private, local-only editorial draft. It uses Drake's supplied first-person history and verified resume chronology to move the site away from job-seeking language. Do not push or publish this branch until the personal copy has been reviewed by Drake. The production `main` branch remains the waiting-list gate.
+
 - https://www.drakestapleton.com/ → portfolio
 - https://www.drakestapleton.com/symphony/ → Atlas Symphony public record
 - Source: https://github.com/dhgmonkey/drakestapleton.com (`main`)

@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom";
 
 const LINKS = [
-  { to: "/", label: "Portfolio", end: true },
+  { to: "/", label: "Drake", end: true },
+  { to: "/path", label: "The path", end: true },
   { to: "/symphony", label: "Symphony", end: true },
   { to: "/symphony/first", label: "First run", end: false },
   { to: "/symphony/workflow", label: "Workflow", end: false },
@@ -14,7 +15,7 @@ export function SiteNav() {
       <div className="site-nav-inner">
         <NavLink to="/" className="brand" end>
           Drake Stapleton
-          <span>Atlas Symphony</span>
+          <span>The human behind the systems</span>
         </NavLink>
         <nav className="links" aria-label="Primary">
           {LINKS.map((l) => (

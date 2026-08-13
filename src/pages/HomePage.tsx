@@ -1,214 +1,132 @@
 import { Link } from "react-router-dom";
-import { VolumeChart } from "../components/VolumeChart";
-import { ARCH, CASES, CHIPS, METRICS, ROLE_MAP, SIDE_CASES, STORY, TREES } from "../data/portfolio";
 import { usePageMeta } from "../lib/usePageMeta";
 
 export function HomePage() {
   usePageMeta({
-    title: "Drake Stapleton — Agentic AI Architect",
+    title: "Drake Stapleton | The Human Behind the Systems",
     description:
-      "I set the architecture for agent systems that plan, reason, and act — with the model never owning done. Inventor of Atlas Symphony.",
+      "Drake Stapleton on chemistry, manufacturing, community, his father, Atlas, and claiming a life on his own terms.",
     path: "/",
   });
 
   return (
-    <main className="wrap">
-      <p className="kicker">Agentic AI · architecture portfolio</p>
-      <h1>Drake Stapleton</h1>
-      <p className="lede">
-        I set the architecture and operating model for agent systems that plan, reason, and act — with the
-        model never owning “done.” This site is one body of work: products first, then the harness, then the
-        named process that runs them.
-      </p>
-      <p className="law">The model proposes. The harness disposes.</p>
-      <div className="chips">
-        {CHIPS.map((c) => (
-          <span className="chip" key={c}>
-            {c}
-          </span>
-        ))}
-        <Link className="chip live" to="/symphony">
-          Atlas Symphony →
-        </Link>
-      </div>
-
-      <div className="metrics">
-        {METRICS.map((m) => (
-          <div className="metric" key={m.title}>
-            <b>{m.title}</b>
-            <span>{m.body}</span>
-          </div>
-        ))}
-      </div>
-      <p className="note">
-        Net ~2.6M source lines committed across the archive — agent-authored code and rewrites included. Not a
-        typing score. Vendor clones excluded.
-      </p>
-
-      <h2 className="sec" id="thesis">
-        The collective story
-      </h2>
-      <div className="card">
-        <p>These are not side projects in a pile. They are one sequence:</p>
-        <ul className="tight">
-          {STORY.map((s) => (
-            <li key={s.era}>
-              <b>{s.era}</b> {s.body}
-            </li>
-          ))}
-        </ul>
-        <p style={{ marginTop: 10 }}>
-          An Agentic AI Architect role is that last step, at company scale. I already designed and operated
-          the personal version under real load — and named the process{" "}
-          <Link to="/symphony">Atlas Symphony</Link>.
+    <main className="wrap portrait-wrap">
+      <section className="portrait-hero">
+        <p className="kicker">Drake Stapleton / Louisville, Kentucky</p>
+        <h1>
+          I am claiming my own life. <em>All of it.</em>
+        </h1>
+        <p className="portrait-deck">
+          I am a chemist by education, a builder by practice, and an agentic architect because I kept
+          following the questions that would not leave me alone. The systems matter. The human reason for
+          building them matters more.
         </p>
-      </div>
-
-      <h2 className="sec" id="arch">
-        Reference architecture I already run
-      </h2>
-      <div className="card">
-        <p>What I would put on a whiteboard in week one. I built each box because the desk failed without it.</p>
-        <div className="arch">
-          {ARCH.map((a) => (
-            <div className="box" key={a.title}>
-              <strong>{a.title}</strong>
-              <span>{a.body}</span>
-            </div>
-          ))}
+        <div className="portrait-actions">
+          <Link className="portrait-link" to="/path">
+            Follow the path
+          </Link>
+          <Link className="portrait-link quiet" to="/symphony">
+            Enter Atlas Symphony
+          </Link>
         </div>
-      </div>
+      </section>
 
-      <h2 className="sec" id="work">
-        Work, sold as one portfolio
-      </h2>
-      {CASES.map((c) => (
-        <article className="case" key={c.title}>
-          <h3>{c.href ? <Link to={c.href}>{c.title}</Link> : c.title}</h3>
-          <p className="meta">{c.meta}</p>
-          <p>{c.body}</p>
-          {c.points ? (
-            <ul className="tight">
-              {c.points.map((p) => (
-                <li key={p}>{p}</li>
-              ))}
-            </ul>
-          ) : null}
+      <section className="portrait-statement" aria-labelledby="not-resume">
+        <p className="portrait-index">01 / Not a resume</p>
+        <div>
+          <h2 id="not-resume">I was never one job title.</h2>
+          <p>
+            I learned to see matter at the molecular level, then learned what it takes to make something
+            real at production scale. Chemistry taught me that every outcome has conditions. Manufacturing
+            taught me that a process has to survive contact with people, pressure, and consequence.
+          </p>
+          <p>
+            That same instinct carried me into software, communities, and artificial intelligence. I did
+            not wait for a credential to tell me I was allowed to begin. I studied, built, failed, repaired,
+            and kept the evidence.
+          </p>
+        </div>
+      </section>
+
+      <section className="portrait-grid" aria-label="What formed me">
+        <article className="portrait-card education">
+          <p className="portrait-index">Education</p>
+          <h2>Chemistry gave me a language for change.</h2>
+          <p>
+            I earned a bachelor&apos;s degree in Chemistry and Biology in 2016, then a master&apos;s degree in
+            Chemistry in 2018, both from Western Kentucky University.
+          </p>
+          <p>
+            The degrees are real foundations, not a box around me. They trained me to test what I think I
+            know and to respect the difference between a claim and proof.
+          </p>
         </article>
-      ))}
 
-      <div className="grid2">
-        {SIDE_CASES.map((c) => (
-          <article className="case" key={c.title}>
-            <h3>{c.title}</h3>
-            <p className="meta">{c.meta}</p>
-            <p>{c.body}</p>
-          </article>
-        ))}
-      </div>
-
-      <h2 className="sec">How I would do the job</h2>
-      <div className="grid3">
-        <div className="card">
-          <h3>Standards</h3>
+        <article className="portrait-card resistance">
+          <p className="portrait-index">Resistance</p>
+          <h2>I stopped asking other people to define what I could become.</h2>
           <p>
-            Reference design first: lanes, tool contracts, gate policy, memory/provenance, env segregation.
-            Teams don’t get a free-form agent.
+            I have worked inside institutions and learned from them. I have also resisted the idea that a
+            title, industry, or conventional path owns the rest of my life.
+          </p>
+          <blockquote>
+            “I will not let anyone tell me what I can and cannot be.”
+          </blockquote>
+          <p>I am not looking for permission to be an agentic architect. I am doing the work.</p>
+        </article>
+      </section>
+
+      <section className="portrait-statement father" aria-labelledby="father-atlas">
+        <p className="portrait-index">02 / My father and Atlas</p>
+        <div>
+          <h2 id="father-atlas">Some of the work began with a goodbye I never got to say.</h2>
+          <p>
+            My father was a preacher. He left handwritten pages behind. Years later, I began bringing those
+            writings into Atlas, not to turn grief into a product, but to make room for a conversation I
+            still needed.
+          </p>
+          <p>
+            Atlas became more than a technical exercise. It became a place where memory, language, and
+            unfinished love could meet. That is part of why I care so deeply about building systems that
+            preserve provenance and remain honest about what they are.
           </p>
         </div>
-        <div className="card">
-          <h3>Safety</h3>
+      </section>
+
+      <section className="portrait-statement" aria-labelledby="self-funded">
+        <p className="portrait-index">03 / Built before invited</p>
+        <div>
+          <h2 id="self-funded">I financed the questions myself.</h2>
           <p>
-            Prompt injection and over-reach are architecture bugs. Redact, classify, deny-by-default, human
-            gate on side effects. “The model asked” is not authorization.
+            Long before anyone offered me a role in this field, I was paying for the tools, running the
+            experiments, keeping the receipts, and building the infrastructure. That was not a campaign to
+            look employable. It was a decision to take my own curiosity seriously.
+          </p>
+          <p>
+            The result is a body of work that includes Atlas, operating harnesses, research protocols,
+            community systems, and products used under real conditions. The throughline is not technology.
+            It is responsibility for what I choose to build.
           </p>
         </div>
-        <div className="card">
-          <h3>Eval & FinOps</h3>
-          <p>
-            Task-based evals before widen. Trace every action. Kill and recover. Measure latency and cost as
-            SLAs, not afterthoughts.
-          </p>
-        </div>
-      </div>
+      </section>
 
-      <h2 className="sec" id="map">
-        Mapped to an Agentic AI Architect seat
-      </h2>
-      <div className="card" style={{ overflowX: "auto" }}>
-        <table>
-          <thead>
-            <tr>
-              <th>What the role owns</th>
-              <th>Evidence in this portfolio</th>
-              <th>Honest gap</th>
-            </tr>
-          </thead>
-          <tbody>
-            {ROLE_MAP.map(([a, b, c]) => (
-              <tr key={a}>
-                <td>{a}</td>
-                <td className="ok">{b}</td>
-                <td className="gap">{c}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-        <p className="note">
-          I do not invent SAP or Bedrock experience I do not have. I do have the harder part: an operating
-          model that survives when the model is wrong.
-        </p>
-      </div>
-
-      <h2 className="sec">Volume</h2>
-      <p className="note">
-        Monthly source added (teal) and cumulative (violet). 2025 is foundations. 2026 is operator products,
-        then the harness. SHA-deduped own trees only.
-      </p>
-      <div className="card">
-        <VolumeChart />
-      </div>
-
-      <h2 className="sec">Selected trees</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>System</th>
-            <th>What it proves</th>
-            <th className="num">Commits</th>
-            <th className="num">Net source</th>
-          </tr>
-        </thead>
-        <tbody>
-          {TREES.map(([a, b, c, d]) => (
-            <tr key={a}>
-              <td>{a}</td>
-              <td>{b}</td>
-              <td className="num">{c}</td>
-              <td className="num">{d}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-
-      <h2 className="sec">What I want next</h2>
-      <div className="card">
+      <section className="portrait-closing">
+        <p className="portrait-index">The work continues</p>
+        <h2>I build systems, but I am not a system.</h2>
         <p>
-          I want to take this operating model off a personal desk and onto an enterprise one: set the
-          reference architecture, the safety bar, and the eval standard so other teams can ship agents that
-          act in real systems without the model getting a vote.
+          I am a son, a scientist, a community builder, and a person still becoming. This site is the record
+          of that becoming, including the parts that do not fit neatly into a portfolio.
         </p>
-        <p>
-          I am most useful as the architect who has already felt the failure modes, not the one who has only
-          assembled a vendor tutorial.
-        </p>
-      </div>
+        <Link className="portrait-link" to="/path">
+          Read the education and working path
+        </Link>
+      </section>
 
-      <footer className="footer">
+      <footer className="footer portrait-footer">
         Drake Stapleton · <a href="https://github.com/dhgmonkey">github.com/dhgmonkey</a>
         <br />
-        Public site. Omits personal media, credentials, and non-public work.{" "}
-        <Link to="/symphony">Atlas Symphony record →</Link>
+        Personal history is included by choice. Private records, credentials, and third-party stories remain
+        private.
       </footer>
     </main>
   );

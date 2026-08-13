@@ -4,6 +4,7 @@ import { FirstRunPage } from "./pages/FirstRunPage";
 import { HomePage } from "./pages/HomePage";
 import { MapPage } from "./pages/MapPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
+import { PathPage } from "./pages/PathPage";
 import { SymphonyPage } from "./pages/SymphonyPage";
 import { WorkflowPage } from "./pages/WorkflowPage";
 
@@ -12,6 +13,7 @@ export function App() {
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<HomePage />} />
+        <Route path="/path" element={<PathPage />} />
         <Route path="/symphony" element={<SymphonyPage />} />
         <Route path="/symphony/first" element={<FirstRunPage />} />
         <Route path="/symphony/workflow" element={<WorkflowPage />} />
