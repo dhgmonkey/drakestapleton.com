@@ -107,6 +107,9 @@ export function HomePage() {
             community systems, and products used under real conditions. The throughline is not technology.
             It is responsibility for what I choose to build.
           </p>
+          <Link className="portrait-inline-link" to="/evidence">
+            See what the current forensic record can prove
+          </Link>
         </div>
       </section>
 

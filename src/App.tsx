@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { Layout } from "./components/Layout";
 import { FirstRunPage } from "./pages/FirstRunPage";
+import { EvidencePage } from "./pages/EvidencePage";
 import { HomePage } from "./pages/HomePage";
 import { MapPage } from "./pages/MapPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
@@ -14,6 +15,7 @@ export function App() {
       <Route element={<Layout />}>
         <Route path="/" element={<HomePage />} />
         <Route path="/path" element={<PathPage />} />
+        <Route path="/evidence" element={<EvidencePage />} />
         <Route path="/symphony" element={<SymphonyPage />} />
         <Route path="/symphony/first" element={<FirstRunPage />} />
         <Route path="/symphony/workflow" element={<WorkflowPage />} />

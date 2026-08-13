@@ -4,6 +4,8 @@
 
 The `content/human-portrait` branch is a private, local-only editorial draft. It uses Drake's supplied first-person history and verified resume chronology to move the site away from job-seeking language. Do not push or publish this branch until the personal copy has been reviewed by Drake. The production `main` branch remains the waiting-list gate.
 
+`/evidence` incorporates only the attached forensic-audit handoff summary. The referenced nine-file ZIP was not present in the Codex attachment directory, so this branch preserves the audit's `PARTIAL` status and does not treat reconstructed notes or direct Atlas chats as an official ChatGPT account export. Reconcile the page against the original audit files before publication.
+
 - https://www.drakestapleton.com/ → portfolio
 - https://www.drakestapleton.com/symphony/ → Atlas Symphony public record
 - Source: https://github.com/dhgmonkey/drakestapleton.com (`main`)
