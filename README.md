@@ -1,43 +1,38 @@
 # drakestapleton.com
 
-Public Agentic AI architecture portfolio.
+Public site for **Drake Stapleton** — architecture portfolio and the **Atlas Symphony** record.
 
-## Backend
+Live: [https://www.drakestapleton.com/](https://www.drakestapleton.com/)  
+Symphony: [https://www.drakestapleton.com/symphony/](https://www.drakestapleton.com/symphony/)
 
-Static site. No app server, no database, no keys.
+This is a Vite + React + TypeScript app. It is not a pile of standalone HTML files.
 
-| Piece | Choice |
+## Scripts
+
+```bash
+npm install
+npm run dev       # http://127.0.0.1:5173
+npm run typecheck
+npm run build     # dist/  (copies index.html → 404.html for GitHub Pages SPA)
+npm run preview
+```
+
+## Routes
+
+| Path | Page |
 |---|---|
-| Source | this repo (`main`) |
-| Host | GitHub Pages |
-| TLS | GitHub (automatic after DNS) |
-| Domain | Hostinger registrar · `www.drakestapleton.com` |
-| Apex | `drakestapleton.com` → same site |
+| `/` | Portfolio |
+| `/symphony` | Named process, first operators, versions, citation |
+| `/symphony/first` | Verbatim invocation + first-run roster |
+| `/symphony/workflow` | Interactive command tree / cycle / save plane |
+| `/symphony/map` | Bird’s-eye six-track map |
 
-## DNS at Hostinger (hPanel)
+Interactive diagrams live in `public/diagrams/` and are framed by the app. Private media, LAN addresses, and credentials stay off this site.
 
-The domain is parked on `aurora.dns-parking.com` / `nebula.dns-parking.com` until you change records.
+## Deploy
 
-1. Open [hPanel](https://hpanel.hostinger.com) → **Domains** → `drakestapleton.com` → **DNS / DNS Zone**.
-2. If nameservers still say `dns-parking.com`, switch to Hostinger nameservers (or keep custom DNS editor).
-3. Set:
+Push `main`. `.github/workflows/pages.yml` runs `npm ci && npm run build` and publishes `dist/` to GitHub Pages. `public/CNAME` keeps `www.drakestapleton.com`.
 
-| Type | Name | Value | TTL |
-|---|---|---|---|
-| A | `@` | `185.199.108.153` | 300 |
-| A | `@` | `185.199.109.153` | 300 |
-| A | `@` | `185.199.110.153` | 300 |
-| A | `@` | `185.199.111.153` | 300 |
-| CNAME | `www` | `dhgmonkey.github.io` | 300 |
+## Credit
 
-Delete Hostinger parking / coming-soon A records that point at `2.57.91.91`.
-
-4. In GitHub: repo **Settings → Pages → Custom domain** = `www.drakestapleton.com`, enable **Enforce HTTPS** after the first cert (can take up to an hour).
-
-## Preview before DNS
-
-https://dhgmonkey.github.io/drakestapleton.com/
-
-## What this is not
-
-Not Hostinger Website Builder. Not WordPress. Not Atlas. Public HTML only.
+Atlas Symphony was invented and first operated by **Drake Stapleton** on **30 July 2026**. First named instance: Sovereign Forge live-ops. See `/symphony/first`.
