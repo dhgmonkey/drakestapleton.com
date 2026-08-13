@@ -89,10 +89,11 @@ export function HomePage() {
         </div>
         <aside className="hero-identity" aria-label="The life in brief">
           <span>Born 1994</span>
-          <span>Kentucky raised</span>
+          <span>Raised in Tennessee</span>
+          <span>College in Kentucky</span>
+          <span>Springfield, Missouri today</span>
           <span>Two science degrees</span>
           <span>Builder by choice</span>
-          <span>Still becoming</span>
         </aside>
       </section>
 
@@ -119,9 +120,9 @@ export function HomePage() {
             <p className="chapter-tag">The boy I was</p>
             <h3>I learned to disappear before I learned why.</h3>
             <p>
-              I grew up gay in the Bible Belt. My mother fought for me. My grandparents rooted me. My father
-              chose me. My little sister gave me someone to protect. I was surrounded by love while believing
-              that being fully known could cost me everything.
+              I grew up gay in Tennessee, in the Bible Belt. My mother fought for me. My grandparents rooted
+              me. My father chose me. My little sister gave me someone to protect. I was surrounded by love
+              while believing that being fully known could cost me everything.
             </p>
             <p>
               I played football, earned my place in honors classes the hard way, and learned how to look

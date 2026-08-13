@@ -6,7 +6,7 @@ export function SiteFooter() {
       <div className="site-footer-inner">
         <div>
           <p className="site-footer-name">Drake Stapleton</p>
-          <p className="site-footer-line">Chemistry, manufacturing, community, software, and Atlas.</p>
+          <p className="site-footer-line">Based in Springfield, Missouri. Chemistry, manufacturing, community, software, and Atlas.</p>
         </div>
         <nav className="site-footer-links" aria-label="Explore the site">
           <Link to="/">Life</Link>

@@ -46,7 +46,8 @@ export function PathPage() {
     <main className="wrap portrait-wrap path-page">
       <PageIntro eyebrow="Education and work" title="Chemistry became the foundation for everything that followed." className="path-header">
         <p>
-          I spent years developing products and supporting manufacturing. My work in software and AI grew
+          I was raised in Tennessee, went to college in Kentucky, and now live in Springfield, Missouri. I
+          spent years developing products and supporting manufacturing. My work in software and AI grew
           alongside that career and carries its discipline forward.
         </p>
       </PageIntro>
