@@ -142,3 +142,114 @@ blockquote.invoke cite { display: block; margin-top: 10px; color: var(--muted); 
   .site-nav { display: none; }
   .card, .case, .metric { break-inside: avoid; background: #fff; border-color: #ddd; }
 }
+
+/* Public development gate */
+.waitlist-shell {
+  --wait-paper: #efe9dc;
+  --wait-ink: #101820;
+  --wait-rust: #cc7340;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(330px, .7fr);
+  grid-template-rows: 1fr auto;
+  gap: clamp(42px, 8vw, 110px);
+  padding: clamp(34px, 6vw, 78px);
+  color: var(--wait-paper);
+  background:
+    linear-gradient(90deg, transparent 0 66%, rgba(255,255,255,.035) 66% 66.1%, transparent 66.1%),
+    radial-gradient(900px 600px at 8% 10%, rgba(204,115,64,.12), transparent 58%),
+    var(--wait-ink);
+}
+.waitlist-copy { align-self: center; max-width: 870px; }
+.waitlist-kicker, .waitlist-number {
+  margin: 0 0 22px;
+  color: var(--wait-rust);
+  font-size: 11px;
+  font-weight: 760;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.waitlist-copy h1 {
+  max-width: 880px;
+  margin: 0;
+  font-family: Iowan Old Style, Baskerville, "Times New Roman", serif;
+  font-size: clamp(4rem, 9vw, 8.8rem);
+  font-weight: 500;
+  letter-spacing: -.065em;
+  line-height: .87;
+}
+.waitlist-copy h1 em { color: var(--wait-rust); font-style: italic; font-weight: 500; }
+.waitlist-lede {
+  max-width: 700px;
+  margin: 34px 0 0;
+  color: rgba(239,233,220,.68);
+  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+  line-height: 1.6;
+}
+.waitlist-rule { margin: 28px 0 0; color: var(--wait-paper); font-weight: 700; }
+.waitlist-panel {
+  align-self: center;
+  padding: clamp(28px, 4.5vw, 54px);
+  color: var(--wait-ink);
+  background: var(--wait-paper);
+  box-shadow: 0 26px 80px rgba(0,0,0,.2);
+}
+.waitlist-panel h2 {
+  margin: 0;
+  font-family: Iowan Old Style, Baskerville, "Times New Roman", serif;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  font-weight: 500;
+  letter-spacing: -.045em;
+  line-height: 1;
+}
+.waitlist-panel > p:not(.waitlist-number):not(.waitlist-privacy) { margin: 20px 0 0; color: #4f5659; }
+.waitlist-form { margin-top: 30px; }
+.waitlist-form > label:first-child { display: block; margin-bottom: 8px; font-size: 12px; font-weight: 740; letter-spacing: .07em; text-transform: uppercase; }
+.waitlist-form input[type="email"] {
+  width: 100%;
+  min-height: 48px;
+  padding: 11px 12px;
+  border: 1px solid rgba(16,24,32,.32);
+  border-radius: 0;
+  color: var(--wait-ink);
+  background: #faf7ef;
+  font: inherit;
+}
+.waitlist-form input:focus-visible, .waitlist-form button:focus-visible { outline: 3px solid var(--wait-rust); outline-offset: 3px; }
+.waitlist-consent { display: grid; grid-template-columns: 18px 1fr; gap: 10px; align-items: start; margin: 18px 0; color: #4f5659; font-size: 12px; }
+.waitlist-consent input { margin: 3px 0 0; accent-color: var(--wait-rust); }
+.waitlist-form button {
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid var(--wait-ink);
+  border-radius: 0;
+  color: var(--wait-paper);
+  background: var(--wait-ink);
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 760;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.waitlist-form button:disabled { cursor: wait; opacity: .62; }
+.waitlist-honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.waitlist-message { margin: 12px 0 0; color: #8b302b; font-size: 12px; }
+.waitlist-success { margin-top: 30px; padding: 22px; border: 1px solid rgba(16,24,32,.25); }
+.waitlist-success span { color: #2d6b50; font-size: 11px; font-weight: 760; letter-spacing: .12em; text-transform: uppercase; }
+.waitlist-success p { margin: 8px 0 0; color: #34413c; }
+.waitlist-privacy { margin: 22px 0 0; color: #6c7274; font-size: 11px; line-height: 1.5; }
+.waitlist-footer { grid-column: 1 / -1; display: flex; justify-content: space-between; gap: 20px; padding-top: 20px; border-top: 1px solid rgba(239,233,220,.18); color: rgba(239,233,220,.52); font-size: 11px; letter-spacing: .09em; text-transform: uppercase; }
+
+@media (max-width: 880px) {
+  .waitlist-shell { grid-template-columns: 1fr; grid-template-rows: auto auto auto; background: var(--wait-ink); }
+  .waitlist-copy { padding-top: 34px; }
+  .waitlist-panel { width: min(100%, 620px); }
+}
+
+@media (max-width: 520px) {
+  .waitlist-shell { padding: 24px 18px; gap: 36px; }
+  .waitlist-copy h1 { font-size: 3.15rem; letter-spacing: -.05em; }
+  .waitlist-panel { padding: 26px 22px; }
+  .waitlist-footer { flex-direction: column; }
+}
