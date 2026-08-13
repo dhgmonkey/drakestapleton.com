@@ -12,7 +12,7 @@ export function NotFoundPage() {
       <p className="kicker">404</p>
       <h1>Nothing at this path</h1>
       <p className="lede">
-        Try the <Link to="/">portfolio</Link> or the <Link to="/symphony">Symphony record</Link>.
+        Return to the <Link to="/">home page</Link> or open the <Link to="/symphony">Symphony record</Link>.
       </p>
     </main>
   );

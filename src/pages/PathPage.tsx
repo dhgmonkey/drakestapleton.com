@@ -4,51 +4,51 @@ import { usePageMeta } from "../lib/usePageMeta";
 const chapters = [
   {
     years: "2016",
-    title: "Bachelor of Science",
-    body: "Chemistry and Biology at Western Kentucky University. The beginning of a way of thinking built around observation, mechanism, and proof.",
+    title: "B.S. in Chemistry and Biology",
+    body: "Graduated from Western Kentucky University with undergraduate training in chemistry and biology.",
   },
   {
     years: "2018",
     title: "Master of Science in Chemistry",
-    body: "A deeper scientific foundation at Western Kentucky University, followed by the move from controlled study into industrial consequence.",
+    body: "Completed graduate study at Western Kentucky University before moving into industrial research and product development.",
   },
   {
     years: "2018 to 2020",
     title: "R&D Chemist, Soudal",
-    body: "Silicone formulation and scale-up, quality work, UL certification, and technical coordination with the company’s Belgian headquarters.",
+    body: "Worked on silicone formulation and scale-up, quality systems, UL certification, and technical coordination with the company’s Belgian headquarters.",
   },
   {
     years: "2020 to 2024",
     title: "R&D Chemist, Gold Eagle",
-    body: "Product commercialization, HAZMAT incident command, technical training, and alternate sourcing work that protected about $1.2 million in supply during COVID-era disruption.",
+    body: "Commercialized products, served as a HAZMAT Incident Commander, delivered technical training, and identified alternate sources that protected about $1.2 million in supply during COVID-era disruption.",
   },
   {
     years: "Beginning 2024",
     title: "Manufacturing Engineer, 3M",
-    body: "Manufacturing change control, product and process introduction, quality systems, audits, and the discipline of keeping 24-hour operations dependable.",
+    body: "Managed manufacturing change control, introduced products and processes, supported quality systems and audits, and worked in a continuous manufacturing environment.",
   },
   {
     years: "Built alongside it all",
-    title: "Self-taught operator and agentic architect",
-    body: "Software, automation, AI systems, research harnesses, community infrastructure, and Atlas. I learned by building systems that had to work outside a tutorial.",
+    title: "Independent software and AI work",
+    body: "Built software, automation, AI systems, research harnesses, community infrastructure, and Atlas alongside my industrial career.",
   },
 ];
 
 export function PathPage() {
   usePageMeta({
     title: "The Path | Drake Stapleton",
-    description: "The education, industrial work, resistance, and self-directed path behind Drake Stapleton's systems.",
+    description: "Drake Stapleton's education, industrial career, and independent work in software and AI.",
     path: "/path",
   });
 
   return (
     <main className="wrap portrait-wrap path-page">
       <header className="path-header">
-        <p className="kicker">Education / work / becoming</p>
-        <h1>The path was not straight. It was mine.</h1>
+        <p className="kicker">Education and work</p>
+        <h1>Chemistry was the beginning, not the boundary.</h1>
         <p className="portrait-deck">
-          Each chapter gave me another way to understand responsibility. None of them gets to be the final
-          word on who I am.
+          I spent years developing products and supporting manufacturing. My work in software and AI grew
+          alongside that career rather than replacing it.
         </p>
       </header>
 
@@ -66,25 +66,27 @@ export function PathPage() {
 
       <section className="path-resistance" aria-labelledby="what-i-resisted">
         <p className="portrait-index">What I resisted</p>
-        <h2 id="what-i-resisted">The demand to remain legible to somebody else.</h2>
+        <h2 id="what-i-resisted">Why I moved beyond the expected path.</h2>
         <div className="path-resistance-grid">
           <p>
-            A chemistry degree can become a boundary. A company title can become an identity. A new field
-            can make experience earned elsewhere look irrelevant. I rejected those reductions.
+            My education prepared me for chemistry, but it did not require me to stop there. The same is
+            true of every job title I have held. Each one describes work I did, not the full range of work I
+            can do.
           </p>
           <p>
-            I carried scientific method into manufacturing, operational discipline into software, and human
-            questions into Atlas. The transitions are not breaks in the story. They are the story.
+            Scientific method carried into manufacturing. Manufacturing discipline carried into software.
+            Atlas brought those habits together with a personal reason to build. The fields changed, but my
+            standards did not.
           </p>
         </div>
       </section>
 
       <section className="portrait-closing compact">
         <p className="portrait-index">Where that leads</p>
-        <h2>Evidence without surrendering the human being.</h2>
+        <h2>The same standards apply.</h2>
         <p>
-          The technical record remains here because claims deserve proof. It sits beside this history,
-          because proof of work is not proof of a whole person.
+          Technical claims on this site are tied to the available record. That evidence documents the work;
+          it is not meant to reduce a career or a life to metrics.
         </p>
         <div className="portrait-actions">
           <Link className="portrait-link" to="/">

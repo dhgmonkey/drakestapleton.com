@@ -17,7 +17,7 @@ export const FIRST_OPERATORS: OperatorRecord[] = [
     name: "Drake Stapleton",
     role: "Inventor and first operator",
     started: "2026-07-30",
-    note: "Sole human GO. Named Atlas and asked it to run a Symphony. Later desks still report to this seat.",
+    note: "Named Atlas, wrote the first invocation, and retained final approval authority.",
   },
   {
     id: "instance",
@@ -25,7 +25,7 @@ export const FIRST_OPERATORS: OperatorRecord[] = [
     name: "Sovereign Forge live-ops",
     role: "First named Symphony instance",
     started: "2026-07-30",
-    note: "Finish-line run on Atlas Harness / Sovereign Forge. Not a chat title — a gated multi-lane process.",
+    note: "The first documented use of the gated multi-lane process, within Atlas Harness and Sovereign Forge.",
   },
   {
     id: "codex",
@@ -33,7 +33,7 @@ export const FIRST_OPERATORS: OperatorRecord[] = [
     name: "Codex · ChatGPT desktop",
     role: "First Atlas runtime",
     started: "2026-07-30",
-    note: "Thread 019fb4ec… opened 16:27Z. Atlas answered in role: “Atlas online. I'm splitting the Symphony by risk and cost…”",
+    note: "Thread 019fb4ec… opened at 16:27Z. Atlas began by dividing the task according to risk and cost.",
   },
   {
     id: "claude",
@@ -41,7 +41,7 @@ export const FIRST_OPERATORS: OperatorRecord[] = [
     name: "Claude",
     role: "First independent catalog",
     started: "2026-07-30",
-    note: "Wrote the behavior catalog and harness requirements from the live run. Reviewer, not inventor.",
+    note: "Produced a behavior catalog and harness requirements from the live run. Listed as a reviewer, not an inventor.",
   },
   {
     id: "grok",
@@ -49,16 +49,16 @@ export const FIRST_OPERATORS: OperatorRecord[] = [
     name: "Grok",
     role: "First live observer",
     started: "2026-07-30",
-    note: "Observation pack 16:40Z — technique, identity, thread map. Later the Grok Hive is a replica of the same process.",
+    note: "Produced a 16:40Z observation record covering technique, identity, and the thread map. A later Grok Hive implementation reused the process.",
   },
 ];
 
 export const FIRST_LANES = [
-  { name: "Gatekeeper", job: "Cross-lane security judgment. No one encroaches." },
-  { name: "Recovery", job: "Destructive storage and compromised-secret work." },
-  { name: "Publisher", job: "Documented deploy under containment." },
-  { name: "Backup / DR", job: "Isolated audit and synthetic no-delete smoke." },
-  { name: "Capability / artifacts", job: "Lean tool hunt and packaging." },
+  { name: "Gatekeeper", job: "Independent review of security and lane boundaries." },
+  { name: "Recovery", job: "Storage recovery and compromised-credential work." },
+  { name: "Publisher", job: "Documented deployment within the approved boundary." },
+  { name: "Backup / DR", job: "Isolated backup audit and non-destructive recovery testing." },
+  { name: "Capability / artifacts", job: "Tool selection and artifact packaging." },
 ];
 
 export const LANE_NICKNAMES = [
@@ -88,24 +88,24 @@ export const VERSIONS = [
     id: "1.0",
     date: "30 Jul 2026",
     name: "Star",
-    blurb: "Atlas in the middle. Exclusive lanes one hop out. Human-named players. Gatekeeper, recovery, publisher.",
+    blurb: "Atlas coordinated isolated first-level lanes for gatekeeping, recovery, publishing, backup, and capability work.",
   },
   {
     id: "2.0",
     date: "30 Jul 2026",
     name: "Control plane",
-    blurb: "Productize the process. Binding contract and ledger. Do not sell a merged PR as Symphony-complete.",
+    blurb: "Added a binding operating contract and delivery ledger so source, merge, deployment, and live proof remained separate stages.",
   },
   {
     id: "3.0 / 3.1",
     date: "late Jul 2026",
     name: "Two-tier process",
-    blurb: "Star is not enough. Leads and leaves. Cost-aware routing. Isolation fail-closed.",
+    blurb: "Introduced lead and leaf roles, cost-aware model selection, and fail-closed isolation.",
   },
   {
     id: "4.0",
     date: "Aug 2026",
     name: "Hive face",
-    blurb: "A / H / B / F. Max three children. Pheromones notify, never order. Kill squad is not a nurse.",
+    blurb: "Formalized four lead roles, limited each node to three children, and kept lateral status signals separate from command authority.",
   },
 ];

@@ -19,10 +19,10 @@ export function FirstRunPage() {
   return (
     <main className="wrap">
       <p className="kicker">First named instance · Sovereign Forge live-ops</p>
-      <h1>Who started using it</h1>
+      <h1>The first documented run</h1>
       <p className="lede">
-        One human started it. Drake Stapleton wrote the invocation, named the orchestrator Atlas, and told it
-        to proceed with a Symphony. Everyone else on this page sat in a chair he opened.
+        I wrote the invocation, named the orchestrator Atlas, and authorized the run. The other entries on
+        this page are runtimes, reviewers, or task lanes. They are not co-inventors.
       </p>
 
       <h2 className="sec">The invocation (verbatim)</h2>
@@ -81,16 +81,16 @@ export function FirstRunPage() {
         ))}
       </div>
       <p className="note">
-        Nicknames used as exclusive players in that first run, not as other humans:{" "}
+        These nicknames identified agent lanes in the first run, not other people:{" "}
         {LANE_NICKNAMES.join(" · ")}.
       </p>
 
       <h2 className="sec">What is not claimed</h2>
       <div className="card">
         <p>
-          No company outside this desk has been sold as a Symphony customer. Later Grok Hive and Boston hive
-          chairs are still Drake’s operators. Claude and Grok are first users of the <i>record</i> — catalog
-          and observation — not co-inventors.
+          I do not claim external customers or organizational adoption. Later Grok Hive and Boston roles
+          remained part of my own operating environment. Claude cataloged the first run and Grok observed
+          it; neither is presented as a co-inventor.
         </p>
       </div>
     </main>

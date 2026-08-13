@@ -4,9 +4,9 @@ import { usePageMeta } from "../lib/usePageMeta";
 
 export function EvidencePage() {
   usePageMeta({
-    title: "What the Record Can Prove | Drake Stapleton",
+    title: "Evidence and Sources | Drake Stapleton",
     description:
-      "A bounded evidence layer for Drake Stapleton's ChatGPT history, Atlas work, products, community leadership, and remaining gaps.",
+      "Current evidence for Drake Stapleton's ChatGPT history, Atlas work, software projects, community leadership, and unresolved gaps.",
     path: "/evidence",
   });
 
@@ -14,17 +14,17 @@ export function EvidencePage() {
     <main className="wrap portrait-wrap evidence-page">
       <header className="path-header evidence-header">
         <p className="kicker">Forensic history audit / partial</p>
-        <h1>What the record can prove.</h1>
+        <h1>What the available record supports.</h1>
         <p className="portrait-deck">
-          My story is personal. The claims beneath it should still be testable. This is the current evidence
-          boundary: what the audit verified, what it reconstructed, and what it cannot honestly count yet.
+          This page separates verified work from reconstructed history and missing source material. It is
+          not a complete account of my ChatGPT history or every project I have worked on.
         </p>
       </header>
 
       <section className="audit-status" aria-labelledby="audit-status-title">
         <div>
           <p className="portrait-index">Completeness</p>
-          <h2 id="audit-status-title">Partial, by design and by missing source.</h2>
+          <h2 id="audit-status-title">The current audit is incomplete.</h2>
         </div>
         <p>
           The audit package reports 33 project records, 168 evidence claims, and 88 dated events. It did not
@@ -44,7 +44,7 @@ export function EvidencePage() {
 
       <section className="evidence-section" aria-labelledby="classes-title">
         <p className="portrait-index">Evidence classes</p>
-        <h2 id="classes-title">Not every record means the same thing.</h2>
+        <h2 id="classes-title">Four different kinds of evidence.</h2>
         <div className="evidence-class-grid">
           {EVIDENCE_CLASSES.map((item) => (
             <article className="evidence-class" key={item.title}>
@@ -58,7 +58,7 @@ export function EvidencePage() {
 
       <section className="evidence-section" aria-labelledby="findings-title">
         <p className="portrait-index">Strongest current findings</p>
-        <h2 id="findings-title">A life of turning responsibility into working systems.</h2>
+        <h2 id="findings-title">Findings supported by the current record.</h2>
         <div className="finding-list">
           {VERIFIED_FINDINGS.map((finding, index) => (
             <article className="finding" key={finding.title}>
@@ -73,8 +73,8 @@ export function EvidencePage() {
       </section>
 
       <section className="evidence-section audit-gaps" aria-labelledby="gaps-title">
-        <p className="portrait-index">Open evidence</p>
-        <h2 id="gaps-title">What I will not pretend is complete.</h2>
+        <p className="portrait-index">Unresolved</p>
+        <h2 id="gaps-title">What remains unverified.</h2>
         <ul>
           {OPEN_GAPS.map((gap) => (
             <li key={gap}>{gap}</li>
@@ -83,11 +83,11 @@ export function EvidencePage() {
       </section>
 
       <section className="portrait-closing compact">
-        <p className="portrait-index">The boundary matters</p>
-        <h2>Evidence supports the story. It does not replace the person.</h2>
+        <p className="portrait-index">Scope</p>
+        <h2>What this audit can and cannot do.</h2>
         <p>
-          This audit can show that I built, operated, repaired, and led. It cannot calculate a whole life,
-          and I do not need it to.
+          The audit documents systems I built, operated, and repaired, along with leadership work supported
+          by the available files. It does not measure my entire account history, career, or life.
         </p>
         <div className="portrait-actions">
           <Link className="portrait-link" to="/">

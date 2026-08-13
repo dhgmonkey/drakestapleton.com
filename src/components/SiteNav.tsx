@@ -16,7 +16,7 @@ export function SiteNav() {
       <div className="site-nav-inner">
         <NavLink to="/" className="brand" end>
           Drake Stapleton
-          <span>The human behind the systems</span>
+          <span>Chemistry, systems, and Atlas</span>
         </NavLink>
         <nav className="links" aria-label="Primary">
           {LINKS.map((l) => (
