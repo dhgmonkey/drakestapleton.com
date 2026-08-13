@@ -39,8 +39,8 @@ export function SymphonyPage() {
       </p>
       <p className="law">
         A Symphony divides work into isolated lanes, assigns an independent gatekeeper, selects models by
-        task and cost, and reserves consequential approval for the human operator. It is a process, not a
-        model or chat title.
+        task and cost, and reserves final approval for the human operator. It is the working process that
+        connects the people, models, tools, reviews, and evidence.
       </p>
 
       <div className="metrics">
@@ -57,7 +57,7 @@ export function SymphonyPage() {
           <span>The initial star topology later became a two-tier control structure.</span>
         </div>
         <div className="metric">
-          <b>No external adoption claimed</b>
+          <b>Current operating record</b>
           <span>The current record covers my own runtimes and reviewers.</span>
         </div>
       </div>
@@ -79,8 +79,8 @@ export function SymphonyPage() {
         ))}
       </div>
       <p className="note">
-        Popper, Lagrange, Avicenna, Plato, Jason, and Hypatia were labels for agent lanes in the first run,
-        not additional people. The complete roster and original invocation are on the{" "}
+        Popper, Lagrange, Avicenna, Plato, Jason, and Hypatia identified agent lanes in the first run. The
+        complete roster and original invocation are on the{" "}
         <Link to="/symphony/first">first run</Link>.
       </p>
 
@@ -132,7 +132,7 @@ export function SymphonyPage() {
       </div>
 
       <footer className="footer">
-        Public process record. Private media, credentials, and internal addresses are not on this site.
+        Public process record. Private media, credentials, and internal addresses remain private.
       </footer>
     </main>
   );

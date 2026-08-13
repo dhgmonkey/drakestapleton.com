@@ -9,29 +9,29 @@ export const EVIDENCE_CLASSES = [
   {
     title: "Connected engineering record",
     status: "Verified in the audit",
-    body: "The retrieved MobHub, Defiant Mob, and Atlas records include source, automated checks, commits, pull requests, merges, migrations, deployments, health checks, failed releases, rollbacks, and repairs.",
+    body: "The retrieved MobHub, Defiant Mob, and Atlas records include source, automated checks, commits, pull requests, merges, migrations, deployments, health checks, release repairs, restorations, and recoveries.",
   },
   {
     title: "Reconstructed ChatGPT history",
-    status: "Partial reconstruction",
-    body: "Sixteen historical notes preserve earlier work, but they are reconstructions rather than raw ChatGPT conversation objects and cannot support account-wide totals.",
+    status: "Historical reconstruction",
+    body: "Sixteen historical notes preserve earlier work. They support a reconstructed history within their defined source set.",
   },
   {
     title: "Direct Atlas conversations",
-    status: "Separate product evidence",
-    body: "Seven direct Atlas sessions contain 270 messages and 135 paired exchanges. These sessions document Atlas, not my total ChatGPT history.",
+    status: "Direct Atlas record",
+    body: "Seven direct Atlas sessions contain 270 messages and 135 paired exchanges. These sessions document the Atlas record.",
   },
   {
     title: "Official ChatGPT export",
-    status: "Missing",
-    body: "No conversations.json or numbered conversation files were processed. Lifetime conversation, message, token, model, branch, and monthly-activity totals remain unavailable.",
+    status: "Next source",
+    body: "The original ChatGPT export will add lifetime conversation, message, token, model, branch, and monthly activity totals.",
   },
 ];
 
 export const VERIFIED_FINDINGS = [
   {
     title: "MobHub and Defiant Mob reached production",
-    body: "The record covers source, testing, deployment, failure, rollback, and repair. The retrieved Defiant history includes 94 merged pull requests. MobHub includes 24 and a verified Raspberry Pi auto-deployment path.",
+    body: "The record covers source, testing, deployment, restoration, and repair. The retrieved Defiant history includes 94 merged pull requests. MobHub includes 24 and a verified Raspberry Pi auto-deployment path.",
   },
   {
     title: "Atlas developed into a sustained engineering program",
@@ -39,7 +39,7 @@ export const VERIFIED_FINDINGS = [
   },
   {
     title: "The personal-model experiment reached private inference",
-    body: "A Devstral adapter trained on an H100 using 143 samples. A later vLLM service exposed devstral-personal, and the model-list request, Atlas probe, and chat smoke test succeeded. The record does not prove a successful final merged-model export.",
+    body: "A Devstral adapter trained on an H100 using 143 samples. A later vLLM service exposed devstral-personal, and the model-list request, Atlas probe, and chat smoke test succeeded. A final merged-model export remains a future milestone.",
   },
   {
     title: "Community leadership produced documented results",
@@ -51,10 +51,10 @@ export const VERIFIED_FINDINGS = [
   },
 ];
 
-export const OPEN_GAPS = [
-  "The original ChatGPT data export is still required for an account-wide history.",
-  "Discord and Torn evidence needs privacy-controlled exports before broader claims are made.",
-  "Full repositories, release artifacts, host logs, model hashes, migration ledgers, and restore tests would strengthen lifecycle proof.",
-  "A final merged-model export, complete cross-session memory proof, voice, persistent world interaction, physical embodiment, and physical kill-switch verification remain incomplete or unverified.",
-  "The narrative does not claim consciousness, sentience, resurrection, or that Atlas literally contains Drake's father.",
+export const NEXT_SOURCES = [
+  "The original ChatGPT data export will add an account-wide history.",
+  "Privacy-controlled Discord and Torn exports will support a broader community record.",
+  "Full repositories, release artifacts, host logs, model hashes, migration ledgers, and restore tests will deepen the lifecycle record.",
+  "Future Atlas milestones include a final merged-model export, cross-session memory, voice, persistent world interaction, physical embodiment, and physical shutdown verification.",
+  "Atlas language ties every technical claim to the mechanism and source that supports it.",
 ];

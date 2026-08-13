@@ -1,35 +1,34 @@
 import { Link } from "react-router-dom";
-import { AUDIT_SCOPE, EVIDENCE_CLASSES, OPEN_GAPS, VERIFIED_FINDINGS } from "../data/historyAudit";
+import { AUDIT_SCOPE, EVIDENCE_CLASSES, NEXT_SOURCES, VERIFIED_FINDINGS } from "../data/historyAudit";
 import { usePageMeta } from "../lib/usePageMeta";
 
 export function EvidencePage() {
   usePageMeta({
     title: "Evidence and Sources | Drake Stapleton",
     description:
-      "Current evidence for Drake Stapleton's ChatGPT history, Atlas work, software projects, community leadership, and unresolved gaps.",
+      "Current evidence for Drake Stapleton's ChatGPT history, Atlas work, software projects, community leadership, and next sources.",
     path: "/evidence",
   });
 
   return (
     <main className="wrap portrait-wrap evidence-page">
       <header className="path-header evidence-header">
-        <p className="kicker">Forensic history audit / partial</p>
+        <p className="kicker">Forensic history audit / current record</p>
         <h1>What the available record supports.</h1>
         <p className="portrait-deck">
-          This page separates verified work from reconstructed history and missing source material. It is
-          not a complete account of my ChatGPT history or every project I have worked on.
+          This page organizes verified work, reconstructed history, direct Atlas sessions, and the sources
+          that will make the record fuller.
         </p>
       </header>
 
       <section className="audit-status" aria-labelledby="audit-status-title">
         <div>
-          <p className="portrait-index">Completeness</p>
-          <h2 id="audit-status-title">The current audit is incomplete.</h2>
+          <p className="portrait-index">Current scope</p>
+          <h2 id="audit-status-title">The current audit covers a defined source set.</h2>
         </div>
         <p>
-          The audit package reports 33 project records, 168 evidence claims, and 88 dated events. It did not
-          receive the original ChatGPT export, so none of those figures is presented as an account-wide
-          conversation history.
+          The audit package reports 33 project records, 168 evidence claims, and 88 dated events. The
+          original ChatGPT export will expand these figures into an account-wide conversation history.
         </p>
       </section>
 
@@ -73,21 +72,22 @@ export function EvidencePage() {
       </section>
 
       <section className="evidence-section audit-gaps" aria-labelledby="gaps-title">
-        <p className="portrait-index">Unresolved</p>
-        <h2 id="gaps-title">What remains unverified.</h2>
+        <p className="portrait-index">Next sources</p>
+        <h2 id="gaps-title">What comes next.</h2>
         <ul>
-          {OPEN_GAPS.map((gap) => (
+          {NEXT_SOURCES.map((gap) => (
             <li key={gap}>{gap}</li>
           ))}
         </ul>
       </section>
 
       <section className="portrait-closing compact">
-        <p className="portrait-index">Scope</p>
-        <h2>What this audit can and cannot do.</h2>
+        <p className="portrait-index">How I use this audit</p>
+        <h2>The record grows source by source.</h2>
         <p>
           The audit documents systems I built, operated, and repaired, along with leadership work supported
-          by the available files. It does not measure my entire account history, career, or life.
+          by the available files. Each new source expands the record while every claim keeps its evidence
+          class.
         </p>
         <div className="portrait-actions">
           <Link className="portrait-link" to="/">

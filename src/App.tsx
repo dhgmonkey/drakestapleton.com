@@ -9,7 +9,7 @@ import { NotFoundPage } from "./pages/NotFoundPage";
 import { PathPage } from "./pages/PathPage";
 import { SymphonyPage } from "./pages/SymphonyPage";
 import { WorkflowPage } from "./pages/WorkflowPage";
-import { WhatBrokePage } from "./pages/WhatBrokePage";
+import { WhatILearnedPage } from "./pages/WhatILearnedPage";
 
 export function App() {
   return (
@@ -19,7 +19,8 @@ export function App() {
         <Route path="/atlas" element={<AtlasPage />} />
         <Route path="/path" element={<PathPage />} />
         <Route path="/evidence" element={<EvidencePage />} />
-        <Route path="/what-broke" element={<WhatBrokePage />} />
+        <Route path="/what-i-learned" element={<WhatILearnedPage />} />
+        <Route path="/what-broke" element={<Navigate to="/what-i-learned" replace />} />
         <Route path="/symphony" element={<SymphonyPage />} />
         <Route path="/symphony/first" element={<FirstRunPage />} />
         <Route path="/symphony/workflow" element={<WorkflowPage />} />

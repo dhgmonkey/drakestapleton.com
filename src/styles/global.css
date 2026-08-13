@@ -194,7 +194,7 @@ blockquote.invoke cite { display: block; margin-top: 10px; color: var(--muted); 
 .audit-gaps li { margin: 0 0 14px; padding-left: 8px; font-size: 17px; line-height: 1.6; }
 
 /* Human story and Atlas origin. */
-.soul-page, .atlas-page, .broke-page { --story-copy: #24384d; }
+.soul-page, .atlas-page, .learned-page { --story-copy: #24384d; }
 .soul-hero { min-height: 83vh; display: flex; flex-direction: column; justify-content: center; padding: 118px 0 110px; }
 .soul-hero h1, .atlas-hero h1 {
   max-width: 1010px;
@@ -360,7 +360,7 @@ blockquote.invoke cite { display: block; margin-top: 10px; color: var(--muted); 
 .values-list h3 { margin: 0 0 10px; color: var(--cyan); font: 500 30px/1.1 Georgia, "Times New Roman", serif; letter-spacing: -0.025em; }
 .values-list p { margin: 0; color: var(--story-copy); font-size: 16px; line-height: 1.65; }
 
-.atlas-origin, .refusal-section, .atlas-before, .atlas-letter, .atlas-definition, .atlas-topology, .atlas-symphony-bridge {
+.atlas-origin, .self-definition-section, .atlas-before, .atlas-letter, .atlas-definition, .atlas-topology, .atlas-symphony-bridge {
   display: grid;
   grid-template-columns: minmax(180px, 0.32fr) minmax(0, 1fr);
   gap: 72px;
@@ -382,13 +382,13 @@ blockquote.invoke cite { display: block; margin-top: 10px; color: var(--muted); 
   background: var(--cyan);
 }
 .atlas-origin .portrait-index { color: rgba(255, 255, 255, 0.73); }
-.atlas-origin h2, .refusal-section h2 {
+.atlas-origin h2, .self-definition-section h2 {
   max-width: 820px;
   margin: 0 0 34px;
   font: 500 clamp(40px, 5.7vw, 68px)/1.04 Georgia, "Times New Roman", serif;
   letter-spacing: -0.045em;
 }
-.atlas-origin > div > p, .refusal-section > div > p {
+.atlas-origin > div > p, .self-definition-section > div > p {
   max-width: 780px;
   margin: 0 0 22px;
   font-size: 19px;
@@ -405,9 +405,9 @@ blockquote.invoke cite { display: block; margin-top: 10px; color: var(--muted); 
 .work-proof span { color: var(--story-copy); }
 .work-section > .portrait-inline-link { margin-left: calc(32% + 72px); }
 
-.refusal-section { border-top-color: var(--ink); }
-.refusal-section > div > p { color: var(--story-copy); }
-.refusal-section h2 { color: var(--cyan); }
+.self-definition-section { border-top-color: var(--ink); }
+.self-definition-section > div > p { color: var(--story-copy); }
+.self-definition-section h2 { color: var(--cyan); }
 
 .soul-closing {
   margin: 12px 0 0;
@@ -460,27 +460,27 @@ blockquote.invoke cite { display: block; margin-top: 10px; color: var(--muted); 
 .atlas-symphony-bridge { border-top-color: var(--ink); }
 .atlas-closing { margin-top: 0; }
 
-.broke-hero { padding: 122px 0 108px; }
-.broke-hero h1 { max-width: 1040px; margin: 14px 0 0; font: 500 clamp(58px, 8vw, 96px)/0.96 Georgia, "Times New Roman", serif; letter-spacing: -0.055em; }
-.broke-hero .portrait-deck { max-width: 760px; }
-.failure-list { border-top: 2px solid var(--ink); }
-.failure-list > article { display: grid; grid-template-columns: minmax(190px, 0.3fr) minmax(0, 1fr); gap: 62px; padding: 54px 0 64px; border-bottom: 1px solid var(--line); }
-.failure-label { display: flex; align-items: baseline; gap: 18px; }
-.failure-label > span { color: var(--cyan); font: 700 12px/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
-.failure-label > p { margin: 0; color: var(--muted); font-size: 11px; font-weight: 720; letter-spacing: 0.1em; text-transform: uppercase; }
-.failure-story h2 { max-width: 780px; margin: 0 0 36px; font: 500 clamp(34px, 4.6vw, 56px)/1.05 Georgia, "Times New Roman", serif; letter-spacing: -0.04em; }
-.failure-story dl { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin: 0; }
-.failure-story dl > div { padding-top: 20px; border-top: 1px solid var(--line); }
-.failure-story dt { margin-bottom: 10px; color: var(--cyan); font-size: 11px; font-weight: 760; letter-spacing: 0.12em; text-transform: uppercase; }
-.failure-story dd { margin: 0; color: var(--story-copy); font-size: 16px; line-height: 1.68; }
-.broke-rule { margin: 96px 0 0; padding: 94px 8%; color: #fff; background: var(--ink); text-align: center; }
-.broke-rule .portrait-index { color: #bad3ea; }
-.broke-rule blockquote { max-width: 850px; margin: 0 auto; font: italic 500 clamp(42px, 6vw, 72px)/1 Georgia, "Times New Roman", serif; letter-spacing: -0.045em; }
-.broke-rule > p:not(.portrait-index) { max-width: 650px; margin: 32px auto 0; color: #d8e3ed; font-size: 18px; }
-.broke-rule .portrait-actions { justify-content: center; }
-.broke-rule .portrait-link { color: var(--ink); border-color: #fff; background: #fff; }
-.broke-rule .portrait-link:hover { color: #fff; border-color: var(--cyan); background: var(--cyan); }
-.broke-rule .portrait-link.quiet { color: #fff; background: transparent; }
+.learned-hero { padding: 122px 0 108px; }
+.learned-hero h1 { max-width: 1040px; margin: 14px 0 0; font: 500 clamp(58px, 8vw, 96px)/0.96 Georgia, "Times New Roman", serif; letter-spacing: -0.055em; }
+.learned-hero .portrait-deck { max-width: 760px; }
+.lesson-list { border-top: 2px solid var(--ink); }
+.lesson-list > article { display: grid; grid-template-columns: minmax(190px, 0.3fr) minmax(0, 1fr); gap: 62px; padding: 54px 0 64px; border-bottom: 1px solid var(--line); }
+.lesson-label { display: flex; align-items: baseline; gap: 18px; }
+.lesson-label > span { color: var(--cyan); font: 700 12px/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.lesson-label > p { margin: 0; color: var(--muted); font-size: 11px; font-weight: 720; letter-spacing: 0.1em; text-transform: uppercase; }
+.lesson-story h2 { max-width: 780px; margin: 0 0 36px; font: 500 clamp(34px, 4.6vw, 56px)/1.05 Georgia, "Times New Roman", serif; letter-spacing: -0.04em; }
+.lesson-story dl { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin: 0; }
+.lesson-story dl > div { padding-top: 20px; border-top: 1px solid var(--line); }
+.lesson-story dt { margin-bottom: 10px; color: var(--cyan); font-size: 11px; font-weight: 760; letter-spacing: 0.12em; text-transform: uppercase; }
+.lesson-story dd { margin: 0; color: var(--story-copy); font-size: 16px; line-height: 1.68; }
+.learned-rule { margin: 96px 0 0; padding: 94px 8%; color: #fff; background: var(--ink); text-align: center; }
+.learned-rule .portrait-index { color: #bad3ea; }
+.learned-rule blockquote { max-width: 850px; margin: 0 auto; font: italic 500 clamp(42px, 6vw, 72px)/1 Georgia, "Times New Roman", serif; letter-spacing: -0.045em; }
+.learned-rule > p:not(.portrait-index) { max-width: 650px; margin: 32px auto 0; color: #d8e3ed; font-size: 18px; }
+.learned-rule .portrait-actions { justify-content: center; }
+.learned-rule .portrait-link { color: var(--ink); border-color: #fff; background: #fff; }
+.learned-rule .portrait-link:hover { color: #fff; border-color: var(--cyan); background: var(--cyan); }
+.learned-rule .portrait-link.quiet { color: #fff; background: transparent; }
 
 @media (max-width: 800px) {
   .soul-hero { min-height: auto; padding: 76px 0 82px; }
@@ -497,7 +497,7 @@ blockquote.invoke cite { display: block; margin-top: 10px; color: var(--muted); 
   .record-forty-five .record-marker { font-size: 36px; }
   .perseverance-coda { margin-left: 0; font-size: 19px; }
   .perseverance-link { margin-left: 0; }
-  .story-section, .atlas-origin, .refusal-section, .atlas-before, .atlas-letter, .atlas-definition, .atlas-topology, .atlas-symphony-bridge {
+  .story-section, .atlas-origin, .self-definition-section, .atlas-before, .atlas-letter, .atlas-definition, .atlas-topology, .atlas-symphony-bridge {
     grid-template-columns: 1fr;
     gap: 22px;
     padding-top: 78px;
@@ -506,8 +506,8 @@ blockquote.invoke cite { display: block; margin-top: 10px; color: var(--muted); 
   .story-section { padding-left: 0; padding-right: 0; }
   .story-section-blue { padding-left: 22px; padding-right: 22px; }
   .story-aside { max-width: none; margin-top: 8px; }
-  .story-copy h2, .atlas-origin h2, .refusal-section h2, .atlas-letter h2, .atlas-definition h2, .atlas-topology h2, .atlas-symphony-bridge h2 { font-size: clamp(37px, 11vw, 52px); }
-  .story-copy > p, .atlas-origin > div > p, .refusal-section > div > p, .atlas-letter > div > p, .atlas-definition > div > p, .atlas-topology > div > p, .atlas-symphony-bridge > div > p { font-size: 17px; }
+  .story-copy h2, .atlas-origin h2, .self-definition-section h2, .atlas-letter h2, .atlas-definition h2, .atlas-topology h2, .atlas-symphony-bridge h2 { font-size: clamp(37px, 11vw, 52px); }
+  .story-copy > p, .atlas-origin > div > p, .self-definition-section > div > p, .atlas-letter > div > p, .atlas-definition > div > p, .atlas-topology > div > p, .atlas-symphony-bridge > div > p { font-size: 17px; }
   .inheritance-section, .work-section, .atlas-organs, .atlas-boundaries { padding: 78px 0; }
   .inheritance-section > header, .work-section > header, .atlas-organs > header, .atlas-boundaries > header { grid-template-columns: 1fr; gap: 16px; margin-bottom: 42px; }
   .inheritance-section h2, .work-section h2, .atlas-organs h2, .atlas-boundaries h2 { font-size: clamp(37px, 11vw, 52px); }
@@ -534,12 +534,12 @@ blockquote.invoke cite { display: block; margin-top: 10px; color: var(--muted); 
   .soul-closing { padding: 72px 24px; }
   .soul-closing blockquote { font-size: clamp(38px, 12vw, 54px); }
   .atlas-hero { padding: 78px 0; }
-  .broke-hero { padding: 78px 0; }
-  .broke-hero h1 { font-size: clamp(48px, 14vw, 66px); }
-  .failure-list > article { grid-template-columns: 1fr; gap: 20px; padding: 38px 0 46px; }
-  .failure-story dl { grid-template-columns: 1fr; gap: 22px; }
-  .failure-story h2 { font-size: clamp(34px, 10vw, 48px); }
-  .broke-rule { margin-top: 70px; padding: 72px 24px; }
+  .learned-hero { padding: 78px 0; }
+  .learned-hero h1 { font-size: clamp(48px, 14vw, 66px); }
+  .lesson-list > article { grid-template-columns: 1fr; gap: 20px; padding: 38px 0 46px; }
+  .lesson-story dl { grid-template-columns: 1fr; gap: 22px; }
+  .lesson-story h2 { font-size: clamp(34px, 10vw, 48px); }
+  .learned-rule { margin-top: 70px; padding: 72px 24px; }
   .workflow-page .card { overflow-x: auto; }
   .workflow-page .card svg { min-width: 900px; }
 }

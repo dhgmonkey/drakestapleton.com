@@ -1,10 +1,10 @@
 type NodeSpec = { id: string; x: number; y: number; w: number; h: number; title: string; sub: string; fill: string; stroke: string };
 
 const NODES: NodeSpec[] = [
-  { id: "drake", x: 430, y: 16, w: 200, h: 54, title: "Drake Stapleton", sub: "inventor · only human GO", fill: "#1a1438", stroke: "#a78bfa" },
+  { id: "drake", x: 430, y: 16, w: 200, h: 54, title: "Drake Stapleton", sub: "inventor · final approval", fill: "#1a1438", stroke: "#a78bfa" },
   { id: "atlas", x: 400, y: 110, w: 260, h: 58, title: "Atlas", sub: "orchestrator agent · named 30 Jul 2026", fill: "#12202a", stroke: "#5eead4" },
-  { id: "sym", x: 370, y: 210, w: 320, h: 58, title: "Symphony", sub: "the process — not a model, not a chat title", fill: "#161b36", stroke: "#5eead4" },
-  { id: "gk", x: 24, y: 330, w: 190, h: 52, title: "Gatekeeper", sub: "no one encroaches", fill: "#161b36", stroke: "#a78bfa" },
+  { id: "sym", x: 370, y: 210, w: 320, h: 58, title: "Symphony", sub: "the multi-lane process", fill: "#161b36", stroke: "#5eead4" },
+  { id: "gk", x: 24, y: 330, w: 190, h: 52, title: "Gatekeeper", sub: "preserves lane boundaries", fill: "#161b36", stroke: "#a78bfa" },
   { id: "rec", x: 232, y: 330, w: 190, h: 52, title: "Recovery", sub: "destructive / secrets", fill: "#261018", stroke: "#fb7185" },
   { id: "pub", x: 440, y: 330, w: 190, h: 52, title: "Publisher", sub: "contained deploy", fill: "#161b36", stroke: "#34d399" },
   { id: "dr", x: 648, y: 330, w: 190, h: 52, title: "Backup / DR", sub: "synthetic smoke", fill: "#161b36", stroke: "#5eead4" },

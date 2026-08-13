@@ -45,10 +45,10 @@ export function PathPage() {
     <main className="wrap portrait-wrap path-page">
       <header className="path-header">
         <p className="kicker">Education and work</p>
-        <h1>Chemistry was the beginning, not the boundary.</h1>
+        <h1>Chemistry became the foundation for everything that followed.</h1>
         <p className="portrait-deck">
           I spent years developing products and supporting manufacturing. My work in software and AI grew
-          alongside that career rather than replacing it.
+          alongside that career and carries its discipline forward.
         </p>
       </header>
 
@@ -64,19 +64,35 @@ export function PathPage() {
         ))}
       </section>
 
-      <section className="path-resistance" aria-labelledby="what-i-resisted">
-        <p className="portrait-index">What I resisted</p>
-        <h2 id="what-i-resisted">Why I moved beyond the expected path.</h2>
+      <section className="path-resistance" aria-labelledby="education-drive">
+        <p className="portrait-index">The drive behind the grades</p>
+        <h2 id="education-drive">I fought for every inch of a 3.92 GPA.</h2>
         <div className="path-resistance-grid">
           <p>
-            My education prepared me for chemistry, but it did not require me to stop there. The same is
-            true of every job title I have held. Each one describes work I did, not the full range of work I
-            can do.
+            Other students held the valedictorian and salutatorian titles. I spent high school wanting the
+            kind of intelligence that seemed effortless. Autism and ADHD made focus a daily contest, and I
+            moved through those years unmedicated.
+          </p>
+          <p>
+            Determination became my advantage. I returned to the page, the problem, and the work as many
+            times as it took. That 3.92 represents discipline, drive, and the habit of fighting for every
+            inch. I carried the same habit through two science degrees and every field that followed.
+          </p>
+        </div>
+      </section>
+
+      <section className="path-resistance" aria-labelledby="how-i-grew">
+        <p className="portrait-index">How I grew</p>
+        <h2 id="how-i-grew">Each field gave me tools for the next one.</h2>
+        <div className="path-resistance-grid">
+          <p>
+            My education prepared me for chemistry. Every job title added another layer of skill. Together,
+            they show a career built through curiosity and the confidence to keep learning.
           </p>
           <p>
             Scientific method carried into manufacturing. Manufacturing discipline carried into software.
-            Atlas brought those habits together with a personal reason to build. The fields changed, but my
-            standards did not.
+            Atlas brought those habits together with a personal reason to build. The fields changed, and my
+            standards stayed.
           </p>
         </div>
       </section>
@@ -85,8 +101,8 @@ export function PathPage() {
         <p className="portrait-index">Where that leads</p>
         <h2>The same standards apply.</h2>
         <p>
-          Technical claims on this site are tied to the available record. That evidence documents the work;
-          it is not meant to reduce a career or a life to metrics.
+          Technical claims on this site are tied to the available record. The evidence documents the work,
+          while the story carries the life around it.
         </p>
         <div className="portrait-actions">
           <Link className="portrait-link" to="/">

@@ -21,11 +21,11 @@ export function FirstRunPage() {
       <p className="kicker">First named instance · Sovereign Forge live-ops</p>
       <h1>The first documented run</h1>
       <p className="lede">
-        I wrote the invocation, named the orchestrator Atlas, and authorized the run. The other entries on
-        this page are runtimes, reviewers, or task lanes. They are not co-inventors.
+        I wrote the invocation, named the orchestrator Atlas, and authorized the run. Drake Stapleton is the
+        inventor; the other entries identify runtimes, reviewers, and task lanes.
       </p>
 
-      <h2 className="sec">The invocation (verbatim)</h2>
+      <h2 className="sec">The public invocation</h2>
       <blockquote className="invoke">
         {INVOCATION}
         <cite>Drake Stapleton · 30 July 2026 · prior turn: “What’s left in our development plan?”</cite>
@@ -81,16 +81,16 @@ export function FirstRunPage() {
         ))}
       </div>
       <p className="note">
-        These nicknames identified agent lanes in the first run, not other people:{" "}
+        These nicknames identified agent lanes in the first run:{" "}
         {LANE_NICKNAMES.join(" · ")}.
       </p>
 
-      <h2 className="sec">What is not claimed</h2>
+      <h2 className="sec">Current scope</h2>
       <div className="card">
         <p>
-          I do not claim external customers or organizational adoption. Later Grok Hive and Boston roles
-          remained part of my own operating environment. Claude cataloged the first run and Grok observed
-          it; neither is presented as a co-inventor.
+          The current record covers my own operating environment. Later Grok Hive and Boston roles grew
+          inside that environment. Claude cataloged the first run, Grok observed it, and Drake Stapleton
+          remains the inventor and operator.
         </p>
       </div>
     </main>

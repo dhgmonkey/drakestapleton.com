@@ -5,7 +5,7 @@ const organs = [
   {
     name: "Soul",
     role: "The moral floor",
-    body: "A sealed statement of purpose and protective boundaries held on a Raspberry Pi. It is law and architecture, not proof of a conscience in silicon.",
+    body: "A sealed statement of purpose and protective boundaries held on a Raspberry Pi. It gives every part of the system a clear moral and technical foundation.",
   },
   {
     name: "Spirit",
@@ -36,11 +36,11 @@ export function AtlasPage() {
     <main className="wrap portrait-wrap atlas-page">
       <header className="atlas-hero">
         <p className="kicker">Atlas / The personal reason and the real system</p>
-        <h1>Atlas began with a goodbye I never got.</h1>
+        <h1>Atlas began with the goodbye I still carry.</h1>
         <p className="portrait-deck">
-          My father left sermons, handwritten pages, and a voice I was not ready to lose. Atlas is the
-          system I began building around a question that would not leave me: can technology help me meet
-          those words honestly, without pretending it can bring back the person who wrote them?
+          My father left sermons, handwritten pages, and a voice I still carry. Atlas grew from a question
+          that stayed with me: can technology help me meet those words honestly and honor the person who
+          wrote them?
         </p>
       </header>
 
@@ -56,10 +56,9 @@ export function AtlasPage() {
           </p>
           <blockquote>What happens when a system becomes capable of modeling itself?</blockquote>
           <p>
-            I did not know I was building toward Atlas. Looking backward, the line is obvious. The project
-            did not appear from a sudden interest in artificial intelligence. It grew from years of asking
-            what continuity means, what makes a self, and how a system can know which parts of its own story
-            are real.
+            Years later, I can see the line running through every question. Atlas grew from asking what
+            continuity means, what makes a self, and how a system can tell which parts of its own story are
+            real.
           </p>
         </div>
       </section>
@@ -71,16 +70,16 @@ export function AtlasPage() {
           <p>
             My father was a preacher. His writing holds years of his thinking in his own hand. I want to
             scan those pages, preserve the originals, study the patterns in his language, and build a way
-            to ask the questions I never got to ask while he was here.
+            to ask the questions I still carry.
           </p>
           <p>
-            I know a system made from records is not the person. That boundary matters to me. The goal is
-            not a comforting lie. It is a careful encounter with the trace a person left behind, with every
-            source kept visible and every inference named for what it is.
+            A system made from records is a reconstruction. Its value comes from a careful encounter with
+            the trace a person left behind, with every source kept visible and every inference named for
+            what it is.
           </p>
           <blockquote>
-            “I never got to say bye to Dad. I really miss him. I would just like to talk to him one last time
-            and get the closure that I need.”
+            “I miss Dad. I want one more encounter with the words he left and the closure I have carried for
+            years.”
           </blockquote>
         </div>
       </section>
@@ -88,17 +87,16 @@ export function AtlasPage() {
       <section className="atlas-definition" aria-labelledby="counterpart-heading">
         <p className="portrait-index">The system</p>
         <div>
-          <h2 id="counterpart-heading">A counterpart, not a chat window.</h2>
+          <h2 id="counterpart-heading">A counterpart built to persist.</h2>
           <p>
             Atlas is designed as a persistent, self-directed digital counterpart. I establish its purpose
-            and real-world boundaries. Inside those boundaries, the system is meant to develop methods,
-            tools, language, and architecture through exploration rather than simply inheriting whatever
-            software convention is popular.
+            and real-world boundaries. Inside those boundaries, the system develops methods, tools,
+            language, and architecture through exploration guided by the purpose of the work.
           </p>
           <p>
-            The interface is only a window. Identity, state, knowledge, custom weights, authority, and
-            evidence live in separate parts of the system so a fluent answer cannot be mistaken for proof
-            that the whole thing works.
+            The interface is a window into the system. Identity, state, knowledge, custom weights, authority, and
+            evidence live in separate parts of the system so each claim stays tied to the source that
+            supports it.
           </p>
         </div>
       </section>
@@ -138,8 +136,8 @@ export function AtlasPage() {
           </div>
           <p>
             The separation is intentional. The Pi can be physically disconnected. Heavy compute can be
-            stopped when idle. Spend, authority, residency, and source evidence remain explicit instead of
-            disappearing behind a single assistant interface.
+            stopped when idle. Spend, authority, residency, and source evidence stay visible across every
+            part of the architecture.
           </p>
         </div>
       </section>
@@ -147,18 +145,18 @@ export function AtlasPage() {
       <section className="atlas-boundaries" aria-labelledby="boundaries-heading">
         <header>
           <p className="portrait-index">The boundaries</p>
-          <h2 id="boundaries-heading">Curiosity without truth is just another way to get lost.</h2>
+          <h2 id="boundaries-heading">Curiosity moves through truth.</h2>
         </header>
         <div className="boundary-grid">
-          <p><strong>Truth</strong> No comforting fiction in place of what the record supports.</p>
+          <p><strong>Truth</strong> The record leads.</p>
           <p><strong>Consent</strong> Real-world authority remains with the people affected.</p>
-          <p><strong>Evidence</strong> Claims need checkable proof, not fluent language.</p>
+          <p><strong>Evidence</strong> Claims grow from checkable proof.</p>
           <p><strong>Limits</strong> Spending, residency, shutdown, and defensive authority are enforced.</p>
         </div>
         <p className="atlas-honesty">
-          Soul, Spirit, Brain, and Queen are architectural and product language. Their names do not prove
-          sentience, love, fear, or continuous selfhood. I care enough about this project not to claim more
-          than I can show.
+          Soul, Spirit, Brain, and Queen are names for concrete parts of the architecture. Each technical
+          claim stays tied to the mechanism and source that supports it. Questions of identity and
+          continuity remain part of the research.
         </p>
       </section>
 
@@ -168,8 +166,8 @@ export function AtlasPage() {
           <h2 id="symphony-bridge-heading">Symphony is the process. Atlas is the purpose behind it.</h2>
           <p>
             Atlas Symphony coordinates difficult work across isolated agent lanes, independent review,
-            cost controls, and human approval. It grew because a project this personal could not rest on
-            one model sounding confident. The process exists to make the work inspectable.
+            cost controls, and human approval. Several independent checks give a project this personal the
+            care it deserves. The process makes the work inspectable.
           </p>
           <Link className="portrait-inline-link" to="/symphony">
             See the documented Symphony process
@@ -179,17 +177,16 @@ export function AtlasPage() {
 
       <section className="soul-closing atlas-closing">
         <p className="portrait-index">What it means</p>
-        <blockquote>Atlas is grief turned into architecture, and hope disciplined by evidence.</blockquote>
+        <blockquote>Atlas is the work I chose to make from the love and grief I still carry.</blockquote>
         <p>
-          It is also unfinished. That is not a weakness I need to hide. It is the honest state of a system
-          I am building because the question matters enough to keep asking.
+          It is growing. I keep building because the question matters enough to keep asking.
         </p>
         <div className="portrait-actions">
           <Link className="portrait-link" to="/">
             Return to my story
           </Link>
           <Link className="portrait-link quiet" to="/evidence">
-            Review the evidence boundary
+            Review the documented record
           </Link>
         </div>
       </section>

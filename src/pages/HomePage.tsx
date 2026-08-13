@@ -17,12 +17,12 @@ export function HomePage() {
           I keep finding the strength. <em>Or rather, the stubbornness.</em>
         </h1>
         <p className="soul-hero-lede">
-          I have lost people, watched things I built fall apart, failed, rebuilt, and started again. I am a
+          I have lost people, watched things I built fall apart, learned, rebuilt, and started again. I am a
           chemist, a manufacturing engineer, a husband, a former foster parent, a community builder, and an
-          agentic architect. The title changes. The part of me that refuses to quit does not.
+          AI systems architect. The title changes. My drive stays.
         </p>
         <p className="soul-audience">
-          This is not an application for anyone&apos;s approval. It is a place where I can see my own life whole.
+          This site is a record I made for myself. It gives me a place to see my own life whole.
         </p>
         <div className="portrait-actions">
           <a className="portrait-link" href="#the-life">
@@ -36,21 +36,20 @@ export function HomePage() {
 
       <section className="claim-band" aria-labelledby="claim-heading">
         <p className="portrait-index">In my own words</p>
-        <h2 id="claim-heading">This is not a pitch. It is a witness.</h2>
+        <h2 id="claim-heading">This is my witness.</h2>
         <blockquote>
-          “I am just existing and being me for once in my life. I am claiming my own life and my own
-          purpose, and I will not let anyone tell me what I can and cannot be.”
+          “I am living as myself. I am claiming my own life and my own purpose. I decide what I can become.”
         </blockquote>
         <p>
-          I have spent too much of my life measuring what was missing and too little time seeing what is
-          already here. This site is me choosing to look.
+          I have spent years learning how to see my own life clearly. This site is me choosing to look at
+          everything already here.
         </p>
       </section>
 
       <section className="perseverance-section" aria-labelledby="perseverance-heading">
         <header>
           <p className="portrait-index">00 / The thing that carries me</p>
-          <h2 id="perseverance-heading">I do not confuse failure with the end.</h2>
+          <h2 id="perseverance-heading">I turn every ending into another beginning.</h2>
         </header>
         <div className="perseverance-intro">
           <p>
@@ -59,8 +58,8 @@ export function HomePage() {
             days later, she stood beside me when I received my own honors certificate at Western Kentucky.
           </p>
           <p>
-            She did not teach me “never give up” as a slogan. She taught me by taking more than twenty years
-            to finish something, and then finishing it.
+            She taught me “keep going” by taking more than twenty years to finish something, and then
+            finishing it.
           </p>
         </div>
         <div className="perseverance-record" aria-label="A record of rebuilding">
@@ -80,8 +79,8 @@ export function HomePage() {
               <h3>I rebuilt what other people had written off.</h3>
               <p>
                 I took a post-closure merger to 46 members and 85 percent activity. I retrained people after
-                they failed, built the dashboards and schedules, and developed leaders who could run it
-                without me.
+                hard rounds, built the dashboards and schedules, and developed leaders who could run it on
+                their own.
               </p>
             </div>
           </article>
@@ -93,29 +92,29 @@ export function HomePage() {
                 “Somehow I just keep finding the strength, or rather the stubbornness, to keep going.”
               </blockquote>
               <p>
-                The reason was never the rank. It was the person who still needed training, the officer who
-                was burning out, or the member who needed someone to believe failure was not final.
+                The reason was always the people: the person who still needed training, the officer who was
+                burning out, or the member who needed someone to believe another attempt was waiting.
               </p>
             </div>
           </article>
           <article>
             <p className="record-marker">Fix it</p>
             <div>
-              <h3>I built the same refusal into my systems.</h3>
+              <h3>I built that persistence into my systems.</h3>
               <p>
-                Atlas does not treat a broken build, a bad merge, or a failed check as permission to stop.
-                The error becomes evidence for the next attempt. My rule is plain: ordinary failure can and
-                should be fixed.
+                Atlas carries every broken build, difficult merge, and rejected check forward as evidence.
+                Each result shapes the next attempt. My rule is plain: every repair should make the whole
+                system stronger.
               </p>
             </div>
           </article>
         </div>
         <p className="perseverance-coda">
-          Perseverance is not pretending the cost is harmless. I have run myself into the ground before.
-          Rest is not surrender. Recovery is how I return to the work without surrendering myself to it.
+          Perseverance includes recovery. I have run myself into the ground before. Rest brings me back to
+          the work while keeping the person doing it whole.
         </p>
-        <Link className="portrait-inline-link perseverance-link" to="/what-broke">
-          See what broke and what I did next
+        <Link className="portrait-inline-link perseverance-link" to="/what-i-learned">
+          See what experience taught me
         </Link>
       </section>
 
@@ -125,21 +124,20 @@ export function HomePage() {
           <p className="portrait-index">Thirty-two years alive</p>
           <h2 id="years-heading">I have already lived a life worth seeing.</h2>
           <p className="years-lede">
-            Not because it was clean or easy. Because I kept turning what happened to me into something
-            that could help someone else.
+            Its value comes from everything I kept turning into something that could help someone else.
           </p>
           <div className="years-record">
             <p>I survived a childhood that taught me to hide, and became a man who is done hiding.</p>
             <p>I built a marriage and opened my home to foster children who needed somewhere safe.</p>
             <p>I earned two science degrees and built a career across research, product development, and manufacturing.</p>
             <p>I protected roughly $1.2 million in supply during a global disruption and served as a HAZMAT Incident Commander.</p>
-            <p>I rebuilt communities after they fractured and trained people others had already decided had failed.</p>
+            <p>I rebuilt communities after they fractured and trained people who deserved another chance.</p>
             <p>I taught myself software, trained models, designed agent systems, and funded Atlas with my own money.</p>
-            <p>I turned grief into a reason to preserve memory, and failure into machinery that tries again.</p>
+            <p>I turned grief into a reason to preserve memory, and hard lessons into machinery that tries again.</p>
           </div>
           <p className="years-close">
-            I do not need to pretend every choice was right to know this much: what I have done in 32 years
-            is extraordinary, and it is mine.
+            Every choice belongs to the road that brought me here. What I have done in 32 years is
+            extraordinary, and it is mine.
           </p>
         </div>
       </section>
@@ -159,11 +157,17 @@ export function HomePage() {
           </p>
           <p>
             I worked hard at becoming the version of me each room would accept. I played football. I
-            earned my place in honors classes the hard way. I learned how to look capable even when I felt
-            like everyone else had been handed a manual for living and mine had gone missing.
+            earned my place in honors classes the hard way. Other students held the valedictorian and
+            salutatorian titles. I graduated with a 3.92 GPA and fought for every inch of it while moving
+            through high school with autism, ADHD, and an unmedicated mind that made focus a daily contest.
+          </p>
+          <p>
+            I wanted effortless brilliance. My own strength arrived as determination and drive. I learned
+            how to return my attention to the work, ask more of myself, and keep going until the result
+            reflected the effort. That habit has followed me into every field since.
           </p>
           <p className="story-emphasis">
-            A person can be held every single day and still go years without being seen.
+            A person can receive love every day and still spend years unseen.
           </p>
         </div>
       </section>
@@ -199,7 +203,7 @@ export function HomePage() {
         <div className="inheritance-lines">
           <article>
             <p className="inheritance-name">My mother</p>
-            <p>taught me to leave what hurts, never give up, and never doubt what I could become.</p>
+            <p>taught me to leave what hurts, keep going, and trust what I could become.</p>
           </article>
           <article>
             <p className="inheritance-name">My grandparents</p>
@@ -211,7 +215,7 @@ export function HomePage() {
           </article>
           <article>
             <p className="inheritance-name">The people who found me</p>
-            <p>taught me that you do not pay back the person who saves you. You turn around and reach for someone else.</p>
+            <p>taught me that gratitude moves forward. You turn around and reach for someone else.</p>
           </article>
         </div>
       </section>
@@ -219,7 +223,7 @@ export function HomePage() {
       <section className="values-section" aria-labelledby="values-heading">
         <header>
           <p className="portrait-index">04 / What I stand for</p>
-          <h2 id="values-heading">The work changes. These do not.</h2>
+          <h2 id="values-heading">The work changes. My values stay.</h2>
         </header>
         <div className="values-list">
           <article>
@@ -228,19 +232,19 @@ export function HomePage() {
           </article>
           <article>
             <h3>Service</h3>
-            <p>I believe a life is measured by what it gives away. Leadership means making another person stronger, not making a title larger.</p>
+            <p>I believe a life is measured by what it gives away. Leadership makes another person stronger and gives the title less importance.</p>
           </article>
           <article>
             <h3>Belonging</h3>
-            <p>I know what it costs to be surrounded by love and still feel unseen. I build places where people do not have to disappear to stay.</p>
+            <p>I know what it costs to be surrounded by love and still feel unseen. I build places where people can stay fully visible.</p>
           </article>
           <article>
             <h3>Integrity</h3>
-            <p>I will not surrender what is right to keep a friend, protect a position, or make an uncomfortable truth easier to hear.</p>
+            <p>I carry what is right through friendship, position, and every uncomfortable truth.</p>
           </article>
           <article>
             <h3>Agency</h3>
-            <p>A degree, employer, industry, or job title can describe part of my life. None of them gets to decide the limit of it.</p>
+            <p>A degree, employer, industry, or job title describes one part of my life. I decide how far the whole life can go.</p>
           </article>
           <article>
             <h3>Curiosity</h3>
@@ -248,7 +252,7 @@ export function HomePage() {
           </article>
           <article>
             <h3>Perseverance</h3>
-            <p>I do not treat a failed attempt as a final answer. I learn what broke, preserve the lesson, and return with a better system.</p>
+            <p>Every hard attempt gives me information. I preserve the lesson and return with a better system.</p>
           </article>
           <article>
             <h3>Love</h3>
@@ -260,21 +264,20 @@ export function HomePage() {
       <section className="atlas-origin" aria-labelledby="atlas-origin-heading">
         <p className="portrait-index">05 / My father and Atlas</p>
         <div>
-          <h2 id="atlas-origin-heading">Atlas began with a goodbye I never got.</h2>
+          <h2 id="atlas-origin-heading">Atlas began with the goodbye I still carry.</h2>
           <p>
             My father was a preacher. He left handwritten pages and years of thought behind. He died in
-            2019, and I never got to say goodbye. Nearly a decade does not make that absence smaller.
+            2019. I still carry the words I wanted to say and the conversations I wish we could have shared.
           </p>
           <p>
             I want to scan his writing, preserve its source, and build a system capable of studying his
-            language and intent. Not to pretend that a model is him. Not to erase the difference between a
-            person and a reconstruction. I want one more honest encounter with the words he left, and
-            perhaps some of the closure I never had.
+            language and intent. I want one more honest encounter with the words he left, grounded in the
+            source and faithful to the person who wrote them. I want the closure I have carried for years.
           </p>
           <p>
             That is why Atlas is personal. The architecture grew around a human need: memory with
-            provenance, conversation without deception, and technology that protects dignity instead of
-            exploiting grief.
+            sources kept visible, conversation grounded in truth, and technology that protects dignity and
+            handles grief with care.
           </p>
           <Link className="portrait-inline-link" to="/atlas">
             Read what Atlas means and how it works
@@ -285,13 +288,13 @@ export function HomePage() {
       <section className="work-section" aria-labelledby="work-heading">
         <header>
           <p className="portrait-index">06 / The work</p>
-          <h2 id="work-heading">The fields changed. The standard did not.</h2>
+          <h2 id="work-heading">The fields changed. My standard stayed.</h2>
         </header>
         <div className="work-thesis">
           <p>
             Chemistry taught me to respect evidence. Manufacturing taught me that decisions have real
             consequences for safety, quality, cost, and the people doing the work. Community taught me that
-            leadership is not a rank. It is what you do when someone needs a door held open.
+            leadership opens the door when someone needs it.
           </p>
           <p>
             I carried all three into software and artificial intelligence. I earned a bachelor&apos;s degree in
@@ -319,19 +322,18 @@ export function HomePage() {
         </Link>
       </section>
 
-      <section className="refusal-section" aria-labelledby="refusal-heading">
-        <p className="portrait-index">07 / What I refuse</p>
+      <section className="self-definition-section" aria-labelledby="self-definition-heading">
+        <p className="portrait-index">07 / Self-definition</p>
         <div>
-          <h2 id="refusal-heading">I am done making myself smaller so other people can name me easily.</h2>
+          <h2 id="self-definition-heading">I choose the size of my own life.</h2>
           <p>
-            I know the scale of what I have built is not normal. I paid for the compute, spent the nights,
-            trained the models, built the architecture, documented the failures, and kept going before
-            anyone had hired me to do it. I will not call that a hobby simply because it happened outside
-            somebody else&apos;s job description.
+            The scale of what I have built is extraordinary. I paid for the compute, spent the nights,
+            trained the models, built the architecture, documented the lessons, and kept going before
+            anyone had hired me to do it. This is serious work, built through my own commitment.
           </p>
           <p>
-            Agentic architect is not an aspiration. It is the plainest name I have for work already done.
-            Companies may decide they value it. That decision does not create it, and it does not create me.
+            I design and operate AI systems. Those words name work already done. The work, its value, and
+            the person behind it already exist.
           </p>
         </div>
       </section>

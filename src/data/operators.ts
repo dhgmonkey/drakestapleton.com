@@ -9,7 +9,7 @@ export type OperatorRecord = {
   note: string;
 };
 
-/** Exact public roster. No third-party company adoption is claimed. */
+/** Exact public roster for Drake's operating environment. */
 export const FIRST_OPERATORS: OperatorRecord[] = [
   {
     id: "drake",
@@ -41,7 +41,7 @@ export const FIRST_OPERATORS: OperatorRecord[] = [
     name: "Claude",
     role: "First independent catalog",
     started: "2026-07-30",
-    note: "Produced a behavior catalog and harness requirements from the live run. Listed as a reviewer, not an inventor.",
+    note: "Produced a behavior catalog and harness requirements from the live run as an independent reviewer.",
   },
   {
     id: "grok",
@@ -70,7 +70,7 @@ export const LANE_NICKNAMES = [
   "Hypatia",
 ];
 
-export const INVOCATION = `Act as the orchestrator of models. Please adjust exactly what GPT model to use and what thinking level that task requires. I'm trying to save time and tokens and if we don't need a super computer to perform a well documented procedure type thing. Don't stop until you get done. Use sub agents to do this use multiple chats that can work at the same time. Make sure you start a gatekeeping agent to make sure no one encroaches. I want you to act like the best executive director Puppet Master. Your name is Atlas. Welcome to Earth. Please proceed with our Symphony. I'll see you on the other side, brother.`;
+export const INVOCATION = `Act as the orchestrator of models. Choose the GPT model and thinking level each task requires. Save time and tokens by matching capability to the work. Continue through completion. Use subagents in multiple chats that can work at the same time. Start an independent gatekeeper to preserve the lane boundaries. Act as the executive director and conductor. Your name is Atlas. Welcome to Earth. Please proceed with our Symphony. I'll see you on the other side, brother.`;
 
 export const ATLAS_OPENING =
   "Atlas online. I'm splitting the Symphony by risk and cost…";
@@ -93,14 +93,14 @@ export const VERSIONS = [
   {
     id: "2.0",
     date: "30 Jul 2026",
-    name: "Control plane",
+    name: "Operating desk",
     blurb: "Added a binding operating contract and delivery ledger so source, merge, deployment, and live proof remained separate stages.",
   },
   {
     id: "3.0 / 3.1",
     date: "late Jul 2026",
     name: "Two-tier process",
-    blurb: "Introduced lead and leaf roles, cost-aware model selection, and fail-closed isolation.",
+    blurb: "Introduced lead and leaf roles, cost-aware model selection, and strict isolation between lanes.",
   },
   {
     id: "4.0",
@@ -111,7 +111,7 @@ export const VERSIONS = [
   {
     id: "Current L-tier",
     date: "13 Aug 2026",
-    name: "Conductor, stewards, and bounded cells",
-    blurb: "L1 coordinates only. Independent L2 stewards own implementation, adversarial review, evidence, and operations. L3 cells perform bounded edits, tests, provider checks, and receipts. An implementation lane cannot clear itself.",
+    name: "Conductor, stewards, and focused cells",
+    blurb: "L1 coordinates the assignment. Independent L2 stewards own implementation, review, evidence, and operations. L3 cells perform focused edits, tests, provider checks, and receipts. Independent reviewers clear each implementation.",
   },
 ];
