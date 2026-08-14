@@ -13,6 +13,7 @@ export function SiteFooter() {
           <Link to="/path">Path</Link>
           <Link to="/software">Software &amp; AI</Link>
           <Link to="/what-i-learned">Lessons</Link>
+          <Link to="/interest">Interest</Link>
           <Link to="/atlas">Latest project</Link>
           <Link to="/symphony">Symphony</Link>
         </nav>

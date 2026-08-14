@@ -4,6 +4,7 @@ import { AtlasPage } from "./pages/AtlasPage";
 import { EvidencePage } from "./pages/EvidencePage";
 import { FirstRunPage } from "./pages/FirstRunPage";
 import { HomePage } from "./pages/HomePage";
+import { InterestPage } from "./pages/InterestPage";
 import { MapPage } from "./pages/MapPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { PathPage } from "./pages/PathPage";
@@ -17,6 +18,7 @@ function Portfolio() {
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<HomePage />} />
+        <Route path="/interest" element={<InterestPage />} />
         <Route path="/atlas" element={<AtlasPage />} />
         <Route path="/path" element={<PathPage />} />
         <Route path="/software" element={<SoftwarePage />} />
