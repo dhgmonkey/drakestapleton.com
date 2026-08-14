@@ -9,7 +9,7 @@ type FormState = "idle" | "submitting" | "success" | "error";
 
 export function WaitlistPage() {
   usePageMeta({
-    title: "Drake Stapleton | A Life in People, Systems, and Atlas",
+    title: "Drake Stapleton | A Life in People, Science, and Systems",
     description:
       "A human portrait and body of work by Drake Stapleton is in development. Join the waiting list for the first public release.",
     path: "/",
@@ -58,20 +58,21 @@ export function WaitlistPage() {
       formElement.reset();
     } catch {
       setState("error");
-      setMessage("The list could not save your email. Please try again in a moment.");
+      setMessage("Please try again in a moment so I can add your email.");
     }
   }
 
   return (
     <main className="waitlist-shell">
       <section className="waitlist-copy">
-        <p className="waitlist-kicker">Drake Stapleton / Agentic architect</p>
+        <p className="waitlist-kicker">Drake Stapleton / Thirty-two years alive</p>
         <h1>
-          A life in people, systems, and <em>Atlas.</em>
+          A life in <span className="waitlist-keep">people, science,</span>{" "}
+          <span className="waitlist-keep">and <em>systems.</em></span>
         </h1>
         <p className="waitlist-lede">
-          I am writing the full story now: chemistry, manufacturing, communities, my father, the path into
-          agent architecture, and why I kept building when nobody was asking me to.
+          I am writing the full story now: Tennessee, Kentucky, family, chemistry, manufacturing,
+          communities, independent projects, and the determination that carried me through every hard turn.
         </p>
         <p className="waitlist-rule">The work is technical. The reason is human.</p>
       </section>
@@ -80,8 +81,8 @@ export function WaitlistPage() {
         <p className="waitlist-number">Private development / 2026</p>
         <h2 id="waitlist-title">Join the waiting list.</h2>
         <p>
-          The portfolio is intentionally closed while I reconcile the record and finish telling it in my
-          own voice. Leave one email and I will let you know when it opens.
+          I am finishing the record and telling it in my own voice. Leave one email and I will write when
+          the complete portrait opens.
         </p>
 
         {state === "success" ? (
@@ -90,7 +91,7 @@ export function WaitlistPage() {
             <p>{message}</p>
           </div>
         ) : (
-          <form className="waitlist-form" onSubmit={joinWaitlist} noValidate>
+          <form className="waitlist-form" onSubmit={joinWaitlist}>
             <label htmlFor="email">Email address</label>
             <input
               id="email"
@@ -109,7 +110,8 @@ export function WaitlistPage() {
             <label className="waitlist-consent">
               <input name="consent" type="checkbox" required disabled={state === "submitting"} />
               <span>
-                Use my email only to tell me when this portfolio opens. Do not sell or share it.
+                Use my email solely for the announcement that this portfolio is open. My address stays
+                private and leaves the list whenever I ask.
               </span>
             </label>
             <button type="submit" disabled={state === "submitting"}>
@@ -124,14 +126,14 @@ export function WaitlistPage() {
         )}
 
         <p className="waitlist-privacy">
-          Stored: email, consent version, and signup time. No tracking pixels, advertising profile, or
-          public list. You can ask to be removed at any time.
+          Stored with consent: email address, consent version, and signup time. Your address supports this
+          single announcement and stays private.
         </p>
       </aside>
 
       <footer className="waitlist-footer">
         <span>Drake Stapleton</span>
-        <span>Louisville, Kentucky</span>
+        <span>Springfield, Missouri</span>
       </footer>
     </main>
   );

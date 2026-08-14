@@ -8,6 +8,26 @@ import {
 } from "../data/operators";
 import { usePageMeta } from "../lib/usePageMeta";
 
+const MONTHS = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+function publicDate(value: string) {
+  const [year, month, day] = value.split("-").map(Number);
+  return `${day} ${MONTHS[month - 1]} ${year}`;
+}
+
 export function FirstRunPage() {
   usePageMeta({
     title: "First Atlas Symphony — 30 July 2026 · Drake Stapleton",
@@ -19,13 +39,13 @@ export function FirstRunPage() {
   return (
     <main className="wrap">
       <p className="kicker">First named instance · Sovereign Forge live-ops</p>
-      <h1>Who started using it</h1>
+      <h1>The first documented run</h1>
       <p className="lede">
-        One human started it. Drake Stapleton wrote the invocation, named the orchestrator Atlas, and told it
-        to proceed with a Symphony. Everyone else on this page sat in a chair he opened.
+        I wrote the invocation, named the orchestrator Atlas, and authorized the run. Drake Stapleton is the
+        inventor; the other entries identify runtimes, reviewers, and task lanes.
       </p>
 
-      <h2 className="sec">The invocation (verbatim)</h2>
+      <h2 className="sec">The public invocation</h2>
       <blockquote className="invoke">
         {INVOCATION}
         <cite>Drake Stapleton · 30 July 2026 · prior turn: “What’s left in our development plan?”</cite>
@@ -51,7 +71,7 @@ export function FirstRunPage() {
           <tbody>
             {FIRST_OPERATORS.map((o) => (
               <tr key={o.id}>
-                <td>{o.started}</td>
+                <td>{publicDate(o.started)}</td>
                 <td>{o.name}</td>
                 <td>{o.role}</td>
                 <td>{o.kind}</td>
@@ -65,7 +85,7 @@ export function FirstRunPage() {
           <p className="kind">{o.kind}</p>
           <h3>{o.name}</h3>
           <p className="meta">
-            {o.role} · {o.started}
+            {o.role} · {publicDate(o.started)}
           </p>
           <p>{o.note}</p>
         </article>
@@ -81,16 +101,16 @@ export function FirstRunPage() {
         ))}
       </div>
       <p className="note">
-        Nicknames used as exclusive players in that first run, not as other humans:{" "}
+        These nicknames identified agent lanes in the first run:{" "}
         {LANE_NICKNAMES.join(" · ")}.
       </p>
 
-      <h2 className="sec">What is not claimed</h2>
+      <h2 className="sec">Current scope</h2>
       <div className="card">
         <p>
-          No company outside this desk has been sold as a Symphony customer. Later Grok Hive and Boston hive
-          chairs are still Drake’s operators. Claude and Grok are first users of the <i>record</i> — catalog
-          and observation — not co-inventors.
+          The current record covers my own operating environment. Later Grok Hive and Boston roles grew
+          inside that environment. Claude cataloged the first run, Grok observed it, and Drake Stapleton
+          remains the inventor and operator.
         </p>
       </div>
     </main>

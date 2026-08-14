@@ -31,15 +31,15 @@ export function VolumeChart() {
   return (
     <svg className="chart" viewBox={`0 0 ${w} ${h}`} role="img" aria-label="Monthly source added and cumulative">
       {bars.map((b, i) => (
-        <rect key={months[i]} x={b.x} y={b.y} width={bw - 8} height={Math.max(b.h, 0)} fill="#5eead4cc" rx="3" />
+        <rect key={months[i]} x={b.x} y={b.y} width={bw - 8} height={Math.max(b.h, 0)} fill="#7fb8a6cc" rx="3" />
       ))}
-      <path d={line} fill="none" stroke="#a78bfa" strokeWidth="2" />
+      <path d={line} fill="none" stroke="#a9462b" strokeWidth="2" />
       {months.map((m, i) => (
-        <text key={m} x={pad.l + i * bw + bw / 2} y={h - 8} textAnchor="middle" fill="#8b93b8" fontSize="9">
+        <text key={m} x={pad.l + i * bw + bw / 2} y={h - 8} textAnchor="middle" fill="#6d626a" fontSize="9">
           {m}
         </text>
       ))}
-      <text x={w - 4} y={18} textAnchor="end" fill="#8b93b8" fontSize="10">
+      <text x={w - 4} y={18} textAnchor="end" fill="#6d626a" fontSize="10">
         peak {fmt(max)} · total {fmt(maxC)}
       </text>
     </svg>

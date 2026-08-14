@@ -15,14 +15,14 @@ const JSON_LD = {
     url: "https://www.drakestapleton.com/",
   },
   description:
-    "A gated multi-agent process. Atlas is the orchestrator; Symphony is the process. Invented and first run by Drake Stapleton on 30 July 2026.",
+    "A gated process for coordinating multiple AI agents. Designed and first run by Drake Stapleton on 30 July 2026.",
 };
 
 export function SymphonyPage() {
   usePageMeta({
     title: "Atlas Symphony — Drake Stapleton",
     description:
-      "Atlas is the orchestrator. Symphony is the process. Invented and first run by Drake Stapleton, 30 July 2026.",
+      "Atlas Symphony is a gated process for coordinating multiple AI agents. Designed and first run by Drake Stapleton on 30 July 2026.",
     path: "/symphony",
   });
 
@@ -34,30 +34,31 @@ export function SymphonyPage() {
         Atlas <em>Symphony</em>
       </h1>
       <p className="lede">
-        Atlas is the orchestrator. Symphony is the process. Drake Stapleton invented it, named it, and was
-        the first human to run it.
+        Atlas Symphony is a gated process for coordinating multiple AI agents on one task. I designed,
+        named, and first used it on 30 July 2026.
       </p>
       <p className="law">
-        “Run a Symphony on X” means start this process — exclusive lanes, a gatekeeper, cost-aware routing,
-        no unsafe mutation. It is not a model and not a chat title.
+        A Symphony divides work into isolated lanes, assigns an independent gatekeeper, selects models by
+        task and cost, and reserves final approval for the human operator. It is the working process that
+        connects the people, models, tools, reviews, and evidence.
       </p>
 
       <div className="metrics">
         <div className="metric">
           <b>Drake Stapleton</b>
-          <span>Inventor and first operator. Sole human GO then and now.</span>
+          <span>Designer and first operator. Final approval remains human.</span>
         </div>
         <div className="metric">
           <b>30 Jul 2026</b>
-          <span>Named in the invocation. First instance: Sovereign Forge live-ops.</span>
+          <span>Date of the first documented run, for Sovereign Forge live operations.</span>
         </div>
         <div className="metric">
-          <b>Star, then law</b>
-          <span>Lanes one hop from Atlas. Later A / H / B / F. Max three children.</span>
+          <b>Versioned process</b>
+          <span>The initial star topology later became a two-tier control structure.</span>
         </div>
         <div className="metric">
-          <b>No company users</b>
-          <span>Later chairs are this desk’s own engines. Third-party adoption is not claimed.</span>
+          <b>Current operating record</b>
+          <span>The current record covers my own runtimes and reviewers.</span>
         </div>
       </div>
 
@@ -78,8 +79,8 @@ export function SymphonyPage() {
         ))}
       </div>
       <p className="note">
-        Lane nicknames (Popper, Lagrange, Avicenna, Plato, Jason, Hypatia) are players in the first Symphony,
-        not the Symphony and not other people. Full roster and invocation:{" "}
+        Popper, Lagrange, Avicenna, Plato, Jason, and Hypatia identified agent lanes in the first run. The
+        complete roster and original invocation are on the{" "}
         <Link to="/symphony/first">first run</Link>.
       </p>
 
@@ -87,8 +88,8 @@ export function SymphonyPage() {
       <div className="card">
         <FirstRunDiagram />
         <p className="note">
-          Solid lines are command. Dashed lines are independent record — Claude catalogued, Grok observed,
-          Codex was the first runtime Atlas sat in.
+          Solid lines show command relationships. Dashed lines show independent review. Codex hosted the
+          first runtime; Claude cataloged the behavior; Grok observed the run.
         </p>
       </div>
 
@@ -97,17 +98,17 @@ export function SymphonyPage() {
         <Link className="card" to="/symphony/first">
           <h3>First Symphony</h3>
           <p className="meta">React diagram · this project</p>
-          <p>Who sat in the first chairs. Drake, Atlas, the process, five lanes, three first users of the record.</p>
+          <p>The original invocation, participating runtimes, reviewer roles, and five work lanes.</p>
         </Link>
         <Link className="card" to="/symphony/workflow">
           <h3>Command tree + cycle</h3>
-          <p className="meta">Interactive · click any bubble</p>
-          <p>Who may speak to whom, then the order a cycle actually launches. A → H B F → R T P.</p>
+          <p className="meta">Illustrated process map</p>
+          <p>The command structure and launch sequence used during a Symphony cycle.</p>
         </Link>
         <Link className="card" to="/symphony/map">
           <h3>Bird’s-eye</h3>
           <p className="meta">Jun 18 – Aug 13 2026</p>
-          <p>Six tracks at once. Harness, counterpart, hive, isolated law, image GPU, save plane.</p>
+          <p>Six concurrent Atlas workstreams shown on a shared timeline.</p>
         </Link>
       </div>
 
@@ -131,7 +132,7 @@ export function SymphonyPage() {
       </div>
 
       <footer className="footer">
-        Public process record. Private media, credentials, and internal addresses are not on this site.
+        Public process record. Private media, credentials, and internal addresses remain private.
       </footer>
     </main>
   );

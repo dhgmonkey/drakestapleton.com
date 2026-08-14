@@ -1,47 +1,55 @@
-# Handoff — drakestapleton.com
+# Handoff - drakestapleton.com
 
-**As of 13 Aug 2026.** The public site is a waiting-list gate while the human portrait remains in private development.
+**As of 14 Aug 2026.** This branch publishes the complete human portrait while retaining the waiting-list gate as a fail-closed fallback.
 
-- https://www.drakestapleton.com/ -> waiting list
-- all prior portfolio routes -> waiting list
-- Source: https://github.com/dhgmonkey/drakestapleton.com (`main`)
+- `npm run build` produces the fail-closed, no-index waiting-list release retained as the rollback build.
+- `npm run build:portfolio` produces the complete, indexable portrait used by GitHub Pages for the public site.
+- Every known route has a static fallback with route-specific metadata.
+- Source: https://github.com/dhgmonkey/drakestapleton.com
 
-Do not attach Atlas private trees, Hostinger tokens, or the coding archive.
-
----
+The portrait uses Drake's supplied first-person history, the reviewed resume chronology, and the complete nine-file derivative audit package in `Downloads/drake-chatgpt-history-handoff`. The audit remains `PARTIAL` by its own evidence definition because the original ChatGPT account export is a future source.
 
 ## Release boundary
 
-| Piece | Status |
+| Piece | State |
 |---|---|
-| Stack | Vite 7 · React 19 · TypeScript · react-router |
-| Host | GitHub Pages + HTTPS · CNAME `www.drakestapleton.com` |
-| Deploy | `.github/workflows/pages.yml` — `npm ci && npm run build` → `dist/` |
-| Public UI | No-index waiting-list page on every route |
+| Stack | Vite 7, React 19, TypeScript, react-router |
+| Host | GitHub Pages with HTTPS and `www.drakestapleton.com` CNAME |
+| Published Pages build | Full portrait via `npm run build:portfolio`, with route metadata, sitemap, and indexable pages |
+| Waiting-list fallback | `npm run build` on every route, `noindex`, disallowing crawler access |
 | Signup API | Dedicated Boston Python service on TLS port 8443 |
-| Stored data | Normalized email, consent version, UTC timestamp only |
-| Excluded | Human portrait draft, resume, private history, credentials, financial identifiers |
+| Stored signup data | Normalized email, consent version, UTC timestamp |
+| Public personal material | First-person story, reviewed work and education chronology, public-safe evidence |
+| Private material | Raw transcripts, family source documents, member records, credentials, addresses, financial identifiers |
 
-**Not on the public site:** career CSV, personal media, counterpart stills, credentials, private IPs.
+The public bundle excludes the portrait code. The portfolio bundle excludes the waiting-list code. `scripts/verify-build.mjs` enforces both boundaries.
 
----
-
-## Local
+## Local review
 
 ```bash
-npm install
-npm run dev
-npm run build && npm run preview
+npm run dev:portfolio
+npm run check:copy
+npm run test:waitlist
+npm run build
+npm run build:portfolio
+npm run preview
 ```
 
-SPA fallback: build copies `dist/index.html` to `dist/404.html` so unknown paths hit the router.
+## Publication assets
 
----
+- `public/og-card.svg`: editable source for the aubergine, ember, and parchment social card.
+- `public/og.png`: rendered 1200 by 630 social card.
+- `public/favicon.svg`: site favicon.
+- `dist/robots.txt`: generated for the selected build mode.
+- `dist/sitemap.xml`: generated for the portfolio build.
 
-## Still open (same as before)
+## Deployment order
 
-1. Revoke the Hostinger API token that was pasted in chat.
-2. Headshot / OG image / favicon.
-3. Public contact.
-4. Resume PDF.
-5. Do not put `drake-coding-archive.html` on this domain.
+1. Publish the complete portrait through `npm run build:portfolio` in the GitHub Pages workflow.
+2. Verify the home page, every direct route, metadata, social image, 404 behavior, and the deployed commit.
+3. To close the portrait again, change the workflow back to `npm run build` and verify the waiting-list gate and crawler block live.
+
+## External security follow-up
+
+- Confirm revocation of the Hostinger API token previously pasted into chat before the portfolio opens.
+- Keep raw resumes, personal media, private histories, credentials, host details, and the coding archive outside the public site.

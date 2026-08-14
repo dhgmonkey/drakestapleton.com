@@ -13,8 +13,8 @@ export function MapPage() {
       <p className="kicker">Diagram · 18 Jun – 13 Aug 2026</p>
       <h1>Bird’s-eye</h1>
       <p className="lede">
-        Six tracks ran at once. Time goes left to right. This is the overview; the first-run page is the
-        origin story.
+        This timeline covers six concurrent Atlas workstreams from June through August 2026. The first-run
+        page documents the process&apos;s starting point.
       </p>
       <div className="card" style={{ overflowX: "auto" }}>
         <Birdseye />

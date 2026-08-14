@@ -3,16 +3,17 @@ import { usePageMeta } from "../lib/usePageMeta";
 
 export function NotFoundPage() {
   usePageMeta({
-    title: "Not found — Drake Stapleton",
-    description: "That path is not on this site.",
+    title: "Page directory | Drake Stapleton",
+    description: "Choose a page from Drake Stapleton's site.",
     path: "/404",
+    robots: "noindex, follow",
   });
   return (
     <main className="wrap">
       <p className="kicker">404</p>
-      <h1>Nothing at this path</h1>
+      <h1>Choose where to go next</h1>
       <p className="lede">
-        Try the <Link to="/">portfolio</Link> or the <Link to="/symphony">Symphony record</Link>.
+        Return to the <Link to="/">home page</Link> or open the <Link to="/symphony">Symphony record</Link>.
       </p>
     </main>
   );

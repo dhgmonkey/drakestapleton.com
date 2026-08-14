@@ -1,215 +1,294 @@
 import { Link } from "react-router-dom";
-import { VolumeChart } from "../components/VolumeChart";
-import { ARCH, CASES, CHIPS, METRICS, ROLE_MAP, SIDE_CASES, STORY, TREES } from "../data/portfolio";
+import { ChapterNav, SectionLead } from "../components/PagePrimitives";
 import { usePageMeta } from "../lib/usePageMeta";
+
+const chapters = [
+  { href: "#formation", number: "01", label: "Formation" },
+  { href: "#drive", number: "02", label: "Drive" },
+  { href: "#people", number: "03", label: "People" },
+  { href: "#work", number: "04", label: "Work" },
+  { href: "#latest", number: "05", label: "Latest" },
+];
+
+const perseverance = [
+  {
+    marker: "Belonging",
+    title: "The people gave me a reason to stay.",
+    body: "DHG found me at nineteen and gave me a place where I could lead as myself. I carried that gift forward by helping other people feel seen, capable, and worth fighting for.",
+  },
+  {
+    marker: "10 weeks",
+    title: "I built people up and watched them lead.",
+    body: "I helped grow a 46-member squad to 85 percent activity. I trained members after difficult rounds, built the dashboards and schedules, and developed officers who could carry the work themselves.",
+  },
+  {
+    marker: "45 times",
+    title: "I kept choosing the people.",
+    body: "Whenever leadership became heavy, someone still needed training, an officer needed support, or a member needed another person to believe in them. The people kept giving the work its purpose.",
+    quote: "Somehow I just keep finding the strength, or rather the stubbornness, to keep going.",
+  },
+  {
+    marker: "Build it",
+    title: "I turn care into systems people can use.",
+    body: "Training plans, schedules, dashboards, research systems, and AI tools all grow from the same instinct: preserve what helps, learn from each result, and give people a stronger next step.",
+  },
+];
+
+const lifeRecord = [
+  "I survived a childhood that taught me to hide, and became a man who lives in the open.",
+  "I built a marriage and opened my home to foster children who needed somewhere safe.",
+  "I earned two science degrees and built a career across research, product development, and\u00a0manufacturing.",
+  "I secured alternate raw materials during a global disruption, produced roughly $1.2 million in documented savings, and served as a HAZMAT Incident\u00a0Commander.",
+  "I helped communities grow, trained people through difficult rounds, and developed leaders who carry others.",
+  "I taught myself software, trained models, designed AI systems, and funded years of independent work with my own money.",
+  "I turned grief into a reason to preserve memory, and hard lessons into machinery that tries again.",
+];
+
+const inheritances = [
+  ["My mother", "taught me to leave what hurts, keep going, and trust what I could become."],
+  ["My grandparents", "gave us land, roots, food, and the belief that a life is measured by what it gives away."],
+  ["The father who chose me", "gave me his name, taught me to be useful, and showed me that family can be a decision."],
+  ["The people who found me", "taught me that gratitude moves forward. You turn around and reach for someone else."],
+];
+
+const values = [
+  ["Truth", "I keep the source. I separate what I saw from what I inferred. I face hard facts with open eyes."],
+  ["Service", "Leadership makes another person stronger and gives the title less importance."],
+  ["Belonging", "I build places where people can stay fully visible."],
+  ["Integrity", "I carry what is right through friendship, position, and every uncomfortable truth."],
+  ["Agency", "A title describes one part of my life. I decide how far the whole life can go."],
+  ["Curiosity", "I keep a question alive long enough to make it sharper."],
+  ["Perseverance", "Every hard attempt gives me information. I preserve the lesson and return with a better system."],
+  ["Love", "Family can be inherited, chosen, adopted, married, fostered, or found through a headset in the dark."],
+];
 
 export function HomePage() {
   usePageMeta({
-    title: "Drake Stapleton — Agentic AI Architect",
+    title: "Drake Stapleton | The life behind the work",
     description:
-      "I set the architecture for agent systems that plan, reason, and act — with the model never owning done. Inventor of Atlas Symphony.",
+      "The human story behind Drake Stapleton's work in chemistry, manufacturing, community leadership, software, and independent invention.",
     path: "/",
   });
 
   return (
-    <main className="wrap">
-      <p className="kicker">Agentic AI · architecture portfolio</p>
-      <h1>Drake Stapleton</h1>
-      <p className="lede">
-        I set the architecture and operating model for agent systems that plan, reason, and act — with the
-        model never owning “done.” This site is one body of work: products first, then the harness, then the
-        named process that runs them.
-      </p>
-      <p className="law">The model proposes. The harness disposes.</p>
-      <div className="chips">
-        {CHIPS.map((c) => (
-          <span className="chip" key={c}>
-            {c}
-          </span>
-        ))}
-        <Link className="chip live" to="/symphony">
-          Atlas Symphony →
-        </Link>
-      </div>
-
-      <div className="metrics">
-        {METRICS.map((m) => (
-          <div className="metric" key={m.title}>
-            <b>{m.title}</b>
-            <span>{m.body}</span>
-          </div>
-        ))}
-      </div>
-      <p className="note">
-        Net ~2.6M source lines committed across the archive — agent-authored code and rewrites included. Not a
-        typing score. Vendor clones excluded.
-      </p>
-
-      <h2 className="sec" id="thesis">
-        The collective story
-      </h2>
-      <div className="card">
-        <p>These are not side projects in a pile. They are one sequence:</p>
-        <ul className="tight">
-          {STORY.map((s) => (
-            <li key={s.era}>
-              <b>{s.era}</b> {s.body}
-            </li>
-          ))}
-        </ul>
-        <p style={{ marginTop: 10 }}>
-          An Agentic AI Architect role is that last step, at company scale. I already designed and operated
-          the personal version under real load — and named the process{" "}
-          <Link to="/symphony">Atlas Symphony</Link>.
-        </p>
-      </div>
-
-      <h2 className="sec" id="arch">
-        Reference architecture I already run
-      </h2>
-      <div className="card">
-        <p>What I would put on a whiteboard in week one. I built each box because the desk failed without it.</p>
-        <div className="arch">
-          {ARCH.map((a) => (
-            <div className="box" key={a.title}>
-              <strong>{a.title}</strong>
-              <span>{a.body}</span>
-            </div>
-          ))}
+    <main className="portrait-page home-page">
+      <section className="home-hero page-boundary">
+        <div className="hero-copy">
+          <p className="kicker">Drake Stapleton / Thirty-two years alive</p>
+          <h1>
+            I keep finding <span>the strength.</span>
+          </h1>
+          <blockquote>Or rather, the stubbornness.</blockquote>
+          <p className="home-hero-lede">
+            I am a chemist, a manufacturing engineer, a husband, a former foster parent, a community
+            builder, and an AI systems architect. My work crosses fields. My drive stays.
+          </p>
+          <p className="home-hero-purpose">
+            This is a record I made for myself. It gives me a place to see my own life whole.
+          </p>
         </div>
+        <aside className="hero-identity" aria-label="The life in brief">
+          <span>Born 1994</span>
+          <span>Raised in Tennessee</span>
+          <span>College in Kentucky</span>
+          <span>Springfield, Missouri today</span>
+          <span>Two science degrees</span>
+          <span>Builder by choice</span>
+        </aside>
+      </section>
+
+      <div className="page-boundary">
+        <ChapterNav links={chapters} />
       </div>
 
-      <h2 className="sec" id="work">
-        Work, sold as one portfolio
-      </h2>
-      {CASES.map((c) => (
-        <article className="case" key={c.title}>
-          <h3>{c.href ? <Link to={c.href}>{c.title}</Link> : c.title}</h3>
-          <p className="meta">{c.meta}</p>
-          <p>{c.body}</p>
-          {c.points ? (
-            <ul className="tight">
-              {c.points.map((p) => (
-                <li key={p}>{p}</li>
-              ))}
-            </ul>
-          ) : null}
-        </article>
-      ))}
+      <section className="manifesto-band">
+        <div className="page-boundary manifesto-inner">
+          <p className="portrait-index">In my own words</p>
+          <blockquote>
+            “I am living as myself. I am claiming my own life and my own purpose. I decide what I can become.”
+          </blockquote>
+          <p>I have spent years learning how to see my own life clearly. This site is me choosing to look.</p>
+        </div>
+      </section>
 
-      <div className="grid2">
-        {SIDE_CASES.map((c) => (
-          <article className="case" key={c.title}>
-            <h3>{c.title}</h3>
-            <p className="meta">{c.meta}</p>
-            <p>{c.body}</p>
+      <section className="home-chapter page-boundary" id="formation">
+        <SectionLead eyebrow="01 / Formation" title="I learned how to fight for every inch.">
+          <p>The beginning gave me love, pressure, questions, and the habit of earning my way forward.</p>
+        </SectionLead>
+        <div className="formation-grid">
+          <article className="feature-story">
+            <p className="chapter-tag">The boy I was</p>
+            <h3>I learned to disappear before I learned why.</h3>
+            <p>
+              I grew up gay in Tennessee, in the Bible Belt. My mother fought for me. My grandparents rooted
+              me. My father chose me. My little sister gave me someone to protect. I was surrounded by love
+              while believing that being fully known could cost me{"\u00a0"}everything.
+            </p>
+            <p>
+              I played football, earned my place in honors classes the hard way, and learned how to look
+              capable while writing my own manual for living.
+            </p>
           </article>
-        ))}
-      </div>
+          <article className="grade-card">
+            <p className="chapter-tag">The drive behind the grades</p>
+            <strong>3.92</strong>
+            <h3>I fought for that GPA.</h3>
+            <p>
+              Other students held the valedictorian and salutatorian titles. Autism and ADHD made focus a
+              daily contest, and I moved through high school{"\u00a0"}unmedicated.
+            </p>
+            <p>
+              I wanted effortless brilliance. Determination became my advantage. It carried me through high
+              school and college. During my first year of graduate school, willpower finally ran out. I
+              started medication. It gave me a new way to focus and keep moving.
+            </p>
+          </article>
+          <article className="door-story">
+            <div>
+              <p className="chapter-tag">June 12, 2013</p>
+              <h3>The worst night of my life and the best decision of my life share a date.</h3>
+            </div>
+            <div>
+              <p>
+                I was nineteen and closer to the edge than most people knew. I picked up a controller. A
+                stranger named Saturn spoke to me in a Call of Duty lobby and invited me into DHG.
+              </p>
+              <p>
+                I said yes. That answer gave me people who had my back, a place to lead, and proof that the
+                person I had hidden could still be wanted. Belonging found me through a headset in the dark.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
 
-      <h2 className="sec">How I would do the job</h2>
-      <div className="grid3">
-        <div className="card">
-          <h3>Standards</h3>
-          <p>
-            Reference design first: lanes, tool contracts, gate policy, memory/provenance, env segregation.
-            Teams don’t get a free-form agent.
-          </p>
-        </div>
-        <div className="card">
-          <h3>Safety</h3>
-          <p>
-            Prompt injection and over-reach are architecture bugs. Redact, classify, deny-by-default, human
-            gate on side effects. “The model asked” is not authorization.
-          </p>
-        </div>
-        <div className="card">
-          <h3>Eval & FinOps</h3>
-          <p>
-            Task-based evals before widen. Trace every action. Kill and recover. Measure latency and cost as
-            SLAs, not afterthoughts.
-          </p>
-        </div>
-      </div>
-
-      <h2 className="sec" id="map">
-        Mapped to an Agentic AI Architect seat
-      </h2>
-      <div className="card" style={{ overflowX: "auto" }}>
-        <table>
-          <thead>
-            <tr>
-              <th>What the role owns</th>
-              <th>Evidence in this portfolio</th>
-              <th>Honest gap</th>
-            </tr>
-          </thead>
-          <tbody>
-            {ROLE_MAP.map(([a, b, c]) => (
-              <tr key={a}>
-                <td>{a}</td>
-                <td className="ok">{b}</td>
-                <td className="gap">{c}</td>
-              </tr>
+      <section className="home-chapter drive-chapter" id="drive">
+        <div className="page-boundary">
+          <SectionLead eyebrow="02 / Drive" title="I keep returning because people are worth the effort.">
+            <p>
+              My mother returned to school in her forties and finished what life had interrupted. I watched
+              her cross the stage on May 5, 2016. Eight days later, she stood beside me at Western Kentucky.
+            </p>
+          </SectionLead>
+          <div className="perseverance-ledger">
+            {perseverance.map((item, index) => (
+              <article key={item.marker}>
+                <div className="ledger-number">{String(index + 1).padStart(2, "0")}</div>
+                <p className="ledger-marker">{item.marker}</p>
+                <div>
+                  <h3>{item.title}</h3>
+                  {item.quote && <blockquote>“{item.quote}”</blockquote>}
+                  <p>{item.body}</p>
+                </div>
+              </article>
             ))}
-          </tbody>
-        </table>
-        <p className="note">
-          I do not invent SAP or Bedrock experience I do not have. I do have the harder part: an operating
-          model that survives when the model is wrong.
-        </p>
-      </div>
+          </div>
+          <div className="recovery-note">
+            <p className="chapter-tag">What I know now</p>
+            <p>Perseverance includes recovery. Rest brings me back to the work while keeping the person doing it whole.</p>
+            <Link to="/what-i-learned">Read the lessons I carried forward</Link>
+          </div>
+        </div>
+      </section>
 
-      <h2 className="sec">Volume</h2>
-      <p className="note">
-        Monthly source added (teal) and cumulative (violet). 2025 is foundations. 2026 is operator products,
-        then the harness. SHA-deduped own trees only.
-      </p>
-      <div className="card">
-        <VolumeChart />
-      </div>
+      <section className="life-record" aria-labelledby="life-record-title">
+        <div className="page-boundary life-record-grid">
+          <div className="life-record-number" aria-hidden="true">32</div>
+          <div>
+            <p className="portrait-index">A life worth seeing</p>
+            <h2 id="life-record-title">I have already built an extraordinary life.</h2>
+            <div className="life-record-list">
+              {lifeRecord.map((item, index) => (
+                <p key={item}><span>{String(index + 1).padStart(2, "0")}</span>{item}</p>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <h2 className="sec">Selected trees</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>System</th>
-            <th>What it proves</th>
-            <th className="num">Commits</th>
-            <th className="num">Net source</th>
-          </tr>
-        </thead>
-        <tbody>
-          {TREES.map(([a, b, c, d]) => (
-            <tr key={a}>
-              <td>{a}</td>
-              <td>{b}</td>
-              <td className="num">{c}</td>
-              <td className="num">{d}</td>
-            </tr>
+      <section className="home-chapter page-boundary" id="people">
+        <SectionLead eyebrow="03 / People" title="My life is shaped by what gets handed forward." />
+        <div className="inheritance-grid">
+          {inheritances.map(([name, body]) => (
+            <article key={name}>
+              <h3>{name}</h3>
+              <p>{body}</p>
+            </article>
           ))}
-        </tbody>
-      </table>
+        </div>
+        <blockquote className="people-quote">
+          “I find great joy in helping others realize just how great they truly are.”
+        </blockquote>
+        <div className="values-block">
+          <div className="values-intro">
+            <p className="chapter-tag">What I stand for</p>
+            <h3>The work changes. My values stay.</h3>
+          </div>
+          <div className="values-grid">
+            {values.map(([name, body]) => (
+              <article key={name}>
+                <h4>{name}</h4>
+                <p>{body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      <h2 className="sec">What I want next</h2>
-      <div className="card">
-        <p>
-          I want to take this operating model off a personal desk and onto an enterprise one: set the
-          reference architecture, the safety bar, and the eval standard so other teams can ship agents that
-          act in real systems without the model getting a vote.
-        </p>
-        <p>
-          I am most useful as the architect who has already felt the failure modes, not the one who has only
-          assembled a vendor tutorial.
-        </p>
-      </div>
+      <section className="home-chapter work-chapter" id="work">
+        <div className="page-boundary">
+          <SectionLead eyebrow="04 / Work" title="The fields changed. My standard stayed.">
+            <p>
+              Chemistry taught me to respect evidence. Manufacturing taught me that decisions carry real
+              consequences. Community taught me to open the door when someone needs it.
+            </p>
+          </SectionLead>
+          <div className="work-record">
+            <article><strong>2016</strong><span>B.S. in Chemistry and Biology, Western Kentucky University</span></article>
+            <article><strong>2018</strong><span>M.S. in Chemistry, Western Kentucky University</span></article>
+            <article><strong>2018 onward</strong><span>Industrial research, product development, and manufacturing engineering</span></article>
+            <article><strong>Built alongside it</strong><span>Software, communities, model training, research systems, and independent invention</span></article>
+          </div>
+          <Link className="text-link" to="/path">Follow the complete education and work path</Link>
+        </div>
+      </section>
 
-      <footer className="footer">
-        Drake Stapleton · <a href="https://github.com/dhgmonkey">github.com/dhgmonkey</a>
-        <br />
-        Public site. Omits personal media, credentials, and non-public work.{" "}
-        <Link to="/symphony">Atlas Symphony record →</Link>
-      </footer>
+      <section className="latest-work" id="latest">
+        <div className="page-boundary latest-work-grid">
+          <div>
+            <p className="portrait-index">05 / Latest achievement</p>
+            <h2>Atlas is my greatest achievement so far.</h2>
+          </div>
+          <div>
+            <p>
+              It is also my latest. Atlas brings together the discipline I learned in chemistry, the
+              accountability I learned in manufacturing, the care I learned through community, and years
+              of independent work in software and AI.
+            </p>
+            <p>
+              Its origin is personal. My father left handwritten sermons and years of thought behind. I
+              built Atlas around memory, truth, dignity, and the questions I still carry. This achievement
+              gives me a stronger foundation for everything I build next.
+            </p>
+            <Link to="/atlas">Explore the Atlas project</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="home-closing page-boundary">
+        <p className="portrait-index">Self-definition</p>
+        <h2>I choose the size of my own life.</h2>
+        <p>
+          I paid for the compute, spent the nights, trained the models, built the architecture, documented
+          the lessons, and kept going. I design and operate AI systems. Those words name work already done.
+          The work, its value, and the person behind it already exist.
+        </p>
+        <blockquote>“The people saved me. Now it&apos;s my turn.”</blockquote>
+        <div className="home-closing-actions">
+          <Link to="/evidence">Explore the documented record</Link>
+          <a href="https://github.com/dhgmonkey">Visit GitHub</a>
+        </div>
+      </section>
     </main>
   );
 }
