@@ -245,9 +245,9 @@ export function HomePage() {
             <p>
               I was 24 and Devin was 22, still kids ourselves, when we married in October 2018. By December,
               before our first Christmas as husbands, our first foster placement was home with us. From
-              December 2018 until COVID made us stop in spring 2020, we cared for six foster children. Among
-              them were two teenage girls with level-five care needs, young people the system struggled to
-              place with families prepared for that responsibility.
+              December 2018 until COVID made us stop in spring 2020, we cared for six foster children. All
+              six were Level 5 placements, young people the system struggled to place with families prepared
+              for that responsibility.
             </p>
             <p>
               My stepdad adopted my brother and me and became our dad. He chose us, on paper and in every other
@@ -258,7 +258,7 @@ export function HomePage() {
           </article>
           <article className="family-story dad-story">
             <p className="chapter-tag">Ballentine Day / December 3, 2007</p>
-            <h3>Dad&apos;s birthday keeps meeting me at the next door.</h3>
+            <h3>Dad and Devin share a birthday that keeps meeting me at the next door.</h3>
             <p>
               Dad made official what he had already lived: he adopted my brother and me. Our family calls
               that date Ballentine Day. I became Michael Drake Ballentine and carried Dad&apos;s name for eleven
@@ -266,7 +266,8 @@ export function HomePage() {
               father who chose me. Stapleton marks the life Devin and I chose together.
             </p>
             <p>
-              On Dad&apos;s birthday in 2024, I received the offer that brought me to 3M as a manufacturing
+              Devin and Dad share that December 3 birthday. On their birthday in 2024, I received the offer
+              that brought me to 3M as a manufacturing
               engineer. Two years later, on February 13, 2026, another call offered me the product engineer
               role I hold today. The dates have ordinary explanations. They still carry extraordinary
               meaning for me.
