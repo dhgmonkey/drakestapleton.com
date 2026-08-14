@@ -2,11 +2,12 @@ import { defineConfig, type Plugin } from "vite";
 import react from "@vitejs/plugin-react";
 import { fileURLToPath, URL } from "node:url";
 
-function siteMetadata(mode: string): Plugin {
+function siteMetadata(mode: string, development: boolean): Plugin {
   const portfolio = mode === "portfolio";
   const values = {
     __SITE_MODE__: portfolio ? "portfolio" : "waitlist",
     __SITE_ROBOTS__: portfolio ? "index, follow" : "noindex, nofollow, noarchive",
+    __SITE_STYLE_SRC__: development ? "style-src 'self' 'unsafe-inline'" : "style-src 'self'",
     __SITE_TITLE__: portfolio
       ? "Drake Stapleton | The Life Behind the Work"
       : "Drake Stapleton | A Life in People, Systems, and Atlas",
@@ -26,8 +27,8 @@ function siteMetadata(mode: string): Plugin {
   };
 }
 
-export default defineConfig(({ mode }) => ({
-  plugins: [siteMetadata(mode), react()],
+export default defineConfig(({ command, mode }) => ({
+  plugins: [siteMetadata(mode, command === "serve"), react()],
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),

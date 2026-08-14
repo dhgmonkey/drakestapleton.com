@@ -28,6 +28,8 @@ const requiredPages = [
 assert(!index.includes("__SITE_"), "HTML metadata placeholders remain");
 assert(index.includes(`name="site-mode" content="${mode}"`), `Incorrect ${mode} marker`);
 assert(index.includes("Content-Security-Policy"), "Content Security Policy metadata is missing");
+assert(index.includes("style-src 'self';"), "Production style policy is missing");
+assert(!index.includes("style-src 'self' 'unsafe-inline'"), "Development style policy leaked into the production build");
 assert(existsSync("dist/og.png"), "Social preview image is missing");
 assert(existsSync("dist/favicon.svg"), "Favicon is missing");
 requiredPages.forEach((page) => assert(existsSync(join("dist", page)), `Missing ${page}`));
