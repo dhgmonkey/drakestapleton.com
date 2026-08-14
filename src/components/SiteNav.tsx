@@ -5,7 +5,6 @@ const LINKS = [
   { to: "/path", label: "Path", end: true },
   { to: "/software", label: "Software", end: true },
   { to: "/what-i-learned", label: "Lessons", end: true },
-  { to: "/evidence", label: "Record", end: true },
 ];
 
 export function SiteNav() {

@@ -14,7 +14,6 @@ export function SiteFooter() {
           <Link to="/software">Software &amp; AI</Link>
           <Link to="/what-i-learned">Lessons</Link>
           <Link to="/atlas">Latest project</Link>
-          <Link to="/evidence">Record</Link>
           <Link to="/symphony">Symphony</Link>
         </nav>
         <p className="site-footer-note">
