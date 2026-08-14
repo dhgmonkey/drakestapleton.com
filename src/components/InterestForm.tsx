@@ -49,6 +49,22 @@ export function InterestForm({ compact = false }: { compact?: boolean }) {
         </div>
       </div>
 
+      <fieldset className="interest-hire">
+        <legend>I am interested in</legend>
+        <label>
+          <input type="radio" name="hiring_interest" value="conversation" defaultChecked />
+          <span>Starting a conversation</span>
+        </label>
+        <label>
+          <input type="radio" name="hiring_interest" value="full-time" />
+          <span>Hiring you full-time</span>
+        </label>
+        <label>
+          <input type="radio" name="hiring_interest" value="contractor-or-part-time" />
+          <span>Hiring you as a contractor or part-time</span>
+        </label>
+      </fieldset>
+
       <details className="interest-more">
         <summary>A few questions</summary>
         <div className="interest-fields">

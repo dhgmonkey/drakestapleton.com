@@ -9,7 +9,7 @@ export function InterestPage() {
 
   usePageMeta({
     title: "Leave a card | Drake Stapleton",
-    description: "Leave a name and email for Drake Stapleton, answer a few questions, and ask him one of your own.",
+    description: "Leave a name and email for Drake Stapleton, mark hiring interest, answer a few questions, and ask him one of your own.",
     path: "/interest",
   });
 
@@ -18,8 +18,8 @@ export function InterestPage() {
       <div className="page-boundary">
         <PageIntro eyebrow="Interest" title="Drop your card here.">
           <p>
-            If this work is useful, leave a name and email. I will write back. Open a few questions if you
-            want, and ask me one of yours.
+            If this work is useful, leave a name and email. Mark a full-time or contractor interest if you
+            want to hire me. Open a few questions if you want, and ask me one of yours.
           </p>
         </PageIntro>
 
