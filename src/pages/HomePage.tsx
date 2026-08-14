@@ -40,9 +40,9 @@ const lifeRecord = [
   "I survived a childhood that taught me to hide, and became a man who lives in the open.",
   "I started average, wanted excellence, and learned to outwork the distance between the two.",
   "I was 24 and Devin was 22, still kids ourselves, when we built a marriage and opened our home to six foster children.",
-  "I earned two science degrees and built a career across research, product development, and\u00a0manufacturing.",
+  "I earned two science degrees and built a career across research, product development, and\\u00a0manufacturing.",
   "At Gold Eagle, I improved and commercialized products across the 303 Graphene line and became one of the chemists trusted to explain the science on camera.",
-  "I secured alternate raw materials during a global disruption, produced roughly $1.2 million in documented sourcing savings, and served as a HAZMAT Incident\u00a0Commander.",
+  "I secured alternate raw materials during a global disruption, produced roughly $1.2 million in documented sourcing savings, and served as a HAZMAT Incident\\u00a0Commander.",
   "At 3M, I improved manufacturing processes and efficiency, producing $1 million in cost savings.",
   "I helped communities grow, trained people through difficult rounds, and developed leaders who carry others.",
   "I taught myself software, trained models, designed AI systems, and funded years of independent work with my own money.",
@@ -76,24 +76,24 @@ export function HomePage() {
   });
 
   return (
-    <main className="portrait-page home-page">
-      <section className="home-hero page-boundary">
-        <div className="hero-copy">
-          <p className="kicker">Drake Stapleton / Thirty-two years alive</p>
+    <main className=\"portrait-page home-page\">
+      <section className=\"home-hero page-boundary\">
+        <div className=\"hero-copy\">
+          <p className=\"kicker\">Drake Stapleton / Thirty-two years alive</p>
           <h1>
             I keep finding <span>the strength.</span>
           </h1>
           <blockquote>Or rather, the stubbornness.</blockquote>
-          <p className="home-hero-lede">
+          <p className=\"home-hero-lede\">
             I am a chemist, a product engineer, a husband, a former foster parent, a community
             builder, and an AI systems architect. My work crosses fields. My drive stays.
           </p>
-          <p className="home-hero-purpose">
+          <p className=\"home-hero-purpose\">
             I started average. I wanted excellence. I learned to outwork the distance between the two.
             That fight taught me how to survive.
           </p>
         </div>
-        <aside className="hero-identity" aria-label="The life in brief">
+        <aside className=\"hero-identity\" aria-label=\"The life in brief\">
           <span>Born 1994</span>
           <span>Raised in Tennessee</span>
           <span>College in Kentucky</span>
@@ -103,38 +103,38 @@ export function HomePage() {
         </aside>
       </section>
 
-      <div className="page-boundary">
+      <div className=\"page-boundary\">
         <ChapterNav links={chapters} />
       </div>
 
-      <section className="manifesto-band">
-        <div className="page-boundary manifesto-inner">
-          <p className="portrait-index">In my own words</p>
+      <section className=\"manifesto-band\">
+        <div className=\"page-boundary manifesto-inner\">
+          <p className=\"portrait-index\">In my own words</p>
           <blockquote>
             “I am living as myself. I am claiming my own life and my own purpose. I decide what I can become.”
           </blockquote>
           <p>
             I have spent years learning how to see my own life clearly. This site is me{" "}
-            <span className="keep-together">choosing to look.</span>
+            <span className=\"keep-together\">choosing to look.</span>
           </p>
         </div>
       </section>
 
-      <section className="home-chapter page-boundary" id="formation">
-        <SectionLead eyebrow="01 / Formation" title="I learned how to fight for every inch.">
+      <section className=\"home-chapter page-boundary\" id=\"formation\">
+        <SectionLead eyebrow=\"01 / Formation\" title=\"I learned how to fight for every inch.\">
           <p>
             I began with love, pressure, questions, and the knowledge that every ability would{" "}
-            <span className="keep-together">have to be earned.</span>
+            <span className=\"keep-together\">have to be earned.</span>
           </p>
         </SectionLead>
-        <div className="formation-grid">
-          <article className="feature-story">
-            <p className="chapter-tag">The boy I was</p>
+        <div className=\"formation-grid\">
+          <article className=\"feature-story\">
+            <p className=\"chapter-tag\">The boy I was</p>
             <h3>I learned to disappear before I learned why.</h3>
             <p>
               I grew up gay in Tennessee, in the Bible Belt. Mom fought for me. Granny and Papa rooted me.
               Dad chose me and gave me his name. My little sister gave me someone to protect. I was surrounded
-              by love while believing that being fully known could cost me{"\u00a0"}everything.
+              by love while believing that being fully known could cost me{\"\\u00a0\"}everything.
             </p>
             <p>
               Disappearing meant studying every room before I entered it. I learned how to stand, talk, and
@@ -150,14 +150,14 @@ export function HomePage() {
               me.
             </p>
           </article>
-          <article className="grade-card">
-            <p className="chapter-tag">The drive behind the grades</p>
+          <article className=\"grade-card\">
+            <p className=\"chapter-tag\">The drive behind the grades</p>
             <strong>3.92</strong>
             <h3>I was average. I wanted excellence.</h3>
             <p>
               I watched intelligence and athleticism seem natural in other people. I played football and sat
               in honors classes feeling pretty average. Autism and ADHD made focus a daily contest, and I
-              moved through high school{"\u00a0"}unmedicated.
+              moved through high school{\"\\u00a0\"}unmedicated.
             </p>
             <p>
               I believed I had to outwork everyone. I returned to the rep, the page, and the problem as many
@@ -165,9 +165,9 @@ export function HomePage() {
               the way I enter every new field. The fight made me a survivor.
             </p>
           </article>
-          <article className="door-story">
+          <article className=\"door-story\">
             <div>
-              <p className="chapter-tag">June 12, 2013</p>
+              <p className=\"chapter-tag\">June 12, 2013</p>
               <h3>The worst night of my life and the best decision of my life share a date.</h3>
             </div>
             <div>
@@ -184,19 +184,19 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="home-chapter drive-chapter" id="drive">
-        <div className="page-boundary">
-          <SectionLead eyebrow="02 / Drive" title="I keep returning because people are worth the effort.">
+      <section className=\"home-chapter drive-chapter\" id=\"drive\">
+        <div className=\"page-boundary\">
+          <SectionLead eyebrow=\"02 / Drive\" title=\"I keep returning because people are worth the effort.\">
             <p>
               Mom returned to school in her forties and finished what life had interrupted. I watched
               her cross the stage on May 5, 2016. Eight days later, she stood beside me at Western Kentucky.
             </p>
           </SectionLead>
-          <div className="perseverance-ledger">
+          <div className=\"perseverance-ledger\">
             {perseverance.map((item, index) => (
               <article key={item.marker}>
-                <div className="ledger-number">{String(index + 1).padStart(2, "0")}</div>
-                <p className="ledger-marker">{item.marker}</p>
+                <div className=\"ledger-number\">{String(index + 1).padStart(2, \"0\")}</div>
+                <p className=\"ledger-marker\">{item.marker}</p>
                 <div>
                   <h3>{item.title}</h3>
                   {item.quote && <blockquote>“{item.quote}”</blockquote>}
@@ -205,32 +205,32 @@ export function HomePage() {
               </article>
             ))}
           </div>
-          <div className="recovery-note">
-            <p className="chapter-tag">What I know now</p>
+          <div className=\"recovery-note\">
+            <p className=\"chapter-tag\">What I know now</p>
             <p>Perseverance includes recovery. Rest brings me back to the work while keeping the person doing it whole.</p>
-            <Link to="/what-i-learned">Read the lessons I carried forward</Link>
+            <Link to=\"/what-i-learned\">Read the lessons I carried forward</Link>
           </div>
         </div>
       </section>
 
-      <section className="life-record" aria-labelledby="life-record-title">
-        <div className="page-boundary life-record-grid">
-          <div className="life-record-number" aria-hidden="true">32</div>
+      <section className=\"life-record\" aria-labelledby=\"life-record-title\">
+        <div className=\"page-boundary life-record-grid\">
+          <div className=\"life-record-number\" aria-hidden=\"true\">32</div>
           <div>
-            <p className="portrait-index">A life worth seeing</p>
-            <h2 id="life-record-title">I have already built an extraordinary life.</h2>
-            <div className="life-record-list">
+            <p className=\"portrait-index\">A life worth seeing</p>
+            <h2 id=\"life-record-title\">I have already built an extraordinary life.</h2>
+            <div className=\"life-record-list\">
               {lifeRecord.map((item, index) => (
-                <p key={item}><span>{String(index + 1).padStart(2, "0")}</span>{item}</p>
+                <p key={item}><span>{String(index + 1).padStart(2, \"0\")}</span>{item}</p>
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      <section className="home-chapter page-boundary" id="people">
-        <SectionLead eyebrow="03 / People" title="My life is shaped by what gets handed forward." />
-        <div className="inheritance-grid">
+      <section className=\"home-chapter page-boundary\" id=\"people\">
+        <SectionLead eyebrow=\"03 / People\" title=\"My life is shaped by what gets handed forward.\" />
+        <div className=\"inheritance-grid\">
           {inheritances.map(([name, body]) => (
             <article key={name}>
               <h3>{name}</h3>
@@ -238,16 +238,16 @@ export function HomePage() {
             </article>
           ))}
         </div>
-        <div className="family-story-grid">
-          <article className="family-story foster-story">
-            <p className="chapter-tag">The home Devin and I opened</p>
+        <div className=\"family-story-grid\">
+          <article className=\"family-story foster-story\">
+            <p className=\"chapter-tag\">The home Devin and I opened</p>
             <h3>We opened our home to young people who needed steady adults.</h3>
             <p>
               I was 24 and Devin was 22, still kids ourselves, when we married in October 2018. By December,
               before our first Christmas as husbands, our first foster placement was home with us. From
-              December 2018 until COVID made us stop in spring 2020, we cared for six foster children. Among
-              them were two teenage girls with level-five care needs, young people the system struggled to
-              place with families prepared for that responsibility.
+              December 2018 until COVID made us stop in spring 2020, we cared for six foster children. All
+              six were Level 5 placements, young people the system struggled to place with families prepared
+              for that responsibility.
             </p>
             <p>
               My stepdad adopted my brother and me and became our dad. He chose us, on paper and in every other
@@ -256,17 +256,17 @@ export function HomePage() {
               the placements ended. The love and the grief both stayed with us.
             </p>
           </article>
-          <article className="family-story dad-story">
-            <p className="chapter-tag">Ballentine Day / December 3, 2007</p>
-            <h3>Dad&apos;s birthday keeps meeting me at the next door.</h3>
+          <article className=\"family-story dad-story\">
+            <p className=\"chapter-tag\">Ballentine Day / December 3, 2007</p>
+            <h3>Dad's birthday keeps meeting me at the next door.</h3>
             <p>
               Dad made official what he had already lived: he adopted my brother and me. Our family calls
-              that date Ballentine Day. I became Michael Drake Ballentine and carried Dad&apos;s name for eleven
+              that date Ballentine Day. I became Michael Drake Ballentine and carried Dad's name for eleven
               years. When Devin and I married in 2018, I became Michael Drake Stapleton. Ballentine marks the
               father who chose me. Stapleton marks the life Devin and I chose together.
             </p>
             <p>
-              On Dad&apos;s birthday in 2024, I received the offer that brought me to 3M as a manufacturing
+              On Dad's birthday in 2024, I received the offer that brought me to 3M as a manufacturing
               engineer. Two years later, on February 13, 2026, another call offered me the product engineer
               role I hold today. The dates have ordinary explanations. They still carry extraordinary
               meaning for me.
@@ -278,15 +278,15 @@ export function HomePage() {
             </p>
           </article>
         </div>
-        <blockquote className="people-quote">
+        <blockquote className=\"people-quote\">
           “I find great joy in helping others realize just how great they truly are.”
         </blockquote>
-        <div className="values-block">
-          <div className="values-intro">
-            <p className="chapter-tag">What I stand for</p>
+        <div className=\"values-block\">
+          <div className=\"values-intro\">
+            <p className=\"chapter-tag\">What I stand for</p>
             <h3>The work changes. My values stay.</h3>
           </div>
-          <div className="values-grid">
+          <div className=\"values-grid\">
             {values.map(([name, body]) => (
               <article key={name}>
                 <h4>{name}</h4>
@@ -297,9 +297,9 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="home-chapter work-chapter" id="work">
-        <div className="page-boundary">
-          <SectionLead eyebrow="04 / Work" title="Every step built the next one.">
+      <section className=\"home-chapter work-chapter\" id=\"work\">
+        <div className=\"page-boundary\">
+          <SectionLead eyebrow=\"04 / Work\" title=\"Every step built the next one.\">
             <p>
               The farm taught me to respect the person closest to the work. Taco Bell taught me to serve a
               crew. Valspar and graduate research turned that discipline into chemistry. Soudal and Gold Eagle
@@ -307,7 +307,7 @@ export function HomePage() {
               through PPU improvements.
             </p>
           </SectionLead>
-          <div className="work-record">
+          <div className=\"work-record\">
             <article><strong>The foundation</strong><span>Farm work, practical dignity, and respect for the people carrying the job</span></article>
             <article><strong>My first job</strong><span>Taco Bell team member to shift leader, serving my crew and carrying every task beside them</span></article>
             <article><strong>College years</strong><span>Taco Bell in Bowling Green followed by a Valspar paint-laboratory internship in color matching and production samples</span></article>
@@ -319,23 +319,23 @@ export function HomePage() {
             <article><strong>2026 onward</strong><span>Product engineering at 3M, bringing product and process improvement together</span></article>
             <article><strong>Built alongside it</strong><span>Software, communities, model training, research systems, and independent invention</span></article>
           </div>
-          <Link className="text-link" to="/path">Walk the ladder from the farm to product engineering</Link>
+          <Link className=\"text-link\" to=\"/path\">Walk the ladder from the farm to product engineering</Link>
         </div>
       </section>
 
-      <section className="software-home" id="software">
-        <div className="page-boundary software-home-grid">
+      <section className=\"software-home\" id=\"software\">
+        <div className=\"page-boundary software-home-grid\">
           <div>
-            <p className="portrait-index">05 / Software and AI</p>
+            <p className=\"portrait-index\">05 / Software and AI</p>
             <h2>I followed the questions into code.</h2>
             <p>
               I began by asking GPT about consciousness. I wrote my way through cosmology, used the same
               questioning in Six Sigma and manufacturing, and learned to orchestrate coding models,
               products, GPU work, and Atlas. I taught myself by building, measuring, and returning to the work.
             </p>
-            <Link to="/software">Explore the software practice and AI story</Link>
+            <Link to=\"/software\">Explore the software practice and AI story</Link>
           </div>
-          <div className="software-home-metrics" aria-label="Software and AI practice snapshot">
+          <div className=\"software-home-metrics\" aria-label=\"Software and AI practice snapshot\">
             {PRACTICE_HOME_METRICS.map((metric) => (
               <article key={metric.label}>
                 <strong>{metric.value}</strong>
@@ -346,10 +346,10 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="latest-work" id="latest">
-        <div className="page-boundary latest-work-grid">
+      <section className=\"latest-work\" id=\"latest\">
+        <div className=\"page-boundary latest-work-grid\">
           <div>
-            <p className="portrait-index">06 / Latest achievement</p>
+            <p className=\"portrait-index\">06 / Latest achievement</p>
             <h2>Atlas is my greatest achievement so far.</h2>
           </div>
           <div>
@@ -363,23 +363,23 @@ export function HomePage() {
               built Atlas around memory, truth, dignity, and the questions I still carry. This achievement
               gives me a stronger foundation for everything I build next.
             </p>
-            <Link to="/atlas">Explore the Atlas project</Link>
+            <Link to=\"/atlas\">Explore the Atlas project</Link>
           </div>
         </div>
       </section>
 
-      <section className="home-closing page-boundary">
-        <p className="portrait-index">Self-definition</p>
+      <section className=\"home-closing page-boundary\">
+        <p className=\"portrait-index\">Self-definition</p>
         <h2>I choose the size of my own life.</h2>
         <p>
           I paid for the compute, spent the nights, trained the models, built the architecture, documented
           the lessons, and kept going. I design and operate AI systems. Those words name work already done.
           The work, its value, and the person behind it already exist.
         </p>
-        <blockquote>“The people saved me. Now it&apos;s my turn.”</blockquote>
-        <div className="home-closing-actions">
-          <Link to="/evidence">Explore the documented record</Link>
-          <a href="https://github.com/dhgmonkey">Visit GitHub</a>
+        <blockquote>“The people saved me. Now it's my turn.”</blockquote>
+        <div className=\"home-closing-actions\">
+          <Link to=\"/evidence\">Explore the documented record</Link>
+          <a href=\"https://github.com/dhgmonkey\">Visit GitHub</a>
         </div>
       </section>
     </main>
