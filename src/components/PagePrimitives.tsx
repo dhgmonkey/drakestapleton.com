@@ -38,17 +38,19 @@ export function ChapterNav({ links }: { links: ChapterLink[] }) {
 export function SectionLead({
   eyebrow,
   title,
+  titleId,
   children,
 }: {
   eyebrow: string;
   title: string;
+  titleId?: string;
   children?: ReactNode;
 }) {
   return (
     <header className="section-lead">
       <p className="portrait-index">{eyebrow}</p>
       <div>
-        <h2>{title}</h2>
+        <h2 id={titleId}>{title}</h2>
         {children}
       </div>
     </header>

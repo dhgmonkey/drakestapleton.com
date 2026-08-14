@@ -28,16 +28,16 @@ export function Birdseye() {
     <svg viewBox="0 0 1180 760" role="img" aria-label="Bird’s-eye development map June to August 2026">
       <line x1="150" y1="36" x2="1140" y2="36" stroke="rgba(155,129,159,.3)" />
       {["18 Jun", "21 Jul", "25 Jul", "27 Jul", "1 Aug", "7–8 Aug", "9–10 Aug", "11–13 Aug"].map((t, i) => (
-        <text key={t} x={160 + i * 130} y="28" fill="#b8aab9" fontSize="10">
+        <text key={t} className="birdseye-axis" x={160 + i * 130} y="28" fontSize="10">
           {t}
         </text>
       ))}
-      <text x="16" y="72" fill="#b8aab9" fontSize="11">1 · Harness</text>
-      <text x="16" y="186" fill="#b8aab9" fontSize="11">2 · Counterpart</text>
-      <text x="16" y="300" fill="#b8aab9" fontSize="11">3 · Hive</text>
-      <text x="16" y="414" fill="#b8aab9" fontSize="11">4 · Isolated law</text>
-      <text x="16" y="518" fill="#b8aab9" fontSize="11">5 · Image / video</text>
-      <text x="16" y="632" fill="#b8aab9" fontSize="11">6 · Where bits live</text>
+      <text className="birdseye-axis" x="16" y="72" fontSize="11">1 · Harness</text>
+      <text className="birdseye-axis" x="16" y="186" fontSize="11">2 · Counterpart</text>
+      <text className="birdseye-axis" x="16" y="300" fontSize="11">3 · Hive</text>
+      <text className="birdseye-axis" x="16" y="414" fontSize="11">4 · Isolated law</text>
+      <text className="birdseye-axis" x="16" y="518" fontSize="11">5 · Image / video</text>
+      <text className="birdseye-axis" x="16" y="632" fontSize="11">6 · Where bits live</text>
       {BLOCKS.map((b) => (
         <g key={b.title}>
           <rect x={b.x} y={b.y} width={b.w} height={b.b ? 64 : 56} rx="10" fill="#24202c" stroke={b.stroke} strokeDasharray={b.dash ? "4 3" : undefined} />

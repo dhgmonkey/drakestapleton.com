@@ -45,9 +45,9 @@ const lessons = [
   },
   {
     when: "Personal / The harder lesson",
-    title: "I learned the cost of carrying too much.",
+    title: "I learned that survival also means protecting myself.",
     experience:
-      "I once carried the work past my body’s limits. Recovery taught me to include myself among the people I am responsible for protecting.",
+      "For years, I survived by outworking every limit and carrying more than people saw. That strength built my life, and at one point I carried the work past my body’s limits.",
     lesson:
       "Perseverance now means returning with my health, judgment, and sense of self intact.",
   },

@@ -1,7 +1,7 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 
-const mode = process.argv[2] || "waitlist";
+const mode = process.argv[2] || "portfolio";
 if (!new Set(["waitlist", "portfolio"]).has(mode)) {
   throw new Error(`Unknown site mode: ${mode}`);
 }
@@ -34,6 +34,12 @@ const routes = [
     path: "/path",
     title: "The Path | Drake Stapleton",
     description: "Drake Stapleton's education, industrial career, and independent work in software and AI.",
+  },
+  {
+    rel: "software/index.html",
+    path: "/software",
+    title: "Software and AI | Drake Stapleton",
+    description: "Drake Stapleton's software practice, working stack, documented coding history, AI exploration, and retained conversation record.",
   },
   {
     rel: "evidence/index.html",

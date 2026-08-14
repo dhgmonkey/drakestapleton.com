@@ -53,12 +53,12 @@ export function FirstRunPage() {
       <p className="law">Atlas opening in role: “{ATLAS_OPENING}”</p>
 
       <h2 className="sec">The first diagram</h2>
-      <div className="card">
+      <div className="card diagram-card">
         <FirstRunDiagram />
       </div>
 
       <h2 className="sec">Roster</h2>
-      <div className="card" style={{ overflowX: "auto" }}>
+      <div className="card roster-table-card" style={{ overflowX: "auto" }}>
         <table>
           <thead>
             <tr>
@@ -106,7 +106,7 @@ export function FirstRunPage() {
       </p>
 
       <h2 className="sec">Current scope</h2>
-      <div className="card">
+      <div className="card current-scope-card">
         <p>
           The current record covers my own operating environment. Later Grok Hive and Boston roles grew
           inside that environment. Claude cataloged the first run, Grok observed it, and Drake Stapleton

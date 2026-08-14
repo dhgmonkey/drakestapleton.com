@@ -7,12 +7,10 @@ import { HomePage } from "./pages/HomePage";
 import { MapPage } from "./pages/MapPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { PathPage } from "./pages/PathPage";
+import { SoftwarePage } from "./pages/SoftwarePage";
 import { SymphonyPage } from "./pages/SymphonyPage";
-import { WaitlistPage } from "./pages/WaitlistPage";
 import { WhatILearnedPage } from "./pages/WhatILearnedPage";
 import { WorkflowPage } from "./pages/WorkflowPage";
-
-const portfolioIsOpen = import.meta.env.MODE === "portfolio";
 
 function Portfolio() {
   return (
@@ -21,6 +19,7 @@ function Portfolio() {
         <Route path="/" element={<HomePage />} />
         <Route path="/atlas" element={<AtlasPage />} />
         <Route path="/path" element={<PathPage />} />
+        <Route path="/software" element={<SoftwarePage />} />
         <Route path="/evidence" element={<EvidencePage />} />
         <Route path="/what-i-learned" element={<WhatILearnedPage />} />
         <Route path="/what-broke" element={<Navigate to="/what-i-learned" replace />} />
@@ -36,5 +35,5 @@ function Portfolio() {
 }
 
 export function App() {
-  return portfolioIsOpen ? <Portfolio /> : <WaitlistPage />;
+  return <Portfolio />;
 }
