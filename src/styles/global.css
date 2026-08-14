@@ -782,3 +782,74 @@ th { color: var(--muted); font-size: 10px; letter-spacing: .08em; text-transform
   .waitlist-panel { padding: 26px 22px; }
   .waitlist-footer { flex-direction: column; }
 }
+
+/* A deliberate dark palette prevents browser force-dark from muddying the warm light theme. */
+@media (prefers-color-scheme: dark) {
+  body { background: #0d1117; }
+
+  .site-shell {
+    color-scheme: dark;
+    --navy: #f4f7fb;
+    --navy-deep: #080b10;
+    --blue: #9bb8ed;
+    --blue-pale: #151c28;
+    --red: #ff735e;
+    --red-deep: #ff9b88;
+    --paper: #0d1117;
+    --white: #f7f9fc;
+    --ink: #f4f7fb;
+    --copy: #c7d0dc;
+    --muted: #929cab;
+    --line: rgba(217, 226, 239, 0.16);
+    --line-strong: rgba(217, 226, 239, 0.38);
+    --on-dark: #f7f9fc;
+    --on-dark-copy: #cbd5e1;
+    --on-dark-muted: #9ba8ba;
+    --on-accent-copy: #ffe0da;
+    --on-accent-muted: #ffd0c7;
+    --accent-bright: #ff8a74;
+    --dark-surface: #151a23;
+    --dark-section: #182233;
+    color: var(--ink);
+    background: var(--paper);
+  }
+
+  .site-nav {
+    color: var(--ink);
+    background: rgba(13, 17, 23, 0.94);
+  }
+
+  .door-story,
+  .work-chapter,
+  .practice-metrics article,
+  .working-stack > article,
+  .practice-timeline,
+  .audit-gaps,
+  .audit-metric,
+  .evidence-class,
+  .case,
+  .roster-row,
+  blockquote.invoke,
+  .diagram-frame {
+    background: var(--dark-surface);
+  }
+
+  .portrait-link,
+  .home-closing-actions a,
+  .grade-card,
+  .recovery-note,
+  .life-record,
+  .practice-workspaces,
+  .practice-chart-controls button.active,
+  .practice-closing,
+  .atlas-letter,
+  .portrait-closing {
+    background: var(--dark-section);
+  }
+
+  .practice-closing .portrait-link {
+    color: #0d1117;
+    border-color: var(--white);
+    background: var(--white);
+  }
+}

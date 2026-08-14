@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="light" />
+    <meta name="color-scheme" content="light dark" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta
       http-equiv="Content-Security-Policy"
@@ -27,7 +27,8 @@
     <meta name="twitter:title" content="__SITE_TITLE__" />
     <meta name="twitter:description" content="__SITE_DESCRIPTION__" />
     <meta name="twitter:image" content="https://www.drakestapleton.com/og.png" />
-    <meta name="theme-color" content="#2b2233" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#2b2233" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d1117" />
   </head>
   <body>
     <div id="root"></div>
