@@ -31,7 +31,7 @@ export const EVIDENCE_CLASSES = [
 export const VERIFIED_FINDINGS = [
   {
     title: "MobHub and Defiant Mob reached production",
-    body: "The record covers source, testing, deployment, restoration, and repair. The retrieved Defiant history includes 94 merged pull requests. MobHub includes 24 and a verified Raspberry Pi auto-deployment path.",
+    body: "The record covers source, testing, deployment, restoration, and repair. The retrieved Defiant history includes 94 merged pull requests. MobHub includes 24 and a verified Raspberry Pi auto-deployment\u00a0path.",
   },
   {
     title: "Atlas developed into a sustained engineering program",
@@ -47,14 +47,14 @@ export const VERIFIED_FINDINGS = [
   },
   {
     title: "Human-resources work produced operating tools",
-    body: "The evidence includes credentialing workbooks, an education-repayment agreement, performance-review redesign, separation documentation, leave and benefit workflows, recognition systems, and manager tools. The audit distinguishes AI-assisted drafting from my decisions and implementation.",
+    body: "The evidence includes credentialing workbooks, an education-repayment agreement, performance-review redesign, separation documentation, leave and benefit workflows, recognition systems, and manager tools. The audit distinguishes AI-assisted drafting from my decisions and\u00a0implementation.",
   },
 ];
 
 export const NEXT_SOURCES = [
-  "The original ChatGPT data export will add an account-wide history.",
+  "The original ChatGPT data export will add an account-wide\u00a0history.",
   "Privacy-controlled Discord and Torn exports will support a broader community record.",
   "Full repositories, release artifacts, host logs, model hashes, migration ledgers, and restore tests will deepen the lifecycle record.",
-  "Future Atlas milestones include a final merged-model export, cross-session memory, voice, persistent world interaction, physical embodiment, and physical shutdown verification.",
+  "Future Atlas milestones include a final merged-model export, cross-session memory, voice, persistent world interaction, physical embodiment, and physical shutdown\u00a0verification.",
   "Atlas language ties every technical claim to the mechanism and source that supports it.",
 ];

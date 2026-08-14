@@ -4,12 +4,12 @@ import { usePageMeta } from "../lib/usePageMeta";
 
 const lessons = [
   {
-    when: "Community / 2025",
-    title: "I carried the truth through a community ending.",
+    when: "Community / Belonging",
+    title: "People gave me a reason to stay.",
     experience:
-      "A private promise and a public decision pointed in different directions. The community I had held together was dissolved, and the story began changing around me.",
+      "At nineteen, an invitation through a headset gave me belonging at the exact moment I needed it. Leadership later gave me a way to pass that gift forward.",
     lesson:
-      "I documented the record, wrote a seventeen-page constitution for the community I believed should exist, returned, and helped rebuild the next squad.",
+      "I built training, schedules, dashboards, and leadership paths that helped members see their ability, support each other, and carry the community forward.",
   },
   {
     when: "MobHub / Production",

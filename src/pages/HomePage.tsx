@@ -12,34 +12,34 @@ const chapters = [
 
 const perseverance = [
   {
-    marker: "Closed",
-    title: "I grieved by building.",
-    body: "When Nemesis was dissolved in 2025, I wrote a seventeen-page constitution for a better community. Then I returned and helped carry the next wounded squad.",
+    marker: "Belonging",
+    title: "The people gave me a reason to stay.",
+    body: "DHG found me at nineteen and gave me a place where I could lead as myself. I carried that gift forward by helping other people feel seen, capable, and worth fighting for.",
   },
   {
     marker: "10 weeks",
-    title: "I rebuilt what other people had written off.",
-    body: "I took a post-closure merger to 46 members and 85 percent activity. I retrained people after hard rounds, built the dashboards and schedules, and developed leaders who could run it on their own.",
+    title: "I built people up and watched them lead.",
+    body: "I helped grow a 46-member squad to 85 percent activity. I trained members after difficult rounds, built the dashboards and schedules, and developed officers who could carry the work themselves.",
   },
   {
     marker: "45 times",
-    title: "I nearly stepped down. I kept finding a reason to stay.",
-    body: "The reason was always the people: the member who needed training, the officer who was burning out, or the person who needed someone to believe another attempt was waiting.",
+    title: "I kept choosing the people.",
+    body: "Whenever leadership became heavy, someone still needed training, an officer needed support, or a member needed another person to believe in them. The people kept giving the work its purpose.",
     quote: "Somehow I just keep finding the strength, or rather the stubbornness, to keep going.",
   },
   {
-    marker: "Fix it",
-    title: "I built that persistence into my systems.",
-    body: "Atlas carries every broken build, difficult merge, and rejected check forward as evidence. Each result shapes the next attempt. Every repair should make the whole system stronger.",
+    marker: "Build it",
+    title: "I turn care into systems people can use.",
+    body: "Training plans, schedules, dashboards, and Atlas all grow from the same instinct: preserve what helps, learn from each result, and give people a stronger next step.",
   },
 ];
 
 const lifeRecord = [
   "I survived a childhood that taught me to hide, and became a man who lives in the open.",
   "I built a marriage and opened my home to foster children who needed somewhere safe.",
-  "I earned two science degrees and built a career across research, product development, and manufacturing.",
-  "I secured alternate raw materials during a global disruption, produced roughly $1.2 million in documented savings, and served as a HAZMAT Incident Commander.",
-  "I rebuilt fractured communities and trained people who deserved another chance.",
+  "I earned two science degrees and built a career across research, product development, and\u00a0manufacturing.",
+  "I secured alternate raw materials during a global disruption, produced roughly $1.2 million in documented savings, and served as a HAZMAT Incident\u00a0Commander.",
+  "I helped communities grow, trained people through difficult rounds, and developed leaders who carry others.",
   "I taught myself software, trained models, designed AI systems, and funded Atlas with my own money.",
   "I turned grief into a reason to preserve memory, and hard lessons into machinery that tries again.",
 ];
@@ -122,7 +122,7 @@ export function HomePage() {
             <p>
               I grew up gay in Tennessee, in the Bible Belt. My mother fought for me. My grandparents rooted
               me. My father chose me. My little sister gave me someone to protect. I was surrounded by love
-              while believing that being fully known could cost me everything.
+              while believing that being fully known could cost me{"\u00a0"}everything.
             </p>
             <p>
               I played football, earned my place in honors classes the hard way, and learned how to look
@@ -135,7 +135,7 @@ export function HomePage() {
             <h3>I fought for that GPA.</h3>
             <p>
               Other students held the valedictorian and salutatorian titles. Autism and ADHD made focus a
-              daily contest, and I moved through high school unmedicated.
+              daily contest, and I moved through high school{"\u00a0"}unmedicated.
             </p>
             <p>
               I wanted effortless brilliance. Determination became my advantage. It carried me through high
@@ -164,7 +164,7 @@ export function HomePage() {
 
       <section className="home-chapter drive-chapter" id="drive">
         <div className="page-boundary">
-          <SectionLead eyebrow="02 / Drive" title="I turn every ending into another beginning.">
+          <SectionLead eyebrow="02 / Drive" title="I keep returning because people are worth the effort.">
             <p>
               My mother returned to school in her forties and finished what life had interrupted. I watched
               her cross the stage on May 5, 2016. Eight days later, she stood beside me at Western Kentucky.

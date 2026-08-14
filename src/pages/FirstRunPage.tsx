@@ -8,6 +8,26 @@ import {
 } from "../data/operators";
 import { usePageMeta } from "../lib/usePageMeta";
 
+const MONTHS = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+function publicDate(value: string) {
+  const [year, month, day] = value.split("-").map(Number);
+  return `${day} ${MONTHS[month - 1]} ${year}`;
+}
+
 export function FirstRunPage() {
   usePageMeta({
     title: "First Atlas Symphony — 30 July 2026 · Drake Stapleton",
@@ -51,7 +71,7 @@ export function FirstRunPage() {
           <tbody>
             {FIRST_OPERATORS.map((o) => (
               <tr key={o.id}>
-                <td>{o.started}</td>
+                <td>{publicDate(o.started)}</td>
                 <td>{o.name}</td>
                 <td>{o.role}</td>
                 <td>{o.kind}</td>
@@ -65,7 +85,7 @@ export function FirstRunPage() {
           <p className="kind">{o.kind}</p>
           <h3>{o.name}</h3>
           <p className="meta">
-            {o.role} · {o.started}
+            {o.role} · {publicDate(o.started)}
           </p>
           <p>{o.note}</p>
         </article>

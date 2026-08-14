@@ -45,7 +45,7 @@ input:focus-visible,
 img, svg { max-width: 100%; }
 button, input, textarea, select { font: inherit; }
 code { font-family: var(--mono); font-size: 0.92em; }
-blockquote { margin: 0; }
+blockquote { margin: 0; text-wrap: pretty; }
 
 .site-shell { min-height: 100vh; }
 .skip-link {
@@ -153,11 +153,21 @@ blockquote { margin: 0; }
   font-size: 11px;
   font-weight: 780;
   letter-spacing: 0.17em;
+  text-wrap: balance;
   text-transform: uppercase;
 }
 .portrait-index { margin-bottom: 18px; }
 .chapter-tag { margin-bottom: 16px; color: var(--blue); }
-h1, h2, h3, h4, p { overflow-wrap: break-word; }
+h1, h2, h3, h4 {
+  overflow-wrap: normal;
+  text-wrap: balance;
+  word-break: normal;
+}
+p, li, dd {
+  overflow-wrap: normal;
+  text-wrap: pretty;
+  word-break: normal;
+}
 h1 { margin: 0; font: 500 clamp(54px, 8vw, 108px)/0.94 var(--display); letter-spacing: -0.058em; }
 h2 { margin: 0; font: 500 clamp(42px, 5.8vw, 72px)/1.02 var(--display); letter-spacing: -0.048em; }
 h3 { margin: 0; font: 500 clamp(28px, 3.4vw, 43px)/1.1 var(--display); letter-spacing: -0.035em; }
@@ -560,6 +570,47 @@ th { color: var(--muted); font-size: 10px; letter-spacing: .08em; text-transform
 }
 
 @media (max-width: 540px) {
+  h1 {
+    font-size: clamp(42px, 12vw, 54px);
+    line-height: .98;
+    letter-spacing: -.047em;
+  }
+  h2 {
+    font-size: clamp(34px, 10vw, 44px);
+    line-height: 1.05;
+    letter-spacing: -.042em;
+  }
+  h3 {
+    font-size: clamp(24px, 7.6vw, 32px);
+    line-height: 1.12;
+    letter-spacing: -.03em;
+  }
+  .wrap > .kicker + h1 { font-size: clamp(42px, 12vw, 54px); }
+  .path-page .path-header h1 { font-size: clamp(36px, 10.5vw, 46px); }
+  .feature-story,
+  .grade-card,
+  .door-story,
+  .path-resistance,
+  .audit-status,
+  .audit-gaps,
+  .evidence-class { padding: 26px 24px; }
+  .manifesto-inner blockquote,
+  .home-closing blockquote,
+  .learned-rule blockquote,
+  .soul-closing blockquote { font-size: clamp(31px, 9.6vw, 40px); }
+  .people-quote { font-size: clamp(28px, 8.8vw, 36px); }
+  .recovery-note { padding: 28px 24px; }
+  .recovery-note > p:nth-child(2) { font-size: clamp(22px, 7.4vw, 29px); }
+  .path-resistance h2,
+  .audit-status h2 { font-size: clamp(32px, 9vw, 40px); }
+  .finding { grid-template-columns: 1fr; gap: 8px; }
+  .path-chapter h2,
+  .lesson-story h2,
+  .finding h3 { font-size: clamp(26px, 7.8vw, 32px); }
+  .evidence-class h3 { font-size: 25px; }
+  .organ-list article { grid-template-columns: 1fr; gap: 8px; }
+  .organ-list article > p { grid-column: auto; }
+  .organ-list h3 { font-size: 30px; }
   .hero-identity { grid-template-columns: 1fr; }
   .hero-identity span:nth-child(even) { padding-left: 0; border-left: 0; }
   .perseverance-ledger article { grid-template-columns: 34px 1fr; gap: 14px; }
@@ -634,18 +685,20 @@ th { color: var(--muted); font-size: 10px; letter-spacing: .08em; text-transform
   font-size: 11px;
   font-weight: 760;
   letter-spacing: .18em;
+  text-wrap: balance;
   text-transform: uppercase;
 }
 .waitlist-copy h1 {
   max-width: 880px;
   margin: 0;
   font-family: Iowan Old Style, Baskerville, "Times New Roman", serif;
-  font-size: clamp(4rem, 9vw, 8.8rem);
+  font-size: clamp(3.6rem, 7.5vw, 7rem);
   font-weight: 500;
   letter-spacing: -.065em;
   line-height: .87;
 }
 .waitlist-copy h1 em { color: #ef5366; font-style: italic; font-weight: 500; }
+.waitlist-keep { white-space: nowrap; }
 .waitlist-lede {
   max-width: 700px;
   margin: 34px 0 0;
@@ -716,7 +769,7 @@ th { color: var(--muted); font-size: 10px; letter-spacing: .08em; text-transform
 
 @media (max-width: 520px) {
   .waitlist-shell { padding: 24px 18px; gap: 36px; }
-  .waitlist-copy h1 { font-size: 3.15rem; letter-spacing: -.05em; }
+  .waitlist-copy h1 { font-size: 2.25rem; line-height: .94; letter-spacing: -.04em; }
   .waitlist-panel { padding: 26px 22px; }
   .waitlist-footer { flex-direction: column; }
 }

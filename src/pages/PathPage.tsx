@@ -26,7 +26,7 @@ const chapters = [
   {
     years: "March 2024 onward",
     title: "Manufacturing Engineer, 3M",
-    body: "Managed manufacturing change control, introduced products and processes, supported quality systems and audits, and worked in a continuous manufacturing environment.",
+    body: "Managed manufacturing change control, introduced products and processes, supported quality systems and audits, and worked in a continuous manufacturing\u00a0environment.",
   },
   {
     years: "Built alongside it all",
@@ -71,7 +71,7 @@ export function PathPage() {
           <p>
             Other students held the valedictorian and salutatorian titles. I spent high school wanting the
             kind of intelligence that seemed effortless. Autism and ADHD made focus a daily contest, and I
-            moved through those years unmedicated.
+            moved through those years{"\u00a0"}unmedicated.
           </p>
           <p>
             Determination became my advantage. I returned to the page, the problem, and the work as many

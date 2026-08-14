@@ -67,7 +67,8 @@ export function WaitlistPage() {
       <section className="waitlist-copy">
         <p className="waitlist-kicker">Drake Stapleton / Thirty-two years alive</p>
         <h1>
-          A life in people, systems, and <em>Atlas.</em>
+          A life in <span className="waitlist-keep">people, systems,</span>{" "}
+          <span className="waitlist-keep">and <em>Atlas.</em></span>
         </h1>
         <p className="waitlist-lede">
           I am writing the full story now: Tennessee, Kentucky, chemistry, manufacturing, communities, my
