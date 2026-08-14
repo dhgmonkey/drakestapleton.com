@@ -1,9 +1,9 @@
 # Handoff - drakestapleton.com
 
-**As of 13 Aug 2026.** This branch combines the public waiting-list gate with the complete human portrait.
+**As of 14 Aug 2026.** This branch publishes the complete human portrait while retaining the waiting-list gate as a fail-closed fallback.
 
-- `npm run build` produces the fail-closed, no-index waiting-list release used by GitHub Pages.
-- `npm run build:portfolio` produces the complete, indexable portrait for final review and the eventual opening.
+- `npm run build` produces the fail-closed, no-index waiting-list release retained as the rollback build.
+- `npm run build:portfolio` produces the complete, indexable portrait used by GitHub Pages for the public site.
 - Every known route has a static fallback with route-specific metadata.
 - Source: https://github.com/dhgmonkey/drakestapleton.com
 
@@ -15,8 +15,8 @@ The portrait uses Drake's supplied first-person history, the reviewed resume chr
 |---|---|
 | Stack | Vite 7, React 19, TypeScript, react-router |
 | Host | GitHub Pages with HTTPS and `www.drakestapleton.com` CNAME |
-| Public build | Waiting list on every route, `noindex`, disallowing crawler access |
-| Portfolio build | Full portrait, route metadata, sitemap, indexable pages |
+| Published Pages build | Full portrait via `npm run build:portfolio`, with route metadata, sitemap, and indexable pages |
+| Waiting-list fallback | `npm run build` on every route, `noindex`, disallowing crawler access |
 | Signup API | Dedicated Boston Python service on TLS port 8443 |
 | Stored signup data | Normalized email, consent version, UTC timestamp |
 | Public personal material | First-person story, reviewed work and education chronology, public-safe evidence |
@@ -37,17 +37,17 @@ npm run preview
 
 ## Publication assets
 
-- `public/og.png`: 1200 by 630 red, white, and blue social card.
+- `public/og-card.svg`: editable source for the aubergine, ember, and parchment social card.
+- `public/og.png`: rendered 1200 by 630 social card.
 - `public/favicon.svg`: site favicon.
 - `dist/robots.txt`: generated for the selected build mode.
 - `dist/sitemap.xml`: generated for the portfolio build.
 
 ## Deployment order
 
-1. Keep the GitHub Pages workflow on `npm run build` while the site remains in development.
-2. Review the complete portrait through `npm run dev:portfolio` or a portfolio build.
-3. Change the Pages workflow to `npm run build:portfolio` only when Drake explicitly opens the site.
-4. Verify the home page, every direct route, metadata, social image, 404 behavior, and the live release marker.
+1. Publish the complete portrait through `npm run build:portfolio` in the GitHub Pages workflow.
+2. Verify the home page, every direct route, metadata, social image, 404 behavior, and the deployed commit.
+3. To close the portrait again, change the workflow back to `npm run build` and verify the waiting-list gate and crawler block live.
 
 ## External security follow-up
 

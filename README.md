@@ -1,6 +1,6 @@
 # drakestapleton.com
 
-The red, white, and blue personal portrait of Drake Stapleton, with a fail-closed waiting-list front door during development.
+The aubergine, ember, and parchment personal portrait of Drake Stapleton, with a fail-closed waiting-list front door during development.
 
 Live: [https://www.drakestapleton.com/](https://www.drakestapleton.com/)
 
@@ -32,7 +32,7 @@ The copy check enforces Drake's affirmative voice across page, component, data, 
 
 ## Hosting
 
-GitHub Pages deploys `npm run build` from `main`. Opening the full portfolio is an explicit release change from `npm run build` to `npm run build:portfolio` after final approval.
+GitHub Pages deploys `npm run build:portfolio` from `main`. The fail-closed waiting-list release remains available through `npm run build` if the portrait needs to close again.
 
 The signup API stores normalized email, consent version, and signup time. Public requests use affirmative consent, origin checks, rate limiting, a honeypot, and TLS.
 
