@@ -31,7 +31,7 @@ const chapters = [
   {
     years: "Built alongside it all",
     title: "Independent software and AI work",
-    body: "Built software, automation, AI systems, research harnesses, community infrastructure, and Atlas alongside my industrial career.",
+    body: "Built software, automation, AI systems, research harnesses, and community infrastructure alongside my industrial career. Atlas became my latest achievement and my greatest so far.",
   },
 ];
 
@@ -93,8 +93,8 @@ export function PathPage() {
           </p>
           <p>
             Scientific method carried into manufacturing. Manufacturing discipline carried into software.
-            Atlas brought those habits together with a personal reason to build. The fields changed, and my
-            standards stayed.
+            Independent AI work brought those habits together. Atlas is their current culmination, and the
+            same standards will carry into everything I build next.
           </p>
         </div>
       </section>

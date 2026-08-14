@@ -341,12 +341,12 @@ h4 { margin: 0; }
 .work-record span { color: var(--copy); font-size: 17px; }
 .work-chapter .text-link { margin-left: min(28%, 320px); }
 
-.atlas-home { color: var(--white); background: var(--red); }
-.atlas-home-grid { padding-top: var(--section); padding-bottom: var(--section); display: grid; grid-template-columns: .48fr .52fr; gap: clamp(48px, 9vw, 120px); }
-.atlas-home .portrait-index { color: var(--on-accent-muted); }
-.atlas-home h2 { color: var(--white); }
-.atlas-home-grid > div:last-child p { margin: 0 0 24px; color: var(--on-accent-copy); font-size: 19px; line-height: 1.7; }
-.atlas-home-grid a { display: inline-block; margin-top: 12px; padding-bottom: 3px; border-bottom: 1px solid rgba(255,255,255,.65); color: var(--white); font-size: 13px; font-weight: 760; }
+.latest-work { border-block: 1px solid var(--line); background: var(--blue-pale); }
+.latest-work-grid { padding-top: var(--section); padding-bottom: var(--section); display: grid; grid-template-columns: .42fr .58fr; gap: clamp(48px, 9vw, 120px); }
+.latest-work .portrait-index { color: var(--red); }
+.latest-work h2 { color: var(--navy); }
+.latest-work-grid > div:last-child p { margin: 0 0 24px; color: var(--copy); font-size: 19px; line-height: 1.7; }
+.latest-work-grid a { display: inline-block; margin-top: 12px; padding-bottom: 3px; border-bottom: 1px solid var(--red); color: var(--red); font-size: 13px; font-weight: 760; }
 
 .home-closing { padding-top: var(--section); padding-bottom: var(--section); text-align: center; }
 .home-closing h2 { max-width: 900px; margin-inline: auto; color: var(--navy); }
@@ -535,7 +535,7 @@ th { color: var(--muted); font-size: 10px; letter-spacing: .08em; text-transform
   .door-story,
   .life-record-grid,
   .values-block,
-  .atlas-home-grid,
+  .latest-work-grid,
   .path-chapter,
   .lesson-list > article,
   .audit-status,

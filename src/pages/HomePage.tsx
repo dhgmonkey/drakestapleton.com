@@ -7,7 +7,7 @@ const chapters = [
   { href: "#drive", number: "02", label: "Drive" },
   { href: "#people", number: "03", label: "People" },
   { href: "#work", number: "04", label: "Work" },
-  { href: "#atlas", number: "05", label: "Atlas" },
+  { href: "#latest", number: "05", label: "Latest" },
 ];
 
 const perseverance = [
@@ -30,7 +30,7 @@ const perseverance = [
   {
     marker: "Build it",
     title: "I turn care into systems people can use.",
-    body: "Training plans, schedules, dashboards, and Atlas all grow from the same instinct: preserve what helps, learn from each result, and give people a stronger next step.",
+    body: "Training plans, schedules, dashboards, research systems, and AI tools all grow from the same instinct: preserve what helps, learn from each result, and give people a stronger next step.",
   },
 ];
 
@@ -40,7 +40,7 @@ const lifeRecord = [
   "I earned two science degrees and built a career across research, product development, and\u00a0manufacturing.",
   "I secured alternate raw materials during a global disruption, produced roughly $1.2 million in documented savings, and served as a HAZMAT Incident\u00a0Commander.",
   "I helped communities grow, trained people through difficult rounds, and developed leaders who carry others.",
-  "I taught myself software, trained models, designed AI systems, and funded Atlas with my own money.",
+  "I taught myself software, trained models, designed AI systems, and funded years of independent work with my own money.",
   "I turned grief into a reason to preserve memory, and hard lessons into machinery that tries again.",
 ];
 
@@ -66,7 +66,7 @@ export function HomePage() {
   usePageMeta({
     title: "Drake Stapleton | The life behind the work",
     description:
-      "The human story behind Drake Stapleton's work in chemistry, manufacturing, community leadership, software, and Atlas.",
+      "The human story behind Drake Stapleton's work in chemistry, manufacturing, community leadership, software, and independent invention.",
     path: "/",
   });
 
@@ -247,29 +247,30 @@ export function HomePage() {
             <article><strong>2016</strong><span>B.S. in Chemistry and Biology, Western Kentucky University</span></article>
             <article><strong>2018</strong><span>M.S. in Chemistry, Western Kentucky University</span></article>
             <article><strong>2018 onward</strong><span>Industrial research, product development, and manufacturing engineering</span></article>
-            <article><strong>Built alongside it</strong><span>Software, communities, model training, research systems, and Atlas</span></article>
+            <article><strong>Built alongside it</strong><span>Software, communities, model training, research systems, and independent invention</span></article>
           </div>
           <Link className="text-link" to="/path">Follow the complete education and work path</Link>
         </div>
       </section>
 
-      <section className="atlas-home" id="atlas">
-        <div className="page-boundary atlas-home-grid">
+      <section className="latest-work" id="latest">
+        <div className="page-boundary latest-work-grid">
           <div>
-            <p className="portrait-index">05 / My father and Atlas</p>
-            <h2>Atlas began with the goodbye I still carry.</h2>
+            <p className="portrait-index">05 / Latest achievement</p>
+            <h2>Atlas is my greatest achievement so far.</h2>
           </div>
           <div>
             <p>
-              My father was a preacher. He left handwritten pages and years of thought behind. He died in
-              2019. I still carry the words I wanted to say and the conversations I wish we could have shared.
+              It is also my latest. Atlas brings together the discipline I learned in chemistry, the
+              accountability I learned in manufacturing, the care I learned through community, and years
+              of independent work in software and AI.
             </p>
             <p>
-              I want one more honest encounter with the words he left, grounded in the source and faithful
-              to the person who wrote them. Atlas grew around memory, truth, dignity, and a grief I chose to
-              turn into work.
+              Its origin is personal. My father left handwritten sermons and years of thought behind. I
+              built Atlas around memory, truth, dignity, and the questions I still carry. This achievement
+              gives me a stronger foundation for everything I build next.
             </p>
-            <Link to="/atlas">Read why Atlas exists and how it works</Link>
+            <Link to="/atlas">Explore the Atlas project</Link>
           </div>
         </div>
       </section>

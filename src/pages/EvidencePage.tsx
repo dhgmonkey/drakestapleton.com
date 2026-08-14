@@ -7,7 +7,7 @@ export function EvidencePage() {
   usePageMeta({
     title: "Evidence and Sources | Drake Stapleton",
     description:
-      "Current evidence for Drake Stapleton's ChatGPT history, Atlas work, software projects, community leadership, and next sources.",
+      "Current evidence for Drake Stapleton's AI history, software projects, community leadership, and next sources.",
     path: "/evidence",
   });
 
@@ -15,8 +15,8 @@ export function EvidencePage() {
     <main className="wrap portrait-wrap evidence-page">
       <PageIntro eyebrow="Forensic history audit / current record" title="What the available record supports." className="path-header evidence-header">
         <p>
-          This page organizes verified work, reconstructed history, direct Atlas sessions, and the sources
-          that will make the record fuller.
+          This page organizes verified work, reconstructed history, direct project sessions, and the
+          sources that will make the record fuller.
         </p>
       </PageIntro>
 

@@ -4,7 +4,6 @@ const LINKS = [
   { to: "/", label: "Life", end: true },
   { to: "/path", label: "Path", end: true },
   { to: "/what-i-learned", label: "Lessons", end: true },
-  { to: "/atlas", label: "Atlas", end: true },
   { to: "/evidence", label: "Record", end: true },
 ];
 

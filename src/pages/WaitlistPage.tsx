@@ -9,7 +9,7 @@ type FormState = "idle" | "submitting" | "success" | "error";
 
 export function WaitlistPage() {
   usePageMeta({
-    title: "Drake Stapleton | A Life in People, Systems, and Atlas",
+    title: "Drake Stapleton | A Life in People, Science, and Systems",
     description:
       "A human portrait and body of work by Drake Stapleton is in development. Join the waiting list for the first public release.",
     path: "/",
@@ -67,12 +67,12 @@ export function WaitlistPage() {
       <section className="waitlist-copy">
         <p className="waitlist-kicker">Drake Stapleton / Thirty-two years alive</p>
         <h1>
-          A life in <span className="waitlist-keep">people, systems,</span>{" "}
-          <span className="waitlist-keep">and <em>Atlas.</em></span>
+          A life in <span className="waitlist-keep">people, science,</span>{" "}
+          <span className="waitlist-keep">and <em>systems.</em></span>
         </h1>
         <p className="waitlist-lede">
-          I am writing the full story now: Tennessee, Kentucky, chemistry, manufacturing, communities, my
-          father, Atlas, and the determination that carried me through every hard turn.
+          I am writing the full story now: Tennessee, Kentucky, family, chemistry, manufacturing,
+          communities, independent projects, and the determination that carried me through every hard turn.
         </p>
         <p className="waitlist-rule">The work is technical. The reason is human.</p>
       </section>

@@ -35,11 +35,11 @@ export function AtlasPage() {
 
   return (
     <main className="wrap portrait-wrap atlas-page">
-      <PageIntro eyebrow="Atlas / The personal reason and the real system" title="Atlas began with the goodbye I still carry." className="atlas-hero">
+      <PageIntro eyebrow="Atlas / My latest project" title="My greatest achievement so far, built from everything that came before." className="atlas-hero">
         <p>
-          My father left sermons, handwritten pages, and a voice I still carry. Atlas grew from a question
-          that stayed with me: can technology help me meet those words honestly and honor the person who
-          wrote them?
+          Atlas brings together my work in science, manufacturing, community leadership, software, model
+          training, and research. Its personal origin lives in a question that stayed with me: can
+          technology help me meet my father&apos;s words honestly and honor the person who wrote them?
         </p>
       </PageIntro>
 
@@ -162,7 +162,7 @@ export function AtlasPage() {
       <section className="atlas-symphony-bridge" aria-labelledby="symphony-bridge-heading">
         <p className="portrait-index">How the work gets done</p>
         <div>
-          <h2 id="symphony-bridge-heading">Symphony is the process. Atlas is the purpose behind it.</h2>
+          <h2 id="symphony-bridge-heading">Symphony is the process I built for work at this scale.</h2>
           <p>
             Atlas Symphony coordinates difficult work across isolated agent lanes, independent review,
             cost controls, and human approval. Several independent checks give a project this personal the
@@ -176,9 +176,10 @@ export function AtlasPage() {
 
       <section className="soul-closing atlas-closing">
         <p className="portrait-index">What it means</p>
-        <blockquote>Atlas is the work I chose to make from the love and grief I still carry.</blockquote>
+        <blockquote>Atlas is the strongest system I have built so far.</blockquote>
         <p>
-          It is growing. I keep building because the question matters enough to keep asking.
+          It carries the love, grief, discipline, and curiosity that shaped me. It also gives me a new
+          foundation for the achievements still ahead.
         </p>
         <div className="portrait-actions">
           <Link className="portrait-link" to="/">

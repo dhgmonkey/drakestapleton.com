@@ -28,7 +28,7 @@ const lessons = [
       "I treated every control as a useful signal. I repaired the permissions, policies, and migration state, then verified the recovery before moving forward.",
   },
   {
-    when: "Atlas / Model training",
+    when: "Independent AI / Model training",
     title: "Model training gave me two deeper loader lessons.",
     experience:
       "A personal Devstral adapter trained on an H100. The first merge exposed Float8 promotion behavior. The second showed how the model configuration differed from the generic loader.",
@@ -36,7 +36,7 @@ const lessons = [
       "I repaired the source and brought private inference live through the adapter path. A final merged export remains a future milestone.",
   },
   {
-    when: "Atlas / Evaluation",
+    when: "Independent AI / Evaluation",
     title: "A score of 90 invited a closer look.",
     experience:
       "A synthetic fixture scored 90 out of 100 because the evaluator rewarded the shape of a convincing answer more than the source behind it.",
