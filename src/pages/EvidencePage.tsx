@@ -26,8 +26,9 @@ export function EvidencePage() {
           <h2 id="audit-status-title">The current audit covers a defined source set.</h2>
         </div>
         <p>
-          The audit package reports 33 project records, 168 evidence claims, and 88 dated events. The
-          original ChatGPT export will expand these figures into an account-wide conversation history.
+          The complete nine-file audit package is part of this record. It reports 33 project records, 168
+          evidence claims, 88 dated events, and 180 retrieved merged pull requests. The original ChatGPT
+          export is the next source for an account-wide conversation history.
         </p>
       </section>
 

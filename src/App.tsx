@@ -1,17 +1,20 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { Layout } from "./components/Layout";
 import { AtlasPage } from "./pages/AtlasPage";
-import { FirstRunPage } from "./pages/FirstRunPage";
 import { EvidencePage } from "./pages/EvidencePage";
+import { FirstRunPage } from "./pages/FirstRunPage";
 import { HomePage } from "./pages/HomePage";
 import { MapPage } from "./pages/MapPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { PathPage } from "./pages/PathPage";
 import { SymphonyPage } from "./pages/SymphonyPage";
-import { WorkflowPage } from "./pages/WorkflowPage";
+import { WaitlistPage } from "./pages/WaitlistPage";
 import { WhatILearnedPage } from "./pages/WhatILearnedPage";
+import { WorkflowPage } from "./pages/WorkflowPage";
 
-export function App() {
+const portfolioIsOpen = import.meta.env.MODE === "portfolio";
+
+function Portfolio() {
   return (
     <Routes>
       <Route element={<Layout />}>
@@ -30,4 +33,8 @@ export function App() {
       </Route>
     </Routes>
   );
+}
+
+export function App() {
+  return portfolioIsOpen ? <Portfolio /> : <WaitlistPage />;
 }

@@ -38,7 +38,7 @@ const lifeRecord = [
   "I survived a childhood that taught me to hide, and became a man who lives in the open.",
   "I built a marriage and opened my home to foster children who needed somewhere safe.",
   "I earned two science degrees and built a career across research, product development, and manufacturing.",
-  "I protected roughly $1.2 million in supply during a global disruption and served as a HAZMAT Incident Commander.",
+  "I secured alternate raw materials during a global disruption, produced roughly $1.2 million in documented savings, and served as a HAZMAT Incident Commander.",
   "I rebuilt fractured communities and trained people who deserved another chance.",
   "I taught myself software, trained models, designed AI systems, and funded Atlas with my own money.",
   "I turned grief into a reason to preserve memory, and hard lessons into machinery that tries again.",
@@ -216,6 +216,9 @@ export function HomePage() {
             </article>
           ))}
         </div>
+        <blockquote className="people-quote">
+          “I find great joy in helping others realize just how great they truly are.”
+        </blockquote>
         <div className="values-block">
           <div className="values-intro">
             <p className="chapter-tag">What I stand for</p>

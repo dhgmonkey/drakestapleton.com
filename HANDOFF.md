@@ -1,49 +1,55 @@
-# Handoff — drakestapleton.com
+# Handoff - drakestapleton.com
 
-**As of 13 Aug 2026.** The site is a **Vite + React + TypeScript** project on GitHub Pages.
+**As of 13 Aug 2026.** This branch combines the public waiting-list gate with the complete human portrait.
 
-The `content/human-portrait` branch is a private, local-only editorial draft. It uses Drake's supplied first-person history and verified resume chronology to move the site away from job-seeking language. Do not push or publish this branch until the personal copy has been reviewed by Drake. The production `main` branch remains the waiting-list gate.
+- `npm run build` produces the fail-closed, no-index waiting-list release used by GitHub Pages.
+- `npm run build:portfolio` produces the complete, indexable portrait for final review and the eventual opening.
+- Every known route has a static fallback with route-specific metadata.
+- Source: https://github.com/dhgmonkey/drakestapleton.com
 
-`/evidence` incorporates only the attached forensic-audit handoff summary. The referenced nine-file ZIP was not present in the Codex attachment directory, so this branch preserves the audit's `PARTIAL` status and does not treat reconstructed notes or direct Atlas chats as an official ChatGPT account export. Reconcile the page against the original audit files before publication.
+The portrait uses Drake's supplied first-person history, the reviewed resume chronology, and the complete nine-file derivative audit package in `Downloads/drake-chatgpt-history-handoff`. The audit remains `PARTIAL` by its own evidence definition because the original ChatGPT account export is a future source.
 
-- https://www.drakestapleton.com/ → portfolio
-- https://www.drakestapleton.com/symphony/ → Atlas Symphony public record
-- Source: https://github.com/dhgmonkey/drakestapleton.com (`main`)
+## Release boundary
 
-Do not attach Atlas private trees, Hostinger tokens, or the coding archive.
-
----
-
-## What shipped
-
-| Piece | Status |
+| Piece | State |
 |---|---|
-| Stack | Vite 7 · React 19 · TypeScript · react-router |
-| Host | GitHub Pages + HTTPS · CNAME `www.drakestapleton.com` |
-| Deploy | `.github/workflows/pages.yml` — `npm ci && npm run build` → `dist/` |
-| Symphony | Inventor/first operator Drake Stapleton · first run 30 Jul 2026 |
-| Diagrams | `/symphony/workflow` · `/symphony/map` · first-run SVG in React |
+| Stack | Vite 7, React 19, TypeScript, react-router |
+| Host | GitHub Pages with HTTPS and `www.drakestapleton.com` CNAME |
+| Public build | Waiting list on every route, `noindex`, disallowing crawler access |
+| Portfolio build | Full portrait, route metadata, sitemap, indexable pages |
+| Signup API | Dedicated Boston Python service on TLS port 8443 |
+| Stored signup data | Normalized email, consent version, UTC timestamp |
+| Public personal material | First-person story, reviewed work and education chronology, public-safe evidence |
+| Private material | Raw transcripts, family source documents, member records, credentials, addresses, financial identifiers |
 
-**Not on the public site:** career CSV, personal media, counterpart stills, credentials, private IPs.
+The public bundle excludes the portrait code. The portfolio bundle excludes the waiting-list code. `scripts/verify-build.mjs` enforces both boundaries.
 
----
-
-## Local
+## Local review
 
 ```bash
-npm install
-npm run dev
-npm run build && npm run preview
+npm run dev:portfolio
+npm run check:copy
+npm run test:waitlist
+npm run build
+npm run build:portfolio
+npm run preview
 ```
 
-SPA fallback: build copies `dist/index.html` to `dist/404.html` so unknown paths hit the router.
+## Publication assets
 
----
+- `public/og.png`: 1200 by 630 red, white, and blue social card.
+- `public/favicon.svg`: site favicon.
+- `dist/robots.txt`: generated for the selected build mode.
+- `dist/sitemap.xml`: generated for the portfolio build.
 
-## Still open (same as before)
+## Deployment order
 
-1. Revoke the Hostinger API token that was pasted in chat.
-2. Headshot / OG image / favicon.
-3. Public contact.
-4. Resume PDF.
-5. Do not put `drake-coding-archive.html` on this domain.
+1. Keep the GitHub Pages workflow on `npm run build` while the site remains in development.
+2. Review the complete portrait through `npm run dev:portfolio` or a portfolio build.
+3. Change the Pages workflow to `npm run build:portfolio` only when Drake explicitly opens the site.
+4. Verify the home page, every direct route, metadata, social image, 404 behavior, and the live release marker.
+
+## External security follow-up
+
+- Confirm revocation of the Hostinger API token previously pasted into chat before the portfolio opens.
+- Keep raw resumes, personal media, private histories, credentials, host details, and the coding archive outside the public site.

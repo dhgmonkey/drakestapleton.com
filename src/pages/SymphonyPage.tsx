@@ -102,7 +102,7 @@ export function SymphonyPage() {
         </Link>
         <Link className="card" to="/symphony/workflow">
           <h3>Command tree + cycle</h3>
-          <p className="meta">Interactive · click any bubble</p>
+          <p className="meta">Illustrated process map</p>
           <p>The command structure and launch sequence used during a Symphony cycle.</p>
         </Link>
         <Link className="card" to="/symphony/map">

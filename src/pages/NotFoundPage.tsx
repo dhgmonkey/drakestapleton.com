@@ -6,6 +6,7 @@ export function NotFoundPage() {
     title: "Page directory | Drake Stapleton",
     description: "Choose a page from Drake Stapleton's site.",
     path: "/404",
+    robots: "noindex, follow",
   });
   return (
     <main className="wrap">

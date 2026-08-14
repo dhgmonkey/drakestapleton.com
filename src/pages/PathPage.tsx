@@ -14,17 +14,17 @@ const chapters = [
     body: "Completed graduate study at Western Kentucky University before moving into industrial research and product development.",
   },
   {
-    years: "2018 to 2020",
+    years: "July 2018 to May 2020",
     title: "R&D Chemist, Soudal",
     body: "Worked on silicone formulation and scale-up, quality systems, UL certification, and technical coordination with the company’s Belgian headquarters.",
   },
   {
-    years: "2020 to 2024",
+    years: "May 2020 to March 2024",
     title: "R&D Chemist, Gold Eagle",
-    body: "Commercialized products, served as a HAZMAT Incident Commander, delivered technical training, and identified alternate sources that protected about $1.2 million in supply during COVID-era disruption.",
+    body: "Commercialized products, served as a HAZMAT Incident Commander, delivered technical training, and secured alternate raw materials during COVID-era disruption, producing about $1.2 million in documented savings.",
   },
   {
-    years: "Beginning 2024",
+    years: "March 2024 onward",
     title: "Manufacturing Engineer, 3M",
     body: "Managed manufacturing change control, introduced products and processes, supported quality systems and audits, and worked in a continuous manufacturing environment.",
   },
@@ -46,9 +46,9 @@ export function PathPage() {
     <main className="wrap portrait-wrap path-page">
       <PageIntro eyebrow="Education and work" title="Chemistry became the foundation for everything that followed." className="path-header">
         <p>
-          I was raised in Tennessee, went to college in Kentucky, and now live in Springfield, Missouri. I
-          spent years developing products and supporting manufacturing. My work in software and AI grew
-          alongside that career and carries its discipline forward.
+          I was raised in Tennessee and went to college in Kentucky. In March 2024, I made Springfield,
+          Missouri home. I spent years developing products and supporting manufacturing. My work in
+          software and AI grew alongside that career and carries its discipline forward.
         </p>
       </PageIntro>
 
