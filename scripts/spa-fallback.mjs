@@ -48,6 +48,12 @@ const routes = [
     description: "Current evidence for Drake Stapleton's ChatGPT history, Atlas work, software projects, community leadership, and next sources.",
   },
   {
+    rel: "interest/index.html",
+    path: "/interest",
+    title: "Leave a card | Drake Stapleton",
+    description: "Leave a name and email for Drake Stapleton, mark hiring interest, answer a few questions, and ask him one of your own.",
+  },
+  {
     rel: "symphony/index.html",
     path: "/symphony",
     title: "Atlas Symphony | Drake Stapleton",
