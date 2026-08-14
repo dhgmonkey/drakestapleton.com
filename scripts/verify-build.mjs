@@ -20,6 +20,7 @@ const requiredPages = [
   "path/index.html",
   "software/index.html",
   "evidence/index.html",
+  "interest/index.html",
   "symphony/index.html",
   "symphony/first/index.html",
   "symphony/workflow/index.html",
