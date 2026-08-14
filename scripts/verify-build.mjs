@@ -18,6 +18,7 @@ const requiredPages = [
   "atlas/index.html",
   "what-i-learned/index.html",
   "path/index.html",
+  "software/index.html",
   "evidence/index.html",
   "symphony/index.html",
   "symphony/first/index.html",

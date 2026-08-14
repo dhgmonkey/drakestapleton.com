@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ChapterNav, SectionLead } from "../components/PagePrimitives";
+import { PRACTICE_HOME_METRICS } from "../data/practice";
 import { usePageMeta } from "../lib/usePageMeta";
 
 const chapters = [
@@ -7,7 +8,8 @@ const chapters = [
   { href: "#drive", number: "02", label: "Drive" },
   { href: "#people", number: "03", label: "People" },
   { href: "#work", number: "04", label: "Work" },
-  { href: "#latest", number: "05", label: "Latest" },
+  { href: "#software", number: "05", label: "Software" },
+  { href: "#latest", number: "06", label: "Latest" },
 ];
 
 const perseverance = [
@@ -36,18 +38,21 @@ const perseverance = [
 
 const lifeRecord = [
   "I survived a childhood that taught me to hide, and became a man who lives in the open.",
-  "I built a marriage and opened my home to foster children who needed somewhere safe.",
+  "I started average, wanted excellence, and learned to outwork the distance between the two.",
+  "I was 24 and Devin was 22, still kids ourselves, when we built a marriage and opened our home to six foster children.",
   "I earned two science degrees and built a career across research, product development, and\u00a0manufacturing.",
-  "I secured alternate raw materials during a global disruption, produced roughly $1.2 million in documented savings, and served as a HAZMAT Incident\u00a0Commander.",
+  "At Gold Eagle, I improved and commercialized products across the 303 Graphene line and became one of the chemists trusted to explain the science on camera.",
+  "I secured alternate raw materials during a global disruption, produced roughly $1.2 million in documented sourcing savings, and served as a HAZMAT Incident\u00a0Commander.",
+  "At 3M, I improved manufacturing processes and efficiency, producing $1 million in cost savings.",
   "I helped communities grow, trained people through difficult rounds, and developed leaders who carry others.",
   "I taught myself software, trained models, designed AI systems, and funded years of independent work with my own money.",
   "I turned grief into a reason to preserve memory, and hard lessons into machinery that tries again.",
 ];
 
 const inheritances = [
-  ["My mother", "taught me to leave what hurts, keep going, and trust what I could become."],
-  ["My grandparents", "gave us land, roots, food, and the belief that a life is measured by what it gives away."],
-  ["The father who chose me", "gave me his name, taught me to be useful, and showed me that family can be a decision."],
+  ["Mom", "fought for me, showed me how to leave what hurts, returned to school in her forties, and crossed her stage eight days before I crossed mine."],
+  ["Granny and Papa", "gave us land, food, roots, and a humble home on the farm. They showed me that a life grows larger through what it gives away."],
+  ["Dad", "gave me the Ballentine name, put farm work in my hands, taught me to be useful, and showed me that love can choose a family."],
   ["The people who found me", "taught me that gratitude moves forward. You turn around and reach for someone else."],
 ];
 
@@ -58,7 +63,7 @@ const values = [
   ["Integrity", "I carry what is right through friendship, position, and every uncomfortable truth."],
   ["Agency", "A title describes one part of my life. I decide how far the whole life can go."],
   ["Curiosity", "I keep a question alive long enough to make it sharper."],
-  ["Perseverance", "Every hard attempt gives me information. I preserve the lesson and return with a better system."],
+  ["Perseverance", "Skill came through repetition. I outwork the distance, preserve each lesson, and return stronger."],
   ["Love", "Family can be inherited, chosen, adopted, married, fostered, or found through a headset in the dark."],
 ];
 
@@ -66,7 +71,7 @@ export function HomePage() {
   usePageMeta({
     title: "Drake Stapleton | The life behind the work",
     description:
-      "The human story behind Drake Stapleton's work in chemistry, manufacturing, community leadership, software, and independent invention.",
+      "The human story behind Drake Stapleton's work in chemistry, manufacturing, community leadership, software, AI exploration, and independent invention.",
     path: "/",
   });
 
@@ -80,11 +85,12 @@ export function HomePage() {
           </h1>
           <blockquote>Or rather, the stubbornness.</blockquote>
           <p className="home-hero-lede">
-            I am a chemist, a manufacturing engineer, a husband, a former foster parent, a community
+            I am a chemist, a product engineer, a husband, a former foster parent, a community
             builder, and an AI systems architect. My work crosses fields. My drive stays.
           </p>
           <p className="home-hero-purpose">
-            This is a record I made for myself. It gives me a place to see my own life whole.
+            I started average. I wanted excellence. I learned to outwork the distance between the two.
+            That fight taught me how to survive.
           </p>
         </div>
         <aside className="hero-identity" aria-label="The life in brief">
@@ -107,40 +113,56 @@ export function HomePage() {
           <blockquote>
             “I am living as myself. I am claiming my own life and my own purpose. I decide what I can become.”
           </blockquote>
-          <p>I have spent years learning how to see my own life clearly. This site is me choosing to look.</p>
+          <p>
+            I have spent years learning how to see my own life clearly. This site is me{" "}
+            <span className="keep-together">choosing to look.</span>
+          </p>
         </div>
       </section>
 
       <section className="home-chapter page-boundary" id="formation">
         <SectionLead eyebrow="01 / Formation" title="I learned how to fight for every inch.">
-          <p>The beginning gave me love, pressure, questions, and the habit of earning my way forward.</p>
+          <p>
+            I began with love, pressure, questions, and the knowledge that every ability would{" "}
+            <span className="keep-together">have to be earned.</span>
+          </p>
         </SectionLead>
         <div className="formation-grid">
           <article className="feature-story">
             <p className="chapter-tag">The boy I was</p>
             <h3>I learned to disappear before I learned why.</h3>
             <p>
-              I grew up gay in Tennessee, in the Bible Belt. My mother fought for me. My grandparents rooted
-              me. My father chose me. My little sister gave me someone to protect. I was surrounded by love
-              while believing that being fully known could cost me{"\u00a0"}everything.
+              I grew up gay in Tennessee, in the Bible Belt. Mom fought for me. Granny and Papa rooted me.
+              Dad chose me and gave me his name. My little sister gave me someone to protect. I was surrounded
+              by love while believing that being fully known could cost me{"\u00a0"}everything.
             </p>
             <p>
-              I played football, earned my place in honors classes the hard way, and learned how to look
-              capable while writing my own manual for living.
+              Disappearing meant studying every room before I entered it. I learned how to stand, talk, and
+              laugh like the kind of boy the other boys would let stand near them. I joined the football team,
+              fought for my place in honors classes, and practiced looking certain while carrying a truth I
+              had barely learned how to name.
+            </p>
+            <p>
+              That kind of hiding creates a particular loneliness. I had a family who loved me and still felt
+              unseen, because they could reach only the version I allowed into the room. The more their love
+              mattered, the more I feared losing it. I became capable, observant, and self-reliant, writing a
+              private manual for how to belong before I understood that belonging should include the whole of
+              me.
             </p>
           </article>
           <article className="grade-card">
             <p className="chapter-tag">The drive behind the grades</p>
             <strong>3.92</strong>
-            <h3>I fought for that GPA.</h3>
+            <h3>I was average. I wanted excellence.</h3>
             <p>
-              Other students held the valedictorian and salutatorian titles. Autism and ADHD made focus a
-              daily contest, and I moved through high school{"\u00a0"}unmedicated.
+              I watched intelligence and athleticism seem natural in other people. I played football and sat
+              in honors classes feeling pretty average. Autism and ADHD made focus a daily contest, and I
+              moved through high school{"\u00a0"}unmedicated.
             </p>
             <p>
-              I wanted effortless brilliance. Determination became my advantage. It carried me through high
-              school and college. During my first year of graduate school, willpower finally ran out. I
-              started medication. It gave me a new way to focus and keep moving.
+              I believed I had to outwork everyone. I returned to the rep, the page, and the problem as many
+              times as it took. That habit earned a 3.92, carried me through two science degrees, and became
+              the way I enter every new field. The fight made me a survivor.
             </p>
           </article>
           <article className="door-story">
@@ -166,7 +188,7 @@ export function HomePage() {
         <div className="page-boundary">
           <SectionLead eyebrow="02 / Drive" title="I keep returning because people are worth the effort.">
             <p>
-              My mother returned to school in her forties and finished what life had interrupted. I watched
+              Mom returned to school in her forties and finished what life had interrupted. I watched
               her cross the stage on May 5, 2016. Eight days later, she stood beside me at Western Kentucky.
             </p>
           </SectionLead>
@@ -216,6 +238,46 @@ export function HomePage() {
             </article>
           ))}
         </div>
+        <div className="family-story-grid">
+          <article className="family-story foster-story">
+            <p className="chapter-tag">The home Devin and I opened</p>
+            <h3>We opened our home to young people who needed steady adults.</h3>
+            <p>
+              I was 24 and Devin was 22, still kids ourselves, when we married in October 2018. By December,
+              before our first Christmas as husbands, our first foster placement was home with us. From
+              December 2018 until COVID made us stop in spring 2020, we cared for six foster children. Among
+              them were two teenage girls with level-five care needs, young people the system struggled to
+              place with families prepared for that responsibility.
+            </p>
+            <p>
+              My stepdad adopted my brother and me and became our dad. He chose us, on paper and in every other
+              way. I also had Mom beside me through the hardest parts of growing up. Devin and I wanted to offer
+              that same presence to young people carrying more uncertainty. When COVID closed the world down,
+              the placements ended. The love and the grief both stayed with us.
+            </p>
+          </article>
+          <article className="family-story dad-story">
+            <p className="chapter-tag">Ballentine Day / December 3, 2007</p>
+            <h3>Dad&apos;s birthday keeps meeting me at the next door.</h3>
+            <p>
+              Dad made official what he had already lived: he adopted my brother and me. Our family calls
+              that date Ballentine Day. I became Michael Drake Ballentine and carried Dad&apos;s name for eleven
+              years. When Devin and I married in 2018, I became Michael Drake Stapleton. Ballentine marks the
+              father who chose me. Stapleton marks the life Devin and I chose together.
+            </p>
+            <p>
+              On Dad&apos;s birthday in 2024, I received the offer that brought me to 3M as a manufacturing
+              engineer. Two years later, on February 13, 2026, another call offered me the product engineer
+              role I hold today. The dates have ordinary explanations. They still carry extraordinary
+              meaning for me.
+            </p>
+            <p>
+              I believe Dad has stayed with me as a guardian angel. I miss him, I am grateful for every lesson
+              he put into me, and I still want to make him proud. I think he would want me to feel proud of
+              myself too.
+            </p>
+          </article>
+        </div>
         <blockquote className="people-quote">
           “I find great joy in helping others realize just how great they truly are.”
         </blockquote>
@@ -237,26 +299,57 @@ export function HomePage() {
 
       <section className="home-chapter work-chapter" id="work">
         <div className="page-boundary">
-          <SectionLead eyebrow="04 / Work" title="The fields changed. My standard stayed.">
+          <SectionLead eyebrow="04 / Work" title="Every step built the next one.">
             <p>
-              Chemistry taught me to respect evidence. Manufacturing taught me that decisions carry real
-              consequences. Community taught me to open the door when someone needs it.
+              The farm taught me to respect the person closest to the work. Taco Bell taught me to serve a
+              crew. Valspar and graduate research turned that discipline into chemistry. Soudal and Gold Eagle
+              taught me to earn operator trust. At 3M, that whole ladder produced $1 million in cost savings
+              through PPU improvements.
             </p>
           </SectionLead>
           <div className="work-record">
-            <article><strong>2016</strong><span>B.S. in Chemistry and Biology, Western Kentucky University</span></article>
-            <article><strong>2018</strong><span>M.S. in Chemistry, Western Kentucky University</span></article>
-            <article><strong>2018 onward</strong><span>Industrial research, product development, and manufacturing engineering</span></article>
+            <article><strong>The foundation</strong><span>Farm work, practical dignity, and respect for the people carrying the job</span></article>
+            <article><strong>My first job</strong><span>Taco Bell team member to shift leader, serving my crew and carrying every task beside them</span></article>
+            <article><strong>College years</strong><span>Taco Bell in Bowling Green followed by a Valspar paint-laboratory internship in color matching and production samples</span></article>
+            <article><strong>2016</strong><span>Honors graduate with a B.S. in Chemistry and Biology, Western Kentucky University</span></article>
+            <article><strong>2018</strong><span>M.S. in Chemistry and published inorganic nanomaterials research</span></article>
+            <article><strong>2018 to 2020</strong><span>Silicone formulation, scale-up, and operator partnership at Soudal</span></article>
+            <article><strong>2020 to 2024</strong><span>Gold Eagle formulation improvement, 303 Graphene commercialization, and about $1.2 million in documented sourcing savings</span></article>
+            <article><strong>2024 to 2026</strong><span>3M PPU improvements, operator partnership, and $1 million in manufacturing cost savings</span></article>
+            <article><strong>2026 onward</strong><span>Product engineering at 3M, bringing product and process improvement together</span></article>
             <article><strong>Built alongside it</strong><span>Software, communities, model training, research systems, and independent invention</span></article>
           </div>
-          <Link className="text-link" to="/path">Follow the complete education and work path</Link>
+          <Link className="text-link" to="/path">Walk the ladder from the farm to product engineering</Link>
+        </div>
+      </section>
+
+      <section className="software-home" id="software">
+        <div className="page-boundary software-home-grid">
+          <div>
+            <p className="portrait-index">05 / Software and AI</p>
+            <h2>I followed the questions into code.</h2>
+            <p>
+              I began by asking GPT about consciousness. I wrote my way through cosmology, used the same
+              questioning in Six Sigma and manufacturing, and learned to orchestrate coding models,
+              products, GPU work, and Atlas. I taught myself by building, measuring, and returning to the work.
+            </p>
+            <Link to="/software">Explore the software practice and AI story</Link>
+          </div>
+          <div className="software-home-metrics" aria-label="Software and AI practice snapshot">
+            {PRACTICE_HOME_METRICS.map((metric) => (
+              <article key={metric.label}>
+                <strong>{metric.value}</strong>
+                <span>{metric.label}</span>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
       <section className="latest-work" id="latest">
         <div className="page-boundary latest-work-grid">
           <div>
-            <p className="portrait-index">05 / Latest achievement</p>
+            <p className="portrait-index">06 / Latest achievement</p>
             <h2>Atlas is my greatest achievement so far.</h2>
           </div>
           <div>
@@ -266,7 +359,7 @@ export function HomePage() {
               of independent work in software and AI.
             </p>
             <p>
-              Its origin is personal. My father left handwritten sermons and years of thought behind. I
+              Its origin is personal. Dad left handwritten sermons and years of thought behind. I
               built Atlas around memory, truth, dignity, and the questions I still carry. This achievement
               gives me a stronger foundation for everything I build next.
             </p>

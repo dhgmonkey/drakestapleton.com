@@ -85,7 +85,7 @@ export function SymphonyPage() {
       </p>
 
       <h2 className="sec">First run</h2>
-      <div className="card">
+      <div className="card diagram-card">
         <FirstRunDiagram />
         <p className="note">
           Solid lines show command relationships. Dashed lines show independent review. Codex hosted the

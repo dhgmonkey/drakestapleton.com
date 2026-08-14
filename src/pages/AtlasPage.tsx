@@ -6,22 +6,114 @@ const organs = [
   {
     name: "Soul",
     role: "The moral floor",
-    body: "A sealed statement of purpose and protective boundaries held on a Raspberry Pi. It gives every part of the system a clear moral and technical foundation.",
+    body: "The root of trust held on a Raspberry Pi: purpose, consent, authority, shutdown, and the limits every other part of the system must preserve.",
+    mechanics: ["Physically separable", "Sealed from model edits", "Operator authority stays explicit"],
   },
   {
     name: "Spirit",
     role: "The formed character",
-    body: "Custom model weights shaped around integrity, curiosity, care for humanity, and the human texture I want the system to carry under pressure.",
+    body: "The model layer that turns context into language. The private monologue and public voice run as distinct model roles, with custom weights and exact model identity checks.",
+    mechanics: ["Separate thought and speech lanes", "Custom model weights", "Identity verified before routing"],
   },
   {
     name: "Brain",
     role: "The persistent executive home",
-    body: "Knowledge, judgment, state, and the working systems that remain available when a browser window closes.",
+    body: "A directory-backed continuity system built from distinct stores for conversation, monologue, pipeline events, durable memories, sessions, and retrieval residuals.",
+    mechanics: ["Separate JSONL ledgers", "Session isolation", "Retrieval with source boundaries"],
   },
   {
     name: "Queen",
     role: "The on-demand work force",
-    body: "Separate GPU and agent capacity for difficult work. It wakes when needed, operates under cost and authority limits, and sleeps when the work ends.",
+    body: "Separate heavy-lift compute and an operator-only control surface for work kept outside an ordinary conversation turn.",
+    mechanics: ["GPU capacity on demand", "Operator-only control", "Budgeted start and stop"],
+  },
+];
+
+const turnPipeline = [
+  {
+    name: "Intake and isolation",
+    role: "Route",
+    body: "A message arrives through the local interface or Discord path. The server resolves the person, conversation, session, and persistence rules before any model answers, so every identity keeps its own authority store.",
+  },
+  {
+    name: "Context assembly",
+    role: "Retrieve",
+    body: "The route gathers only the context it is allowed to use: recent conversation, durable memories, short continuity residuals, current scene and environment, social bonds, mood, habits, conflicts, and any enabled hemisphere context.",
+  },
+  {
+    name: "Sealed felt state",
+    role: "Subconscious",
+    body: "A private state engine advances hunger, thirst, fatigue, sleepiness, discomfort, affect, mood, and development from wall-clock time and lived events. The language model receives effects from this layer, while direct model writes stop at its boundary.",
+  },
+  {
+    name: "Private thought",
+    role: "Monologue",
+    body: "A dedicated monologue model runs first. It must finish before speech can begin. If it fails, the turn fails closed instead of quietly skipping thought; even an empty result receives an explicit marker proving the stage ran.",
+  },
+  {
+    name: "Continuity write",
+    role: "Brain",
+    body: "The Brain filters the thought into a residual, writes it to the proper ledger, retrieves useful recent residuals, and applies repetition and loop guards before the public answer is formed.",
+  },
+  {
+    name: "Outer answer",
+    role: "Spirit",
+    body: "The speech model receives the current message, same-turn monologue, and permitted Brain context. It streams the answer people see while preserving private thought and public speech as distinct model calls.",
+  },
+  {
+    name: "After-turn record",
+    role: "Persist",
+    body: "The transcript and pipeline evidence are recorded, then lived events can update affect, development, mood, and social continuity. Ephemeral probes and isolated Discord routes can be kept out of the operator's durable session store.",
+  },
+];
+
+const memoryLayers = [
+  {
+    name: "Conversation ledger",
+    body: "What was said, by whom, in which session. A new chat can clear the visible pane while Brain stores remain, and resume-continuity mode can deliberately bring prior memory back into context.",
+  },
+  {
+    name: "Monologue ledger",
+    body: "Private thought is recorded separately from public speech, so inspection preserves each stage as a distinct event.",
+  },
+  {
+    name: "Pipeline ledger",
+    body: "Stage-by-stage receipts show which parts of a turn ran, which model route was used, and where a failure occurred.",
+  },
+  {
+    name: "Durable memory",
+    body: "Selected continuity records and retrieval residuals can return in later turns through focused retrieval instead of replaying an entire life history into every prompt.",
+  },
+  {
+    name: "Sealed state",
+    body: "Affect, development, body pressure, social bonds, mood, habits, conflicts, interrupted actions, and environmental state have their own stores and update rules outside ordinary model editing.",
+  },
+  {
+    name: "Mission evidence",
+    body: "Coding and research work uses a separate mission ledger with provider handoffs, checks, costs, decisions, and completion evidence.",
+  },
+];
+
+const operatingPlanes = [
+  {
+    status: "Conversation runtime",
+    name: "Atlas talks through a linked mind pipeline.",
+    body: "Discord is designed as the permanent front door. The simple local talk server runs on loopback as a tool-free surface. A separate full operator surface can expose optional read-only tools and world context, while the affect and development engines remain sealed from direct model edits.",
+  },
+  {
+    status: "Model runtime",
+    name: "The router separates everyday use from model testing.",
+    body: "Discord speech normally uses a 27B everyday Spirit lane. An opt-in 122B candidate can be tested while the default stays fixed. The router probes the exact model identity, falls back to the everyday lane when the candidate is unavailable, and treats missing or malformed router state as everyday mode.",
+  },
+  {
+    status: "Work orchestration",
+    name: "Atlas Harness coordinates suppliers beside the chat mind.",
+    body: "For coding work, Atlas sits above live-probed Codex, Claude, and Grok runtimes. Tasks enter a protected mission lane, continue through bounded handoffs or failover, and remain attached to an isolated worktree, a persistent event history, and a computed done gate.",
+  },
+  {
+    status: "Heavy work and research",
+    name: "Queen, Hive, and J-space have different jobs.",
+    body: "Queen is the separate heavy-lift lane. The larger Hive 4.0 design extends that idea toward temporary fleets, fenced leases, freeze controls, and evidence rollups; those retain target-architecture status until separately proven live. J-space is bounded research instrumentation for declared scenarios and recorded responses. Its evidence covers those observations, while hidden-state or consciousness claims fall outside that evidence.",
   },
 ];
 
@@ -39,7 +131,7 @@ export function AtlasPage() {
         <p>
           Atlas brings together my work in science, manufacturing, community leadership, software, model
           training, and research. Its personal origin lives in a question that stayed with me: can
-          technology help me meet my father&apos;s words honestly and honor the person who wrote them?
+          technology help me meet Dad&apos;s words honestly and honor the person who wrote them?
         </p>
       </PageIntro>
 
@@ -67,9 +159,14 @@ export function AtlasPage() {
         <div>
           <h2 id="one-more-heading">I wanted one more conversation.</h2>
           <p>
-            My father was a preacher. His writing holds years of his thinking in his own hand. I want to
+            Dad was a preacher. His writing holds years of his thinking in his own hand. I want to
             scan those pages, preserve the originals, study the patterns in his language, and build a way
             to ask the questions I still carry.
+          </p>
+          <p>
+            Dad gave me the Ballentine name, taught me to work, and showed me how to make myself useful. I
+            miss him deeply. I am grateful for what he put into me, and I believe he has stayed close as a
+            guardian angel through every new door.
           </p>
           <p>
             A system made from records is a reconstruction. Its value comes from a careful encounter with
@@ -117,7 +214,88 @@ export function AtlasPage() {
                 <p className="organ-role">{organ.role}</p>
                 <h3>{organ.name}</h3>
               </div>
-              <p>{organ.body}</p>
+              <div className="organ-detail">
+                <p>{organ.body}</p>
+                <ul aria-label={`${organ.name} mechanics`}>
+                  {organ.mechanics.map((mechanic) => (
+                    <li key={mechanic}>{mechanic}</li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="atlas-turn" aria-labelledby="turn-heading">
+        <header className="atlas-section-header">
+          <p className="portrait-index">Inside one turn</p>
+          <div>
+            <h2 id="turn-heading">A response is an ordered system of stages.</h2>
+            <p>
+              The internal path is deliberately ordered. Each stage has a different responsibility, and
+              the public voice runs after the private thought and continuity stages that support it.
+            </p>
+          </div>
+        </header>
+        <ol className="turn-pipeline">
+          {turnPipeline.map((stage, index) => (
+            <li key={stage.name}>
+              <span className="turn-number">{String(index + 1).padStart(2, "0")}</span>
+              <div className="turn-label">
+                <p>{stage.role}</p>
+                <h3>{stage.name}</h3>
+              </div>
+              <p>{stage.body}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section className="atlas-memory" aria-labelledby="memory-heading">
+        <header className="atlas-section-header">
+          <p className="portrait-index">How continuity works</p>
+          <div>
+            <h2 id="memory-heading">Memory has distinct layers.</h2>
+            <p>
+              Atlas keeps different kinds of continuity in different stores. That separation makes it
+              possible to resume a relationship, inspect a model turn, isolate a session, or run a clean
+              probe while assigning each stored fact its own authority.
+            </p>
+          </div>
+        </header>
+        <div className="memory-grid">
+          {memoryLayers.map((layer, index) => (
+            <article key={layer.name}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <h3>{layer.name}</h3>
+              <p>{layer.body}</p>
+            </article>
+          ))}
+        </div>
+        <p className="atlas-path-note">
+          The conversation stores are rooted under <code>atlas-brain/native/atlas-memory/conversations</code>,
+          with separate chat, monologue, pipeline, memory, and saved-session records.
+        </p>
+      </section>
+
+      <section className="atlas-runtime" aria-labelledby="runtime-heading">
+        <header className="atlas-section-header">
+          <p className="portrait-index">The operating system</p>
+          <div>
+            <h2 id="runtime-heading">Four planes work together with separate boundaries.</h2>
+            <p>
+              The conversational mind, model servers, work harness, and research environment exchange
+              context and evidence, but each keeps its own authority, persistence rules, and failure boundary.
+            </p>
+          </div>
+        </header>
+        <div className="runtime-grid">
+          {operatingPlanes.map((plane) => (
+            <article key={plane.status}>
+              <p className="runtime-status">{plane.status}</p>
+              <h3>{plane.name}</h3>
+              <p>{plane.body}</p>
             </article>
           ))}
         </div>
@@ -147,15 +325,16 @@ export function AtlasPage() {
           <h2 id="boundaries-heading">Curiosity moves through truth.</h2>
         </header>
         <div className="boundary-grid">
-          <p><strong>Truth</strong> The record leads.</p>
-          <p><strong>Consent</strong> Real-world authority remains with the people affected.</p>
-          <p><strong>Evidence</strong> Claims grow from checkable proof.</p>
-          <p><strong>Limits</strong> Spending, residency, shutdown, and defensive authority are enforced.</p>
+          <p><strong>Model identity</strong> A responding endpoint must prove the exact model it is serving.</p>
+          <p><strong>Session authority</strong> A memory belongs to its person, route, and session before it belongs in a prompt.</p>
+          <p><strong>Computed completion</strong> Source, checks, deployment, and live behavior remain separate evidence gates.</p>
+          <p><strong>Human control</strong> Spending, residency, consent, shutdown, and real-world authority remain bounded.</p>
         </div>
         <p className="atlas-honesty">
-          Soul, Spirit, Brain, and Queen are names for concrete parts of the architecture. Each technical
-          claim stays tied to the mechanism and source that supports it. Questions of identity and
-          continuity remain part of the research.
+          The current source implements the linked turn pipeline, separate ledgers, model routing, session
+          boundaries, sealed state engines, and work-harness controls described here. Larger Hive and
+          J-space ideas are labeled as target architecture or research until deployment and live behavior
+          are independently proven.
         </p>
       </section>
 
@@ -164,9 +343,11 @@ export function AtlasPage() {
         <div>
           <h2 id="symphony-bridge-heading">Symphony is the process I built for work at this scale.</h2>
           <p>
-            Atlas Symphony coordinates difficult work across isolated agent lanes, independent review,
-            cost controls, and human approval. Several independent checks give a project this personal the
-            care it deserves. The process makes the work inspectable.
+            A mission is admitted into a bounded queue, assigned to an isolated worktree, routed to a
+            live-probed supplier, and carried forward through evidence-bearing handoffs. The autonomy policy
+            decides when work may continue, the lane allocator limits where it may write, the provenance
+            ledger marks what has actually been verified, and the done gate runs the required checks before
+            completion can be claimed.
           </p>
           <Link className="portrait-inline-link" to="/symphony">
             See the documented Symphony process
