@@ -259,19 +259,12 @@ export function HomePage() {
           </article>
           <article className="family-story dad-story">
             <p className="chapter-tag">Ballentine Day / December 3, 2007</p>
-            <h3>Dad and Devin share a February 13 birthday that keeps meeting me at the next door.</h3>
+            <h3>Dad made official what he had already lived.</h3>
             <p>
-              Dad made official what he had already lived: he adopted my brother and me. Our family calls
-              that date Ballentine Day. I became Michael Drake Ballentine and carried Dad&apos;s name for eleven
-              years. When Devin and I married in 2018, I became Michael Drake Stapleton. Ballentine marks the
-              father who chose me. Stapleton marks the life Devin and I chose together.
-            </p>
-            <p>
-              Devin and Dad share a February 13 birthday. On that date in 2024, I received the offer
-              that brought me to 3M as a manufacturing
-              engineer. Two years later, on February 13, 2026, another call offered me the product engineer
-              role I hold today. The dates have ordinary explanations. They still carry extraordinary
-              meaning for me.
+              He adopted my brother and me. Our family calls that date Ballentine Day. I became Michael
+              Drake Ballentine and carried Dad's name for eleven years. When Devin and I married in 2018,
+              I became Michael Drake Stapleton. Ballentine marks the father who chose me. Stapleton marks
+              the life Devin and I chose together.
             </p>
             <p>
               I believe Dad has stayed with me as a guardian angel. I miss him, I am grateful for every lesson
@@ -392,7 +385,7 @@ export function HomePage() {
           the lessons, and kept going. I design and operate AI systems. Those words name work already done.
           The work, its value, and the person behind it already exist.
         </p>
-        <blockquote>“The people saved me. Now it&apos;s my turn.”</blockquote>
+        <blockquote>“The people saved me. Now it's my turn.”</blockquote>
         <div className="home-closing-actions">
           <Link to="/interest">Leave a card</Link>
           <a href="https://github.com/dhgmonkey">Visit GitHub</a>
