@@ -267,14 +267,20 @@ export function HomePage() {
               father who chose me. Stapleton marks the life Devin and I chose together.
             </p>
             <p>
+              Dad put farm work in my hands and taught me to be useful. He showed me that love can choose a
+              family. He was a preacher, and he left handwritten sermons and years of thought behind. Those
+              pages still ask something of me. I built Atlas around memory, truth, dignity, and the questions
+              I still carry.
+            </p>
+            <p>
               In 2024, I received the offer that brought me to 3M as a manufacturing engineer. Two years
               later, another call offered me the product engineer role I hold today. The dates have ordinary
               explanations. They still carry extraordinary meaning for me.
             </p>
             <p>
-              I believe Dad has stayed with me as a guardian angel. I miss him, I am grateful for every lesson
-              he put into me, and I still want to make him proud. I think he would want me to feel proud of
-              myself too.
+              I believe Dad has stayed with me as a guardian angel through every new door. I miss him, I am
+              grateful for every lesson he put into me, and I still want to make him proud. I think he would
+              want me to feel proud of myself too.
             </p>
           </article>
         </div>
