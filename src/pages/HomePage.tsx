@@ -41,9 +41,9 @@ const lifeRecord = [
   "I survived a childhood that taught me to hide, and became a man who lives in the open.",
   "I started average, wanted excellence, and learned to outwork the distance between the two.",
   "I was 24 and Devin was 22, still kids ourselves, when we built a marriage and opened our home to six foster children.",
-  "I earned two science degrees and built a career across research, product development, and\\u00a0manufacturing.",
+  "I earned two science degrees and built a career across research, product development, and manufacturing.",
   "At Gold Eagle, I improved and commercialized products across the 303 Graphene line and became one of the chemists trusted to explain the science on camera.",
-  "I secured alternate raw materials during a global disruption, produced roughly $1.2 million in documented sourcing savings, and served as a HAZMAT Incident\\u00a0Commander.",
+  "I secured alternate raw materials during a global disruption, produced roughly $1.2 million in documented sourcing savings, and served as a HAZMAT Incident Commander.",
   "At 3M, I improved manufacturing processes and efficiency, producing $1 million in cost savings.",
   "I helped communities grow, trained people through difficult rounds, and developed leaders who carry others.",
   "I taught myself software, trained models, designed AI systems, and funded years of independent work with my own money.",
@@ -135,7 +135,7 @@ export function HomePage() {
             <p>
               I grew up gay in Tennessee, in the Bible Belt. Mom fought for me. Granny and Papa rooted me.
               Dad chose me and gave me his name. My little sister gave me someone to protect. I was surrounded
-              by love while believing that being fully known could cost me{"\\u00a0"}everything.
+              by love while believing that being fully known could cost me everything.
             </p>
             <p>
               Disappearing meant studying every room before I entered it. I learned how to stand, talk, and
@@ -158,7 +158,7 @@ export function HomePage() {
             <p>
               I watched intelligence and athleticism seem natural in other people. I played football and sat
               in honors classes feeling pretty average. Autism and ADHD made focus a daily contest, and I
-              moved through high school{"\\u00a0"}unmedicated.
+              moved through high school unmedicated.
             </p>
             <p>
               I believed I had to outwork everyone. I returned to the rep, the page, and the problem as many
