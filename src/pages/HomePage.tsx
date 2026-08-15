@@ -259,12 +259,17 @@ export function HomePage() {
           </article>
           <article className="family-story dad-story">
             <p className="chapter-tag">Ballentine Day / December 3, 2007</p>
-            <h3>Dad made official what he had already lived.</h3>
+            <h3>Dad keeps meeting me at the next door.</h3>
             <p>
-              He adopted my brother and me. Our family calls that date Ballentine Day. I became Michael
-              Drake Ballentine and carried Dad's name for eleven years. When Devin and I married in 2018,
-              I became Michael Drake Stapleton. Ballentine marks the father who chose me. Stapleton marks
-              the life Devin and I chose together.
+              Dad made official what he had already lived: he adopted my brother and me. Our family calls
+              that date Ballentine Day. I became Michael Drake Ballentine and carried Dad's name for eleven
+              years. When Devin and I married in 2018, I became Michael Drake Stapleton. Ballentine marks the
+              father who chose me. Stapleton marks the life Devin and I chose together.
+            </p>
+            <p>
+              In 2024, I received the offer that brought me to 3M as a manufacturing engineer. Two years
+              later, another call offered me the product engineer role I hold today. The dates have ordinary
+              explanations. They still carry extraordinary meaning for me.
             </p>
             <p>
               I believe Dad has stayed with me as a guardian angel. I miss him, I am grateful for every lesson
