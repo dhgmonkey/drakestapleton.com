@@ -55,10 +55,10 @@ export const FIRST_OPERATORS: OperatorRecord[] = [
 
 export const FIRST_LANES = [
   { name: "Gatekeeper", job: "Independent review of security and lane boundaries." },
-  { name: "Recovery", job: "Storage recovery and compromised-credential\u00a0work." },
+  { name: "Recovery", job: "Storage recovery and compromised-credential work." },
   { name: "Publisher", job: "Documented deployment within the approved boundary." },
   { name: "Backup / DR", job: "Isolated backup audit and non-destructive recovery testing." },
-  { name: "Capability / artifacts", job: "Tool selection and artifact\u00a0packaging." },
+  { name: "Capability / artifacts", job: "Tool selection and artifact packaging." },
 ];
 
 export const LANE_NICKNAMES = [
@@ -112,6 +112,6 @@ export const VERSIONS = [
     id: "Current L-tier",
     date: "13 Aug 2026",
     name: "Conductor, stewards, and focused cells",
-    blurb: "L1 coordinates the assignment. Independent L2 stewards own implementation, review, evidence, and operations. L3 cells perform focused edits, tests, provider checks, and receipts. Independent reviewers clear each\u00a0implementation.",
+    blurb: "L1 coordinates the assignment. Independent L2 stewards own implementation, review, evidence, and operations. L3 cells perform focused edits, tests, provider checks, and receipts. Independent reviewers clear each implementation.",
   },
 ];
