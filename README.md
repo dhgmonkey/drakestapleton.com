@@ -1,8 +1,9 @@
-# drakestapleton.com
+# Drake Stapleton — AI Architect & Operator
 
-The aubergine, ember, and parchment personal portrait of Drake Stapleton.
+Hire Drake Stapleton for specialized AI architecture: production orchestration, GPU systems, and verifiable work.
 
 Live: [https://www.drakestapleton.com/](https://www.drakestapleton.com/)
+Hire: [https://www.drakestapleton.com/interest](https://www.drakestapleton.com/interest)
 
 ## Local development and release
 

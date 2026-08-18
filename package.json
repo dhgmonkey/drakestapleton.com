@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Public site for Drake Stapleton — portfolio and Atlas Symphony.",
+  "description": "AI Architect & Operator portfolio for Drake Stapleton.",
   "scripts": {
     "dev": "vite --mode portfolio",
     "dev:portfolio": "vite --mode portfolio",
