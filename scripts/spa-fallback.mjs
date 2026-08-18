@@ -62,6 +62,25 @@ function structuredData(page) {
     url: "https://www.drakestapleton.com/",
     image: "https://www.drakestapleton.com/og.png?v=20260818",
     sameAs: ["https://github.com/dhgmonkey"],
+    alumniOf: {
+      "@type": "CollegeOrUniversity",
+      name: "Western Kentucky University",
+      url: "https://www.wku.edu/",
+    },
+    subjectOf: [
+      {
+        "@type": "Thesis",
+        name: "Master of Science in Chemistry thesis",
+        datePublished: "2018",
+        url: "https://digitalcommons.wku.edu/theses/2101/",
+      },
+      {
+        "@type": "ScholarlyArticle",
+        name: "2019 peer-reviewed nanomaterials paper",
+        datePublished: "2019",
+        url: "https://pubmed.ncbi.nlm.nih.gov/30931213/",
+      },
+    ],
   };
 
   const graph = page.path === "/"
