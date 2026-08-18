@@ -59,7 +59,7 @@ function structuredData(page) {
     name: "Drake Stapleton",
     jobTitle: "AI Architect & Operator",
     url: "https://www.drakestapleton.com/",
-    image: "https://www.drakestapleton.com/og.png",
+    image: "https://www.drakestapleton.com/og.png?v=20260818",
     sameAs: ["https://github.com/dhgmonkey"],
   };
 

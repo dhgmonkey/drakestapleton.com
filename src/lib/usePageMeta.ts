@@ -15,7 +15,7 @@ function structuredData(path: string, title: string, description: string) {
     name: "Drake Stapleton",
     jobTitle: "AI Architect & Operator",
     url: `${siteUrl}/`,
-    image: `${siteUrl}/og.png`,
+    image: `${siteUrl}/og.png?v=20260818`,
     sameAs: ["https://github.com/dhgmonkey"],
   };
   const graph = path === "/"
