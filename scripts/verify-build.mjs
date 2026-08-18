@@ -46,6 +46,8 @@ if (mode === "waitlist") {
   assert(index.includes("index, follow"), "Portfolio build is hidden from search");
   assert(index.includes("AI Architect"), "Homepage AI Architect metadata is missing");
   assert(index.includes("application/ld+json"), "Homepage structured data is missing");
+  assert(index.includes('property="og:site_name" content="Drake Stapleton"'), "Homepage og:site_name missing");
+  assert(index.includes("Drake Stapleton"), "Homepage Drake Stapleton missing");
   assert(scripts.includes("I keep finding "), "Portrait copy is missing from the portfolio bundle");
   assert(!scripts.includes("Join the waiting list"), "Waitlist copy leaked into the portfolio bundle");
   assert(existsSync("dist/sitemap.xml"), "Portfolio sitemap is missing");
