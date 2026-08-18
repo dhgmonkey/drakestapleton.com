@@ -44,7 +44,7 @@ function noscriptSummary(page) {
     ["/software", "Software"],
     ["/evidence", "Evidence"],
     ["/atlas", "Atlas"],
-    ["/interest", "Interest"],
+    ["/interest", "Hire"],
     ["/symphony", "Symphony"],
   ];
   const nav = links.map(([href, label]) => `<a href="${href}">${label}</a>`).join(" ");
