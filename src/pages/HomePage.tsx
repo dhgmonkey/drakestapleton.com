@@ -426,7 +426,7 @@ export function HomePage() {
         <blockquote>“The people saved me. Now it's my turn.”</blockquote>
         <div className="home-closing-actions">
           <Link to="/interest">Request an Architecture Audit</Link>
-          <a href="https://github.com/dhgmonkey">GitHub</a>
+          <a href="https://github.com/dhgmonkey" rel="me">GitHub</a>
         </div>
       </section>
       <p className="ai-transparency" style={{textAlign: 'center', marginTop: '40px', color: 'var(--muted)', fontSize: '12px'}}>

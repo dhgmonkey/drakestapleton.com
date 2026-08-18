@@ -178,7 +178,7 @@ if (mode === "portfolio") {
     "</urlset>",
     "",
   ].join("\n");
-  writeFileSync(join(dist, "robots.txt"), "User-agent: *\nAllow: /\nSitemap: https://www.drakestapleton.com/sitemap.xml\n");
+  writeFileSync(join(dist, "robots.txt"), "User-agent: *\nAllow: /\nSitemap: https://www.drakestapleton.com/sitemap.xml\nLLMs: https://www.drakestapleton.com/llms.txt\n");
   writeFileSync(join(dist, "sitemap.xml"), sitemap);
 } else {
   writeFileSync(join(dist, "robots.txt"), "User-agent: *\nDisallow: /\n");

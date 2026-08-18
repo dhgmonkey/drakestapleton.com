@@ -54,6 +54,7 @@ if (mode === "waitlist") {
   const atlas = readFileSync("dist/atlas/index.html", "utf8");
   assert(atlas.includes("Why Atlas Exists"), "Atlas static metadata is missing");
   assert(atlas.includes("https://www.drakestapleton.com/atlas"), "Atlas canonical URL is missing");
+  assert(existsSync("dist/llms.txt"), "Portfolio llms.txt is missing");
 }
 
 console.log(`${mode} build verified`);
