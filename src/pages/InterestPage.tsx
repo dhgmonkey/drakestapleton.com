@@ -7,16 +7,15 @@ export function InterestPage() {
   const [params] = useSearchParams();
   const received = params.get("received") === "1";
 
-  usePageMeta({
-    title: "Leave a card | Drake Stapleton",
-    description: "Leave a name and email for Drake Stapleton, mark hiring interest, answer a few questions, and ask him one of your own.",
-    path: "/interest",
-  });
+  usePageMeta("/interest");
 
   return (
     <main className="portrait-page interest-page">
       <div className="page-boundary">
         <PageIntro eyebrow="Interest" title="Drop your card here.">
+          <p>
+            I work with companies seeking a specialized AI Architect for full-time and contractor engagements.
+          </p>
           <p>
             If this work is useful, leave a name and email. Mark a full-time or contractor interest if you
             want to hire me. Open a few questions if you want, and ask me one of yours.

@@ -13,12 +13,7 @@ import {
 import { usePageMeta } from "../lib/usePageMeta";
 
 export function SoftwarePage() {
-  usePageMeta({
-    title: "AI Orchestration & Architecture | Drake Stapleton",
-    description:
-      "Drake Stapleton's AI orchestration frameworks, architectural patterns, operational methods, and verifiable systems history.",
-    path: "/software",
-  });
+  usePageMeta("/software");
 
   return (
     <main className="portrait-page practice-page">

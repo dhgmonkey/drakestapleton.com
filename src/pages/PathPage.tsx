@@ -150,11 +150,7 @@ const featuredVideos = [
 ];
 
 export function PathPage() {
-  usePageMeta({
-    title: "The Path | Drake Stapleton",
-    description: "Drake Stapleton's education, chemistry, product development, manufacturing, software, and AI path.",
-    path: "/path",
-  });
+  usePageMeta("/path");
 
   return (
     <main className="wrap portrait-wrap path-page">
@@ -387,6 +383,17 @@ export function PathPage() {
             Springfield in 2024. The move joined my career to the place my family had already made home.
           </p>
         </div>
+      </section>
+
+      <section className="portrait-closing compact" aria-labelledby="hiring-review-heading">
+        <p className="portrait-index">For hiring managers</p>
+        <h2 id="hiring-review-heading">Review the career behind the AI architecture.</h2>
+        <p>
+          My path from industrial chemistry through manufacturing engineering into AI architecture shows how
+          I translate technical systems into accountable production work. Continue through the
+          <Link to="/evidence"> evidence record</Link>, inspect my <Link to="/software">software practice</Link>,
+          or <Link to="/interest">start a hiring conversation</Link>.
+        </p>
       </section>
 
       <section className="portrait-closing compact">

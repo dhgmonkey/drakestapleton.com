@@ -4,12 +4,7 @@ import { AUDIT_SCOPE, EVIDENCE_CLASSES, NEXT_SOURCES, VERIFIED_FINDINGS } from "
 import { usePageMeta } from "../lib/usePageMeta";
 
 export function EvidencePage() {
-  usePageMeta({
-    title: "Evidence and Sources | Drake Stapleton",
-    description:
-      "Current evidence for Drake Stapleton's AI history, software projects, community leadership, and next sources.",
-    path: "/evidence",
-  });
+  usePageMeta("/evidence");
 
   return (
     <main className="wrap portrait-wrap evidence-page">

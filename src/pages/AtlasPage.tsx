@@ -118,12 +118,7 @@ const operatingPlanes = [
 ];
 
 export function AtlasPage() {
-  usePageMeta({
-    title: "Why Atlas Exists | Drake Stapleton",
-    description:
-      "The personal origin, purpose, architecture, and honest boundaries of Drake Stapleton's Atlas project.",
-    path: "/atlas",
-  });
+  usePageMeta("/atlas");
 
   return (
     <main className="wrap portrait-wrap atlas-page">
@@ -372,6 +367,16 @@ export function AtlasPage() {
         </p>
         <p>
           <strong>How to inspect:</strong> Review the <Link to="/evidence">Evidence and Sources</Link> page for a summarized record of these orchestration patterns.
+        </p>
+      </section>
+
+      <section className="soul-closing atlas-closing" aria-labelledby="atlas-funder-heading">
+        <p className="portrait-index">For research funders</p>
+        <h2 id="atlas-funder-heading">Atlas is my private R&amp;D program in accountable AI.</h2>
+        <p>
+          Research funders and technical reviewers can evaluate the architecture through its documented controls,
+          operating boundaries, and inspectable records. Review the <Link to="/evidence">evidence base</Link> and
+          the <Link to="/symphony">multi-model orchestration process</Link> that supports this research.
         </p>
       </section>
 

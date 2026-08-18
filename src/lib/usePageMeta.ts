@@ -1,23 +1,87 @@
 import { useEffect } from "react";
+import pageMetadata from "../../site-metadata.json";
 
-export function usePageMeta(opts: { title: string; description: string; path: string; robots?: string }) {
+type Meta = { title: string; description: string };
+type PageMetaInput = string | (Meta & { path: string; robots?: string });
+
+const metadata = pageMetadata as Record<string, Meta>;
+const siteUrl = "https://www.drakestapleton.com";
+
+function structuredData(path: string, title: string, description: string) {
+  const canonical = `${siteUrl}${path}`;
+  const person = {
+    "@type": "Person",
+    "@id": `${siteUrl}/#person`,
+    name: "Drake Stapleton",
+    jobTitle: "AI Architect & Operator",
+    url: `${siteUrl}/`,
+    image: `${siteUrl}/og.png`,
+    sameAs: ["https://github.com/dhgmonkey"],
+  };
+  const graph = path === "/"
+    ? [
+        { "@type": "WebSite", "@id": `${siteUrl}/#website`, name: "Drake Stapleton", url: `${siteUrl}/` },
+        person,
+        {
+          "@type": "ProfessionalService",
+          "@id": `${siteUrl}/#service`,
+          name: "Drake Stapleton AI Architecture",
+          url: `${siteUrl}/`,
+          areaServed: "Worldwide remote engagements",
+          serviceType: "Specialized AI architecture for businesses",
+          founder: { "@id": `${siteUrl}/#person` },
+        },
+      ]
+    : [
+        {
+          "@type": "WebPage",
+          "@id": `${canonical}#webpage`,
+          name: title,
+          description,
+          url: canonical,
+          isPartOf: { "@id": `${siteUrl}/#website` },
+          about: { "@id": `${siteUrl}/#person` },
+        },
+        person,
+      ];
+  return { "@context": "https://schema.org", "@graph": graph };
+}
+
+export function usePageMeta(input: PageMetaInput, robots?: string) {
+  const path = typeof input === "string" ? input : input.path;
+  const shared = typeof input === "string" ? metadata[path] : input;
+  const title = shared?.title;
+  const description = shared?.description;
+  const robotPolicy = robots || (typeof input === "string" ? undefined : input.robots);
+
+  if (!title || !description) throw new Error(`Missing page metadata for ${path}`);
+
   useEffect(() => {
-    document.title = opts.title;
-    const url = `https://www.drakestapleton.com${opts.path}`;
+    document.title = title;
+    const url = `${siteUrl}${path}`;
     const setMeta = (selector: string, content: string) => {
       document.querySelector(selector)?.setAttribute("content", content);
     };
 
-    setMeta('meta[name="description"]', opts.description);
-    setMeta('meta[property="og:title"]', opts.title);
-    setMeta('meta[property="og:description"]', opts.description);
+    setMeta('meta[name="description"]', description);
+    setMeta('meta[property="og:title"]', title);
+    setMeta('meta[property="og:description"]', description);
     setMeta('meta[property="og:url"]', url);
-    setMeta('meta[name="twitter:title"]', opts.title);
-    setMeta('meta[name="twitter:description"]', opts.description);
+    setMeta('meta[name="twitter:title"]', title);
+    setMeta('meta[name="twitter:description"]', description);
     setMeta(
       'meta[name="robots"]',
-      opts.robots || (import.meta.env.MODE === "portfolio" ? "index, follow" : "noindex, nofollow, noarchive"),
+      robotPolicy || (import.meta.env.MODE === "portfolio" ? "index, follow" : "noindex, nofollow, noarchive"),
     );
     document.querySelector('link[rel="canonical"]')?.setAttribute("href", url);
-  }, [opts.title, opts.description, opts.path, opts.robots]);
+
+    let script = document.querySelector<HTMLScriptElement>('#structured-data');
+    if (!script) {
+      script = document.createElement("script");
+      script.id = "structured-data";
+      script.type = "application/ld+json";
+      document.head.append(script);
+    }
+    script.textContent = JSON.stringify(structuredData(path, title, description));
+  }, [title, description, path, robotPolicy]);
 }

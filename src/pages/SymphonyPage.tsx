@@ -3,32 +3,12 @@ import { FirstRunDiagram } from "../components/FirstRunDiagram";
 import { CITATION, FIRST_OPERATORS, VERSIONS } from "../data/operators";
 import { usePageMeta } from "../lib/usePageMeta";
 
-const JSON_LD = {
-  "@context": "https://schema.org",
-  "@type": "CreativeWork",
-  name: "Atlas Symphony",
-  url: CITATION.url,
-  dateCreated: "2026-07-30",
-  creator: {
-    "@type": "Person",
-    name: "Drake Stapleton",
-    url: "https://www.drakestapleton.com/",
-  },
-  description:
-    "A gated process for coordinating multiple AI agents. Designed and first run by Drake Stapleton on 30 July 2026.",
-};
 
 export function SymphonyPage() {
-  usePageMeta({
-    title: "Atlas Symphony — Drake Stapleton",
-    description:
-      "Atlas Symphony is a gated process for coordinating multiple AI agents. Designed and first run by Drake Stapleton on 30 July 2026.",
-    path: "/symphony",
-  });
+  usePageMeta("/symphony");
 
   return (
     <main className="wrap">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }} />
       <p className="kicker">Public record · first run 30 July 2026</p>
       <h1>
         Atlas <em>Symphony</em>

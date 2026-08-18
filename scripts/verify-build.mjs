@@ -44,9 +44,13 @@ if (mode === "waitlist") {
   assert(!existsSync("dist/sitemap.xml"), "Waitlist build includes a sitemap");
 } else {
   assert(index.includes("index, follow"), "Portfolio build is hidden from search");
+  assert(index.includes("AI Architect"), "Homepage AI Architect metadata is missing");
+  assert(index.includes("application/ld+json"), "Homepage structured data is missing");
   assert(scripts.includes("I keep finding "), "Portrait copy is missing from the portfolio bundle");
   assert(!scripts.includes("Join the waiting list"), "Waitlist copy leaked into the portfolio bundle");
   assert(existsSync("dist/sitemap.xml"), "Portfolio sitemap is missing");
+  const interest = readFileSync("dist/interest/index.html", "utf8");
+  assert(interest.includes("Hire Drake Stapleton"), "Interest hiring metadata is missing");
   const atlas = readFileSync("dist/atlas/index.html", "utf8");
   assert(atlas.includes("Why Atlas Exists"), "Atlas static metadata is missing");
   assert(atlas.includes("https://www.drakestapleton.com/atlas"), "Atlas canonical URL is missing");

@@ -69,12 +69,7 @@ const values = [
 ];
 
 export function HomePage() {
-  usePageMeta({
-    title: "Drake Stapleton | AI Architect & Operator",
-    description:
-      "AI Architect and Operator designing durable, verifiable, and production-ready systems.",
-    path: "/",
-  });
+  usePageMeta("/");
 
   return (
     <main className="portrait-page home-page">
@@ -355,6 +350,26 @@ export function HomePage() {
                 <span>{metric.label}</span>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="software-home" aria-labelledby="hire-ai-architect-title">
+        <div className="page-boundary software-home-grid">
+          <div>
+            <p className="portrait-index">For companies building with AI</p>
+            <h2 id="hire-ai-architect-title">Hire a specialized AI Architect who operates the system.</h2>
+            <p>
+              I design the architecture, work from the keyboard, and stay accountable for production behavior.
+              I connect orchestration, GPU operations, authorization boundaries, and evidence into one operating
+              practice shaped around the business problem.
+            </p>
+            <p>
+              Hiring teams can inspect my <Link to="/software">AI architecture practice</Link>, review the
+              <Link to="/evidence"> evidence record</Link>, and trace my <Link to="/path">career path</Link>
+              before opening a conversation.
+            </p>
+            <Link to="/interest">Discuss full-time or contractor work</Link>
           </div>
         </div>
       </section>

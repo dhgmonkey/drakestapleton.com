@@ -2,11 +2,7 @@ import { Birdseye } from "../diagrams/Birdseye";
 import { usePageMeta } from "../lib/usePageMeta";
 
 export function MapPage() {
-  usePageMeta({
-    title: "Atlas Symphony — bird’s-eye map",
-    description: "Six-track map of Atlas development, June–August 2026. Public view of the Symphony desk.",
-    path: "/symphony/map",
-  });
+  usePageMeta("/symphony/map");
 
   return (
     <main className="wrap wide map-page">

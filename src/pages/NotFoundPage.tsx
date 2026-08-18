@@ -2,12 +2,7 @@ import { Link } from "react-router-dom";
 import { usePageMeta } from "../lib/usePageMeta";
 
 export function NotFoundPage() {
-  usePageMeta({
-    title: "Page directory | Drake Stapleton",
-    description: "Choose a page from Drake Stapleton's site.",
-    path: "/404",
-    robots: "noindex, follow",
-  });
+  usePageMeta("/404", "noindex, follow");
   return (
     <main className="wrap">
       <p className="kicker">404</p>

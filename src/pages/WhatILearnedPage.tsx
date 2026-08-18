@@ -54,11 +54,7 @@ const lessons = [
 ];
 
 export function WhatILearnedPage() {
-  usePageMeta({
-    title: "What I Learned | Drake Stapleton",
-    description: "The experiences, lessons, and returns that shaped Drake Stapleton's work and life.",
-    path: "/what-i-learned",
-  });
+  usePageMeta("/what-i-learned");
 
   return (
     <main className="wrap portrait-wrap learned-page">

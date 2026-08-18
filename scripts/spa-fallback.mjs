@@ -9,81 +9,20 @@ if (!new Set(["waitlist", "portfolio"]).has(mode)) {
 const dist = "dist";
 const indexPath = join(dist, "index.html");
 const indexHtml = readFileSync(indexPath, "utf8");
+const pageMetadata = JSON.parse(readFileSync(new URL("../site-metadata.json", import.meta.url), "utf8"));
 const routes = [
-  {
-    rel: "atlas/index.html",
-    path: "/atlas",
-    title: "Why Atlas Exists | Drake Stapleton",
-    description: "The personal origin, purpose, architecture, and honest boundaries of Drake Stapleton's Atlas project.",
-  },
-  {
-    rel: "what-i-learned/index.html",
-    path: "/what-i-learned",
-    title: "What I Learned | Drake Stapleton",
-    description: "The experiences, lessons, and returns that shaped Drake Stapleton's work and life.",
-  },
-  {
-    rel: "what-broke/index.html",
-    path: "/what-i-learned",
-    title: "What I Learned | Drake Stapleton",
-    description: "The experiences, lessons, and returns that shaped Drake Stapleton's work and life.",
-    redirect: true,
-  },
-  {
-    rel: "path/index.html",
-    path: "/path",
-    title: "The Path | Drake Stapleton",
-    description: "Drake Stapleton's education, industrial career, and independent work in software and AI.",
-  },
-  {
-    rel: "software/index.html",
-    path: "/software",
-    title: "Software and AI | Drake Stapleton",
-    description: "Drake Stapleton's software practice, working stack, documented coding history, AI exploration, and retained conversation record.",
-  },
-  {
-    rel: "evidence/index.html",
-    path: "/evidence",
-    title: "Evidence and Sources | Drake Stapleton",
-    description: "Current evidence for Drake Stapleton's ChatGPT history, Atlas work, software projects, community leadership, and next sources.",
-  },
-  {
-    rel: "interest/index.html",
-    path: "/interest",
-    title: "Leave a card | Drake Stapleton",
-    description: "Leave a name and email for Drake Stapleton, mark hiring interest, answer a few questions, and ask him one of your own.",
-  },
-  {
-    rel: "symphony/index.html",
-    path: "/symphony",
-    title: "Atlas Symphony | Drake Stapleton",
-    description: "Atlas Symphony is a gated process for coordinating multiple AI agents, designed and first run by Drake Stapleton on 30 July 2026.",
-  },
-  {
-    rel: "symphony/first/index.html",
-    path: "/symphony/first",
-    title: "First Atlas Symphony | Drake Stapleton",
-    description: "The first documented Atlas Symphony run, including its operator, participating runtimes, work lanes, and independent reviewers.",
-  },
-  {
-    rel: "symphony/workflow/index.html",
-    path: "/symphony/workflow",
-    title: "Atlas Symphony Workflow | Drake Stapleton",
-    description: "The Atlas Symphony command tree and cycle phases designed by Drake Stapleton.",
-  },
-  {
-    rel: "symphony/map/index.html",
-    path: "/symphony/map",
-    title: "Atlas Symphony Map | Drake Stapleton",
-    description: "A six-track map of Atlas development from June through August 2026.",
-  },
-  {
-    rel: "atlas-symphony/index.html",
-    path: "/symphony",
-    title: "Atlas Symphony | Drake Stapleton",
-    description: "Atlas Symphony is a gated process for coordinating multiple AI agents, designed and first run by Drake Stapleton on 30 July 2026.",
-    redirect: true,
-  },
+  { rel: "atlas/index.html", path: "/atlas", ...pageMetadata["/atlas"] },
+  { rel: "what-i-learned/index.html", path: "/what-i-learned", ...pageMetadata["/what-i-learned"] },
+  { rel: "what-broke/index.html", path: "/what-i-learned", ...pageMetadata["/what-i-learned"], redirect: true },
+  { rel: "path/index.html", path: "/path", ...pageMetadata["/path"] },
+  { rel: "software/index.html", path: "/software", ...pageMetadata["/software"] },
+  { rel: "evidence/index.html", path: "/evidence", ...pageMetadata["/evidence"] },
+  { rel: "interest/index.html", path: "/interest", ...pageMetadata["/interest"] },
+  { rel: "symphony/index.html", path: "/symphony", ...pageMetadata["/symphony"] },
+  { rel: "symphony/first/index.html", path: "/symphony/first", ...pageMetadata["/symphony/first"] },
+  { rel: "symphony/workflow/index.html", path: "/symphony/workflow", ...pageMetadata["/symphony/workflow"] },
+  { rel: "symphony/map/index.html", path: "/symphony/map", ...pageMetadata["/symphony/map"] },
+  { rel: "atlas-symphony/index.html", path: "/symphony", ...pageMetadata["/symphony"], redirect: true },
 ];
 
 function escapeAttribute(value) {
@@ -98,10 +37,58 @@ function escapeText(value) {
   return value.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
 }
 
+function structuredData(page) {
+  const canonical = `https://www.drakestapleton.com${page.path}`;
+  const person = {
+    "@type": "Person",
+    "@id": "https://www.drakestapleton.com/#person",
+    name: "Drake Stapleton",
+    jobTitle: "AI Architect & Operator",
+    url: "https://www.drakestapleton.com/",
+    image: "https://www.drakestapleton.com/og.png",
+    sameAs: ["https://github.com/dhgmonkey"],
+  };
+
+  const graph = page.path === "/"
+    ? [
+        {
+          "@type": "WebSite",
+          "@id": "https://www.drakestapleton.com/#website",
+          name: "Drake Stapleton",
+          url: "https://www.drakestapleton.com/",
+        },
+        person,
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://www.drakestapleton.com/#service",
+          name: "Drake Stapleton AI Architecture",
+          url: "https://www.drakestapleton.com/",
+          areaServed: "Worldwide remote engagements",
+          serviceType: "Specialized AI architecture for businesses",
+          founder: { "@id": "https://www.drakestapleton.com/#person" },
+        },
+      ]
+    : [
+        {
+          "@type": "WebPage",
+          "@id": `${canonical}#webpage`,
+          name: page.title,
+          description: page.description,
+          url: canonical,
+          isPartOf: { "@id": "https://www.drakestapleton.com/#website" },
+          about: { "@id": "https://www.drakestapleton.com/#person" },
+        },
+        person,
+      ];
+
+  return JSON.stringify({ "@context": "https://schema.org", "@graph": graph }).replaceAll("<", "\\u003c");
+}
+
 function withMetadata(html, page) {
   const title = escapeText(page.title);
   const description = escapeAttribute(page.description);
   const canonical = `https://www.drakestapleton.com${page.path}`;
+  const jsonLd = structuredData(page);
   return html
     .replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`)
     .replace(/<meta name="description" content="[^"]*"\s*\/?>/, `<meta name="description" content="${description}" />`)
@@ -110,7 +97,8 @@ function withMetadata(html, page) {
     .replace(/<meta property="og:description" content="[^"]*"\s*\/?>/, `<meta property="og:description" content="${description}" />`)
     .replace(/<meta property="og:url" content="[^"]*"\s*\/?>/, `<meta property="og:url" content="${canonical}" />`)
     .replace(/<meta name="twitter:title" content="[^"]*"\s*\/?>/, `<meta name="twitter:title" content="${escapeAttribute(page.title)}" />`)
-    .replace(/<meta name="twitter:description" content="[^"]*"\s*\/?>/, `<meta name="twitter:description" content="${description}" />`);
+    .replace(/<meta name="twitter:description" content="[^"]*"\s*\/?>/, `<meta name="twitter:description" content="${description}" />`)
+    .replace(/<script id="structured-data" type="application\/ld\+json">[\s\S]*?<\/script>/, `<script id="structured-data" type="application/ld+json">${jsonLd}</script>`);
 }
 
 function writePage(rel, html) {
@@ -120,16 +108,16 @@ function writePage(rel, html) {
   console.log("site fallback", destination);
 }
 
+if (mode === "portfolio") {
+  writeFileSync(indexPath, withMetadata(indexHtml, { path: "/", ...pageMetadata["/"] }));
+}
+
 for (const route of routes) {
   writePage(route.rel, mode === "portfolio" ? withMetadata(indexHtml, route) : indexHtml);
 }
 
 const notFound = mode === "portfolio"
-  ? withMetadata(indexHtml, {
-      path: "/404",
-      title: "Page Directory | Drake Stapleton",
-      description: "Choose a page from Drake Stapleton's site.",
-    }).replace('content="index, follow"', 'content="noindex, follow"')
+  ? withMetadata(indexHtml, { path: "/404", ...pageMetadata["/404"] }).replace('content="index, follow"', 'content="noindex, follow"')
   : indexHtml;
 writePage("404.html", notFound);
 

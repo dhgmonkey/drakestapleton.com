@@ -3,12 +3,7 @@ import { CyclePhases } from "../diagrams/CyclePhases";
 import { usePageMeta } from "../lib/usePageMeta";
 
 export function WorkflowPage() {
-  usePageMeta({
-    title: "Atlas Symphony workflow — command tree and cycle",
-    description:
-      "Atlas Symphony command tree and cycle phases. Invented by Drake Stapleton.",
-    path: "/symphony/workflow",
-  });
+  usePageMeta("/symphony/workflow");
 
   return (
     <main className="wrap wide workflow-page">

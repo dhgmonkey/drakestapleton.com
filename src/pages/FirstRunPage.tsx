@@ -29,12 +29,7 @@ function publicDate(value: string) {
 }
 
 export function FirstRunPage() {
-  usePageMeta({
-    title: "First Atlas Symphony — 30 July 2026 · Drake Stapleton",
-    description:
-      "Who started Atlas Symphony: Drake Stapleton invented and first operated it. Codex was the first runtime. Claude and Grok wrote the first independent record.",
-    path: "/symphony/first",
-  });
+  usePageMeta("/symphony/first");
 
   return (
     <main className="wrap">
