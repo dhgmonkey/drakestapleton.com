@@ -14,9 +14,9 @@ import { usePageMeta } from "../lib/usePageMeta";
 
 export function SoftwarePage() {
   usePageMeta({
-    title: "Software and AI | Drake Stapleton",
+    title: "AI Orchestration & Architecture | Drake Stapleton",
     description:
-      "Drake Stapleton's software practice, working stack, documented coding history, AI exploration, and retained conversation record.",
+      "Drake Stapleton's AI orchestration frameworks, architectural patterns, operational methods, and verifiable systems history.",
     path: "/software",
   });
 

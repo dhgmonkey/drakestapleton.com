@@ -37,12 +37,12 @@ export function InterestForm({ compact = false }: { compact?: boolean }) {
             />
           </label>
           <label htmlFor="interest-org">
-            Company or role
+            Company or project
             <input
               id="interest-org"
               name="company_or_role"
               type="text"
-              autoComplete="organization"
+              placeholder="e.g. Acme Corp / AI System Pipeline"
               maxLength={160}
             />
           </label>
@@ -50,7 +50,7 @@ export function InterestForm({ compact = false }: { compact?: boolean }) {
       </div>
 
       <fieldset className="interest-hire">
-        <legend>I am interested in</legend>
+        <legend>Inquiry Type</legend>
         <label>
           <input type="radio" name="hiring_interest" value="conversation" defaultChecked />
           <span>Starting a conversation</span>

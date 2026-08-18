@@ -355,6 +355,26 @@ export function AtlasPage() {
         </div>
       </section>
 
+      <section className="atlas-case-study page-boundary" aria-labelledby="case-study-heading">
+        <p className="portrait-index">Engineering Case Study</p>
+        <h2 id="case-study-heading">Orchestrating GPU Compute</h2>
+        <p>
+          <strong>Context:</strong> I managed a system for two billed GPU seats from an ARM64 Pi.
+        </p>
+        <p>
+          <strong>Constraint:</strong> GPU pods incur per-minute billing. The Pi control plane initiates billing only upon verified intent.
+        </p>
+        <p>
+          <strong>Decision:</strong> I implemented a hub-and-spoke architecture. The Pi CLI treats GPU pod status, health, and metadata as read-only probes, explicitly decoupled from the lifecycle `up` command.
+        </p>
+        <p>
+          <strong>Outcome:</strong> This separation ensures deterministic billing control. The system supports reliable pod management on resource-constrained hardware with industrial stability.
+        </p>
+        <p>
+          <strong>How to inspect:</strong> Review the <Link to="/evidence">Evidence and Sources</Link> page for a summarized record of these orchestration patterns.
+        </p>
+      </section>
+
       <section className="soul-closing atlas-closing">
         <p className="portrait-index">What it means</p>
         <blockquote>Atlas is the strongest system I have built so far.</blockquote>
@@ -371,6 +391,7 @@ export function AtlasPage() {
           </Link>
         </div>
       </section>
+
     </main>
   );
 }

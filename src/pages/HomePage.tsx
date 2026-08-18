@@ -70,9 +70,9 @@ const values = [
 
 export function HomePage() {
   usePageMeta({
-    title: "Drake Stapleton | The life behind the work",
+    title: "Drake Stapleton | AI Architect & Operator",
     description:
-      "The human story behind Drake Stapleton's work in chemistry, manufacturing, community leadership, software, AI exploration, and independent invention.",
+      "AI Architect and Operator designing durable, verifiable, and production-ready systems.",
     path: "/",
   });
 
@@ -80,18 +80,18 @@ export function HomePage() {
     <main className="portrait-page home-page">
       <section className="home-hero page-boundary">
         <div className="hero-copy">
-          <p className="kicker">Drake Stapleton / Thirty-two years alive</p>
+          <p className="kicker">Drake Stapleton / AI Architect & Operator</p>
           <h1>
             I keep finding <span>the strength.</span>
           </h1>
-          <blockquote>Or rather, the stubbornness.</blockquote>
+          <blockquote>I turn raw compute into verifiable production work.</blockquote>
           <p className="home-hero-lede">
-            I am a chemist, a product engineer, a husband, a former foster parent, a community
-            builder, and an AI systems architect. My work crosses fields. My drive stays.
+            I design, operate, and audit orchestration systems. My architecture relies on
+            probe-first design, authorization boundaries, and verifiable proof records.
           </p>
           <p className="home-hero-purpose">
-            I started average. I wanted excellence. I learned to outwork the distance between the two.
-            That fight taught me how to survive.
+            I lead from the keyboard. I design the pipeline, train the models, and enforce
+            the gate. This portfolio archives my operational history.
           </p>
         </div>
         <aside className="hero-identity" aria-label="The life in brief">
@@ -389,17 +389,22 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="home-closing page-boundary">
-        <p className="portrait-index">Self-definition</p>
-        <h2>I choose the size of my own life.</h2>
+      <section className="home-closing page-boundary" id="identity">
+        <p className="portrait-index">Professional Identity</p>
+        <h2>AI Architect & Operator</h2>
         <p>
-          I paid for the compute, spent the nights, trained the models, built the architecture, documented
-          the lessons, and kept going. I design and operate AI systems. Those words name work already done.
-          The work, its value, and the person behind it already exist.
+          I build software and operate AI systems that produce results. My portfolio
+          documents 16 months of continuous AI orchestration—managing GPU compute, designing
+          complex workflows, and enforcing clear authorization boundaries. I turn raw
+          compute and fuzzy requirements into durable, verifiable, and production-ready work.
+        </p>
+        <p>
+          The work, its evidence, and the person behind it exist now. Hire me to build, audit,
+          or architect your AI practice.
         </p>
         <blockquote>“The people saved me. Now it's my turn.”</blockquote>
         <div className="home-closing-actions">
-          <Link to="/interest">Leave a card</Link>
+          <Link to="/interest">Request an Architecture Audit</Link>
           <a href="https://github.com/dhgmonkey">Visit GitHub</a>
         </div>
       </section>

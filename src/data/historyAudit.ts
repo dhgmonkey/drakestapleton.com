@@ -49,6 +49,10 @@ export const VERIFIED_FINDINGS = [
     title: "Human-resources work produced operating tools",
     body: "The evidence includes credentialing workbooks, an education-repayment agreement, performance-review redesign, separation documentation, leave and benefit workflows, recognition systems, and manager tools. The audit distinguishes AI-assisted drafting from my decisions and implementation.",
   },
+  {
+    title: "GPU compute orchestration follows probe-first principles",
+    body: "Atlas manages two billed GPU seats on ARM64 hardware through a hub-and-spoke control plane. The system treats all status, health, and metadata requests as side-effect-free probes, ensuring billing is only initiated by verified, intentional 'up' commands.",
+  },
 ];
 
 export const NEXT_SOURCES = [
