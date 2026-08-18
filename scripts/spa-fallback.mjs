@@ -18,6 +18,7 @@ const routes = [
   { rel: "software/index.html", path: "/software", ...pageMetadata["/software"] },
   { rel: "evidence/index.html", path: "/evidence", ...pageMetadata["/evidence"] },
   { rel: "interest/index.html", path: "/interest", ...pageMetadata["/interest"] },
+  { rel: "hire/index.html", path: "/interest", ...pageMetadata["/interest"], redirect: true },
   { rel: "symphony/index.html", path: "/symphony", ...pageMetadata["/symphony"] },
   { rel: "symphony/first/index.html", path: "/symphony/first", ...pageMetadata["/symphony/first"] },
   { rel: "symphony/workflow/index.html", path: "/symphony/workflow", ...pageMetadata["/symphony/workflow"] },

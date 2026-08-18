@@ -51,6 +51,10 @@ if (mode === "waitlist") {
   assert(existsSync("dist/sitemap.xml"), "Portfolio sitemap is missing");
   const interest = readFileSync("dist/interest/index.html", "utf8");
   assert(interest.includes("Hire Drake Stapleton"), "Interest hiring metadata is missing");
+  assert(existsSync("dist/hire/index.html"), "Missing hire/index.html");
+  const hire = readFileSync("dist/hire/index.html", "utf8");
+  assert(hire.includes("noindex, follow"), "hire is indexable");
+  assert(hire.includes("https://www.drakestapleton.com/interest"), "hire missing canonical link");
   const atlas = readFileSync("dist/atlas/index.html", "utf8");
   assert(atlas.includes("Why Atlas Exists"), "Atlas static metadata is missing");
   assert(atlas.includes("https://www.drakestapleton.com/atlas"), "Atlas canonical URL is missing");
@@ -64,6 +68,7 @@ if (mode === "waitlist") {
   const sitemap = readFileSync("dist/sitemap.xml", "utf8");
   assert(!sitemap.includes("/what-broke"), "sitemap includes /what-broke");
   assert(!sitemap.includes("/atlas-symphony"), "sitemap includes /atlas-symphony");
+  assert(!sitemap.includes("/hire"), "sitemap includes /hire");
   const fourOhFour = readFileSync("dist/404.html", "utf8");
   assert(fourOhFour.includes("noindex, follow"), "404 is indexable");
 

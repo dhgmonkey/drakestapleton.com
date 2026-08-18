@@ -19,6 +19,7 @@ function Portfolio() {
       <Route element={<Layout />}>
         <Route path="/" element={<HomePage />} />
         <Route path="/interest" element={<InterestPage />} />
+        <Route path="/hire" element={<Navigate to="/interest" replace />} />
         <Route path="/atlas" element={<AtlasPage />} />
         <Route path="/path" element={<PathPage />} />
         <Route path="/software" element={<SoftwarePage />} />
