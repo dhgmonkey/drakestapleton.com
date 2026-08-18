@@ -53,7 +53,7 @@ const lifeRecord = [
 const inheritances = [
   ["Mom", "fought for me, showed me how to leave what hurts, returned to school in her forties, and crossed her stage eight days before I crossed mine."],
   ["Granny and Papa", "gave us land, food, roots, and a humble home on the farm. They showed me that a life grows larger through what it gives away."],
-  ["Dad", "gave me the Ballentine name, put farm work in my hands, taught me to be useful, and showed me that love can choose a family."],
+  ["Dad", "was a carpenter, gave me the Ballentine name, put farm work in my hands, taught me to be useful, and showed me that love can choose a family."],
   ["The people who found me", "taught me that gratitude moves forward. You turn around and reach for someone else."],
 ];
 
