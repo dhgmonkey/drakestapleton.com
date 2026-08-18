@@ -158,7 +158,13 @@ if (mode === "portfolio") {
 }
 
 for (const route of routes) {
-  writePage(route.rel, mode === "portfolio" ? withMetadata(indexHtml, route) : indexHtml);
+  const routeHtml = mode === "portfolio" ? withMetadata(indexHtml, route) : indexHtml;
+  writePage(
+    route.rel,
+    mode === "portfolio" && route.redirect
+      ? routeHtml.replace('content="index, follow"', 'content="noindex, follow"')
+      : routeHtml,
+  );
 }
 
 const notFound = mode === "portfolio"
@@ -168,12 +174,13 @@ writePage("404.html", notFound);
 
 if (mode === "portfolio") {
   const publicRoutes = ["/", ...routes.filter((route) => !route.redirect).map((route) => route.path)];
+  const lastmod = new Date().toISOString().slice(0, 10);
   const sitemap = [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
     ...publicRoutes.map((path) => {
       const priority = path === "/" ? "1.0" : new Set(["/interest", "/software"]).has(path) ? "0.9" : "0.7";
-      return `  <url><loc>https://www.drakestapleton.com${path}</loc><lastmod>2026-08-18</lastmod><priority>${priority}</priority></url>`;
+      return `  <url><loc>https://www.drakestapleton.com${path}</loc><lastmod>${lastmod}</lastmod><priority>${priority}</priority></url>`;
     }),
     "</urlset>",
     "",
