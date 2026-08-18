@@ -81,6 +81,36 @@ function structuredData(page) {
           serviceType: "Specialized AI architecture for businesses",
           founder: { "@id": "https://www.drakestapleton.com/#person" },
         },
+        {
+          "@type": "FAQPage",
+          "@id": "https://www.drakestapleton.com/#faq",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "How do companies hire Drake Stapleton?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Leave a card at https://www.drakestapleton.com/interest for full-time or contractor work as a specialized AI Architect.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "What work does Drake Stapleton do?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "I design, operate, and audit production orchestration, GPU systems, and verifiable AI architecture.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "What is Atlas?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Atlas is Drake Stapleton's private R&D program in accountable AI architecture for operator learning and research-funder diligence.",
+              },
+            },
+          ],
+        },
       ]
     : [
         {
@@ -141,7 +171,10 @@ if (mode === "portfolio") {
   const sitemap = [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-    ...publicRoutes.map((path) => `  <url><loc>https://www.drakestapleton.com${path}</loc></url>`),
+    ...publicRoutes.map((path) => {
+      const priority = path === "/" ? "1.0" : new Set(["/interest", "/software"]).has(path) ? "0.9" : "0.7";
+      return `  <url><loc>https://www.drakestapleton.com${path}</loc><lastmod>2026-08-18</lastmod><priority>${priority}</priority></url>`;
+    }),
     "</urlset>",
     "",
   ].join("\n");

@@ -31,6 +31,36 @@ function structuredData(path: string, title: string, description: string) {
           serviceType: "Specialized AI architecture for businesses",
           founder: { "@id": `${siteUrl}/#person` },
         },
+        {
+          "@type": "FAQPage",
+          "@id": `${siteUrl}/#faq`,
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "How do companies hire Drake Stapleton?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Leave a card at https://www.drakestapleton.com/interest for full-time or contractor work as a specialized AI Architect.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "What work does Drake Stapleton do?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "I design, operate, and audit production orchestration, GPU systems, and verifiable AI architecture.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "What is Atlas?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Atlas is Drake Stapleton's private R&D program in accountable AI architecture for operator learning and research-funder diligence.",
+              },
+            },
+          ],
+        },
       ]
     : [
         {

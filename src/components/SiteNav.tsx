@@ -5,6 +5,7 @@ const LINKS = [
   { to: "/path", label: "Career", end: true },
   { to: "/software", label: "Orchestration", end: true },
   { to: "/evidence", label: "Audit", end: true },
+  { to: "/interest", label: "Hire", end: true },
 ];
 
 export function SiteNav() {
