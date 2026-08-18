@@ -37,6 +37,20 @@ function escapeText(value) {
   return value.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
 }
 
+function noscriptSummary(page) {
+  const links = [
+    ["/", "Home"],
+    ["/path", "Path"],
+    ["/software", "Software"],
+    ["/evidence", "Evidence"],
+    ["/atlas", "Atlas"],
+    ["/interest", "Interest"],
+    ["/symphony", "Symphony"],
+  ];
+  const nav = links.map(([href, label]) => `<a href="${href}">${label}</a>`).join(" ");
+  return `<noscript><main><h1>${escapeText(page.title)}</h1><p>${escapeText(page.description)}</p><nav>${nav}</nav></main></noscript>`;
+}
+
 function structuredData(page) {
   const canonical = `https://www.drakestapleton.com${page.path}`;
   const person = {
@@ -98,7 +112,8 @@ function withMetadata(html, page) {
     .replace(/<meta property="og:url" content="[^"]*"\s*\/?>/, `<meta property="og:url" content="${canonical}" />`)
     .replace(/<meta name="twitter:title" content="[^"]*"\s*\/?>/, `<meta name="twitter:title" content="${escapeAttribute(page.title)}" />`)
     .replace(/<meta name="twitter:description" content="[^"]*"\s*\/?>/, `<meta name="twitter:description" content="${description}" />`)
-    .replace(/<script id="structured-data" type="application\/ld\+json">[\s\S]*?<\/script>/, `<script id="structured-data" type="application/ld+json">${jsonLd}</script>`);
+    .replace(/<script id="structured-data" type="application\/ld\+json">[\s\S]*?<\/script>/, `<script id="structured-data" type="application/ld+json">${jsonLd}</script>`)
+    .replace('<div id="root"></div>', `<div id="root"></div>${noscriptSummary(page)}`);
 }
 
 function writePage(rel, html) {
