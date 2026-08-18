@@ -138,6 +138,9 @@ export function HomePage() {
               by love while believing that being fully known could cost me everything.
             </p>
             <p>
+              That farm is where I want you to stand for a minute, because it's where the other lessons started. It smelled like alfalfa and cut grass with just a smidge of manure underneath—the honest smell of a place that works for what it has. At the end of that path was Granny's kitchen, where something was always being made for someone else. It taught me that work was not just about the output, but about the care you put into the foundation.
+            </p>
+            <p>
               Disappearing meant studying every room before I entered it. I learned how to stand, talk, and
               laugh like the kind of boy the other boys would let stand near them. I joined the football team,
               fought for my place in honors classes, and practiced looking certain while carrying a truth I
@@ -265,6 +268,9 @@ export function HomePage() {
               that date Ballentine Day. I became Michael Drake Ballentine and carried Dad's name for eleven
               years. When Devin and I married in 2018, I became Michael Drake Stapleton. Ballentine marks the
               father who chose me. Stapleton marks the life Devin and I chose together.
+            </p>
+            <p>
+              I remember standing in that courtroom in 2007. The judge asked me why I wanted the name change. I told him: "I don't want the same middle name as my biological father. And the first name is misspelled and wanted to fix it." He chuckled and said, "Well that's a good enough reason for me. Granted." It was the best day of my life. I was thirteen and took the name 'Drake' for myself.
             </p>
             <p>
               Dad put farm work in my hands and taught me to be useful. He showed me that love can choose a
@@ -405,9 +411,12 @@ export function HomePage() {
         <blockquote>“The people saved me. Now it's my turn.”</blockquote>
         <div className="home-closing-actions">
           <Link to="/interest">Request an Architecture Audit</Link>
-          <a href="https://github.com/dhgmonkey">Visit GitHub</a>
+          <a href="https://github.com/dhgmonkey">GitHub</a>
         </div>
       </section>
+      <p className="ai-transparency" style={{textAlign: 'center', marginTop: '40px', color: 'var(--muted)', fontSize: '12px'}}>
+        This site is AI-architected by Drake Stapleton. I maintain excellence through relentless iteration, logged by 885 nights of less than 6 hours sleep captured over the years.
+      </p>
     </main>
   );
 }

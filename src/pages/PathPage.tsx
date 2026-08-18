@@ -237,7 +237,7 @@ export function PathPage() {
               <strong>$1M</strong>
               <span>PPU improvement savings</span>
             </div>
-            <h3>I approached improvement through PPU and manufacturing process.</h3>
+            <h3>I approached improvement through Process.</h3>
             <p>
               I used workflow mapping, line balancing, standard work, change control, and the knowledge of
               operators who trusted me enough to show me what the process really needed.
