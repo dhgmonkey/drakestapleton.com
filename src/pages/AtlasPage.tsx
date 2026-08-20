@@ -333,6 +333,21 @@ export function AtlasPage() {
         </p>
       </section>
 
+      <section className="atlas-symphony-bridge atlas-aegis-bridge" aria-labelledby="aegis-bridge-heading">
+        <p className="portrait-index">The defensive extension</p>
+        <div>
+          <h2 id="aegis-bridge-heading">AEGIS puts Atlas on the customer&apos;s side of the door.</h2>
+          <p>
+            I am extending Atlas into a licensed, on-prem defender that reads a company&apos;s existing security
+            signals, contains an intrusion inside the customer&apos;s authorized estate, and preserves the evidence.
+            The first AEGIS adapter passed 59 of 62 checks in its frozen project suite on August 20, 2026.
+          </p>
+          <Link className="portrait-inline-link" to="/aegis">
+            See the AEGIS product and evaluation record
+          </Link>
+        </div>
+      </section>
+
       <section className="atlas-symphony-bridge" aria-labelledby="symphony-bridge-heading">
         <p className="portrait-index">How the work gets done</p>
         <div>

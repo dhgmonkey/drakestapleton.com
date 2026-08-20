@@ -12,13 +12,14 @@ export function InterestPage() {
   return (
     <main className="portrait-page interest-page">
       <div className="page-boundary">
-        <PageIntro eyebrow="Interest" title="Drop your card here.">
+        <PageIntro eyebrow="Partnership" title="Put your card on my desk.">
           <p>
-            I work with companies seeking a specialized AI Architect for full-time and contractor engagements.
+            I work with companies and builders as an independent AI architecture partner. We define the
+            problem, authority, evidence, and finish line together.
           </p>
           <p>
-            If this work is useful, leave a name and email. Mark a full-time or contractor interest if you
-            want to hire me. Open a few questions if you want, and ask me one of yours.
+            If this work fits what you are building, leave a name and email. Choose the shape of the
+            partnership, open a few questions if you want, and ask me one of yours.
           </p>
         </PageIntro>
 

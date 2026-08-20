@@ -15,6 +15,7 @@ const scripts = readdirSync("dist/assets")
   .join("\n");
 const requiredPages = [
   "404.html",
+  "aegis/index.html",
   "atlas/index.html",
   "what-i-learned/index.html",
   "path/index.html",
@@ -52,7 +53,7 @@ if (mode === "waitlist") {
   assert(!scripts.includes("Join the waiting list"), "Waitlist copy leaked into the portfolio bundle");
   assert(existsSync("dist/sitemap.xml"), "Portfolio sitemap is missing");
   const interest = readFileSync("dist/interest/index.html", "utf8");
-  assert(interest.includes("Hire Drake Stapleton"), "Interest hiring metadata is missing");
+  assert(interest.includes("Work With Drake Stapleton"), "Partnership metadata is missing");
   assert(existsSync("dist/hire/index.html"), "Missing hire/index.html");
   const hire = readFileSync("dist/hire/index.html", "utf8");
   assert(hire.includes("noindex, follow"), "hire is indexable");
@@ -60,6 +61,11 @@ if (mode === "waitlist") {
   const atlas = readFileSync("dist/atlas/index.html", "utf8");
   assert(atlas.includes("Why Atlas Exists"), "Atlas static metadata is missing");
   assert(atlas.includes("https://www.drakestapleton.com/atlas"), "Atlas canonical URL is missing");
+  const aegis = readFileSync("dist/aegis/index.html", "utf8");
+  assert(aegis.includes("AEGIS On-Prem AI Defense"), "AEGIS static metadata is missing");
+  assert(aegis.includes("https://www.drakestapleton.com/aegis"), "AEGIS canonical URL is missing");
+  assert(scripts.includes("59/62"), "AEGIS evaluation result is missing from the portfolio bundle");
+  assert(!scripts.includes("want to hire me"), "Employer language remains in the portfolio bundle");
   assert(existsSync("dist/llms.txt"), "Portfolio llms.txt is missing");
   const whatBroke = readFileSync("dist/what-broke/index.html", "utf8");
   assert(whatBroke.includes("noindex, follow"), "what-broke is indexable");

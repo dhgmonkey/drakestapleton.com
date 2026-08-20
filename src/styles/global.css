@@ -420,6 +420,7 @@ h4 { margin: 0; }
 .latest-work h2 { color: var(--navy); }
 .latest-work-grid > div:last-child p { margin: 0 0 24px; color: var(--copy); font-size: 19px; line-height: 1.7; }
 .latest-work-grid a { display: inline-block; margin-top: 12px; padding-bottom: 3px; border-bottom: 1px solid var(--red); color: var(--red); font-size: 13px; font-weight: 760; }
+.latest-work-links { display: flex; flex-wrap: wrap; gap: 10px 26px; }
 
 .home-closing { padding-top: var(--section); padding-bottom: var(--section); text-align: center; }
 .home-closing h2 { max-width: 900px; margin-inline: auto; color: var(--navy); }
@@ -723,6 +724,153 @@ h4 { margin: 0; }
 .boundary-grid p:nth-child(even) { padding-left: 24px; border-left: 1px solid var(--line); }
 .boundary-grid strong { display: block; color: var(--red); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
 .atlas-honesty { max-width: 760px; margin: 42px 0 0 min(28%, 320px); padding-left: 22px; border-left: 3px solid var(--red); color: var(--navy); font: 500 21px/1.55 var(--display); }
+.atlas-aegis-bridge {
+  margin-inline: calc(50% - 50vw);
+  padding-inline: max(var(--gutter), calc((100vw - var(--page)) / 2 + var(--gutter)));
+  color: var(--on-dark);
+  border-top-color: rgba(255, 248, 238, .18);
+  background:
+    linear-gradient(110deg, rgba(169, 70, 43, .26), transparent 52%),
+    var(--navy-deep);
+}
+.atlas-aegis-bridge .portrait-index { color: var(--accent-bright); }
+.atlas-aegis-bridge h2 { color: var(--on-dark); }
+.atlas-aegis-bridge > div > p { color: var(--on-dark-copy); }
+.atlas-aegis-bridge .portrait-inline-link { color: var(--accent-bright); }
+
+/* AEGIS */
+.aegis-hero { position: relative; padding: clamp(16px, 3vw, 38px) 0 clamp(58px, 8vw, 96px); }
+.aegis-hero::after {
+  content: "A";
+  position: absolute;
+  z-index: -1;
+  top: -44px;
+  right: 0;
+  color: rgba(169, 70, 43, .07);
+  font: 500 clamp(190px, 28vw, 390px)/.8 var(--display);
+  letter-spacing: -.09em;
+}
+.aegis-hero h1 { max-width: 980px; margin-top: 16px; color: var(--navy); }
+.aegis-scope-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-block: 1px solid var(--line-strong);
+}
+.aegis-scope-strip span {
+  min-height: 72px;
+  display: grid;
+  place-items: center;
+  padding: 14px;
+  color: var(--navy);
+  border-right: 1px solid var(--line);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+.aegis-scope-strip span:last-child { border-right: 0; }
+.aegis-tagline {
+  max-width: 930px;
+  margin: clamp(52px, 7vw, 88px) auto;
+  color: var(--red);
+  font: italic 500 clamp(31px, 5vw, 62px)/1.12 var(--display);
+  text-align: center;
+}
+.aegis-house,
+.aegis-guidance {
+  margin-inline: calc(50% - 50vw);
+  padding: var(--section) max(var(--gutter), calc((100vw - var(--page)) / 2 + var(--gutter)));
+  display: grid;
+  grid-template-columns: minmax(170px, .28fr) minmax(0, 1fr);
+  gap: clamp(38px, 7vw, 90px);
+}
+.aegis-house { color: var(--on-dark); background: var(--navy-deep); }
+.aegis-house .portrait-index { color: var(--accent-bright); }
+.aegis-house h2 { max-width: 850px; color: var(--on-dark); }
+.aegis-house > div > p { max-width: var(--reading); margin: 24px 0 0; color: var(--on-dark-copy); font-size: 18px; }
+.aegis-house .aegis-law {
+  margin-top: 38px;
+  padding: 22px 0 22px 22px;
+  color: var(--on-dark);
+  border-left: 4px solid var(--accent-bright);
+  font: italic 500 clamp(24px, 3vw, 34px)/1.35 var(--display);
+}
+.aegis-response,
+.aegis-offer,
+.aegis-boundary { padding: var(--section) 0; border-top: 1px solid var(--line); }
+.aegis-section-lead {
+  display: grid;
+  grid-template-columns: minmax(170px, .28fr) minmax(0, 1fr);
+  gap: clamp(38px, 7vw, 90px);
+  margin-bottom: 52px;
+}
+.aegis-section-lead h2 { max-width: 900px; color: var(--navy); }
+.aegis-section-lead > div > p { max-width: var(--reading); margin: 24px 0 0; color: var(--copy); font-size: 18px; }
+.aegis-flow { display: grid; grid-template-columns: repeat(4, 1fr); margin: 0; padding: 0; border-top: 4px solid var(--red); list-style: none; }
+.aegis-flow li { min-width: 0; padding: 26px 24px 30px 0; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.aegis-flow li + li { padding-left: 24px; }
+.aegis-flow li:last-child { border-right: 0; }
+.aegis-flow li > span { color: var(--red); font: 750 10px/1 var(--mono); }
+.aegis-flow li > p { margin: 38px 0 7px; color: var(--muted); font-size: 9px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.aegis-flow h3 { color: var(--navy); font-size: clamp(25px, 2.6vw, 34px); }
+.aegis-flow li > div { margin-top: 16px; color: var(--copy); font-size: 14px; line-height: 1.7; }
+.aegis-knockout {
+  margin-inline: calc(50% - 50vw);
+  padding: var(--section) max(var(--gutter), calc((100vw - var(--page)) / 2 + var(--gutter)));
+  color: #fff8ee;
+  background:
+    radial-gradient(700px 400px at 90% 0%, rgba(255, 255, 255, .08), transparent 62%),
+    #681f17;
+}
+.aegis-knockout .portrait-index { color: #ffd0c7; }
+.aegis-knockout h2 { max-width: 1080px; color: #fff8ee; font-size: clamp(46px, 7vw, 86px); }
+.aegis-knockout > p:nth-of-type(2) { max-width: 760px; margin: 30px 0 0; color: #f3d7d1; font-size: 18px; }
+.aegis-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 44px; }
+.aegis-actions span { padding: 8px 11px; border: 1px solid rgba(255, 248, 238, .38); color: #fff8ee; font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.aegis-offer-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.aegis-offer-card { min-height: 310px; padding: clamp(30px, 4vw, 48px); border: 1px solid var(--line-strong); background: var(--white); }
+.aegis-offer-card > p { margin: 0; color: var(--red); font-size: 10px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.aegis-offer-card h3 { max-width: 470px; margin-top: 46px; color: var(--navy); }
+.aegis-offer-card > div { max-width: 530px; margin-top: 22px; color: var(--copy); font-size: 17px; }
+.aegis-evaluation {
+  margin-inline: calc(50% - 50vw);
+  padding: var(--section) max(var(--gutter), calc((100vw - var(--page)) / 2 + var(--gutter)));
+  background: var(--blue-pale);
+}
+.aegis-evaluation-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, .34fr); gap: 44px; align-items: end; }
+.aegis-evaluation h2 { max-width: 850px; color: var(--navy); }
+.aegis-total { padding-left: 28px; border-left: 1px solid var(--line-strong); }
+.aegis-total strong { display: block; color: var(--red); font: 500 clamp(64px, 8vw, 106px)/.78 var(--display); letter-spacing: -.065em; }
+.aegis-total span { display: block; margin-top: 18px; color: var(--navy); font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.aegis-evaluation-copy { max-width: 860px; margin: 42px 0 0; color: var(--copy); font-size: 18px; line-height: 1.75; }
+.aegis-eval-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin-top: 46px; background: var(--line-strong); }
+.aegis-eval-grid article { min-height: 190px; padding: 26px; background: var(--paper); }
+.aegis-eval-grid p { margin: 0; color: var(--muted); font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.aegis-eval-grid strong { display: block; margin-top: 36px; color: var(--navy); font: 500 clamp(42px, 5vw, 62px)/.9 var(--display); letter-spacing: -.05em; }
+.aegis-eval-grid span { display: block; margin-top: 12px; color: var(--red); font: 750 10px/1 var(--mono); }
+.aegis-eval-boundary { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; margin-top: 28px; background: var(--line-strong); }
+.aegis-eval-boundary > div { padding: 30px; background: var(--paper); }
+.aegis-eval-label { margin: 0 0 18px; color: var(--red); font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.aegis-eval-boundary ul { margin: 0; padding-left: 20px; color: var(--copy); }
+.aegis-eval-boundary li + li { margin-top: 10px; }
+.aegis-eval-boundary > div > p:not(.aegis-eval-label) { margin: 0; color: var(--copy); }
+.aegis-eval-boundary > div > p + p { margin-top: 18px; }
+.aegis-boundary-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 2px solid var(--navy); }
+.aegis-boundary-card { min-height: 220px; padding: 32px 32px 34px 0; border-bottom: 1px solid var(--line); background: transparent; }
+.aegis-boundary-card:nth-child(even) { padding-left: 32px; border-left: 1px solid var(--line); }
+.aegis-boundary-card h3 { color: var(--navy); font-size: clamp(27px, 3vw, 36px); }
+.aegis-boundary-card p { max-width: 500px; margin: 18px 0 0; color: var(--copy); }
+.aegis-guidance { border-block: 1px solid var(--line); background: var(--blue-pale); }
+.aegis-guidance h2 { max-width: 900px; color: var(--navy); }
+.aegis-guidance > div > p { max-width: 820px; margin: 24px 0 0; color: var(--copy); font-size: 17px; }
+.aegis-source-links { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 32px; }
+.aegis-source-links a { padding-bottom: 3px; color: var(--red); border-bottom: 1px solid var(--red); font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.aegis-guidance .aegis-counsel { color: var(--muted); font-size: 13px; }
+.aegis-current { padding: var(--section) 0 0; }
+.aegis-current h2 { max-width: 980px; color: var(--navy); }
+.aegis-current > p:last-child { max-width: 820px; margin: 28px 0 0; color: var(--copy); font-size: 18px; }
+.aegis-closing { margin-bottom: 0; }
 
 .lesson-label { display: flex; align-items: baseline; gap: 14px; }
 .lesson-label p { margin: 0; color: var(--muted); font: 700 10px/1.3 var(--sans); letter-spacing: .08em; }
@@ -817,6 +965,9 @@ th { color: var(--muted); font-size: 10px; letter-spacing: .08em; text-transform
   .atlas-definition,
   .atlas-topology,
   .atlas-symphony-bridge,
+  .aegis-house,
+  .aegis-guidance,
+  .aegis-section-lead,
   .atlas-organs > header,
   .atlas-boundaries > header,
   .atlas-section-header { grid-template-columns: 1fr; }
@@ -844,6 +995,10 @@ th { color: var(--muted); font-size: 10px; letter-spacing: .08em; text-transform
   .lesson-story dl,
   .grid2,
   .grid3 { grid-template-columns: 1fr; }
+  .aegis-offer-grid,
+  .aegis-boundary-grid,
+  .aegis-evaluation-intro,
+  .aegis-eval-boundary { grid-template-columns: 1fr; }
   .inheritance-grid article:nth-child(even),
   .values-grid article:nth-child(even) { padding-left: 0; border-left: 0; }
   .work-record,
@@ -870,6 +1025,11 @@ th { color: var(--muted); font-size: 10px; letter-spacing: .08em; text-transform
   .topology-line { grid-template-columns: repeat(2, 1fr); }
   .boundary-grid { grid-template-columns: 1fr; }
   .boundary-grid p:nth-child(even) { padding-left: 0; border-left: 0; }
+  .aegis-flow { grid-template-columns: repeat(2, 1fr); }
+  .aegis-flow li:nth-child(odd) { padding-left: 0; }
+  .aegis-flow li:nth-child(even) { border-right: 0; }
+  .aegis-boundary-card:nth-child(even) { padding-left: 0; border-left: 0; }
+  .aegis-total { padding-top: 28px; padding-left: 0; border-top: 1px solid var(--line-strong); border-left: 0; }
   .workflow-page .card { overflow-x: auto; }
   .workflow-page .card svg { min-width: 900px; }
 }
@@ -955,6 +1115,16 @@ th { color: var(--muted); font-size: 10px; letter-spacing: .08em; text-transform
   .audit-metrics,
   .metrics,
   .topology-line { grid-template-columns: 1fr; }
+  .aegis-scope-strip,
+  .aegis-flow,
+  .aegis-eval-grid { grid-template-columns: 1fr; }
+  .aegis-scope-strip span { border-right: 0; border-bottom: 1px solid var(--line); }
+  .aegis-scope-strip span:last-child { border-bottom: 0; }
+  .aegis-flow li,
+  .aegis-flow li + li { padding: 26px 0 30px; border-right: 0; }
+  .aegis-offer-card { min-height: auto; padding: 28px 24px; }
+  .aegis-eval-grid article { min-height: auto; }
+  .aegis-source-links { flex-direction: column; align-items: flex-start; }
   .roster-row { grid-template-columns: 1fr; }
   .portrait-actions,
   .home-closing-actions { flex-direction: column; }
@@ -1164,6 +1334,9 @@ th { color: var(--muted); font-size: 10px; letter-spacing: .08em; text-transform
   .audit-metric,
   .evidence-class,
   .memory-grid article,
+  .aegis-offer-card,
+  .aegis-eval-grid article,
+  .aegis-eval-boundary > div,
   .metric,
   .grid2 > .card,
   .grid3 > .card,

@@ -15,7 +15,7 @@ function structuredData(path: string, title: string, description: string) {
     name: "Drake Stapleton",
     jobTitle: "AI Architect & Operator",
     url: `${siteUrl}/`,
-    image: `${siteUrl}/og.png?v=20260818`,
+    image: `${siteUrl}/og.png?v=20260820`,
     sameAs: ["https://github.com/dhgmonkey"],
     alumniOf: {
       "@type": "CollegeOrUniversity",
@@ -56,10 +56,10 @@ function structuredData(path: string, title: string, description: string) {
           mainEntity: [
             {
               "@type": "Question",
-              name: "How do companies hire Drake Stapleton?",
+              name: "How do companies work with Drake Stapleton?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Leave a card at https://www.drakestapleton.com/interest for full-time or contractor work as a specialized AI Architect.",
+                text: "Leave a card at https://www.drakestapleton.com/interest to explore an AI architecture partnership.",
               },
             },
             {
