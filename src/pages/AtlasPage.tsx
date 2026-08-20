@@ -198,7 +198,7 @@ export function AtlasPage() {
           <h2 id="organs-heading">Names with specific jobs behind them.</h2>
           <p>
             The language is personal because the project is personal. Each name still maps to concrete
-            files, models, machines, or controls.
+            files, models, machines, or controls. When Atlas is finished, I intend to release it as open source.
           </p>
         </header>
         <div className="organ-list">

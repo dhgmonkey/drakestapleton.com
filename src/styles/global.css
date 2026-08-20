@@ -680,7 +680,15 @@ h4 { margin: 0; }
 .atlas-organs > header,
 .atlas-boundaries > header,
 .atlas-section-header { display: grid; grid-template-columns: minmax(170px, .28fr) minmax(0, 1fr); gap: clamp(38px, 7vw, 90px); margin-bottom: 54px; }
-.atlas-organs > header > p:last-child { max-width: 590px; margin: 18px 0 0; color: var(--copy); }
+.atlas-organs > header > p:last-child {
+  grid-column: 2;
+  max-width: 660px;
+  margin: 22px 0 0;
+  color: var(--copy);
+  hyphens: none;
+  text-align: left;
+  text-align-last: auto;
+}
 .organ-list article { display: grid; grid-template-columns: 46px 230px 1fr; gap: 24px; padding: 30px 0; border-bottom: 1px solid var(--line); }
 .organ-list article > span { color: var(--red); font: 700 11px/1.5 var(--mono); }
 .organ-list h3 { color: var(--navy); font-size: 36px; }
@@ -971,6 +979,7 @@ th { color: var(--muted); font-size: 10px; letter-spacing: .08em; text-transform
   .atlas-organs > header,
   .atlas-boundaries > header,
   .atlas-section-header { grid-template-columns: 1fr; }
+  .atlas-organs > header > p:last-child { grid-column: auto; }
   .section-lead { gap: 12px; }
   .practice-hero { gap: 22px; }
   .practice-hero .portrait-deck { grid-column: auto; }
