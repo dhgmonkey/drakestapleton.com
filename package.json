@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Independent AI Architect & Operator portfolio for Drake Stapleton.",
+  "description": "The personal project record of Drake Stapleton, Freedom Fighter, AI Architect & Operator.",
   "scripts": {
     "dev": "vite --mode portfolio",
     "dev:portfolio": "vite --mode portfolio",

@@ -385,33 +385,17 @@ export function PathPage() {
         </div>
       </section>
 
-      <section className="portrait-closing compact" aria-labelledby="partner-review-heading">
-        <p className="portrait-index">For potential partners</p>
-        <h2 id="partner-review-heading">Review the career behind the AI architecture.</h2>
+      <section className="portrait-closing compact" aria-labelledby="career-record-heading">
+        <p className="portrait-index">The project record</p>
+        <h2 id="career-record-heading">The career behind the AI architecture.</h2>
         <p>
           My path from industrial chemistry through manufacturing engineering into AI architecture shows how
           I translate technical systems into accountable production work. Continue through the
-          <Link to="/evidence"> evidence record</Link>, inspect my <Link to="/software">software practice</Link>,
-          or <Link to="/interest">start a partnership conversation</Link>.
+          <Link to="/evidence"> evidence record</Link>, explore my <Link to="/software">software practice</Link>,
+          or <Link to="/interest">start a conversation</Link>.
         </p>
       </section>
 
-      <section className="portrait-closing compact">
-        <p className="portrait-index">Where that leads</p>
-        <h2>The same standards apply.</h2>
-        <p>
-          Technical claims on this site are tied to the available record. The evidence documents the work,
-          while the story carries the life around it.
-        </p>
-        <div className="portrait-actions">
-          <Link className="portrait-link" to="/">
-            Return to the human story
-          </Link>
-          <Link className="portrait-link quiet" to="/software">
-            Explore software and AI
-          </Link>
-        </div>
-      </section>
     </main>
   );
 }

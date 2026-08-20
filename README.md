@@ -1,9 +1,11 @@
-# Drake Stapleton — AI Architect & Operator
+# Drake Stapleton: Freedom Fighter, AI Architect & Operator
 
-Partner with Drake Stapleton on specialized AI architecture: production orchestration, GPU systems, and verifiable work.
+The personal project record of Drake Stapleton: production orchestration, GPU systems, model training, research, and Atlas.
+
+Open to good conversation and research partnerships that advance what our generation can build with AI.
 
 Live: [https://www.drakestapleton.com/](https://www.drakestapleton.com/)
-Partner: [https://www.drakestapleton.com/interest](https://www.drakestapleton.com/interest)
+Conversation: [https://www.drakestapleton.com/interest](https://www.drakestapleton.com/interest)
 
 ## Local development and release
 

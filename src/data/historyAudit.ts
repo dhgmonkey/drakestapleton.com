@@ -14,7 +14,7 @@ export const EVIDENCE_CLASSES = [
   {
     title: "Reconstructed ChatGPT history",
     status: "Historical reconstruction",
-    body: "Sixteen historical notes preserve earlier work. They support a reconstructed history within their defined source set.",
+    body: "Sixteen historical notes preserve the work, dates, and themes in the reconstructed record.",
   },
   {
     title: "Direct Atlas conversations",
@@ -39,7 +39,7 @@ export const VERIFIED_FINDINGS = [
   },
   {
     title: "The personal-model experiment reached private inference",
-    body: "A Devstral adapter trained on an H100 using 143 samples. A later vLLM service exposed devstral-personal, and the model-list request, Atlas probe, and chat smoke test succeeded. A final merged-model export remains a future milestone.",
+    body: "A Devstral adapter trained on an H100 using 143 samples. A later vLLM service exposed devstral-personal, and the model-list request, Atlas probe, and chat smoke test succeeded.",
   },
   {
     title: "Community leadership produced documented results",

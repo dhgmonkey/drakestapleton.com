@@ -58,33 +58,6 @@
 }
 .interest-more summary::-webkit-details-marker { display: none; }
 .interest-more[open] summary { margin-bottom: 16px; }
-.interest-partnership {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  display: grid;
-  gap: 10px;
-}
-.interest-partnership legend {
-  padding: 0;
-  color: var(--navy);
-  font-size: 12px;
-  font-weight: 740;
-  letter-spacing: .07em;
-  text-transform: uppercase;
-}
-.interest-partnership label {
-  display: grid;
-  grid-template-columns: 18px 1fr;
-  gap: 10px;
-  align-items: start;
-  text-transform: none;
-  letter-spacing: 0;
-  font-size: 15px;
-  font-weight: 500;
-  color: var(--copy);
-}
-.interest-partnership input { margin-top: 3px; accent-color: var(--red); }
 .interest-consent {
   display: grid;
   grid-template-columns: 18px 1fr;
@@ -110,7 +83,6 @@
   cursor: pointer;
 }
 .interest-form button:hover { background: var(--red-deep); }
-.interest-note { margin: 0; color: var(--muted); font-size: 13px; }
 .interest-honeypot {
   position: absolute;
   left: -10000px;

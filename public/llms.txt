@@ -1,18 +1,18 @@
 # Drake Stapleton
-> Independent AI Architect & Operator. Specialized AI architecture partnerships for companies, operators, and research funders.
+> Freedom Fighter, AI Architect & Operator. A personal record of projects, research, and the life behind the work. Open to good conversation and research partnerships that advance what our generation can build with AI.
 
-Partner with Drake Stapleton on production orchestration, GPU systems, and verifiable AI work.
+Drake Stapleton documents production orchestration, GPU systems, model training, community work, and Atlas.
 
 ## Pages
-- [Home](https://www.drakestapleton.com/): AI Architect partnership overview and life record
-- [Partner](https://www.drakestapleton.com/interest): partnership card
+- [Home](https://www.drakestapleton.com/): life and project record
+- [Conversation](https://www.drakestapleton.com/interest): leave a note
 - [Career path](https://www.drakestapleton.com/path): chemist to manufacturing engineer to AI Architect
 - [Orchestration](https://www.drakestapleton.com/software): AI architecture practice and evidence
-- [Audit](https://www.drakestapleton.com/evidence): inspectable records for partner and funder diligence
-- [Atlas](https://www.drakestapleton.com/atlas): private accountable AI research
+- [Audit](https://www.drakestapleton.com/evidence): source and evidence record
+- [Atlas](https://www.drakestapleton.com/atlas): personal accountable AI research
 - [AEGIS](https://www.drakestapleton.com/aegis): on-prem defensive Atlas extension and August 20 evaluation
 - [Symphony](https://www.drakestapleton.com/symphony): multi-model orchestration process
 
 ## Contact
 - GitHub: https://github.com/dhgmonkey
-- Partner: https://www.drakestapleton.com/interest
+- Conversation and AI research: https://www.drakestapleton.com/interest

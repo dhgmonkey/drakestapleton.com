@@ -113,7 +113,7 @@ const operatingPlanes = [
   {
     status: "Heavy work and research",
     name: "Queen, Hive, and J-space have different jobs.",
-    body: "Queen is the separate heavy-lift lane. The larger Hive 4.0 design extends that idea toward temporary fleets, fenced leases, freeze controls, and evidence rollups; those retain target-architecture status until separately proven live. J-space is bounded research instrumentation for declared scenarios and recorded responses. Its evidence covers those observations, while hidden-state or consciousness claims fall outside that evidence.",
+    body: "Queen is the separate heavy-lift lane. Hive 4.0 extends that work through temporary fleets, fenced leases, freeze controls, and evidence rollups. J-space runs declared research scenarios and records the resulting responses.",
   },
 ];
 
@@ -163,11 +163,6 @@ export function AtlasPage() {
             miss him deeply. I am grateful for what he put into me, and I believe he has stayed close as a
             guardian angel through every new door.
           </p>
-          <p>
-            A system made from records is a reconstruction. Its value comes from a careful encounter with
-            the trace a person left behind, with every source kept visible and every inference named for
-            what it is.
-          </p>
           <blockquote>
             “I miss Dad. I want one more encounter with the words he left and the closure I have carried for
             years.”
@@ -197,8 +192,8 @@ export function AtlasPage() {
           <p className="portrait-index">The organ map</p>
           <h2 id="organs-heading">Names with specific jobs behind them.</h2>
           <p>
-            The language is personal because the project is personal. Each name still maps to concrete
-            files, models, machines, or controls. When Atlas is finished, I intend to release it as open source.
+            Soul, Spirit, Brain, and Queen name the working parts of Atlas. When Atlas is finished, I will
+            release it as open source.
           </p>
         </header>
         <div className="organ-list">
@@ -327,23 +322,21 @@ export function AtlasPage() {
         </div>
         <p className="atlas-honesty">
           The current source implements the linked turn pipeline, separate ledgers, model routing, session
-          boundaries, sealed state engines, and work-harness controls described here. Larger Hive and
-          J-space ideas are labeled as target architecture or research until deployment and live behavior
-          are independently proven.
+          boundaries, sealed state engines, and work-harness controls described here.
         </p>
       </section>
 
       <section className="atlas-symphony-bridge atlas-aegis-bridge" aria-labelledby="aegis-bridge-heading">
         <p className="portrait-index">The defensive extension</p>
         <div>
-          <h2 id="aegis-bridge-heading">AEGIS puts Atlas on the customer&apos;s side of the door.</h2>
+          <h2 id="aegis-bridge-heading">AEGIS puts Atlas on the defender&apos;s side of the door.</h2>
           <p>
-            I am extending Atlas into a licensed, on-prem defender that reads a company&apos;s existing security
-            signals, contains an intrusion inside the customer&apos;s authorized estate, and preserves the evidence.
+            I am extending Atlas into an on-prem defender that reads existing security signals, contains an
+            intrusion inside the authorized estate, and preserves the evidence.
             The first AEGIS adapter passed 59 of 62 checks in its frozen project suite on August 20, 2026.
           </p>
           <Link className="portrait-inline-link" to="/aegis">
-            See the AEGIS product and evaluation record
+            See the AEGIS project and evaluation record
           </Link>
         </div>
       </section>
@@ -356,8 +349,8 @@ export function AtlasPage() {
             A mission is admitted into a bounded queue, assigned to an isolated worktree, routed to a
             live-probed supplier, and carried forward through evidence-bearing handoffs. The autonomy policy
             decides when work may continue, the lane allocator limits where it may write, the provenance
-            ledger marks what has actually been verified, and the done gate runs the required checks before
-            completion can be claimed.
+            ledger marks what has been verified, and the done gate closes the mission after the required
+            checks pass.
           </p>
           <Link className="portrait-inline-link" to="/symphony">
             See the documented Symphony process
@@ -385,13 +378,14 @@ export function AtlasPage() {
         </p>
       </section>
 
-      <section className="soul-closing atlas-closing" aria-labelledby="atlas-funder-heading">
-        <p className="portrait-index">For research funders</p>
-        <h2 id="atlas-funder-heading">Atlas is my private R&amp;D program in accountable AI.</h2>
+      <section className="soul-closing atlas-closing" aria-labelledby="atlas-record-heading">
+        <p className="portrait-index">The research record</p>
+        <h2 id="atlas-record-heading">Atlas is my R&amp;D program in accountable AI.</h2>
         <p>
-          Research funders and technical reviewers can evaluate the architecture through its documented controls,
-          operating boundaries, and inspectable records. Review the <Link to="/evidence">evidence base</Link> and
-          the <Link to="/symphony">multi-model orchestration process</Link> that supports this research.
+          I document the architecture through its controls, operating boundaries, and records. The
+          <Link to="/evidence"> evidence base</Link> and <Link to="/symphony">Symphony process</Link> preserve
+          how the work was built. I am open to research partnerships that advance what our generation can
+          build with AI.
         </p>
       </section>
 

@@ -12,21 +12,21 @@ export function InterestPage() {
   return (
     <main className="portrait-page interest-page">
       <div className="page-boundary">
-        <PageIntro eyebrow="Partnership" title="Put your card on my desk.">
+        <PageIntro eyebrow="Conversation" title="Walk with me for a while.">
           <p>
-            I work with companies and builders as an independent AI architecture partner. We define the
-            problem, authority, evidence, and finish line together.
+            This site is my record of the projects and the life behind them. If something here gives you a
+            question, an idea, or a story of your own, leave me a note.
           </p>
           <p>
-            If this work fits what you are building, leave a name and email. Choose the shape of the
-            partnership, open a few questions if you want, and ask me one of yours.
+            I am open to good conversation with people who want to walk part of this journey with me, and
+            to research partnerships that advance what our generation can build with AI.
           </p>
         </PageIntro>
 
         {received ? (
           <div className="interest-received" role="status">
             <p className="portrait-index">Received</p>
-            <h2>I have your card.</h2>
+            <h2>I have your note.</h2>
             <p>I will write back from this desk.</p>
           </div>
         ) : (

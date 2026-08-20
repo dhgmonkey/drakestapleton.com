@@ -8,7 +8,7 @@ export function InterestForm({ compact = false }: { compact?: boolean }) {
       action={INTAKE_ACTION}
       method="POST"
     >
-      <input type="hidden" name="_subject" value="Partnership card from drakestapleton.com" />
+      <input type="hidden" name="_subject" value="Conversation from drakestapleton.com" />
       <input type="hidden" name="_captcha" value="true" />
       <input type="hidden" name="_template" value="table" />
       <input type="hidden" name="_next" value={THANKS_URL} />
@@ -18,7 +18,7 @@ export function InterestForm({ compact = false }: { compact?: boolean }) {
       </div>
 
       <div className="interest-card-grid">
-        <p className="interest-card-label">The card</p>
+        <p className="interest-card-label">Your note</p>
         <div className="interest-fields">
           <label htmlFor="interest-name">
             Name
@@ -37,33 +37,16 @@ export function InterestForm({ compact = false }: { compact?: boolean }) {
             />
           </label>
           <label htmlFor="interest-org">
-            Company or project
+            Your project or story
             <input
               id="interest-org"
-              name="company_or_role"
+              name="project_or_story"
               type="text"
-              placeholder="e.g. Acme Corp / AI System Pipeline"
               maxLength={160}
             />
           </label>
         </div>
       </div>
-
-      <fieldset className="interest-partnership">
-        <legend>Partnership Type</legend>
-        <label>
-          <input type="radio" name="partnership_interest" value="conversation" defaultChecked />
-          <span>Starting a conversation</span>
-        </label>
-        <label>
-          <input type="radio" name="partnership_interest" value="ongoing-partnership" />
-          <span>Exploring an ongoing partnership</span>
-        </label>
-        <label>
-          <input type="radio" name="partnership_interest" value="defined-architecture-engagement" />
-          <span>Solving a defined architecture problem together</span>
-        </label>
-      </fieldset>
 
       <details className="interest-more">
         <summary>A few questions</summary>
@@ -89,8 +72,7 @@ export function InterestForm({ compact = false }: { compact?: boolean }) {
         <span>Use this email only to continue this conversation.</span>
       </label>
 
-      <button type="submit">Send the card</button>
-      <p className="interest-note">FormSubmit delivers the card and asks one CAPTCHA before it reaches me.</p>
+      <button type="submit">Send the note</button>
     </form>
   );
 }

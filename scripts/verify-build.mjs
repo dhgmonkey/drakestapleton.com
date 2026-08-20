@@ -53,19 +53,16 @@ if (mode === "waitlist") {
   assert(!scripts.includes("Join the waiting list"), "Waitlist copy leaked into the portfolio bundle");
   assert(existsSync("dist/sitemap.xml"), "Portfolio sitemap is missing");
   const interest = readFileSync("dist/interest/index.html", "utf8");
-  assert(interest.includes("Work With Drake Stapleton"), "Partnership metadata is missing");
-  assert(existsSync("dist/hire/index.html"), "Missing hire/index.html");
-  const hire = readFileSync("dist/hire/index.html", "utf8");
-  assert(hire.includes("noindex, follow"), "hire is indexable");
-  assert(hire.includes("https://www.drakestapleton.com/interest"), "hire missing canonical link");
+  assert(interest.includes("Start a Conversation"), "Conversation metadata is missing");
   const atlas = readFileSync("dist/atlas/index.html", "utf8");
   assert(atlas.includes("Why Atlas Exists"), "Atlas static metadata is missing");
   assert(atlas.includes("https://www.drakestapleton.com/atlas"), "Atlas canonical URL is missing");
   const aegis = readFileSync("dist/aegis/index.html", "utf8");
-  assert(aegis.includes("AEGIS On-Prem AI Defense"), "AEGIS static metadata is missing");
+  assert(aegis.includes("AEGIS Defensive Atlas Extension"), "AEGIS static metadata is missing");
   assert(aegis.includes("https://www.drakestapleton.com/aegis"), "AEGIS canonical URL is missing");
   assert(scripts.includes("59/62"), "AEGIS evaluation result is missing from the portfolio bundle");
-  assert(!scripts.includes("want to hire me"), "Employer language remains in the portfolio bundle");
+  assert(!scripts.includes("Discuss a partnership"), "Sales language remains in the portfolio bundle");
+  assert(!scripts.includes("License AEGIS"), "AEGIS sales language remains in the portfolio bundle");
   assert(existsSync("dist/llms.txt"), "Portfolio llms.txt is missing");
   const whatBroke = readFileSync("dist/what-broke/index.html", "utf8");
   assert(whatBroke.includes("noindex, follow"), "what-broke is indexable");
@@ -76,7 +73,6 @@ if (mode === "waitlist") {
   const sitemap = readFileSync("dist/sitemap.xml", "utf8");
   assert(!sitemap.includes("/what-broke"), "sitemap includes /what-broke");
   assert(!sitemap.includes("/atlas-symphony"), "sitemap includes /atlas-symphony");
-  assert(!sitemap.includes("/hire"), "sitemap includes /hire");
   const fourOhFour = readFileSync("dist/404.html", "utf8");
   assert(fourOhFour.includes("noindex, follow"), "404 is indexable");
 

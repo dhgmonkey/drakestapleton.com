@@ -100,12 +100,11 @@ export function FirstRunPage() {
         {LANE_NICKNAMES.join(" · ")}.
       </p>
 
-      <h2 className="sec">Current scope</h2>
+      <h2 className="sec">Operating record</h2>
       <div className="card current-scope-card">
         <p>
-          The current record covers my own operating environment. Later Grok Hive and Boston roles grew
-          inside that environment. Claude cataloged the first run, Grok observed it, and Drake Stapleton
-          remains the inventor and operator.
+          Symphony began in my operating environment. Grok Hive and Boston roles grew there. Claude
+          cataloged the first run, Grok observed it, and I am the inventor and operator.
         </p>
       </div>
     </main>

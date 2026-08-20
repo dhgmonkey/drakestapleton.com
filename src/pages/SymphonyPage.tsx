@@ -26,7 +26,7 @@ export function SymphonyPage() {
       <div className="metrics">
         <div className="metric">
           <b>Drake Stapleton</b>
-          <span>Designer and first operator. Final approval remains human.</span>
+          <span>Designer, first operator, and final approver.</span>
         </div>
         <div className="metric">
           <b>30 Jul 2026</b>
@@ -38,7 +38,7 @@ export function SymphonyPage() {
         </div>
         <div className="metric">
           <b>Current operating record</b>
-          <span>The current record covers my own runtimes and reviewers.</span>
+          <span>My runtimes and reviewers form the operating record.</span>
         </div>
       </div>
 
@@ -110,10 +110,6 @@ export function SymphonyPage() {
         Stapleton, Drake. <i>Atlas Symphony</i>. First run 30 July 2026 (Sovereign Forge live-ops).{" "}
         <a href={CITATION.url}>{CITATION.url}</a>
       </div>
-
-      <footer className="footer">
-        Public process record. Private media, credentials, and internal addresses remain private.
-      </footer>
     </main>
   );
 }

@@ -75,11 +75,11 @@ export function HomePage() {
     <main className="portrait-page home-page">
       <section className="home-hero page-boundary">
         <div className="hero-copy">
-          <p className="kicker">Drake Stapleton / AI Architect & Operator</p>
+          <p className="kicker">Drake Stapleton / Freedom Fighter</p>
           <h1>
             I keep finding <span>the strength.</span>
           </h1>
-          <blockquote>I turn raw compute into verifiable production work.</blockquote>
+          <blockquote>I am a Freedom Fighter. I turn raw compute into verifiable production work.</blockquote>
           <p className="home-hero-lede">
             I design, operate, and audit orchestration systems. My architecture relies on
             probe-first design, authorization boundaries, and verifiable proof records.
@@ -96,6 +96,7 @@ export function HomePage() {
           <span>Springfield, Missouri today</span>
           <span>Two science degrees</span>
           <span>Builder by choice</span>
+          <span>Freedom Fighter</span>
         </aside>
       </section>
 
@@ -354,26 +355,6 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="software-home" aria-labelledby="partner-ai-architect-title">
-        <div className="page-boundary software-home-grid">
-          <div>
-            <p className="portrait-index">For companies building with AI</p>
-            <h2 id="partner-ai-architect-title">Bring an AI architecture partner into the work.</h2>
-            <p>
-              I work with you as a partner. I design the architecture, work from the keyboard, and stay accountable
-              for production behavior. Together we connect orchestration, GPU operations, authorization boundaries,
-              and evidence around the business problem.
-            </p>
-            <p>
-              Potential partners can inspect my <Link to="/software">AI architecture practice</Link>, review the
-              <Link to="/evidence"> evidence record</Link>, and trace my <Link to="/path">career path</Link>
-              before opening a conversation.
-            </p>
-            <Link to="/interest">Discuss a partnership</Link>
-          </div>
-        </div>
-      </section>
-
       <section className="latest-work" id="latest">
         <div className="page-boundary latest-work-grid">
           <div>
@@ -392,7 +373,7 @@ export function HomePage() {
               gives me a stronger foundation for everything I build next.
             </p>
             <p>
-              I am now extending Atlas into AEGIS, an on-prem defender for customer-authorized networks. Its
+              I am now extending Atlas into AEGIS, an on-prem defender for authorized networks. Its
               first adapter passed 59 of 62 checks in a frozen project suite on August 20, 2026.
             </p>
             <div className="latest-work-links">
@@ -406,11 +387,12 @@ export function HomePage() {
       <section className="interest-home" id="interest">
         <div className="page-boundary interest-home-grid">
           <div>
-            <p className="portrait-index">Partnership</p>
-            <h2>Put your card on my desk.</h2>
+            <p className="portrait-index">Conversation</p>
+            <h2>Walk with me for a while.</h2>
             <p>
-              If this work fits what you are building, leave a name and email. Choose the shape of the
-              partnership, open a few questions if you want, and ask me one of yours.
+              This site is my record of the projects and the life behind them. If something here gives you
+              a question, an idea, or a story of your own, leave me a note. I am open to good conversation
+              and research partnerships that advance what our generation can build with AI.
             </p>
           </div>
           <InterestForm compact />
@@ -418,8 +400,8 @@ export function HomePage() {
       </section>
 
       <section className="home-closing page-boundary" id="identity">
-        <p className="portrait-index">Professional Identity</p>
-        <h2>AI Architect & Operator</h2>
+        <p className="portrait-index">Identity</p>
+        <h2>Freedom Fighter. AI Architect. Operator.</h2>
         <p>
           I build software and operate AI systems that produce results. My portfolio
           documents 16 months of continuous AI orchestration—managing GPU compute, designing
@@ -427,12 +409,11 @@ export function HomePage() {
           compute and fuzzy requirements into durable, verifiable, and production-ready work.
         </p>
         <p>
-          The work, its evidence, and the person behind it exist now. Work with me to build, audit,
-          or architect your AI practice as partners.
+          This site keeps the record of the systems, evidence, lessons, and person behind the work.
         </p>
         <blockquote>“The people saved me. Now it's my turn.”</blockquote>
         <div className="home-closing-actions">
-          <Link to="/interest">Request an Architecture Audit</Link>
+          <Link to="/interest">Start a conversation</Link>
           <a href="https://github.com/dhgmonkey" rel="me">GitHub</a>
         </div>
       </section>

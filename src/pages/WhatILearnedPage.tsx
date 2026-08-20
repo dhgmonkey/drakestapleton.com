@@ -33,7 +33,7 @@ const lessons = [
     experience:
       "A personal Devstral adapter trained on an H100. The first merge exposed Float8 promotion behavior. The second showed how the model configuration differed from the generic loader.",
     lesson:
-      "I repaired the source and brought private inference live through the adapter path. A final merged export remains a future milestone.",
+      "I repaired the source and brought private inference live through the adapter path.",
   },
   {
     when: "Independent AI / Evaluation",

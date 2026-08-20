@@ -7,7 +7,7 @@ const responsePath = [
     step: "01",
     label: "Observe",
     title: "Watch the house",
-    body: "Read the IDS, DNS, identity, endpoint, and firewall signals already present in the customer security path.",
+    body: "Read the IDS, DNS, identity, endpoint, and firewall signals already present in the security path.",
   },
   {
     step: "02",
@@ -19,26 +19,13 @@ const responsePath = [
     step: "03",
     label: "Contain",
     title: "End the session",
-    body: "Choose one tested action inside the customer estate: cut the session, isolate the host, block the path, or revoke the token.",
+    body: "Choose one tested action inside the authorized estate: cut the session, isolate the host, block the path, or revoke the token.",
   },
   {
     step: "04",
     label: "Preserve",
     title: "Keep the trail",
-    body: "Record the signal, decision, action, time, and result for incident response, counsel, and law enforcement.",
-  },
-];
-
-const deliveryPaths = [
-  {
-    marker: "Model license",
-    title: "License the model.",
-    body: "Run AEGIS in the customer stack, air gap, and key boundary. The weights remain governed by contract and the customer deployment policy.",
-  },
-  {
-    marker: "Complete stack",
-    title: "Deploy the defense stack.",
-    body: "Place the model, collectors, policy engine, and runbooks in the customer SOC path across firewall, IDS, DNS, identity, and endpoint controls.",
+    body: "Record the signal, decision, action, time, and result for the incident team.",
   },
 ];
 
@@ -51,8 +38,8 @@ const evaluationSlices = [
 
 const authorityBoundaries = [
   {
-    title: "Customer estate",
-    body: "Every automated action targets systems, devices, accounts, and sessions the customer is authorized to control.",
+    title: "Authorized estate",
+    body: "Every automated action targets systems, devices, accounts, and sessions under the operator's authority.",
   },
   {
     title: "Short allow-list",
@@ -60,11 +47,11 @@ const authorityBoundaries = [
   },
   {
     title: "Human authority",
-    body: "Ambiguous attribution, broader changes, and activity beyond the customer edge require a human decision.",
+    body: "Ambiguous attribution, broader changes, and activity beyond the authorized edge require a human decision.",
   },
   {
     title: "Evidence first",
-    body: "The record survives the response so incident teams, counsel, insurers, and law enforcement can inspect what happened.",
+    body: "The response record gives the incident team a clear account of what happened.",
   },
 ];
 
@@ -79,15 +66,14 @@ export function AegisPage() {
         className="aegis-hero"
       >
         <p>
-          I am extending Atlas into AEGIS: a licensed, on-prem defender designed to read the security
-          signals a company already owns, recognize an intrusion, and contain it inside that company&apos;s
-          authorized estate.
+          I am extending Atlas into AEGIS, an on-prem defensive project that reads existing security
+          signals, recognizes an intrusion, and contains it inside the authorized estate.
         </p>
       </PageIntro>
 
-      <div className="aegis-scope-strip" aria-label="AEGIS product scope">
+      <div className="aegis-scope-strip" aria-label="AEGIS project scope">
         <span>Atlas extension</span>
-        <span>Customer-authorized estates</span>
+        <span>Authorized networks</span>
         <span>On-prem deployment</span>
         <span>Evidence-bearing response</span>
       </div>
@@ -101,12 +87,12 @@ export function AegisPage() {
         <div>
           <h2 id="aegis-house-heading">The network is the house.</h2>
           <p>
-            Customer data, payroll, source code, models, and trade secrets live behind the same boundary.
-            AEGIS treats that boundary like a house: watch the door, recognize forced entry, remove access,
-            and preserve the record.
+            Data, payroll, source code, models, and trade secrets live behind the same boundary. AEGIS
+            treats that boundary like a house: watch the door, recognize forced entry, remove access, and
+            preserve the record.
           </p>
           <p className="aegis-law">
-            “Stand your ground” is the product metaphor. Customer authorization defines the ground.
+            “Stand your ground” is the project metaphor. The authorized network defines the ground.
           </p>
         </div>
       </section>
@@ -117,8 +103,8 @@ export function AegisPage() {
           <div>
             <h2 id="aegis-response-heading">See the play. Close the path. Keep the proof.</h2>
             <p>
-              AEGIS sits above the customer&apos;s existing sensors and controls. The sequence stays short,
-              inspectable, and bounded to the customer&apos;s authority.
+              AEGIS sits above existing sensors and controls. The sequence stays short, inspectable, and
+              bounded to the operator&apos;s authority.
             </p>
           </div>
         </header>
@@ -138,7 +124,7 @@ export function AegisPage() {
         <p className="portrait-index">One decisive action</p>
         <h2 id="aegis-knockout-heading">Cut the session. Isolate the host. Close the door. Keep the evidence.</h2>
         <p>
-          That is the knockout: the intruder loses access to this house, while the customer retains the
+          That is the knockout: the intruder loses access to this house, while the operator retains the
           systems, the authority, and the trail.
         </p>
         <div className="aegis-actions" aria-label="AEGIS containment actions">
@@ -147,28 +133,6 @@ export function AegisPage() {
           <span>Block path</span>
           <span>Revoke token</span>
           <span>Preserve trail</span>
-        </div>
-      </section>
-
-      <section className="aegis-offer" aria-labelledby="aegis-offer-heading">
-        <header className="aegis-section-lead">
-          <p className="portrait-index">The offer</p>
-          <div>
-            <h2 id="aegis-offer-heading">Two ways to put AEGIS inside the boundary.</h2>
-            <p>
-              The customer operates its own wire. Inference and response can remain inside the customer
-              estate, with the vendor cloud outside the decision path.
-            </p>
-          </div>
-        </header>
-        <div className="aegis-offer-grid">
-          {deliveryPaths.map((path) => (
-            <article className="aegis-offer-card" key={path.title}>
-              <p>{path.marker}</p>
-              <h3>{path.title}</h3>
-              <div>{path.body}</div>
-            </article>
-          ))}
         </div>
       </section>
 
@@ -212,13 +176,8 @@ export function AegisPage() {
           <div>
             <p className="aegis-eval-label">Current artifact state</p>
             <p>
-              The adapter is sealed in the Pi vault, and a private model-repository upload receipt was recorded
-              at 23:00 UTC. The artifact receipt marks the overall evaluation gate incomplete. Merge,
-              quantization, production routing, and a serving bind on port 18000 remain future gates.
-            </p>
-            <p>
-              HumanEval remains unrun on this August 20 lineage. The earlier 62.2% versus 89.6% HumanEval
-              comparison belongs to a separate August 18 e2 track.
+              The unmerged LoRA adapter is sealed in the Pi vault and recorded in a private model repository
+              at 23:00 UTC.
             </p>
           </div>
         </div>
@@ -230,8 +189,8 @@ export function AegisPage() {
           <div>
             <h2 id="aegis-boundary-heading">The fight ends at the door.</h2>
             <p>
-              AEGIS studies attacker behavior so it can close the path inside the customer estate. The
-              customer owns the policy, the automated allow-list, and every escalation decision.
+              AEGIS studies attacker behavior so it can close the path inside the authorized estate. The
+              operator owns the policy, the automated allow-list, and every escalation decision.
             </p>
           </div>
         </header>
@@ -245,54 +204,23 @@ export function AegisPage() {
         </div>
       </section>
 
-      <section className="aegis-guidance" aria-labelledby="aegis-guidance-heading">
-        <p className="portrait-index">Established response practice</p>
-        <div>
-          <h2 id="aegis-guidance-heading">Contain here. Preserve here. Escalate through people.</h2>
-          <p>
-            CISA incident-response guidance describes isolation, firewall filtering, access blocking,
-            credential and key rotation, and evidence preservation. U.S. Department of Justice guidance
-            warns victim organizations against accessing, damaging, or impairing another network.
-          </p>
-          <div className="aegis-source-links">
-            <a
-              href="https://www.cisa.gov/sites/default/files/2024-08/Federal_Government_Cybersecurity_Incident_and_Vulnerability_Response_Playbooks_508C.pdf"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Read the CISA incident response playbook
-            </a>
-            <a
-              href="https://www.justice.gov/sites/default/files/opa/speeches/attachments/2015/04/29/criminal_division_guidance_on_best_practices_for_victim_response_and_reporting_cyber_incidents2.pdf"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Read the DOJ victim response guidance
-            </a>
-          </div>
-          <p className="aegis-counsel">Customer counsel governs legal interpretation and jurisdiction-specific duties.</p>
-        </div>
-      </section>
-
       <section className="aegis-current" aria-labelledby="aegis-current-heading">
         <p className="portrait-index">Current state</p>
-        <h2 id="aegis-current-heading">A trained adapter, a documented evaluation, and a product path still being built.</h2>
+        <h2 id="aegis-current-heading">A trained adapter and a documented evaluation.</h2>
         <p>
-          The August 20 adapter and evaluation establish a concrete model milestone. A customer deployment
-          reaches operational status after its sensor mappings, policies, failure behavior, escalation paths,
-          audit trail, and live containment tests are validated on that estate.
+          The August 20 adapter and its 59/62 frozen-suite result establish the first AEGIS model milestone.
         </p>
       </section>
 
       <section className="soul-closing aegis-closing">
-        <p className="portrait-index">The offer, in one line</p>
+        <p className="portrait-index">Walk the journey</p>
         <blockquote>
-          License AEGIS. Put a defender on your side of the door. If they come in, put them out on your wire
-          and keep the house.
+          Put a defender on your side of the door. If they come in, put them out on your wire and keep the
+          house.
         </blockquote>
         <div className="portrait-actions">
           <Link className="portrait-link" to="/interest">
-            Discuss an AEGIS partnership
+            Start a conversation
           </Link>
           <Link className="portrait-link quiet" to="/atlas">
             Return to Atlas
