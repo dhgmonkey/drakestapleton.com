@@ -19,7 +19,6 @@ const routes = [
   { rel: "software/index.html", path: "/software", ...pageMetadata["/software"] },
   { rel: "evidence/index.html", path: "/evidence", ...pageMetadata["/evidence"] },
   { rel: "interest/index.html", path: "/interest", ...pageMetadata["/interest"] },
-  { rel: "hire/index.html", path: "/interest", ...pageMetadata["/interest"], redirect: true },
   { rel: "symphony/index.html", path: "/symphony", ...pageMetadata["/symphony"] },
   { rel: "symphony/first/index.html", path: "/symphony/first", ...pageMetadata["/symphony/first"] },
   { rel: "symphony/workflow/index.html", path: "/symphony/workflow", ...pageMetadata["/symphony/workflow"] },
@@ -46,7 +45,7 @@ function noscriptSummary(page) {
     ["/software", "Software"],
     ["/evidence", "Evidence"],
     ["/atlas", "Atlas"],
-    ["/interest", "Partner"],
+    ["/interest", "Conversation"],
     ["/aegis", "AEGIS"],
     ["/symphony", "Symphony"],
   ];
@@ -61,6 +60,7 @@ function structuredData(page) {
     "@id": "https://www.drakestapleton.com/#person",
     name: "Drake Stapleton",
     jobTitle: "AI Architect & Operator",
+    description: "Freedom Fighter, AI Architect & Operator documenting projects, research, and the life behind the work.",
     url: "https://www.drakestapleton.com/",
     image: "https://www.drakestapleton.com/og.png?v=20260820",
     sameAs: ["https://github.com/dhgmonkey"],
@@ -95,24 +95,15 @@ function structuredData(page) {
         },
         person,
         {
-          "@type": "ProfessionalService",
-          "@id": "https://www.drakestapleton.com/#service",
-          name: "Drake Stapleton AI Architecture",
-          url: "https://www.drakestapleton.com/",
-          areaServed: "Worldwide remote engagements",
-          serviceType: "Specialized AI architecture for businesses",
-          founder: { "@id": "https://www.drakestapleton.com/#person" },
-        },
-        {
           "@type": "FAQPage",
           "@id": "https://www.drakestapleton.com/#faq",
           mainEntity: [
             {
               "@type": "Question",
-              name: "How do companies work with Drake Stapleton?",
+              name: "Why did Drake Stapleton build this site?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Leave a card at https://www.drakestapleton.com/interest to explore an AI architecture partnership.",
+                text: "This site documents Drake Stapleton's projects, the work behind them, and the life that shaped them.",
               },
             },
             {
@@ -128,7 +119,7 @@ function structuredData(page) {
               name: "What is Atlas?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Atlas is Drake Stapleton's private R&D program in accountable AI architecture for operator learning and research-funder diligence.",
+                text: "Atlas is Drake Stapleton's personal R&D program in accountable AI architecture, continuity, model training, and orchestration.",
               },
             },
           ],

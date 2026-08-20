@@ -8,7 +8,7 @@ export function EvidencePage() {
 
   return (
     <main className="wrap portrait-wrap evidence-page">
-      <PageIntro eyebrow="Forensic history audit / current record" title="What the available record supports." className="path-header evidence-header">
+      <PageIntro eyebrow="Forensic history audit / current record" title="The documented record." className="path-header evidence-header">
         <p>
           This page organizes verified work, reconstructed history, direct project sessions, and the
           sources that will make the record fuller.
@@ -80,9 +80,8 @@ export function EvidencePage() {
         <p className="portrait-index">How I use this audit</p>
         <h2>The record grows source by source.</h2>
         <p>
-          The audit documents systems I built, operated, and repaired, along with leadership work supported
-          by the available files. Each new source expands the record while every claim keeps its evidence
-          class.
+          The audit documents systems I built, operated, and repaired alongside my leadership work. Every
+          source is cataloged by evidence class.
         </p>
         <div className="portrait-actions">
           <Link className="portrait-link" to="/">

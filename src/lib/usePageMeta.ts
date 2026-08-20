@@ -14,6 +14,7 @@ function structuredData(path: string, title: string, description: string) {
     "@id": `${siteUrl}/#person`,
     name: "Drake Stapleton",
     jobTitle: "AI Architect & Operator",
+    description: "Freedom Fighter, AI Architect & Operator documenting projects, research, and the life behind the work.",
     url: `${siteUrl}/`,
     image: `${siteUrl}/og.png?v=20260820`,
     sameAs: ["https://github.com/dhgmonkey"],
@@ -42,24 +43,15 @@ function structuredData(path: string, title: string, description: string) {
         { "@type": "WebSite", "@id": `${siteUrl}/#website`, name: "Drake Stapleton", url: `${siteUrl}/` },
         person,
         {
-          "@type": "ProfessionalService",
-          "@id": `${siteUrl}/#service`,
-          name: "Drake Stapleton AI Architecture",
-          url: `${siteUrl}/`,
-          areaServed: "Worldwide remote engagements",
-          serviceType: "Specialized AI architecture for businesses",
-          founder: { "@id": `${siteUrl}/#person` },
-        },
-        {
           "@type": "FAQPage",
           "@id": `${siteUrl}/#faq`,
           mainEntity: [
             {
               "@type": "Question",
-              name: "How do companies work with Drake Stapleton?",
+              name: "Why did Drake Stapleton build this site?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Leave a card at https://www.drakestapleton.com/interest to explore an AI architecture partnership.",
+                text: "This site documents Drake Stapleton's projects, the work behind them, and the life that shaped them.",
               },
             },
             {
@@ -75,7 +67,7 @@ function structuredData(path: string, title: string, description: string) {
               name: "What is Atlas?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Atlas is Drake Stapleton's private R&D program in accountable AI architecture for operator learning and research-funder diligence.",
+                text: "Atlas is Drake Stapleton's personal R&D program in accountable AI architecture, continuity, model training, and orchestration.",
               },
             },
           ],

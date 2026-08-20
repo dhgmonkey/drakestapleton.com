@@ -149,7 +149,6 @@ blockquote { margin: 0; text-wrap: pretty; }
 .site-footer-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px 24px; align-content: start; }
 .site-footer-links a { color: var(--on-dark); font-size: 13px; font-weight: 690; }
 .site-footer-links a:hover { color: var(--accent-bright); }
-.site-footer-note { grid-column: 1 / -1; margin: 0; padding-top: 24px; border-top: 1px solid rgba(255,248,238,.18); color: var(--on-dark-muted); font-size: 12px; }
 
 /* Shared typography and controls */
 .kicker,
@@ -785,8 +784,7 @@ h4 { margin: 0; }
   font: italic 500 clamp(31px, 5vw, 62px)/1.12 var(--display);
   text-align: center;
 }
-.aegis-house,
-.aegis-guidance {
+.aegis-house {
   margin-inline: calc(50% - 50vw);
   padding: var(--section) max(var(--gutter), calc((100vw - var(--page)) / 2 + var(--gutter)));
   display: grid;
@@ -805,7 +803,6 @@ h4 { margin: 0; }
   font: italic 500 clamp(24px, 3vw, 34px)/1.35 var(--display);
 }
 .aegis-response,
-.aegis-offer,
 .aegis-boundary { padding: var(--section) 0; border-top: 1px solid var(--line); }
 .aegis-section-lead {
   display: grid;
@@ -836,11 +833,6 @@ h4 { margin: 0; }
 .aegis-knockout > p:nth-of-type(2) { max-width: 760px; margin: 30px 0 0; color: #f3d7d1; font-size: 18px; }
 .aegis-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 44px; }
 .aegis-actions span { padding: 8px 11px; border: 1px solid rgba(255, 248, 238, .38); color: #fff8ee; font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
-.aegis-offer-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
-.aegis-offer-card { min-height: 310px; padding: clamp(30px, 4vw, 48px); border: 1px solid var(--line-strong); background: var(--white); }
-.aegis-offer-card > p { margin: 0; color: var(--red); font-size: 10px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
-.aegis-offer-card h3 { max-width: 470px; margin-top: 46px; color: var(--navy); }
-.aegis-offer-card > div { max-width: 530px; margin-top: 22px; color: var(--copy); font-size: 17px; }
 .aegis-evaluation {
   margin-inline: calc(50% - 50vw);
   padding: var(--section) max(var(--gutter), calc((100vw - var(--page)) / 2 + var(--gutter)));
@@ -869,12 +861,6 @@ h4 { margin: 0; }
 .aegis-boundary-card:nth-child(even) { padding-left: 32px; border-left: 1px solid var(--line); }
 .aegis-boundary-card h3 { color: var(--navy); font-size: clamp(27px, 3vw, 36px); }
 .aegis-boundary-card p { max-width: 500px; margin: 18px 0 0; color: var(--copy); }
-.aegis-guidance { border-block: 1px solid var(--line); background: var(--blue-pale); }
-.aegis-guidance h2 { max-width: 900px; color: var(--navy); }
-.aegis-guidance > div > p { max-width: 820px; margin: 24px 0 0; color: var(--copy); font-size: 17px; }
-.aegis-source-links { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 32px; }
-.aegis-source-links a { padding-bottom: 3px; color: var(--red); border-bottom: 1px solid var(--red); font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
-.aegis-guidance .aegis-counsel { color: var(--muted); font-size: 13px; }
 .aegis-current { padding: var(--section) 0 0; }
 .aegis-current h2 { max-width: 980px; color: var(--navy); }
 .aegis-current > p:last-child { max-width: 820px; margin: 28px 0 0; color: var(--copy); font-size: 18px; }
@@ -948,7 +934,6 @@ th { color: var(--muted); font-size: 10px; letter-spacing: .08em; text-transform
   .links a { flex: 0 0 auto; }
   .site-footer-inner { grid-template-columns: 1fr; gap: 30px; }
   .site-footer-links { grid-template-columns: repeat(2, 1fr); }
-  .site-footer-note { grid-column: auto; }
   .home-hero { min-height: auto; grid-template-columns: 1fr; align-items: start; }
   .hero-identity { grid-template-columns: repeat(2, 1fr); }
   .hero-identity span:nth-child(even) { padding-left: 16px; border-left: 1px solid var(--line); }
@@ -974,7 +959,6 @@ th { color: var(--muted); font-size: 10px; letter-spacing: .08em; text-transform
   .atlas-topology,
   .atlas-symphony-bridge,
   .aegis-house,
-  .aegis-guidance,
   .aegis-section-lead,
   .atlas-organs > header,
   .atlas-boundaries > header,
@@ -1004,7 +988,6 @@ th { color: var(--muted); font-size: 10px; letter-spacing: .08em; text-transform
   .lesson-story dl,
   .grid2,
   .grid3 { grid-template-columns: 1fr; }
-  .aegis-offer-grid,
   .aegis-boundary-grid,
   .aegis-evaluation-intro,
   .aegis-eval-boundary { grid-template-columns: 1fr; }
@@ -1045,8 +1028,8 @@ th { color: var(--muted); font-size: 10px; letter-spacing: .08em; text-transform
 
 @media (max-width: 540px) {
   .links {
-    gap: 0;
-    justify-content: space-between;
+    gap: 20px;
+    justify-content: flex-start;
   }
   .links a {
     font-size: 10px;
@@ -1131,9 +1114,7 @@ th { color: var(--muted); font-size: 10px; letter-spacing: .08em; text-transform
   .aegis-scope-strip span:last-child { border-bottom: 0; }
   .aegis-flow li,
   .aegis-flow li + li { padding: 26px 0 30px; border-right: 0; }
-  .aegis-offer-card { min-height: auto; padding: 28px 24px; }
   .aegis-eval-grid article { min-height: auto; }
-  .aegis-source-links { flex-direction: column; align-items: flex-start; }
   .roster-row { grid-template-columns: 1fr; }
   .portrait-actions,
   .home-closing-actions { flex-direction: column; }
@@ -1343,7 +1324,6 @@ th { color: var(--muted); font-size: 10px; letter-spacing: .08em; text-transform
   .audit-metric,
   .evidence-class,
   .memory-grid article,
-  .aegis-offer-card,
   .aegis-eval-grid article,
   .aegis-eval-boundary > div,
   .metric,

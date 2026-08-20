@@ -199,7 +199,7 @@ export const WORKING_STACK = [
 export const PRACTICE_METHODS = [
   {
     title: "Source lines present",
-    body: "A 13 August census counted first-party source in six curated Mac roots. Model weights, generated copies, dependencies, and Boston worktree copies stay outside the headline.",
+    body: "A 13 August census counted first-party source in six curated Mac roots.",
   },
   {
     title: "Lines added and commits",
@@ -207,7 +207,7 @@ export const PRACTICE_METHODS = [
   },
   {
     title: "Retained conversation text",
-    body: "The 32.1 million measure estimates unique human and assistant message text at four characters per token. Tool results, images, cache replay, system events, and subagent processing sit in other layers.",
+    body: "The 32.1 million measure estimates unique human and assistant message text at four characters per token.",
   },
   {
     title: "Product AI I/O",
@@ -219,15 +219,15 @@ export const PRACTICE_METHODS = [
   },
   {
     title: "Early-story evidence",
-    body: "The consciousness-first detail is my own recollection. Dated titles and themes come from 16 reconstructed notes; my current resume and work record support the Six Sigma and manufacturing chronology.",
+    body: "Sixteen reconstructed notes preserve the dated titles and themes. My resume and work record establish the Six Sigma and manufacturing chronology.",
   },
   {
     title: "Windsurf evidence",
-    body: "Forty paid receipts, 32 pairing records, project trees, and a rules file establish Windsurf use from April 2025 through May 2026. Cascade transcripts and token totals remain outside the surviving archive.",
+    body: "Forty paid receipts, 32 pairing records, project trees, and a rules file establish Windsurf use from April 2025 through May 2026.",
   },
   {
-    title: "Archive boundary",
-    body: "The archive supports detailed Claude, Codex, and Grok history. Sixteen older ChatGPT threads survive as reconstructions. The original ChatGPT export, Claude web archive, and Windsurf Cascade transcripts remain open sources for a later census.",
+    title: "Source archive",
+    body: "The archive contains detailed Claude, Codex, and Grok history plus 16 reconstructed ChatGPT threads.",
   },
 ];
 
