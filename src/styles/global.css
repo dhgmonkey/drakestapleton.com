@@ -1041,7 +1041,7 @@ th { color: var(--muted); font-size: 10px; letter-spacing: .08em; text-transform
   }
   .links a {
     font-size: 10px;
-    letter-spacing: .06em;
+    letter-spacing: .04em;
   }
   h1 {
     font-size: clamp(42px, 12vw, 54px);

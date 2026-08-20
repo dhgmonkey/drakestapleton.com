@@ -5,6 +5,8 @@ const LINKS = [
   { to: "/path", label: "Career", end: true },
   { to: "/software", label: "Orchestration", end: true },
   { to: "/evidence", label: "Audit", end: true },
+  { to: "/atlas", label: "Atlas", end: true },
+  { to: "/aegis", label: "AEGIS", end: true },
   { to: "/interest", label: "Partner", end: true },
 ];
 
