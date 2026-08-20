@@ -354,22 +354,22 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="software-home" aria-labelledby="hire-ai-architect-title">
+      <section className="software-home" aria-labelledby="partner-ai-architect-title">
         <div className="page-boundary software-home-grid">
           <div>
             <p className="portrait-index">For companies building with AI</p>
-            <h2 id="hire-ai-architect-title">Hire a specialized AI Architect who operates the system.</h2>
+            <h2 id="partner-ai-architect-title">Bring an AI architecture partner into the work.</h2>
             <p>
-              I design the architecture, work from the keyboard, and stay accountable for production behavior.
-              I connect orchestration, GPU operations, authorization boundaries, and evidence into one operating
-              practice shaped around the business problem.
+              I work with you as a partner. I design the architecture, work from the keyboard, and stay accountable
+              for production behavior. Together we connect orchestration, GPU operations, authorization boundaries,
+              and evidence around the business problem.
             </p>
             <p>
-              Hiring teams can inspect my <Link to="/software">AI architecture practice</Link>, review the
+              Potential partners can inspect my <Link to="/software">AI architecture practice</Link>, review the
               <Link to="/evidence"> evidence record</Link>, and trace my <Link to="/path">career path</Link>
               before opening a conversation.
             </p>
-            <Link to="/interest">Discuss full-time or contractor work</Link>
+            <Link to="/interest">Discuss a partnership</Link>
           </div>
         </div>
       </section>
@@ -391,7 +391,14 @@ export function HomePage() {
               built Atlas around memory, truth, dignity, and the questions I still carry. This achievement
               gives me a stronger foundation for everything I build next.
             </p>
-            <Link to="/atlas">Explore the Atlas project</Link>
+            <p>
+              I am now extending Atlas into AEGIS, an on-prem defender for customer-authorized networks. Its
+              first adapter passed 59 of 62 checks in a frozen project suite on August 20, 2026.
+            </p>
+            <div className="latest-work-links">
+              <Link to="/atlas">Explore the Atlas project</Link>
+              <Link to="/aegis">See AEGIS and its evaluation</Link>
+            </div>
           </div>
         </div>
       </section>
@@ -399,11 +406,11 @@ export function HomePage() {
       <section className="interest-home" id="interest">
         <div className="page-boundary interest-home-grid">
           <div>
-            <p className="portrait-index">Interest</p>
-            <h2>Drop your card here.</h2>
+            <p className="portrait-index">Partnership</p>
+            <h2>Put your card on my desk.</h2>
             <p>
-              If this work is useful, leave a name and email. Mark a full-time or contractor interest if you
-              want to hire me. Open a few questions if you want, and ask me one of yours.
+              If this work fits what you are building, leave a name and email. Choose the shape of the
+              partnership, open a few questions if you want, and ask me one of yours.
             </p>
           </div>
           <InterestForm compact />
@@ -420,8 +427,8 @@ export function HomePage() {
           compute and fuzzy requirements into durable, verifiable, and production-ready work.
         </p>
         <p>
-          The work, its evidence, and the person behind it exist now. Hire me to build, audit,
-          or architect your AI practice.
+          The work, its evidence, and the person behind it exist now. Work with me to build, audit,
+          or architect your AI practice as partners.
         </p>
         <blockquote>“The people saved me. Now it's my turn.”</blockquote>
         <div className="home-closing-actions">

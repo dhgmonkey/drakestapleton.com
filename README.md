@@ -1,9 +1,9 @@
 # Drake Stapleton — AI Architect & Operator
 
-Hire Drake Stapleton for specialized AI architecture: production orchestration, GPU systems, and verifiable work.
+Partner with Drake Stapleton on specialized AI architecture: production orchestration, GPU systems, and verifiable work.
 
 Live: [https://www.drakestapleton.com/](https://www.drakestapleton.com/)
-Hire: [https://www.drakestapleton.com/interest](https://www.drakestapleton.com/interest)
+Partner: [https://www.drakestapleton.com/interest](https://www.drakestapleton.com/interest)
 
 ## Local development and release
 
@@ -15,7 +15,7 @@ npm run build:portfolio     # explicit public portrait release
 npm run preview             # preview the most recent build
 ```
 
-Both release commands render the complete story, software and AI practice, evidence record, Atlas history, and Symphony pages. The build emits route-specific static metadata, a sitemap, and an indexable robots file.
+Both release commands render the complete story, software and AI practice, evidence record, Atlas history, AEGIS product record, and Symphony pages. The build emits route-specific static metadata, a sitemap, and an indexable robots file.
 
 ## Checks
 

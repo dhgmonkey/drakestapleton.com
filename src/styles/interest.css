@@ -58,14 +58,14 @@
 }
 .interest-more summary::-webkit-details-marker { display: none; }
 .interest-more[open] summary { margin-bottom: 16px; }
-.interest-hire {
+.interest-partnership {
   margin: 0;
   padding: 0;
   border: 0;
   display: grid;
   gap: 10px;
 }
-.interest-hire legend {
+.interest-partnership legend {
   padding: 0;
   color: var(--navy);
   font-size: 12px;
@@ -73,7 +73,7 @@
   letter-spacing: .07em;
   text-transform: uppercase;
 }
-.interest-hire label {
+.interest-partnership label {
   display: grid;
   grid-template-columns: 18px 1fr;
   gap: 10px;
@@ -84,7 +84,7 @@
   font-weight: 500;
   color: var(--copy);
 }
-.interest-hire input { margin-top: 3px; accent-color: var(--red); }
+.interest-partnership input { margin-top: 3px; accent-color: var(--red); }
 .interest-consent {
   display: grid;
   grid-template-columns: 18px 1fr;

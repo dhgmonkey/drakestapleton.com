@@ -8,7 +8,7 @@ export function InterestForm({ compact = false }: { compact?: boolean }) {
       action={INTAKE_ACTION}
       method="POST"
     >
-      <input type="hidden" name="_subject" value="Interest card from drakestapleton.com" />
+      <input type="hidden" name="_subject" value="Partnership card from drakestapleton.com" />
       <input type="hidden" name="_captcha" value="true" />
       <input type="hidden" name="_template" value="table" />
       <input type="hidden" name="_next" value={THANKS_URL} />
@@ -49,19 +49,19 @@ export function InterestForm({ compact = false }: { compact?: boolean }) {
         </div>
       </div>
 
-      <fieldset className="interest-hire">
-        <legend>Inquiry Type</legend>
+      <fieldset className="interest-partnership">
+        <legend>Partnership Type</legend>
         <label>
-          <input type="radio" name="hiring_interest" value="conversation" defaultChecked />
+          <input type="radio" name="partnership_interest" value="conversation" defaultChecked />
           <span>Starting a conversation</span>
         </label>
         <label>
-          <input type="radio" name="hiring_interest" value="full-time" />
-          <span>Hiring you full-time</span>
+          <input type="radio" name="partnership_interest" value="ongoing-partnership" />
+          <span>Exploring an ongoing partnership</span>
         </label>
         <label>
-          <input type="radio" name="hiring_interest" value="contractor-or-part-time" />
-          <span>Hiring you as a contractor or part-time</span>
+          <input type="radio" name="partnership_interest" value="defined-architecture-engagement" />
+          <span>Solving a defined architecture problem together</span>
         </label>
       </fieldset>
 

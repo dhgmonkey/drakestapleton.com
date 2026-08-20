@@ -12,6 +12,7 @@ const indexHtml = readFileSync(indexPath, "utf8");
 const pageMetadata = JSON.parse(readFileSync(new URL("../site-metadata.json", import.meta.url), "utf8"));
 const routes = [
   { rel: "atlas/index.html", path: "/atlas", ...pageMetadata["/atlas"] },
+  { rel: "aegis/index.html", path: "/aegis", ...pageMetadata["/aegis"] },
   { rel: "what-i-learned/index.html", path: "/what-i-learned", ...pageMetadata["/what-i-learned"] },
   { rel: "what-broke/index.html", path: "/what-i-learned", ...pageMetadata["/what-i-learned"], redirect: true },
   { rel: "path/index.html", path: "/path", ...pageMetadata["/path"] },
@@ -45,7 +46,8 @@ function noscriptSummary(page) {
     ["/software", "Software"],
     ["/evidence", "Evidence"],
     ["/atlas", "Atlas"],
-    ["/interest", "Hire"],
+    ["/interest", "Partner"],
+    ["/aegis", "AEGIS"],
     ["/symphony", "Symphony"],
   ];
   const nav = links.map(([href, label]) => `<a href="${href}">${label}</a>`).join(" ");
@@ -60,7 +62,7 @@ function structuredData(page) {
     name: "Drake Stapleton",
     jobTitle: "AI Architect & Operator",
     url: "https://www.drakestapleton.com/",
-    image: "https://www.drakestapleton.com/og.png?v=20260818",
+    image: "https://www.drakestapleton.com/og.png?v=20260820",
     sameAs: ["https://github.com/dhgmonkey"],
     alumniOf: {
       "@type": "CollegeOrUniversity",
@@ -107,10 +109,10 @@ function structuredData(page) {
           mainEntity: [
             {
               "@type": "Question",
-              name: "How do companies hire Drake Stapleton?",
+              name: "How do companies work with Drake Stapleton?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Leave a card at https://www.drakestapleton.com/interest for full-time or contractor work as a specialized AI Architect.",
+                text: "Leave a card at https://www.drakestapleton.com/interest to explore an AI architecture partnership.",
               },
             },
             {

@@ -9,7 +9,7 @@ export function NotFoundPage() {
       <h1>Choose where to go next</h1>
       <p className="lede">
         Return to the <Link to="/">human story</Link>, explore <Link to="/software">software and AI</Link>,
-        or open the <Link to="/symphony">Symphony record</Link>.
+        open the <Link to="/aegis">AEGIS defense record</Link>, or review the <Link to="/symphony">Symphony process</Link>.
       </p>
     </main>
   );
