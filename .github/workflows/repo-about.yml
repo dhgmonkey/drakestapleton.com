@@ -15,4 +15,4 @@ jobs:
         run: |
           gh api "repos/${GITHUB_REPOSITORY}" -X PATCH \
             -f homepage='https://www.drakestapleton.com' \
-            -f description='AI Architect & Operator portfolio — www.drakestapleton.com'
+            -f description='Freedom Fighter, AI Architect & Operator: personal project record'
