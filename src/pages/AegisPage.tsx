@@ -79,7 +79,11 @@ export function AegisPage() {
       </div>
 
       <blockquote className="aegis-tagline">
-        “Aegis online. I watch the logs. You touchy. I knock you out. Period.”
+        “Aegis online. I watch the logs.
+        <br />
+        <span>You touchy. I knock you out.</span>
+        <br />
+        Period.”
       </blockquote>
 
       <section className="aegis-house" aria-labelledby="aegis-house-heading">

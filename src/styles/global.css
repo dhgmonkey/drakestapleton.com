@@ -784,6 +784,7 @@ h4 { margin: 0; }
   font: italic 500 clamp(31px, 5vw, 62px)/1.12 var(--display);
   text-align: center;
 }
+.aegis-tagline span { white-space: nowrap; }
 .aegis-house {
   margin-inline: calc(50% - 50vw);
   padding: var(--section) max(var(--gutter), calc((100vw - var(--page)) / 2 + var(--gutter)));
@@ -1112,6 +1113,7 @@ th { color: var(--muted); font-size: 10px; letter-spacing: .08em; text-transform
   .aegis-eval-grid { grid-template-columns: 1fr; }
   .aegis-scope-strip span { border-right: 0; border-bottom: 1px solid var(--line); }
   .aegis-scope-strip span:last-child { border-bottom: 0; }
+  .aegis-tagline span { white-space: normal; }
   .aegis-flow li,
   .aegis-flow li + li { padding: 26px 0 30px; border-right: 0; }
   .aegis-eval-grid article { min-height: auto; }
