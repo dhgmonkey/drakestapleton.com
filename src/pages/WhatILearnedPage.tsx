@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { PageIntro } from "../components/PagePrimitives";
+import { HisWords } from "../components/VoiceMark";
 import { usePageMeta } from "../lib/usePageMeta";
 
 const lessons = [
@@ -10,6 +11,14 @@ const lessons = [
       "At nineteen, an invitation through a headset gave me belonging at the exact moment I needed it. Leadership later gave me a way to pass that gift forward.",
     lesson:
       "I built training, schedules, dashboards, and leadership paths that helped members see their ability, support each other, and carry the community forward.",
+  },
+  {
+    when: "Leadership / The shepherd",
+    title: "The rank is made up. The people are real.",
+    experience:
+      "Leading a squad taught me that titles, tags, and structures can vanish overnight. When squads closed, the grief was real, and the only work that mattered was gathering the people and keeping them safe.",
+    lesson:
+      "I lead by going first, giving the credit away, and building people who can run the work on their own. The chain I build outlasts any title I hold.",
   },
   {
     when: "MobHub / Production",
@@ -45,7 +54,9 @@ const lessons = [
   },
   {
     when: "Personal / The harder lesson",
-    title: "I learned that survival also means protecting myself.",
+    title: (
+      <HisWords>I learned that survival also means protecting myself.</HisWords>
+    ),
     experience:
       "For years, I survived by outworking every limit and carrying more than people saw. That strength built my life, and at one point I carried the work past my body’s limits.",
     lesson:
@@ -67,7 +78,7 @@ export function WhatILearnedPage() {
 
       <section className="lesson-list" aria-label="Lessons and repairs">
         {lessons.map((lesson, index) => (
-          <article key={lesson.title}>
+          <article key={lesson.when}>
             <div className="lesson-label">
               <span>{String(index + 1).padStart(2, "0")}</span>
               <p>{lesson.when}</p>

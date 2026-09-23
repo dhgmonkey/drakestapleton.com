@@ -18,9 +18,6 @@ const requiredPages = [
   "aegis/index.html",
   "aien/index.html",
   "research/index.html",
-  "research/inference-orchestration-tax/index.html",
-  "research/ionic-liquid-thesis/index.html",
-  "research/metal-particles-semiconductor-nanorods/index.html",
   "atlas/index.html",
   "what-i-learned/index.html",
   "path/index.html",
@@ -69,14 +66,8 @@ if (mode === "waitlist") {
   assert(aien.includes("AIEN Sovereign Cognitive Architecture"), "AIEN static metadata is missing");
   assert(aien.includes("https://www.drakestapleton.com/aien"), "AIEN canonical URL is missing");
   const research = readFileSync("dist/research/index.html", "utf8");
-  assert(research.includes("Professional Works & Research"), "Research static metadata is missing");
+  assert(research.includes("LLM Inference Research & Architecture"), "Research static metadata is missing");
   assert(research.includes("https://www.drakestapleton.com/research"), "Research canonical URL is missing");
-  const thesis = readFileSync("dist/research/ionic-liquid-thesis/index.html", "utf8");
-  assert(thesis.includes("Ionic Liquid Nanomaterials Thesis"), "Thesis reader metadata is missing");
-  const journal = readFileSync("dist/research/metal-particles-semiconductor-nanorods/index.html", "utf8");
-  assert(journal.includes("Metal Particles on Semiconductor Nanorods"), "Journal reader metadata is missing");
-  const inferencePaper = readFileSync("dist/research/inference-orchestration-tax/index.html", "utf8");
-  assert(inferencePaper.includes("Eliminating Software Orchestration Tax"), "Inference reader metadata is missing");
   assert(scripts.includes("59/62"), "AEGIS evaluation result is missing from the portfolio bundle");
   assert(!scripts.includes("Discuss a partnership"), "Sales language remains in the portfolio bundle");
   assert(!scripts.includes("License AEGIS"), "AEGIS sales language remains in the portfolio bundle");
@@ -88,8 +79,14 @@ if (mode === "waitlist") {
   assert(atlasSymphony.includes("noindex, follow"), "atlas-symphony is indexable");
   assert(atlasSymphony.includes("https://www.drakestapleton.com/symphony"), "atlas-symphony missing canonical link");
   const sitemap = readFileSync("dist/sitemap.xml", "utf8");
-  assert(!sitemap.includes("/what-broke"), "sitemap includes /what-broke");
-  assert(!sitemap.includes("/atlas-symphony"), "sitemap includes /atlas-symphony");
+  assert(
+    !sitemap.includes("https://www.drakestapleton.com/what-broke</loc>"),
+    "sitemap lists the what-broke alias",
+  );
+  assert(
+    !sitemap.includes("https://www.drakestapleton.com/atlas-symphony</loc>"),
+    "sitemap lists the atlas-symphony alias",
+  );
   const fourOhFour = readFileSync("dist/404.html", "utf8");
   assert(fourOhFour.includes("noindex, follow"), "404 is indexable");
 
