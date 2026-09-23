@@ -56,7 +56,19 @@
     "description": "Choose a page from Drake Stapleton's site."
   },
   "/research": {
-    "title": "LLM Inference Research & Architecture | Drake Stapleton",
-    "description": "Research publication: Eliminating Software Orchestration Tax in Modern Large Language Model Inference with Native Rust ABI, Paged Unified Memory KV Cache, and Grace Blackwell Telemetry."
+    "title": "Professional Works & Research | Drake Stapleton",
+    "description": "A reading archive of Drake Stapleton's professional research, graduate chemistry thesis, peer-reviewed nanomaterials publication, and AI systems papers."
+  },
+  "/research/inference-orchestration-tax": {
+    "title": "Eliminating Software Orchestration Tax | Drake Stapleton",
+    "description": "A systems architecture paper on compiled LLM inference control planes, paged KV cache management, continuous batching, and Grace Blackwell measurements."
+  },
+  "/research/ionic-liquid-thesis": {
+    "title": "Ionic Liquid Nanomaterials Thesis | Drake Stapleton",
+    "description": "Drake Stapleton's 2018 M.S. chemistry thesis on ionic liquids, noble-metal deposition, CdSe@CdS nanorods, and photocatalytic performance."
+  },
+  "/research/metal-particles-semiconductor-nanorods": {
+    "title": "Metal Particles on Semiconductor Nanorods | Drake Stapleton",
+    "description": "The 2019 peer-reviewed nanomaterials paper on ionic-liquid deposition of metal particles onto CdSe@CdS semiconductor nanorods."
   }
 }
