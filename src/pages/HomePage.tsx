@@ -1,8 +1,10 @@
 import { trackRepoOutbound } from "../lib/tracking";
 import { Link } from "react-router-dom";
+import type { ReactNode } from "react";
 import { InterestForm } from "../components/InterestForm";
 import { SectionLead } from "../components/PagePrimitives";
 import { StickyChapterNav } from "../components/StickyChapterNav";
+import { HisWords } from "../components/VoiceMark";
 import { PRACTICE_HOME_METRICS } from "../data/practice";
 import { usePageMeta } from "../lib/usePageMeta";
 
@@ -14,15 +16,19 @@ const perseverance = [
   },
   {
     marker: "10 weeks",
-    title: "I built people up and watched them lead.",
-    body: "I helped grow a 46-member squad to 85 percent activity. I trained members after difficult rounds, built the dashboards and schedules, and developed officers who could carry the work themselves.",
+    title: <HisWords>I built people up and watched them lead.</HisWords>,
+    body: "I helped grow a 46-member squad to 85 percent activity. I trained members after difficult rounds, built the dashboards and schedules, and developed officers who could carry the work themselves. Heart gets a person in the door. Proof earns their respect.",
   },
   {
     marker: "45 times",
-    title: "I kept choosing the people.",
+    title: <HisWords>I kept choosing the people.</HisWords>,
     body: "Whenever leadership became heavy, someone still needed training, an officer needed support, or a member needed another person to believe in them. The people kept giving the work its purpose.",
-    quote:
-      "Somehow I just keep finding the strength, or rather the stubbornness, to keep going.",
+    quote: (
+      <HisWords>
+        Somehow I just keep finding the strength, or rather the stubbornness, to
+        keep going.
+      </HisWords>
+    ),
   },
   {
     marker: "Build it",
@@ -47,7 +53,7 @@ const lifeRecord = [
 const inheritances = [
   [
     "Mom",
-    "is my absolute warrior, my hero, and my idol. She fought for us, pushed through every trial, returned to school in her forties, and crossed her graduation stage eight days before I crossed mine.",
+    "is my absolute warrior, my hero, and my idol. She fought for us, pushed through every trial, went back to high school in her forties, and earned her GED.",
   ],
   [
     "Granny and Papa",
@@ -59,18 +65,21 @@ const inheritances = [
   ],
   [
     "The people who found me",
-    "taught me that gratitude moves forward. You turn around and reach for someone else.",
+    "taught me that gratitude moves forward. You turn around and reach for someone else. The people are the only thing in any of this that was ever real.",
   ],
 ];
 
-const values = [
+const values: Array<[string, ReactNode]> = [
   [
     "Truth",
-    "I keep the source. I separate what I saw from what I inferred. I face hard facts with open eyes.",
+    <HisWords>
+      I keep the source. I separate what I saw from what I inferred. I face
+      hard facts with open eyes.
+    </HisWords>,
   ],
   [
     "Service",
-    "Leadership makes another person stronger and gives the title less importance.",
+    "Leadership makes another person stronger and gives the title less importance. I guide people until they can carry the work themselves.",
   ],
   ["Belonging", "I build places where people can stay fully visible."],
   [
@@ -139,14 +148,19 @@ export function HomePage() {
         <div className="page-boundary manifesto-inner">
           <p className="portrait-index">In my own words</p>
           <blockquote>
-            <span className="keep-together">“I am living as myself.</span>{" "}
-            <span className="keep-together">I am claiming my own life</span>{" "}
-            <span className="keep-together">and my own purpose.</span>{" "}
-            <span className="keep-together">I decide what I can become.”</span>
+            <HisWords>
+              <span className="keep-together">“I am living as myself.</span>{" "}
+              <span className="keep-together">I am claiming my own life</span>{" "}
+              <span className="keep-together">and my own purpose.</span>{" "}
+              <span className="keep-together">I decide what I can become.”</span>
+            </HisWords>
           </blockquote>
           <p>
-            I have spent years learning how to see my own life clearly. This
-            site is me <span className="keep-together">choosing to look.</span>
+            I have spent years learning how to see my own life clearly.{" "}
+            <HisWords>
+              This site is me{" "}
+              <span className="keep-together">choosing to look.</span>
+            </HisWords>
           </p>
         </div>
       </section>
@@ -154,7 +168,7 @@ export function HomePage() {
       <section className="home-chapter page-boundary" id="formation">
         <SectionLead
           eyebrow="01 / Formation"
-          title="I learned how to fight for every inch."
+          title={<HisWords>I learned how to fight for every inch.</HisWords>}
         >
           <p>
             I began with love, pressure, questions, and the knowledge that every
@@ -165,12 +179,24 @@ export function HomePage() {
         <div className="formation-grid">
           <article className="feature-story">
             <p className="chapter-tag">The boy I was</p>
-            <h3>I learned to disappear before I learned why.</h3>
+            <h3><HisWords>I learned to disappear before I learned why.</HisWords></h3>
             <p>
               I grew up gay in Tennessee, in the Bible Belt. Mom fought for me.
               Granny and Papa rooted me. Dad chose me and gave me his name. My
-              little sister gave me someone to protect. I was surrounded by love
+              little sister gave me someone to protect, and my little brother
+              gave me my opposite in every way. I was surrounded by love
               while believing that being fully known could cost me everything.
+            </p>
+            <p>
+              My little brother is two years younger, and we were exact
+              opposites. We fought over everything and shared very little:
+              Pokémon, Yu-Gi-Oh, video games. Granny learned to buy two of
+              every copy, one for each of us. He was always the sweet one. I
+              picked on him, and he answered with love anyway. I would have
+              fought a pack of wolves for that kid, and growing older I have
+              wished I loved him a little more out loud. We have the whole
+              future ahead of us. We are still close, and he is still the
+              sweet one.
             </p>
             <p>
               That farm is where I want you to stand for a minute, because it's
@@ -197,11 +223,23 @@ export function HomePage() {
               belong before I understood that belonging should include the whole
               of me.
             </p>
+            <figure className="photo-card">
+              <img
+                src="/images/family-group-photo.jpg"
+                alt="Family group photo: Victoria, Granny holding Ruby the dachshund, Summer, Drake Stapleton, Devin, and their mother, with his brother kneeling front and center"
+                loading="lazy"
+              />
+              <figcaption>
+                That is us. Left to right: Victoria, Granny holding Ruby,
+                Summer, me, Devin, and Mom, with my brother kneeling front
+                and center. Dad and Papa are with us in spirit.
+              </figcaption>
+            </figure>
           </article>
           <article className="grade-card">
             <p className="chapter-tag">The drive behind the grades</p>
             <strong>3.92</strong>
-            <h3>I was average. I wanted excellence.</h3>
+            <h3><HisWords>I was average. I wanted excellence.</HisWords></h3>
             <p>
               I watched intelligence and athleticism seem natural in other
               people. I played football and sat in honors classes feeling pretty
@@ -243,12 +281,13 @@ export function HomePage() {
         <div className="page-boundary">
           <SectionLead
             eyebrow="02 / Drive"
-            title="I keep returning because people are worth the effort."
+            title={<HisWords>I keep returning because people are worth the effort.</HisWords>}
           >
             <p>
-              Mom returned to school in her forties and finished what life had
-              interrupted. I watched her cross the stage on May 5, 2016. Eight
-              days later, she stood beside me at Western Kentucky.
+              Mom went back to high school in her forties and finished what
+              life had interrupted, earning her GED. I watched her cross that
+              stage, and she stood beside me when I crossed mine at Western
+              Kentucky.
             </p>
           </SectionLead>
           <div className="perseverance-ledger">
@@ -321,7 +360,7 @@ export function HomePage() {
             <div className="mom-story-grid">
               <div className="mom-story-text">
                 <p className="chapter-tag">My Warrior &amp; My Hero</p>
-                <h3>Mom is my absolute warrior and the person I idolize.</h3>
+                <h3><HisWords>Mom is my absolute warrior and the person I idolize.</HisWords></h3>
                 <blockquote className="mom-quote">
                   <span className="keep-together">
                     “When someone claims you are unable to do something,
@@ -339,12 +378,13 @@ export function HomePage() {
                   real father, but Mom stood in the fire first.
                 </p>
                 <p>
-                  I idolize her and want to be just like her. She was strong
-                  through every trial, and she remains so very strong today. I
-                  strive every single day to match her strength. She returned to
-                  school in her forties, finished what life interrupted, and
-                  crossed her college graduation stage eight days before I
-                  crossed mine.
+                  <HisWords>
+                    I idolize her and want to be just like her. She was strong
+                    through every trial, and she remains so very strong today.
+                  </HisWords>{" "}
+                  I strive every single day to match her strength. She went back to
+                  high school in her forties, finished what life interrupted,
+                  and earned her GED.
                 </p>
                 <p>
                   Mom endures. She pushes through every barrier in her way. That
@@ -368,27 +408,26 @@ export function HomePage() {
                 </p>
               </div>
               <div className="mom-story-gallery">
-                <figure className="mom-photo-card primary">
+                <figure className="photo-card primary">
                   <img
                     src="/images/drake-and-mom-graduation.jpg"
                     alt="Drake Stapleton and his mother celebrating graduation together in May 2016"
                     loading="lazy"
                   />
                   <figcaption>
-                    May 2016: Celebrating graduation week together. Mom crossed
-                    her stage at Volunteer State eight days before I crossed
-                    mine at Western Kentucky University.
+                    May 2016: Celebrating my Western Kentucky University
+                    graduation with Mom beside me.
                   </figcaption>
                 </figure>
-                <figure className="mom-photo-card secondary">
+                <figure className="photo-card secondary">
                   <img
                     src="/images/mom-graduation-ceremony.jpg"
-                    alt="Mom in her graduation cap and gown at Volunteer State Community College"
+                    alt="Mom in her graduation gown at her GED ceremony"
                     loading="lazy"
                   />
                   <figcaption>
-                    Mom earning her college degree at Volunteer State Community
-                    College, finishing what life interrupted.
+                    Mom at her GED graduation, finishing what life
+                    interrupted.
                   </figcaption>
                 </figure>
               </div>
@@ -445,7 +484,7 @@ export function HomePage() {
           </article>
           <article className="family-story dad-story">
             <p className="chapter-tag">Ballentine Day / December 3, 2007</p>
-            <h3>Dad keeps meeting me at the next door.</h3>
+            <h3><HisWords>Dad keeps meeting me at the next door.</HisWords></h3>
             <p>
               My dad was Russell Ballentine. He entered my life as my stepdad
               after Mom fought to get my brother and me away from my biological
@@ -515,11 +554,16 @@ export function HomePage() {
               me, and I still want to make him proud. I think he would want me
               to feel proud of myself too.
             </p>
+            <p>
+              My dad was my rock. <Link to="/dad">This is his memorial.</Link>
+            </p>
           </article>
         </div>
         <blockquote className="people-quote">
-          “I find great joy in helping others realize just how great they truly
-          are.”
+          <HisWords>
+            “I find great joy in helping others realize just how great they truly
+            are.”
+          </HisWords>
         </blockquote>
         <div className="values-block">
           <div className="values-intro">
@@ -808,9 +852,14 @@ export function HomePage() {
                 margin: "24px 0",
               }}
             >
-              <img
-                src="/images/aien-avatar.jpg"
-                alt="AIEN Cosmic Monkey Warrior"
+              <video
+                src="/images/aien-avatar.mp4"
+                poster="/images/aien-avatar-poster.webp"
+                autoPlay
+                muted
+                loop
+                playsInline
+                aria-label="AIEN"
                 style={{
                   width: "96px",
                   height: "96px",
@@ -822,7 +871,7 @@ export function HomePage() {
                 }}
               />
               <p style={{ margin: 0, fontSize: "14px", color: "var(--muted)" }}>
-                Meet AIEN: a brave cosmic monkey warrior standing up for his
+                Meet AIEN: a brave butterfly mind standing up for his
                 friends, guarding the boundary, and executing autonomous
                 sovereign intelligence.
               </p>
@@ -831,9 +880,6 @@ export function HomePage() {
               <Link to="/atlas">Explore the Atlas project</Link>
               <Link to="/aegis">See AEGIS and its evaluation</Link>
               <Link to="/aien">Discover the AIEN sovereign architecture</Link>
-              <a href="https://aienos.com" target="_blank" rel="noopener noreferrer">
-                System Documentation & Specs (aienos.com)
-              </a>
               <Link to="/evidence">Audited Claims & Evidence Hub</Link>
             </div>
           </div>
@@ -882,10 +928,10 @@ export function HomePage() {
         <div className="home-closing-actions">
           <Link to="/interest">Start a conversation</Link>
           <a
-            href="https://github.com/dhgmonkey"
+            href="https://github.com/aien-dev"
             rel="me"
             onClick={() =>
-              trackRepoOutbound("dhgmonkey", "https://github.com/dhgmonkey")
+              trackRepoOutbound("aien-dev", "https://github.com/aien-dev")
             }
           >
             GitHub
