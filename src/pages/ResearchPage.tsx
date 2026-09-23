@@ -42,10 +42,60 @@ const encoderStressData = [
 ];
 
 const memoryStabilityData = [
-  { service: "cortex-rs", baseline: "15.97 MB", peak: "18.57 MB", delta: "+2.60 MB", status: "Zero memory leaks" },
-  { service: "cortex-encoder-rs", baseline: "780.02 MB", peak: "780.39 MB", delta: "+0.36 MB", status: "Deterministic INT8 heap" },
-  { service: "max inference engine", baseline: "9,011.61 MB", peak: "9,013.99 MB", delta: "+2.38 MB", status: "Stable model weights" },
-  { service: "openclaw-rs daemon", baseline: "4.80 MB", peak: "4.80 MB", delta: "+0.00 MB", status: "Zero allocation drift" },
+  { service: "cortex-rs", baseline: "15.97 MB", peak: "18.57 MB", delta: "+2.60 MB", status: "No growth observed after stress" },
+  { service: "cortex-encoder-rs", baseline: "780.02 MB", peak: "780.39 MB", delta: "+0.36 MB", status: "Stable in observed run" },
+  { service: "max inference engine", baseline: "9,011.61 MB", peak: "9,013.99 MB", delta: "+2.38 MB", status: "Stable in observed run" },
+  { service: "openclaw-rs daemon", baseline: "4.80 MB", peak: "4.80 MB", delta: "+0.00 MB", status: "No observed RSS drift" },
+];
+
+const researchHighlights = [
+  {
+    label: "KV metadata allocator",
+    value: "134.3M",
+    unit: "blocks/sec",
+    detail: "10,000-sequence allocation benchmark on the native block-table path.",
+  },
+  {
+    label: "500-way branch run",
+    value: "2.06 µs",
+    unit: "median / branch",
+    detail: "Copy-on-write sequence branching over a shared 32K-token prefix.",
+  },
+  {
+    label: "Scheduler construction",
+    value: "1.01–17.68 µs",
+    unit: "per batch",
+    detail: "Measured across 1 to 192 active streams; this is scheduler work, not model execution.",
+  },
+  {
+    label: "Native TinyLlama run",
+    value: "553.14",
+    unit: "tokens/sec",
+    detail: "Physical native execution result currently recorded in the benchmark table.",
+  },
+];
+
+const implementationStatus = [
+  {
+    status: "Implemented",
+    title: "Runtime spine and branch-native KV",
+    body: "Scheduler, sequence lifecycle, shared KV pages, copy-on-write branching, streaming, and native transformer execution exist in the current codebase.",
+  },
+  {
+    status: "Implemented",
+    title: "World, Cortex, AEGIS, and RSI foundations",
+    body: "Branchable World drafts, durable Cortex memory, policy enforcement primitives, and gated RSI evaluation are real subsystems rather than roadmap-only concepts.",
+  },
+  {
+    status: "Partial",
+    title: "Canonical composition boundaries",
+    body: "MCP ownership, VaultOnly enforcement, a universal Effect Broker, signed World commits, and the portable accelerator contract are still being consolidated.",
+  },
+  {
+    status: "Target",
+    title: "Capability Graph, Fabric, J-Space, and relational paths",
+    body: "These are architectural targets. They should not be read as already complete merely because supporting primitives exist elsewhere in the project.",
+  },
 ];
 
 export function ResearchPage() {
@@ -54,57 +104,87 @@ export function ResearchPage() {
   return (
     <main className="wrap portrait-wrap aegis-page research-page">
       <PageIntro
-        eyebrow="Research Publication / Systems Architecture"
-        title="Eliminating Software Orchestration Tax in Modern Large Language Model Inference."
-        className="aegis-hero"
+        eyebrow="Systems Research / Native LLM Runtime"
+        title="Measuring the control-plane cost around modern LLM inference."
+        className="aegis-hero research-hero"
       >
         <p>
-          A formal architectural study and empirical evaluation of native compiled systems.
-          Author: Drake Stapleton (AIEN Sovereign Systems).
-          Execution Platform: NVIDIA Grace Blackwell GB10 (128 GB Unified LPDDR5X Memory).
+          An implementation-backed study of scheduling, branch-native KV state, and local service overhead in the
+          AIEN runtime. Author: Drake Stapleton. Primary execution platform: NVIDIA Grace Blackwell GB10
+          (128 GB unified LPDDR5X memory).
         </p>
+        <div className="research-hero-actions">
+          <a href="#benchmarks">Jump to measured results</a>
+          <Link to="/evidence">Inspect evidence</Link>
+          <a
+            href="https://github.com/aien-dev/aien-architecture"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackRepoOutbound("aien-architecture", "https://github.com/aien-dev/aien-architecture")}
+          >
+            Read architecture RFC
+          </a>
+        </div>
       </PageIntro>
 
-      <div className="aegis-scope-strip" aria-label="Research highlights">
-        <span>134M Blocks/Sec KV Allocation</span>
-        <span>2.06 µs Zero-Copy Sequence Branching</span>
-        <span>500.0x Physical Memory Savings</span>
-        <span>Pure Compiled Rust &amp; Mojo</span>
+      <div className="research-status-note" role="note">
+        <strong>Research status: implementation-backed, not peer reviewed.</strong>
+        <span>
+          Results below mix direct measurements with explicitly labeled estimates and projections. Control-plane
+          microbenchmarks are not presented as full end-to-end serving benchmarks.
+        </span>
       </div>
 
-      <blockquote className="aegis-tagline">
-        “How much of modern inference latency, memory pressure, and energy consumption
+      <nav className="research-jump-nav" aria-label="Research sections">
+        <a href="#abstract">Abstract</a>
+        <a href="#problem">Problem</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#benchmarks">Benchmarks</a>
+        <a href="#interpretation">Interpretation</a>
+        <a href="#status">Implementation status</a>
+        <a href="#conclusion">Conclusion</a>
+      </nav>
+
+      <section className="research-summary-grid" aria-label="Measured research highlights">
+        {researchHighlights.map((item) => (
+          <article key={item.label}>
+            <p>{item.label}</p>
+            <strong>{item.value}</strong>
+            <span>{item.unit}</span>
+            <small>{item.detail}</small>
+          </article>
+        ))}
+      </section>
+
+      <blockquote className="aegis-tagline research-question">
+        “How much latency and memory pressure belongs to model mathematics,
         <br />
-        <span>belongs to forward tensor mathematics,</span>
-        <br />
-        and how much is an artifact of the software orchestration stack?”
+        <span>and how much belongs to the runtime around it?</span>”
       </blockquote>
 
       {/* 1. Abstract */}
-      <section className="aegis-house" aria-labelledby="research-abstract-heading">
+      <section id="abstract" className="aegis-house" aria-labelledby="research-abstract-heading">
         <p className="portrait-index">Section 01</p>
         <div>
           <h2 id="research-abstract-heading">Abstract.</h2>
           <p>
-            Mainstream multi-agent orchestration stacks frequently execute critical coordination loops inside
-            interpreted Python scaffolding. While CUDA and Triton kernels compute matrix products at hardware limits,
-            the surrounding agent runtimes suffer from orchestration friction: inter-process serialization,
-            unshared buffer replication, and high-latency request scheduling.
+            High-performance tensor kernels do not eliminate the work performed around them. Admission, batching,
+            sequence bookkeeping, KV ownership, branching, tool coordination, and process boundaries can all add
+            measurable latency or memory pressure. This study isolates several of those control-plane costs instead
+            of treating end-to-end token latency as one indivisible number.
           </p>
           <p>
-            In this research, we introduce the AIEN Sovereign Inference Stack: a compiled native architecture
-            comprising an asynchronous unified Inference ABI, a paged Key-Value (KV) Cache Manager,
-            and a deterministic continuous batching scheduler. By replacing agent control planes with native
-            Rust and Mojo, we eliminate runtime scheduling bottlenecks, fork 500 concurrent reasoning branches in 1.20 ms
-            (2.06 µs median fork latency, achieving a 500.0x physical memory reduction over unshared copying),
-            and demonstrate sustained KV block allocation throughput exceeding 134 million blocks per second on
-            NVIDIA Grace Blackwell silicon.
+            The current AIEN implementation combines a native Rust runtime spine, paged KV management, branchable
+            sequences, continuous batching, and accelerated kernel paths. The measurements on this page show that
+            specific metadata and branching operations can be reduced to microsecond or nanosecond-scale work. They
+            do not, by themselves, establish that every Python-based serving runtime has the same overhead or that
+            AIEN is already faster end to end across every model and workload.
           </p>
         </div>
       </section>
 
       {/* 2. Problem Definition */}
-      <section className="aegis-response" aria-labelledby="research-problem-heading">
+      <section id="problem" className="aegis-response" aria-labelledby="research-problem-heading">
         <SectionLead
           eyebrow="Section 02"
           title="The Software Orchestration Tax: Deconstructing the Control Plane."
@@ -148,14 +228,15 @@ export function ResearchPage() {
       </section>
 
       {/* 3. Core Architecture */}
-      <section className="aegis-response" aria-labelledby="research-arch-heading">
+      <section id="architecture" className="aegis-response" aria-labelledby="research-arch-heading">
         <SectionLead
           eyebrow="Section 03"
           title="Architecture of the AIEN Sovereign Inference Stack."
           titleId="research-arch-heading"
         >
           <p>
-            A four-tier native control plane executing directly on unified silicon free of Python intervention.
+            The runtime path under study is intentionally native: Rust owns orchestration and state, while compiled
+            accelerator kernels handle tensor work where supported.
           </p>
         </SectionLead>
 
@@ -196,14 +277,14 @@ export function ResearchPage() {
       </section>
 
       {/* 4. Empirical Evaluation */}
-      <section className="aegis-house" aria-labelledby="research-evaluation-heading">
+      <section id="benchmarks" className="aegis-house research-benchmarks" aria-labelledby="research-evaluation-heading">
         <p className="portrait-index">Section 04</p>
         <div>
           <h2 id="research-evaluation-heading">Empirical Verification &amp; Silicon Benchmarks.</h2>
           <p>
-            Rigorous benchmarking methodology across five axes: KV cache allocation throughput, subagent zero-copy
-            branching latency, scheduler batch construction overhead, memory stability under saturation, and live
-            API gateway stress.
+            Benchmarks cover KV metadata allocation, copy-on-write branching, scheduler construction, live Cortex
+            service stress, embedding throughput, and process RSS observations. Every table states what is directly
+            measured; estimates and projections are labeled rather than blended into the measured column.
           </p>
         </div>
 
@@ -215,8 +296,9 @@ export function ResearchPage() {
         </div>
 
         <p>
-          All measurements conducted directly on workstation spark-b87b (NVIDIA Grace Blackwell GB10, aarch64, Linux 6.8+).
-          Zero simulation models: measurements represent physical hardware counters, operating system process tables, and live network sockets.
+          Measurements were collected on workstation spark-b87b (NVIDIA Grace Blackwell GB10, aarch64). Some rows are
+          direct physical measurements, while comparison columns such as naive-copy time and projected memory savings
+          are analytical estimates derived from the stated workload.
         </p>
 
         {/* KV Cache Table */}
@@ -226,8 +308,8 @@ export function ResearchPage() {
         <p style={{ fontSize: "14px", color: "var(--text-dim)", marginBottom: "16px" }}>
           Workload: 10,000 sequence allocations (160,000 physical blocks, block size = 16 tokens).
         </p>
-        <div style={{ overflowX: "auto" }}>
-          <table className="evidence-table" style={{ width: "100%", borderCollapse: "collapse", marginBottom: "32px" }}>
+        <div className="research-table-wrap">
+          <table className="evidence-table research-table">
             <thead>
               <tr style={{ borderBottom: "1px solid var(--border-line)", textAlign: "left" }}>
                 <th style={{ padding: "10px" }}>Subsystem Metric</th>
@@ -257,8 +339,8 @@ export function ResearchPage() {
           Compares pointer-table reference cloning against physical unshared tensor memory duplication (~704 MB per sequence in BF16).
           Physical silicon receipt: <code>gb10_canonical_1789907893_4d762</code>.
         </p>
-        <div style={{ overflowX: "auto" }}>
-          <table className="evidence-table" style={{ width: "100%", borderCollapse: "collapse", marginBottom: "32px" }}>
+        <div className="research-table-wrap">
+          <table className="evidence-table research-table">
             <thead>
               <tr style={{ borderBottom: "1px solid var(--border-line)", textAlign: "left" }}>
                 <th style={{ padding: "10px" }}>Subagents Forked</th>
@@ -295,8 +377,8 @@ export function ResearchPage() {
         <p style={{ fontSize: "14px", color: "var(--text-dim)", marginBottom: "16px" }}>
           Batch build duration across concurrency sweeps. Calculated as percentage of a standard 10-millisecond GPU execution step.
         </p>
-        <div style={{ overflowX: "auto" }}>
-          <table className="evidence-table" style={{ width: "100%", borderCollapse: "collapse", marginBottom: "32px" }}>
+        <div className="research-table-wrap">
+          <table className="evidence-table research-table">
             <thead>
               <tr style={{ borderBottom: "1px solid var(--border-line)", textAlign: "left" }}>
                 <th style={{ padding: "10px" }}>Active Sequence Batch</th>
@@ -323,8 +405,8 @@ export function ResearchPage() {
         <p style={{ fontSize: "14px", color: "var(--text-dim)", marginBottom: "16px" }}>
           200 live API requests executed across concurrency sweeps against SQLite WAL + vector similarity tables.
         </p>
-        <div style={{ overflowX: "auto" }}>
-          <table className="evidence-table" style={{ width: "100%", borderCollapse: "collapse", marginBottom: "32px" }}>
+        <div className="research-table-wrap">
+          <table className="evidence-table research-table">
             <thead>
               <tr style={{ borderBottom: "1px solid var(--border-line)", textAlign: "left" }}>
                 <th style={{ padding: "10px" }}>Concurrent Streams</th>
@@ -357,8 +439,8 @@ export function ResearchPage() {
         <p style={{ fontSize: "14px", color: "var(--text-dim)", marginBottom: "16px" }}>
           Execution of BAAI/bge-base-en-v1.5 INT8 via ONNX Runtime C-API across batch sweeps on Grace Blackwell workstation silicon.
         </p>
-        <div style={{ overflowX: "auto" }}>
-          <table className="evidence-table" style={{ width: "100%", borderCollapse: "collapse", marginBottom: "32px" }}>
+        <div className="research-table-wrap">
+          <table className="evidence-table research-table">
             <thead>
               <tr style={{ borderBottom: "1px solid var(--border-line)", textAlign: "left" }}>
                 <th style={{ padding: "10px" }}>Batch Size</th>
@@ -389,8 +471,8 @@ export function ResearchPage() {
         <p style={{ fontSize: "14px", color: "var(--text-dim)", marginBottom: "16px" }}>
           Process RSS telemetry captured directly from /proc/[pid]/status (VmRSS) before, during, and after saturation load.
         </p>
-        <div style={{ overflowX: "auto" }}>
-          <table className="evidence-table" style={{ width: "100%", borderCollapse: "collapse", marginBottom: "32px" }}>
+        <div className="research-table-wrap">
+          <table className="evidence-table research-table">
             <thead>
               <tr style={{ borderBottom: "1px solid var(--border-line)", textAlign: "left" }}>
                 <th style={{ padding: "10px" }}>Operating Daemon</th>
@@ -415,60 +497,84 @@ export function ResearchPage() {
         </div>
       </section>
 
-      {/* 5. Ablation Comparison */}
-      <section className="aegis-response" aria-labelledby="research-ablation-heading">
+      {/* 5. Interpretation */}
+      <section id="interpretation" className="aegis-response" aria-labelledby="research-interpretation-heading">
         <SectionLead
           eyebrow="Section 05"
-          title="Empirical Ablation: AIEN Native Architecture vs Python / PyTorch Runtimes."
-          titleId="research-ablation-heading"
+          title="Interpretation: what these benchmarks establish, and what they do not."
+          titleId="research-interpretation-heading"
         >
           <p>
-            Benchmarking runtime architectures across identical hardware and silicon constraints.
+            The useful claim is narrower than “native beats Python.” The evidence shows where AIEN has removed
+            specific sources of orchestration and memory-management cost in its own runtime.
           </p>
         </SectionLead>
 
-        <div className="aegis-scope-strip" style={{ marginBottom: "24px" }}>
-          <span>Hardware: GB10 Grace Blackwell</span>
-          <span>Silicon Architecture: Pure Compiled Rust &amp; Mojo</span>
-          <span>Unified Memory: 128 GB LPDDR5X</span>
-        </div>
-
-        <div className="evidence-class-grid">
-          <article className="evidence-class">
-            <p className="evidence-status">Baseline: Python Runtimes (AsyncIO + Interpreted Scaffolding)</p>
-            <h3>12 to 15 ms Orchestration Tax / 44 to 3,700 MB RSS</h3>
-            <p>
-              Under standard Python serving frameworks, async schedulers introduce significant request parsing,
-              dynamic graph guards, and IPC serialization delays before execution begins.
-              Subagent spawning requires deep memory copying or stalling the worker loop.
-            </p>
+        <div className="research-claim-boundary">
+          <article>
+            <p className="evidence-status">Supported by current evidence</p>
+            <h3>Specific control-plane operations are very small.</h3>
+            <ul>
+              <li>KV block-table allocation and reclamation are measured directly.</li>
+              <li>Shared-prefix branch creation avoids physical KV duplication in the tested path.</li>
+              <li>Scheduler batch construction remains microsecond-scale across the reported sweep.</li>
+              <li>Local Cortex and embedding services have repeatable stress measurements on the stated machine.</li>
+            </ul>
           </article>
-          <article className="evidence-class">
-            <p className="evidence-status">Sovereign: AIEN Native Stack</p>
-            <h3>8.00 µs Step Latency / 2.06 µs Zero-Copy Branching</h3>
-            <p>
-              By hosting execution behind the AIEN Inference ABI and managing physical KV tables in Rust and Mojo,
-              the scheduling and allocation tax drops to nanoseconds (13.30 µs per CoW page mutation on physical unified memory).
-              Subagent sequence branching executes in 2.06 microseconds per branch (1.20 ms for 500 branches),
-              achieving a 500.0x physical memory savings ratio (704 MB vs 343.75 GB for 500 branches on 32K context).
-            </p>
+          <article>
+            <p className="evidence-status">Not established by this page alone</p>
+            <h3>System-wide superiority still requires neutral end-to-end comparison.</h3>
+            <ul>
+              <li>No universal claim is made about every vLLM, TGI, Ollama, or PyTorch deployment.</li>
+              <li>Allocator throughput is not equivalent to end-to-end model throughput.</li>
+              <li>Projected copy cost and memory savings are not direct copy benchmarks.</li>
+              <li>Energy-efficiency claims require dedicated power telemetry and matched workloads.</li>
+            </ul>
           </article>
         </div>
       </section>
 
-      {/* 6. Conclusion */}
-      <section className="aegis-knockout" aria-labelledby="research-conclusion-heading">
-        <p className="portrait-index">Section 06</p>
+      {/* 6. Current implementation */}
+      <section id="status" className="aegis-response research-status-section" aria-labelledby="research-status-heading">
+        <SectionLead
+          eyebrow="Section 06"
+          title="Current implementation status."
+          titleId="research-status-heading"
+        >
+          <p>
+            The architecture is intentionally ahead of the implementation. This section separates code that exists
+            today from composition layers that remain partial or planned.
+          </p>
+        </SectionLead>
+
+        <div className="research-implementation-grid">
+          {implementationStatus.map((item) => (
+            <article key={item.title}>
+              <p className={`research-status-pill research-status-${item.status.toLowerCase()}`}>{item.status}</p>
+              <h3>{item.title}</h3>
+              <p>{item.body}</p>
+            </article>
+          ))}
+        </div>
+        <p className="research-status-source">
+          Status is aligned with the public AIEN architecture repository and current sovereign-core implementation,
+          not inferred from roadmap language alone.
+        </p>
+      </section>
+
+      {/* 7. Conclusion */}
+      <section id="conclusion" className="aegis-knockout" aria-labelledby="research-conclusion-heading">
+        <p className="portrait-index">Section 07</p>
         <h2 id="research-conclusion-heading">Conclusion &amp; Technological Sovereignty.</h2>
         <p>
-          The findings demonstrate that software orchestration overhead constitutes a substantial portion of observed
-          LLM serving latency and memory saturation. In autonomous multi-agent environments, interpreted control planes become
-          the primary bottleneck preventing high-density agent spawning.
+          The measurements support a narrower conclusion: orchestration and state-management costs are large enough to
+          deserve first-class engineering attention, and several of those costs can be made very small with compiled,
+          branch-native runtime structures.
         </p>
         <p>
-          By implementing pure compiled architectures, pre-mapped physical KV pooling, and zero-copy sequence branching,
-          the AIEN Sovereign Inference Stack proves that high-performance local AI is achievable free of proprietary
-          enclosure, external cloud handshakes, or subscription-gated tokens.
+          AIEN is therefore best understood as an implementation program with measurable low-level results and an
+          explicit path toward a more complete local runtime. The next standard is not a stronger slogan; it is broader,
+          reproducible, apples-to-apples evidence across full models, workloads, hardware, and competing runtimes.
         </p>
         <div style={{ marginTop: "32px", display: "flex", gap: "16px", flexWrap: "wrap" }}>
           <a
@@ -490,6 +596,16 @@ export function ResearchPage() {
             onClick={() => trackRepoOutbound("benchmarks", "https://github.com/aien-dev/benchmarks")}
           >
             Reproduce Live Benchmarks
+          </a>
+          <a
+            href="https://github.com/aien-dev/aien-architecture"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="aegis-action-secondary"
+            style={{ textDecoration: "none" }}
+            onClick={() => trackRepoOutbound("aien-architecture", "https://github.com/aien-dev/aien-architecture")}
+          >
+            Read Architecture RFC
           </a>
           <Link to="/evidence" className="aegis-action-secondary" style={{ textDecoration: "none" }}>
             Inspect Evidence Hub
